@@ -2,12 +2,12 @@
 
 ## Введение
 
-* [Обложка](README.md)
+* [Титульный лист](README.md)
 * [Оглавление](vvedenie/oglavlenie.md)
 * [Вступление](vvedenie/vstuplenie.md)
 * [Зачем PHP-разработчику AI](vvedenie/zachem-php-razrabotchiku-ai.md)
 * [Как эта книга устроена](vvedenie/kak-eta-kniga-ustroena.md)
-* [Вместо заключения](vvedenie/vmesto-zaklyucheniya.md)
+* [Что дальше](vvedenie/chto-dalshe.md)
 
 ## Часть I. Математический язык AI
 
