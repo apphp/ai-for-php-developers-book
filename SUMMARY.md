@@ -14,3 +14,7 @@
 * [Что такое модель в математическом смысле](chast-i.-matematicheskii-yazyk-ai/chto-takoe-model-v-matematicheskom-smysle.md)
 * [Векторы, размерности и пространства признаков](chast-i.-matematicheskii-yazyk-ai/vektory-razmernosti-i-prostranstva-priznakov.md)
 * [Расстояния и сходство](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo.md)
+
+## Часть II. Обучение как оптимизация
+
+* [Ошибка, loss-функции и зачем они нужны](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny.md)
