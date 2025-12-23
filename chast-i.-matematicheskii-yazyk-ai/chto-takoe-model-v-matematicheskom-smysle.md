@@ -31,19 +31,16 @@ $$
 Если переписать это на PHP, получится почти банальный код:
 
 ```php
-class LinearModel
-{
+class LinearModel {
     public float $w;
     public float $b;
 
-    public function __construct(float $w, float $b)
-    {
+    public function __construct(float $w, float $b) {
         $this->w = $w;
         $this->b = $b;
     }
 
-    public function predict(float $x): float
-    {
+    public function predict(float $x): float {
         return $this->w * $x + $this->b;
     }
 }
@@ -54,6 +51,7 @@ class LinearModel
 ```php
 $model = new LinearModel(2.0, 0.0);
 echo $model->predict(3.0);
+
 // Результат: 6
 // Объяснение: 2 * 3 + 0 = 6 
 ```
@@ -85,8 +83,7 @@ ŷ ​- y
 $$
 
 ```php
-function error(float $yTrue, float $yPredicted): float
-{
+function error(float $yTrue, float $yPredicted): float {
     return $yPredicted - $yTrue;
 }
 ```
@@ -94,7 +91,8 @@ function error(float $yTrue, float $yPredicted): float
 Пример:
 
 ```php
-echo error(10.0, 7.0);
+echo error(yTrue: 10.0, yPredicted: 7.0);
+
 // Результат: -3 
 // Объяснение: 7 - 10 = -3
 ```
@@ -106,8 +104,7 @@ $$
 $$
 
 ```php
-function squaredError(float $yTrue, float $yPredicted): float
-{
+function squaredError(float $yTrue, float $yPredicted): float {
     return ($yPredicted - $yTrue) ** 2;
 }
 ```
@@ -115,7 +112,8 @@ function squaredError(float $yTrue, float $yPredicted): float
 Пример:
 
 ```php
-echo squaredError(4.0, 6.0);
+echo squaredError(yTrue: 4.0, yPredicted: 6.0);
+
 // Результат: -3 
 // Объяснение: (6 - 4)² = 4
 ```
@@ -142,7 +140,7 @@ $dataset = [
     [2.0, 4.0],
 ];
 
-$model = new LinearModel(0.0, 0.0);
+$model = new LinearModel(w: 0.0, b: 0.0);
 
 foreach ($dataset as [$x, $yTrue]) {
     $yPredicted = $model->predict($x);
@@ -161,14 +159,14 @@ x = 2, yTrue = 4, yPredicted = 0, loss = 16
 
 ```php
 // Плохая модель (до обучения)
-$model = new LinearModel(0.0, 0.0)
+$model = new LinearModel(w: 0.0, b: 0.0)
 // y = 0 * x
 // Результат:
 // x = 1, yTrue = 2, yPredicted = 0, loss = 4
 // x = 2, yTrue = 4, yPredicted = 0, loss = 16
 
 // Улучшенная модель (после нескольких "шагов обучения")
-$model = new LinearModel(0.8, 0.0);
+$model = new LinearModel(w: 0.8, b: 0.0);
 // y = 0.8 * x
 // Результат:
 // x = 1, yTrue = 2, yPredicted = 0.8, loss = 1.44
