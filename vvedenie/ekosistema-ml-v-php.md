@@ -173,7 +173,7 @@ tiktoken-php – это PHP-порт токенизатора OpenAI. Он ис�
 
 #### **Flow PHP**
 
-Сайт: [https://flow-php.com](https://flow-php.com/)
+Репозиторий: [https://github.com/flow-php/flow](https://github.com/flow-php/flow)
 
 Статус: <mark style="color:$success;">**активный**</mark>
 
