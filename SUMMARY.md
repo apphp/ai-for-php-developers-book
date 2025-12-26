@@ -24,3 +24,4 @@
 
 * [Ошибка, loss-функции и зачем они нужны](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny.md)
 * [Линейная регрессия как базовая модель](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model.md)
+* [Градиентный спуск на пальцах](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh.md)
