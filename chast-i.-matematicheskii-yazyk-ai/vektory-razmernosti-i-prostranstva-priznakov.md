@@ -270,7 +270,7 @@ function euclideanDistance(array $a, array $b): float {
 
     for ($i = 0; $i < $n; $i++) {
         $diff = $a[$i] - $b[$i];
-        $sum += $diff * $diff;
+        $sum += $diff ** 2;
     }
 
     return sqrt($sum);

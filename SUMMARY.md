@@ -6,8 +6,9 @@
 * [Оглавление](vvedenie/oglavlenie.md)
 * [Вступление](vvedenie/vstuplenie.md)
 * [Зачем PHP-разработчику AI](vvedenie/zachem-php-razrabotchiku-ai.md)
-* [Как эта книга устроена](vvedenie/kak-eta-kniga-ustroena.md)
 * [Экосистема ML в PHP](vvedenie/ekosistema-ml-v-php.md)
+* [Как эта книга устроена](vvedenie/kak-eta-kniga-ustroena.md)
+* [Глоссарий](vvedenie/glossarii.md)
 * [Что дальше](vvedenie/chto-dalshe.md)
 
 ## Часть I. Математический язык AI
