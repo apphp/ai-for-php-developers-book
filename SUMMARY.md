@@ -17,8 +17,9 @@
 * [Векторы, размерности и пространства признаков](chast-i.-matematicheskii-yazyk-ai/vektory-razmernosti-i-prostranstva-priznakov.md)
 * [Расстояния и сходство](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/README.md)
   * [Практические кейсы](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/README.md)
-    * [Кейс 1: сравнение текстов](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-1-sravnenie-tekstov.md)
-    * [Кейс 2: сравнение объектов и пользователей](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-2-sravnenie-obektov-i-polzovatelei.md)
+    * [Кейс 1: сравнение объектов и пользователей](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-1-sravnenie-obektov-i-polzovatelei.md)
+    * [Кейс 2: оценка релевантности объекта](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-2-ocenka-relevantnosti-obekta.md)
+    * [Кейс 3: сравнение текстов](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-3-sravnenie-tekstov.md)
 
 ## Часть II. Обучение как оптимизация
 
