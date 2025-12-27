@@ -73,7 +73,7 @@ $$
 
 Если у нас один признак, то данные – это точки на плоскости $$(x, y)$$. Модель – это прямая. Обучение линейной регрессии означает поиск такой прямой, которая проходит «как можно ближе» к этим точкам в смысле минимальной суммарной квадратичной ошибки.
 
-<div align="left"><figure><img src="../.gitbook/assets/11.1-points-and-approximating-line.png" alt="" width="563"><figcaption><p>11.1 Точки данных и аппроксимирующая прямая, которая минимизирует сумму квадратов вертикальных отклонений</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/11.1-points-and-approximating-line.png" alt="" width="563"><figcaption><p>11.1 Точки данных и аппроксимирующая прямая, которая минимизирует сумму квадратов вертикальных отклонений</p></figcaption></figure></div>
 
 Вертикальные отрезки от точек до прямой – это и есть ошибки предсказания.
 
@@ -85,7 +85,7 @@ $$
 
 С этой точки зрения линейная регрессия – это задача подбора такого направления в пространстве признаков, которое лучше всего объясняет данные.
 
-<div align="left"><figure><img src="../.gitbook/assets/11.2-vectors-and-projection.png" alt="" width="563"><figcaption><p>11.2 Векторы x, w и проекция на направление w</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/11.2-vectors-and-projection.png" alt="" width="563"><figcaption><p>11.2 Векторы x, w и проекция на направление w</p></figcaption></figure></div>
 
 ### Как находятся веса
 
@@ -124,7 +124,7 @@ $$
 
 Где $$\eta$$ – learning rate, шаг обучения.
 
-<div align="left"><figure><img src="../.gitbook/assets/11.3-error-surface-and-gradient-descent.png" alt="" width="563"><figcaption><p>11.3 Поверхность ошибки и шаги градиентного спуска</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/11.3-error-surface-and-gradient-descent.png" alt="" width="563"><figcaption><p>11.3 Поверхность ошибки и шаги градиентного спуска</p></figcaption></figure></div>
 
 ### Реализация на PHP – с нуля
 

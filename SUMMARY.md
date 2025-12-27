@@ -24,5 +24,7 @@
 ## Часть II. Обучение как оптимизация
 
 * [Ошибка, loss-функции и зачем они нужны](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny.md)
-* [Линейная регрессия как базовая модель](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model.md)
+* [Линейная регрессия как базовая модель](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/README.md)
+  * [Практические кейсы](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/README.md)
+    * [Кейсы](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keisy.md)
 * [Градиентный спуск на пальцах](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh.md)
