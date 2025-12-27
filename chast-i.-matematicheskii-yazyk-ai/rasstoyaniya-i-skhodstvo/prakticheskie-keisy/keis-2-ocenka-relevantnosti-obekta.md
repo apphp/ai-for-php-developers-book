@@ -129,7 +129,7 @@ print_r($prediction);
 
 #### Что происходит внутри
 
-Ridge – это линейная регрессия с L2-регуляризацией (т.е. Ridge = Linear Regression + L2):
+Ridge – это линейная регрессия с [L2-регуляризацией](../../../vvedenie/glossarii.md#l2-regulyarizaciya) (т.е. Ridge = Linear Regression + L2):
 
 $$
 \hat y = w_1​x_1​+w_2 x_2​+w_3x_3​ + b
