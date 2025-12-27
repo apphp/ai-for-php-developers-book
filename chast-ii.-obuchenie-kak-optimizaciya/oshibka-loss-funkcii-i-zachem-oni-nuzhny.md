@@ -22,7 +22,7 @@ $$
 
 Геометрически это выглядит так: мы смотрим, насколько далеко предсказание отстоит от реального значения на числовой прямой.
 
-<div align="left"><figure><img src="../.gitbook/assets/9.1-distance-between-y-and-y1-on-axis.png" alt="" width="563"><figcaption><p>Расстояние между y и ŷ на числовой оси</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/9.1-distance-between-y-and-y1-on-axis.png" alt="" width="563"><figcaption><p>10.1 Расстояние между y и ŷ на числовой оси</p></figcaption></figure></div>
 
 По сути, ошибка – это расстояние. А значит, мы сразу приходим к идее: ошибка должна быть неотрицательной.
 
@@ -60,7 +60,7 @@ $$
 
 Если представить данные как точки на плоскости, а модель как линию или поверхность, MSE измеряет, насколько далеко точки находятся от этой поверхности.
 
-<div align="left"><figure><img src="../.gitbook/assets/9.2-data-points-and-regression-line.png" alt="" width="563"><figcaption><p>Точки данных и линия регрессии, вертикальные отрезки – ошибки</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/9.2-data-points-and-regression-line.png" alt="" width="563"><figcaption><p>10.2 Точки данных и линия регрессии, вертикальные отрезки – ошибки</p></figcaption></figure></div>
 
 #### Немного полезной математики
 
@@ -80,7 +80,7 @@ $$
 
 – обучение стабильно
 
-\[IMAGE 9.3: график выпуклой функции потерь с единственным минимумом]
+<div align="left"><figure><img src="../.gitbook/assets/10.3-graph-of-convex-loss-function-with-single-minimum.png" alt="" width="563"><figcaption><p>10.3 График выпуклой функции потерь с единственным минимумом</p></figcaption></figure></div>
 
 Это одна из причин, почему линейная регрессия – базовый и надёжный инструмент.
 
@@ -132,7 +132,7 @@ $$
 
 График этой функции очень показателен.
 
-\[IMAGE 9.4: график -log(p) при p → 0 и p → 1]
+<div align="left"><figure><img src="../.gitbook/assets/10.4-plot-of-function-log.png" alt="" width="563"><figcaption><p>10.4 График -log(p) при p → 0 и p → 1</p></figcaption></figure></div>
 
 – при $$\hat{p} \to 1$$ ошибка стремится к нулю
 
@@ -158,7 +158,7 @@ $$
 
 – $$q$$ – распределение модели
 
-\[IMAGE 9.5: два распределения вероятностей и расстояние между ними]
+<div align="left"><figure><img src="../.gitbook/assets/10.5-two-probability-distributions-and-distance-between-them.png" alt="" width="563"><figcaption><p>10.5: Два распределения вероятностей и расстояние между ними</p></figcaption></figure></div>
 
 Это делает log loss естественным выбором для вероятностных моделей.
 

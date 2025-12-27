@@ -209,7 +209,7 @@ echo 'Blue: ' . encodeColor(color: 'blue');
 
 Именно поэтому даже самые разные модели в итоге сводятся к геометрическим операциям над векторами.
 
-<div align="left"><figure><img src="../.gitbook/assets/6.1-points-in-2d-feature-space.png" alt="" width="563"><figcaption><p>Точки в 2D-пространстве признаков</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/6.1-points-in-2d-feature-space.png" alt="" width="563"><figcaption><p>8.1 Точки в 2D-пространстве признаков</p></figcaption></figure></div>
 
 #### **Геометрический смысл расстояний и углов**
 
@@ -236,7 +236,7 @@ $$
 
 Это напрямую используется, например, при сравнении текстовых эмбеддингов или пользовательских профилей.
 
-<div align="left"><figure><img src="../.gitbook/assets/6.2-angle-between-2-vectors.png" alt="" width="563"><figcaption><p>Угол между двумя векторами</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/6.2-angle-between-2-vectors.png" alt="" width="563"><figcaption><p>8.2 Угол между двумя векторами</p></figcaption></figure></div>
 
 Для PHP-разработчика это означает простую вещь: модель может считать два объекта похожими не потому, что они близки по всем координатам, а потому, что они “смотрят” в одном направлении в пространстве признаков.
 
@@ -250,7 +250,7 @@ $$
 
 Математически это выглядит так: для нового вектора x мы ищем такие векторы $$xᵢ$$ из обучающей выборки, для которых расстояние $$d(x, xᵢ)$$ минимально.
 
-<div align="left"><figure><img src="../.gitbook/assets/6.3.-knn-in-feature-space.png" alt="" width="563"><figcaption><p>kNN в пространстве признаков</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/6.3.-knn-in-feature-space.png" alt="" width="563"><figcaption><p>8.3 kNN в пространстве признаков</p></figcaption></figure></div>
 
 Функция указанная ниже реализует классическую формулу евклидова расстояния между двумя точками:
 
@@ -282,7 +282,7 @@ $$
 
 > Линейная модель разбивает пространство признаков гиперплоскостью, а знак линейной функции определяет класс объекта.
 
-<div align="left"><figure><img src="../.gitbook/assets/6.4-linear-decision-boundary.png" alt="" width="563"><figcaption><p>Линейная граница принятия решений</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/6.4-linear-decision-boundary.png" alt="" width="563"><figcaption><p>8.4 Линейная граница принятия решений</p></figcaption></figure></div>
 
 Функция ниже вычисляет:
 
@@ -333,13 +333,9 @@ $$
 z = W x + b
 $$
 
-А затем применяет нелинейную функцию активации. Геометрически это означает, что пространство сначала линейно поворачивается и растягивается, а затем нелинейно “ломается”.
+А затем применяет нелинейную функцию активации. Геометрически это означает, что пространство сначала линейно поворачивается и растягивается, а затем нелинейно "ломается". После нескольких таких преобразований данные, которые были неразделимы линейно, становятся разделимыми.
 
-После нескольких таких преобразований данные, которые были неразделимы линейно, становятся разделимыми.
-
-<div align="left"><figure><img src="../.gitbook/assets/6.5-nonlinear-transformation-of-space.png" alt="Нелинейное преобразование пространства" width="563"><figcaption></figcaption></figure></div>
-
-
+<div align="left"><figure><img src="../.gitbook/assets/6.5-nonlinear-transformation-of-space.png" alt="Нелинейное преобразование пространства" width="563"><figcaption><p>8.5 Нелинейной преобразование пространства</p></figcaption></figure></div>
 
 Несмотря на сложность архитектур, вход у нейросети всегда один и тот же – вектор фиксированной размерности.
 
