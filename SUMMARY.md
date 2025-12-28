@@ -28,3 +28,7 @@
   * [Практические кейсы](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/README.md)
     * [Кейсы](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keisy.md)
 * [Градиентный спуск на пальцах](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh.md)
+
+## Часть III. Классификация и вероятности
+
+* [Вероятность как степень уверенности](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti.md)
