@@ -112,11 +112,7 @@ $$
 
 Это не просто два числа. Это распределение нашей уверенности между гипотезами.
 
-\[IMAGE PLACEHOLDER: распределение вероятности между двумя классами]
-
-Промпт для картинки:
-
-“Simple probability distribution visualization: two bars labeled ‘Spam’ and ‘Not spam’, heights 0.85 and 0.15, clean minimal style, white background, educational diagram”
+<div align="left"><figure><img src="../.gitbook/assets/12.1-probability-distribution-between-two-classes.png" alt="" width="563"><figcaption><p>12.1 Распределение вероятности между двумя классами</p></figcaption></figure></div>
 
 #### Вероятность и softmax
 
@@ -145,11 +141,7 @@ $$
 
 Здоровая модель почти всегда оставляет место сомнению.
 
-\[IMAGE PLACEHOLDER: шкала уверенности от 0 до 1]
-
-Промпт для картинки:
-
-“Confidence scale from 0 to 1 with labels ‘Impossible’, ‘Unlikely’, ‘Uncertain’, ‘Likely’, ‘Almost certain’, minimal flat design”
+<div align="left"><figure><img src="../.gitbook/assets/12.2-confidence-scale-from-0-to-1.png" alt="" width="563"><figcaption><p>12.2 Шкала уверенности от 0 до 1</p></figcaption></figure></div>
 
 ### Вероятность и решения
 
