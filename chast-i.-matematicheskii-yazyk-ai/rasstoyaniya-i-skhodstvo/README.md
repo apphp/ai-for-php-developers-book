@@ -207,9 +207,9 @@ echo $similarity;
 
 // Результат: 0.8
 // Объяснение: 
-// dot = 1*2 + 2*1 = 4
-// normA = sqrt(1*1 + 2*2) = sqrt(5)
-// normB = sqrt(2*2 + 1*1) = sqrt(5)
+// dot = 1 * 2 + 2 * 1 = 4
+// normA = sqrt(1 * 1 + 2 * 2) = sqrt(5)
+// normB = sqrt(2 * 2 + 1 * 1) = sqrt(5)
 // cosine = 4 / (sqrt(5) * sqrt(5)) = 4 / 5 = 0.8
 ```
 
