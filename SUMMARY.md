@@ -32,6 +32,11 @@
     * [Кейс 5. Обучение модели как минимизация ошибки](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/keis-5.-obuchenie-modeli-kak-minimizaciya-oshibki.md)
 * [Линейная регрессия как базовая модель](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/README.md)
   * [Практические кейсы](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/README.md)
+    * [Кейс 1. Оценка стоимости квартиры по параметрам](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keis-1.-ocenka-stoimosti-kvartiry-po-parametram.md)
+    * [Кейс 2. Прогноз времени выполнения задачи разработчиком](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keis-2.-prognoz-vremeni-vypolneniya-zadachi-razrabotchikom.md)
+    * [Кейс 3. Прогноз потребления ресурсов сервера](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keis-3.-prognoz-potrebleniya-resursov-servera.md)
+    * [Кейс 4. Оценка вероятного чека клиента](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keis-4.-ocenka-veroyatnogo-cheka-klienta.md)
+    * [Кейс 5. Прогноз зарплаты по рынку](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keis-5.-prognoz-zarplaty-po-rynku.md)
     * [Кейсы](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keisy.md)
 * [Градиентный спуск на пальцах](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh.md)
 
