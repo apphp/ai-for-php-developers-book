@@ -23,7 +23,13 @@
 
 ## Часть II. Обучение как оптимизация
 
-* [Ошибка, loss-функции и зачем они нужны](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny.md)
+* [Ошибка, loss-функции и зачем они нужны](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/README.md)
+  * [Практические кейсы](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/README.md)
+    * [Кейс 1: MSE и цена большого промаха](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/keis-1-mse-i-cena-bolshogo-promakha.md)
+    * [Кейс 2. Сравнение двух моделей по MSE](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/keis-2.-sravnenie-dvukh-modelei-po-mse.md)
+    * [Кейс 3. Спам-фильтр и цена уверенной ошибки (log loss)](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/keis-3.-spam-filtr-i-cena-uverennoi-oshibki-log-loss.md)
+    * [Кейс 4. Одинаковая точность – разный log loss](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/keis-4.-odinakovaya-tochnost-raznyi-log-loss.md)
+    * [Кейс 5. Обучение модели как минимизация ошибки](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/keis-5.-obuchenie-modeli-kak-minimizaciya-oshibki.md)
 * [Линейная регрессия как базовая модель](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/README.md)
   * [Практические кейсы](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/README.md)
     * [Кейсы](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keisy.md)
