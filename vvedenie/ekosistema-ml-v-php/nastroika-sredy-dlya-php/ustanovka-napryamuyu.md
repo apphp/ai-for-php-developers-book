@@ -160,23 +160,18 @@ php -S localhost:8000
 Создайте файл с именем `php_ml_test.php` в каталоге `public`:
 
 ```php
-<?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Phpml\Classification\KNearestNeighbors;
 
 $samples = [[1, 3], [1, 4], [2, 4], [3, 1], [4, 1], [4, 2]];
-
 $labels = ['a', 'a', 'a', 'b', 'b', 'b'];
 
 $classifier = new KNearestNeighbors();
-
 $classifier->train($samples, $labels);
-
 $prediction = $classifier->predict([3, 2]);
 
 echo "Предсказание: " . $prediction;
-
 ```
 
 **Тестовый скрипт Rubix ML**
@@ -188,22 +183,17 @@ echo "Предсказание: " . $prediction;
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Rubix\ML\Classifiers\KNearestNeighbors;
-
 use Rubix\ML\Datasets\Labeled;
 
 $samples = [[1, 3], [1, 4], [2, 4], [3, 1], [4, 1], [4, 2]];
-
 $labels = ['a', 'a', 'a', 'b', 'b', 'b'];
 
 $dataset = new Labeled($samples, $labels);
-
 $estimator = new KNearestNeighbors(3);
-
 $estimator->train($dataset);
 
 $prediction = $estimator->predict([[3, 2]]);
 echo "Rubix ML Prediction: " . $prediction[0] . "\n";
-
 ```
 
 Для запуска этих скриптов используйте следующие команды:
