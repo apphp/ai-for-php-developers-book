@@ -26,7 +26,7 @@ description: Почему производная – это направлени
 
 Мы как будто идем по гористой местности и хотим спуститься в самую низкую точку – в минимум.
 
-<div align="left"><figure><img src="../.gitbook/assets/12.1-error-graph-like-a-hill.png" alt="" width="563"><figcaption><p>12.1 График ошибки как холм</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/12.1-error-graph-like-a-hill.png" alt="" width="563"><figcaption><p>12.1 График ошибки как холм</p></figcaption></figure></div>
 
 ### Почему "спуск"
 
@@ -54,7 +54,7 @@ $$
 
 Геометрически производная – это тангенс угла наклона касательной к графику.
 
-<div align="left"><figure><img src="../.gitbook/assets/12.2-tangent-to-graph.png" alt="" width="563"><figcaption><p>12.2 График функции и касательная, показывающая наклон</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/12.2-tangent-to-graph.png" alt="" width="563"><figcaption><p>12.2 График функции и касательная, показывающая наклон</p></figcaption></figure></div>
 
 ### Почему производная – это направление движения
 
@@ -94,7 +94,7 @@ $$
 
 Если шаг слишком большой, мы не спускаемся, а начинаем перепрыгивать минимум. Сегодня – слева от него, завтра – справа, послезавтра – снова слева. Ошибка не уменьшается, а скачет.
 
-<div align="left"><figure><img src="../.gitbook/assets/12.3-chart-with-jumping-minimum.png" alt="" width="563"><figcaption><p>12.3 График с перескакиванием минимума</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/12.3-chart-with-jumping-minimum.png" alt="" width="563"><figcaption><p>12.3 График с перескакиванием минимума</p></figcaption></figure></div>
 
 Если же шаг слишком маленький, обучение становится мучительно медленным. Мы вроде бы движемся в правильном направлении, но настолько медленно, что кажется, будто модель вообще не обучается.
 
@@ -128,7 +128,7 @@ $$
 
 И снова никакой магии. Мы просто идем вниз по самому крутому склону.
 
-<div align="left"><figure><img src="../.gitbook/assets/12.4-error-surface-and-gradient-vector.png" alt="" width="563"><figcaption><p>12.4 3D-поверхность ошибки и вектор градиента</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/12.4-error-surface-and-gradient-vector.png" alt="" width="563"><figcaption><p>12.4 3D-поверхность ошибки и вектор градиента</p></figcaption></figure></div>
 
 ### Почему без производных никуда
 

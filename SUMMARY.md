@@ -37,8 +37,12 @@
     * [Кейс 3. Прогноз потребления ресурсов сервера](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keis-3.-prognoz-potrebleniya-resursov-servera.md)
     * [Кейс 4. Оценка вероятного чека клиента](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keis-4.-ocenka-veroyatnogo-cheka-klienta.md)
     * [Кейс 5. Прогноз зарплаты по рынку](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keis-5.-prognoz-zarplaty-po-rynku.md)
-    * [Кейсы](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keisy.md)
-* [Градиентный спуск на пальцах](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh.md)
+* [Градиентный спуск на пальцах](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/README.md)
+  * [Эксперименты с градиентным спуском](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/README.md)
+    * [Пример 1. Траектория параметра](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/primer-1.-traektoriya-parametra.md)
+    * [Пример 2. Влияние learning rate](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/primer-2.-vliyanie-learning-rate.md)
+    * [Пример 3. Плато и почти нулевой градиент](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/primer-3.-plato-i-pochti-nulevoi-gradient.md)
+    * [Пример 4. Batch и стохастический спуск](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/primer-4.-batch-i-stokhasticheskii-spusk.md)
 
 ## Часть III. Классификация и вероятности
 
