@@ -175,7 +175,6 @@ docker-compose exec app composer install
 Создайте файл с именем `php_ml_test.php` в вашей директории `public`:
 
 ```php
-<?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Phpml\Classification\KNearestNeighbors;
@@ -195,7 +194,6 @@ echo "Предсказание: " . $prediction;
 Создайте еще один файл с именем `rubix_ml_test.php` в вашей директории `public`:
 
 ```php
-<?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Rubix\ML\Classifiers\KNearestNeighbors;

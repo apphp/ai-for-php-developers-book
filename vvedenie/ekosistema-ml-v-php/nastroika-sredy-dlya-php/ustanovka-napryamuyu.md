@@ -141,12 +141,10 @@ php -S localhost:8000
 
 #### 11. Проверка настройки
 
-Создайте файл `phpinfo.php` в корневом каталоге вашего веб-сервера:
+Создайте файл `phpinfo.php` в корневом каталоге вашего веб-сервера со следующим содержимым:
 
 ```php
-<?php
-    phpinfo();
-?>
+phpinfo();
 ```
 
 Откройте этот файл в веб-браузере, чтобы проверить конфигурацию PHP.
@@ -179,7 +177,6 @@ echo "Предсказание: " . $prediction;
 Создайте еще один файл с именем `rubix_ml_test.php` в вашей директории `public`:
 
 ```php
-<?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Rubix\ML\Classifiers\KNearestNeighbors;
