@@ -114,7 +114,7 @@ function squaredError(float $yTrue, float $yPredicted): float {
 ```php
 echo squaredError(yTrue: 4.0, yPredicted: 6.0);
 
-// Результат: -3 
+// Результат: 4 
 // Объяснение: (6 - 4)² = 4
 ```
 
