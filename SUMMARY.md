@@ -51,3 +51,13 @@
 ## Часть III. Классификация и вероятности
 
 * [Вероятность как степень уверенности](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti.md)
+* [Логистическая регрессия](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/README.md)
+  * [Практические кейсы](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/README.md)
+    * [Кейс 1. Логистическая регрессия для оттока клиентов](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-1.-logisticheskaya-regressiya-dlya-ottoka-klientov.md)
+    * [Кейс 2. Подписка на рассылку](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-2.-podpiska-na-rassylku.md)
+    * [Кейс 3. Спам или не спам](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-3.-spam-ili-ne-spam.md)
+    * [Кейс 4. Клик по рекламе (CTR)](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-4.-klik-po-reklame-ctr.md)
+    * [Кейс 5. Одобрение кредита](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-5.-odobrenie-kredita.md)
+    * [Кейс 6. Фрод или нормальная транзакция](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-6.-frod-ili-normalnaya-tranzakciya.md)
+    * [Кейс 7. Медицинский скрининг](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-7.-medicinskii-skrining.md)
+    * [Кейс 8. Технический дефект оборудования](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-8.-tekhnicheskii-defekt-oborudovaniya.md)
