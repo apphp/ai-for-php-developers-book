@@ -110,7 +110,7 @@ for ($epoch = 0; $epoch < $epochs; $epoch++) {
     $gradients = array_fill(0, $m, 0.0);
 
     for ($i = 0; $i < $n; $i++) {
-        $prediction = dot($weights, $X[$i]);
+        $prediction = dotProduct($weights, $X[$i]);
         $error = $y[$i] - $prediction;
 
         for ($j = 0; $j < $m; $j++) {
