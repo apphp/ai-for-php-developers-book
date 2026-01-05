@@ -190,5 +190,5 @@ $model = new LinearModel(w: 0.8, b: 0.0);
 Если вы это поняли, то страх перед машинным обучением уже исчез. Дальше начинается инженерия: какие функции брать, какие ошибки использовать и как эффективно подбирать параметры.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры файлов из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или запустите его с помощью [онлайн-примеров](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/what-is-a-model)
+Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/what-is-a-model) для его запуска.
 {% endhint %}
