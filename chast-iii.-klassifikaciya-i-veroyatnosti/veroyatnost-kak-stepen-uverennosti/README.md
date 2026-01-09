@@ -178,7 +178,7 @@ $$99 / 5 094 \approx 1.94\%$$
 
 Это не просто два числа. Это распределение нашей уверенности между гипотезами.
 
-<div align="left"><figure><img src="../.gitbook/assets/13.1-probability-distribution-between-two-classes.png" alt="" width="563"><figcaption><p>13.1 Распределение вероятности между двумя классами</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/13.1-probability-distribution-between-two-classes.png" alt="" width="563"><figcaption><p>13.1 Распределение вероятности между двумя классами</p></figcaption></figure></div>
 
 #### Вероятность и softmax
 
@@ -265,9 +265,11 @@ normal: 0.19
 * сумма всех значений равна 1;
 * числа можно интерпретировать как степень уверенности модели.
 
+
+
 Важное замечание: `softmax` не делает модель умнее. Он лишь переводит ее внутренние оценки в форму, удобную для интерпретации и принятия решений. Модель по-прежнему сомневается и распределяет уверенность между альтернативами, а не выдает жесткий ответ "да" или "нет".
 
-
+<div align="left"><figure><img src="../../.gitbook/assets/13.3-сonverting-logits-to-probabilities-via-softmax.png" alt="" width="563"><figcaption><p>13.3 softmax превращает logits в вероятности</p></figcaption></figure></div>
 
 ### Почему вероятность почти никогда не бывает 0 или 1
 
@@ -281,7 +283,7 @@ normal: 0.19
 
 Здоровая модель почти всегда оставляет место сомнению.
 
-<div align="left"><figure><img src="../.gitbook/assets/12.2-confidence-scale-from-0-to-1.png" alt="" width="563"><figcaption><p>13.2 Шкала уверенности от 0 до 1</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/12.2-confidence-scale-from-0-to-1.png" alt="" width="563"><figcaption><p>13.2 Шкала уверенности от 0 до 1</p></figcaption></figure></div>
 
 ### Вероятность и решения
 
