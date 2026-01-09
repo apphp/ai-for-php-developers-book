@@ -178,7 +178,7 @@ $$99 / 5 094 \approx 1.94\%$$
 
 Это не просто два числа. Это распределение нашей уверенности между гипотезами.
 
-
+<div align="left"><figure><img src="../.gitbook/assets/13.1-probability-distribution-between-two-classes.png" alt="" width="563"><figcaption><p>13.1 Распределение вероятности между двумя классами</p></figcaption></figure></div>
 
 #### Вероятность и softmax
 
