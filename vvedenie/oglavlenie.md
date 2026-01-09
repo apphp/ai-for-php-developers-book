@@ -40,6 +40,7 @@
 
 13. \>> <mark style="color:purple;">Вероятность как степень уверенности</mark>\
     _<mark style="color:purple;">Частоты, апостериорные вероятности.</mark>_
+    1. \>> <mark style="color:purple;">Практические кейсы</mark>
 14. <mark style="color:purple;">>> Логистическая регрессия</mark>
 
     _<mark style="color:purple;">Sigmoid, decision boundary, кейс классификации.</mark>_
