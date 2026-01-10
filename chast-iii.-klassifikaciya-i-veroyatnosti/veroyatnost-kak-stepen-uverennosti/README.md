@@ -234,8 +234,8 @@ function softmax(array $scores): array
 
     $probabilities = [];
     foreach ($expValues as $key => $value) {
-        $probabilities[$key] = $value / $sum;
-    }
+        $probabilities[$key] = $value / max($sum, 1);
+​    }
 
     return $probabilities;
 }
