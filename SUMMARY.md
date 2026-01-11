@@ -68,3 +68,4 @@
     * [Кейс 6. Фрод или нормальная транзакция](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-6.-frod-ili-normalnaya-tranzakciya.md)
     * [Кейс 7. Медицинский скрининг](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-7.-medicinskii-skrining.md)
     * [Кейс 8. Технический дефект оборудования](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-8.-tekhnicheskii-defekt-oborudovaniya.md)
+* [Почему наивный Байес работает](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet.md)
