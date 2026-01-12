@@ -33,13 +33,13 @@ $$
 Например:
 
 $$
-P(спам \mid есть \space слово “free”)
+P(\text{спам} \mid \text{есть слово ``free''})
 $$
 
 Но это не то же самое, что:
 
 $$
-P("free" \mid спам)
+P(\text{``free"} \mid спам)
 $$
 
 Именно это различие часто путают, и именно здесь появляется формула Байеса.
@@ -143,18 +143,12 @@ $$
 В лог-пространстве это выглядит как линейная сумма:
 
 $$
-log P(C \mid X) = log P(C) + Σ log P(xᵢ \mid C)
+log P(C \mid X) = \log P(C) + \sum_{i} \log P(x_i \mid C)
 $$
 
 Это очень важно: несмотря на вероятностную природу, граница решений у наивного Байеса часто линейная.
 
-
-
-\[IMAGE PLACEHOLDER 1: Геометрия наивного Байеса]
-
-Prompt для картинки:
-
-“2D scatter plot with two classes of points, linear decision boundary, arrows from features contributing additively, clean educational style, white background, machine learning visualization”
+<div align="left"><figure><img src="../../.gitbook/assets/15.1-geometry-of-naive-bayes.png" alt="" width="563"><figcaption><p>15.1 Геометрия наивного Байеса</p></figcaption></figure></div>
 
 #### Пример: классификация писем
 
@@ -172,23 +166,19 @@ Prompt для картинки:
 Модель считает:
 
 $$
-P(спам \mid письмо) \propto P("free" \mid спам) \cdot P("win" \mid спам) \cdot P("meeting" \mid спам) \cdot P(спам)
+P(\text{спам} \mid \text{письмо}) \propto P(\text{``free''} \mid \text{спам}) \cdot P(\text{``win''} \mid \text{спам}) \cdot P(\text{``meeting''} \mid \text{спам}) \cdot P(\text{спам})
 $$
 
 Каждое слово независимо "голосует" за или против спама.
 
-\[IMAGE PLACEHOLDER 2: Голосование признаков]
-
-Prompt для картинки:
-
-“diagram showing naive Bayes feature voting, words ‘free’, ‘win’, ‘meeting’ with arrows pointing to ‘spam’ and ‘not spam’, different arrow strengths, simple flat illustration”
+<div align="left"><figure><img src="../../.gitbook/assets/15.2-voting-of-features.png" alt="" width="563"><figcaption><p>15.2 Голосование признаков</p></figcaption></figure></div>
 
 #### Немного математики
 
 Для численной устойчивости на практике почти всегда используют логарифмы:
 
 $$
-log P(C \mid X) = log P(C) + Σ log P(xᵢ \mid C)
+\log P(C \mid X) = \log P(C) + \sum_{i} \log P(x_i \mid C)
 $$
 
 Это превращает:
@@ -202,8 +192,6 @@ $$
 
 Важно понимать границы применимости.
 
-<br>
-
 Наивный Байес плохо работает, когда:
 
 * признаки сильно зависят друг от друга и эта зависимость критична,
@@ -216,7 +204,7 @@ $$
 * признаков много,
 * нужна быстрая и интерпретируемая модель.
 
-#### 15.11. Почему эта модель важна именно для понимания ML
+#### Почему эта модель важна именно для понимания ML
 
 Наивный Байес ценен не только как инструмент, но и как учебная модель.
 
