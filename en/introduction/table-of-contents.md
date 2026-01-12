@@ -1,9 +1,8 @@
 # Table of Contents
 
-## Table of Contents
-
 {% hint style="info" %}
-This book is being written publicly and is still a work in progress.\
+This book is being written publicly and is still a work in progress.
+
 Section statuses:
 
 🚧 – empty for now\
