@@ -1,7 +1,3 @@
-# Обложка
-
-<div align="left"><figure><img src="/ru/.gitbook/assets/book-cover-min.png" alt="" width="375"><figcaption></figcaption></figure></div>
-
-# Book Cover
-
-<div align="left"><figure><img src="/en/.gitbook/assets/book-cover.png" alt="" width="375"><figcaption></figcaption></figure></div>
+| Обложка | Book Cover |
+|:------:|:----------:|
+| <div align="center"><figure><img src="/ru/.gitbook/assets/book-cover-min.png" alt="" width="375"><figcaption></figcaption></figure><p>Практическое руководство для PHP-разработчиков, желающих использовать ИИ и машинное обучение в реальных проектах. Никакой рекламы, никаких сложных расчетов — только практические идеи, инструменты и работающий PHP-код.</p></div> | <div align="center"><figure><img src="/en/.gitbook/assets/book-cover.png" alt="" width="375"><figcaption></figcaption></figure><p>A hands-on guide for PHP developers who want to use AI and machine learning in real projects. No hype, no math—just practical ideas, tools, and PHP code that works.</p></div> |
