@@ -1,4 +1,11 @@
-| <div style="width:50%; text-align:center;">Обложка</div> | <div style="width:50%; text-align:center;">Book Cover</div> |
-|----------------------------------------------------------|-------------------------------------------------------------|
-| <div align="center" style="width:100%"><figure><img src="/ru/.gitbook/assets/book-cover-min.png" alt="" width="375"></figure><p>Практическое руководство для PHP-разработчиков, желающих использовать ИИ и машинное обучение в реальных проектах. Никакой рекламы, никаких сложных расчетов — только практические идеи, инструменты и работающий PHP-код.</p></div> | <div align="center" style="width:100%"><figure><img src="/en/.gitbook/assets/book-cover.png" alt="" width="375"></figure><p>A hands-on guide for PHP developers who want to use AI and machine learning in real projects. No hype, no math—just practical ideas, tools, and PHP code that works.</p></div> |
+**A hands-on guide for PHP developers**  
+who want to use **AI and machine learning** in real projects.
 
+_No hype. No heavy math._  
+Just **practical ideas, proven tools, and PHP code that works**.
+
+**Languages:** 🇷🇺 Russian · 🇬🇧 English
+
+<figure>
+  <img src="/en/.gitbook/assets/book-cover.png" alt="Book cover" width="375">
+</figure>
