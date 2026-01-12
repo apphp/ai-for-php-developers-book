@@ -46,7 +46,9 @@ $labels = ['a', 'a', 'a', 'b', 'b', 'b'];
 $classifier = new KNearestNeighbors();
 $classifier->train($samples, $labels);
 
-echo $classifier->predict([3, 2]);
+$prediction = $classifier->predict([3, 2]);
+
+echo $prediction;
 // Результат: 'b'
 ```
 
@@ -70,6 +72,7 @@ Rubix поддерживает классификацию, регрессию, �
 
 ```php
 use Rubix\ML\Datasets\Labeled;
+use Rubix\ML\Datasets\Unlabeled;
 use Rubix\ML\Classifiers\KNearestNeighbors;
 
 $samples = [
@@ -86,8 +89,11 @@ $dataset = new Labeled($samples, $labels);
 $model = new KNearestNeighbors(3);
 $model->train($dataset);
 
-$prediction = $model->predict([[172, 68]]);
-// Результат: ['M']
+$testSamples = new Unlabeled([[172, 68]]);
+$prediction = $model->predict($testSamples);
+
+echo $prediction[0];
+// Результат: 'M'
 ```
 
 Обратите внимание на важный момент.
