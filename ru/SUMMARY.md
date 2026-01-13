@@ -73,3 +73,7 @@
     * [Кейс 1. Категориальные признаки и частоты](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/keis-1.-kategorialnye-priznaki-i-chastoty.md)
     * [Кейс 2. Спам-фильтр на словах (Bernoulli Naive Bayes)](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/keis-2.-spam-filtr-na-slovakh-bernoulli-naive-bayes.md)
     * [Кейс 3. Числовые признаки (Gaussian Naive Bayes)](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/keis-3.-chislovye-priznaki-gaussian-naive-bayes.md)
+
+## Часть IV. Близость и структура данных
+
+* [Алгоритм k-ближайших соседей и локальные решения](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya.md)
