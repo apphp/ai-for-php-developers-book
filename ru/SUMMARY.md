@@ -76,4 +76,8 @@
 
 ## Часть IV. Близость и структура данных
 
-* [Алгоритм k-ближайших соседей и локальные решения](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya.md)
+* [Алгоритм k-ближайших соседей и локальные решения](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/README.md)
+  * [Практические кейсы](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/README.md)
+    * [Кейс 1. Классификация клиента по поведению](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/keis-1.-klassifikaciya-klienta-po-povedeniyu.md)
+    * [Кейс 2. Регрессия: оценка цены квартиры](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/keis-2.-regressiya-ocenka-ceny-kvartiry.md)
+    * [Кейс 3. Классификация с RubixML](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/keis-3.-klassifikaciya-s-rubixml.md)

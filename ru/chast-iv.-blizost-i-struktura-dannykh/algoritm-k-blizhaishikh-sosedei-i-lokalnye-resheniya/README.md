@@ -24,7 +24,7 @@ description: Геометрическая интуиция, метрики ра�
 
 > Что обычно происходит с объектами, _похожими именно на этот_?
 
-<div align="left"><figure><img src="../.gitbook/assets/16.1-knn-local-decision.png" alt="" width="563"><figcaption><p>16.1 Локальные решения c kNN</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/16.1-knn-local-decision.png" alt="" width="563"><figcaption><p>16.1 Локальные решения c kNN</p></figcaption></figure></div>
 
 ### Геометрическая интуиция kNN
 
@@ -66,7 +66,7 @@ $$
 * пространство относительно низкой размерности
 * важна геометрическая форма облаков
 
-<div align="left"><figure><img src="../.gitbook/assets/16.2-euclidean-distance.png" alt="" width="563"><figcaption><p>16.2 Евклидово расстояние</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/16.2-euclidean-distance.png" alt="" width="563"><figcaption><p>16.2 Евклидово расстояние</p></figcaption></figure></div>
 
 #### Манхэттенское расстояние
 
@@ -78,7 +78,7 @@ $$
 
 Эта метрика часто используется, когда признаки независимы и имеют интерпретацию "стоимости шага".
 
-<div align="left"><figure><img src="../.gitbook/assets/16.3-manhattan-distance.png" alt="" width="563"><figcaption><p>16.3 Манхэттенское расстояние</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/16.3-manhattan-distance.png" alt="" width="563"><figcaption><p>16.3 Манхэттенское расстояние</p></figcaption></figure></div>
 
 #### Расстояние Минковского
 
@@ -93,7 +93,7 @@ $$
 
 Выбор p позволяет плавно менять форму "окрестности" точки.
 
-<div align="left"><figure><img src="../.gitbook/assets/16.4-minkowski_distance.png" alt="" width="563"><figcaption><p>16.4 Расстояние Минковского</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/16.4-minkowski_distance.png" alt="" width="563"><figcaption><p>16.4 Расстояние Минковского</p></figcaption></figure></div>
 
 #### Косинусное расстояние
 
@@ -105,7 +105,7 @@ $$
 
 Используется в задачах с текстами, эмбеддингами, рекомендациями, где абсолютные значения менее важны, чем относительные пропорции.
 
-<div align="left"><figure><img src="../.gitbook/assets/16.5-cosine-distance.png" alt="" width="563"><figcaption><p>16.5 Косинусное расстояние</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/16.5-cosine-distance.png" alt="" width="563"><figcaption><p>16.5 Косинусное расстояние</p></figcaption></figure></div>
 
 ### Выбор k и компромисс смещения и дисперсии
 
@@ -121,7 +121,7 @@ $$
 * решения более сглаженные
 * выше смещение, ниже дисперсия
 
-<div align="left"><figure><img src="../.gitbook/assets/16.6-knn-bias-variance.png" alt="" width="563"><figcaption><p>16.6 Сравнение границ принятия решений kNN</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/16.6-knn-bias-variance.png" alt="" width="563"><figcaption><p>16.6 Сравнение границ принятия решений kNN</p></figcaption></figure></div>
 
 kNN – наглядный пример классического компромисса bias–variance.
 
