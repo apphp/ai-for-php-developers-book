@@ -36,7 +36,7 @@ $yHat = [102, 118, 128, 117, 123];
 
 ```php
 function mse(array $y, array $yHat): float {
-    $n = count($y);
+    $n = max(count($y), 1);
     $sum = 0.0;
 
     for ($i = 0; $i < $n; $i++) {
@@ -46,14 +46,15 @@ function mse(array $y, array $yHat): float {
 
     return $sum / $n;
 }
-
-echo mse($y, $yHat);
 ```
 
 Посчитаем ошибку:
 
 ```php
-echo mse($y, $yHat);
+echo 'Normal MSE: ' . mse($y, $yHat);
+
+// Результат:
+// Normal MSE: 4
 ```
 
 Значение MSE получается небольшим. Это ожидаемо: все ошибки лежат в пределах нескольких единиц, и возведение в квадрат лишь умеренно усиливает их вклад.
@@ -77,7 +78,10 @@ $yHat[] = 130;
 Ошибка здесь огромная. Посчитаем MSE снова:
 
 ```php
-echo mse($y, $yHat);
+echo 'MSE with outlier: ' . mse($y, $yHat)ж
+
+// Результат:
+// MSE with outlier: 4820
 ```
 
 И вот тут происходит ключевой момент кейса.
