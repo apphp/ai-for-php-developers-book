@@ -207,5 +207,5 @@ echo "Оценка стоимости: $" . number_format($predictedPrice) . "\n
 В следующих кейсах мы будем постепенно усложнять модели, сохраняя эту практическую направленность.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-2/linear-regression-as-basic-model/case-1/apartment-valuation-based-on-parameters) для его запуска.
+Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-2/linear-regression-as-basic-model) для его запуска.
 {% endhint %}
