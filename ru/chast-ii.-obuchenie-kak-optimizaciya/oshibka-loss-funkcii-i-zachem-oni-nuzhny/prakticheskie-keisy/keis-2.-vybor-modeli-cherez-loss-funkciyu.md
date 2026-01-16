@@ -39,7 +39,7 @@ $modelB = [10, 13, 15, 15, 14];
 
 ```php
 function mse(array $y, array $yHat): float {
-    $n = max(count($y), 1);
+    $n = count($y);
     $sum = 0.0;
 
     for ($i = 0; $i < $n; $i++) {
@@ -47,7 +47,7 @@ function mse(array $y, array $yHat): float {
         $sum += $diff * $diff;
     }
 
-    return $sum / $n;
+    return $sum / max($n, 1);
 }
 
 echo "MSE A: " . mse($y, $modelA) . PHP_EOL;
