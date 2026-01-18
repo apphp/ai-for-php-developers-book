@@ -119,6 +119,8 @@ $dataset = new Unlabeled([$newTask]);
 $predictions = $model->predict($dataset);
 
 echo "Оценка времени выполнения: " . round($predictions[0], 1) . "ч\n";
+// Результат: 
+// Оценка времени выполнения: 8.5ч
 ```
 
 **Интерпретация весов**
@@ -131,6 +133,16 @@ $bias = $model->bias();
 
 print_r($weights);
 echo "Bias: $bias\n";
+
+// Результат: 
+// Coefficients (feature weights):
+// Array (
+//     [0] => 0.0096483427009701
+//     [1] => 0.012763517335245
+//     [2] => 0.015140939905538
+//     [3] => -0.076581104011325
+// )
+// Bias: 5.2106141417173
 ```
 
 Теперь модель можно объяснить (вес – это coefficient):
