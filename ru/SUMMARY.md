@@ -81,3 +81,4 @@
     * [Кейс 1. Классификация клиента по поведению](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/keis-1.-klassifikaciya-klienta-po-povedeniyu.md)
     * [Кейс 2. Регрессия: оценка цены квартиры](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/keis-2.-regressiya-ocenka-ceny-kvartiry.md)
     * [Кейс 3. Классификация с RubixML](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/keis-3.-klassifikaciya-s-rubixml.md)
+* [Decision Trees и разбиение пространства](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva.md)
