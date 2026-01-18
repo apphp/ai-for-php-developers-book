@@ -7,7 +7,7 @@
 Вы можете установить готовую среду Docker с примерами:\
 [https://github.com/apphp/ai-for-php-developers-examples](https://github.com/apphp/ai-for-php-developers-examples)
 
-Вы также можете запускать все примеры из книги напрямую:\
+Вы также можете запускать все примеры из книги напрямую на моём сайте:\
 [https://aiwithphp.org/books/ai-for-php-developers/examples/](https://aiwithphp.org/books/ai-for-php-developers/examples/)
 
 #### Дополнительные примечания о PHP-ML и Rubix ML
