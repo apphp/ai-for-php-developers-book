@@ -100,11 +100,14 @@ try {
 Простейший пример – нормализация в диапазон от 0 до 1:
 
 ```php
-function normalize(float $value, float $min, float $max): float {
-    if ($max === $min) {
+function normalize(float $value, float $min, float $max): float {  
+    $range = $max - $min;
+
+    if ($range === 0.0) {
         return 0.0;
     }
-    return ($value - $min) / ($max - $min);
+
+    return ($value - $min) / $range;
 }
 ```
 
@@ -131,6 +134,7 @@ function standardize(float $value, float $mean, float $std): float {
     if ($std == 0.0) {
         return 0.0;
     }
+    
     return ($value - $mean) / $std;
 }
 ```
