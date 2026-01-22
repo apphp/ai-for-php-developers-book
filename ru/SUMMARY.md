@@ -87,3 +87,7 @@
     * [Кейс 1. Учебное дерево решений на чистом PHP](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/keis-1.-uchebnoe-derevo-reshenii-na-chistom-php.md)
     * [Кейс 2. Классификация с помощью RubixML](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/keis-2.-klassifikaciya-s-pomoshyu-rubixml.md)
     * [Кейс 3. Когда дерево удобно в реальном продукте](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/keis-3.-kogda-derevo-udobno-v-realnom-produkte.md)
+
+## ЧАСТЬ V. ТЕКСТ КАК МАТЕМАТИКА
+
+* [Почему слова превращаются в числа](chast-v.-tekst-kak-matematika/pochemu-slova-prevrashayutsya-v-chisla.md)
