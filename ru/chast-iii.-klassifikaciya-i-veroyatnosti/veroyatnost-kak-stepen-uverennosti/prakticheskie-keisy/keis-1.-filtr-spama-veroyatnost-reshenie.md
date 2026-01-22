@@ -61,7 +61,8 @@ $model->train($dataset);
 * ссылок много.
 
 ```php
-$sample = [[12, 6]]; // новое письмо
+// новое письмо
+$sample = new Unlabeled([[12, 6]]);
 $probabilities = $model->proba($sample)[0];
 ```
 
