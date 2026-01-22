@@ -13,6 +13,7 @@
     * [Примечания](vvedenie/ekosistema-ml-v-php/nastroika-sredy-dlya-php/primechaniya.md)
 * [Как эта книга устроена](vvedenie/kak-eta-kniga-ustroena/README.md)
   * [Как контрибьютить](vvedenie/kak-eta-kniga-ustroena/kak-kontribyutit.md)
+  * [История изменений книги](vvedenie/kak-eta-kniga-ustroena/istoriya-izmenenii-knigi.md)
 * [Глоссарий](vvedenie/glossarii.md)
 * [Что дальше](vvedenie/chto-dalshe.md)
 
