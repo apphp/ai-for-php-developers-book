@@ -53,7 +53,7 @@
 
 * [Вероятность как степень уверенности](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/README.md)
   * [Практические кейсы](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/README.md)
-    * [Кейс 1. Фильтр спама: вероятность ≠ решение (RubixML)](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-1.-filtr-spama-veroyatnost-reshenie-rubixml.md)
+    * [Кейс 1. Фильтр спама: вероятность ≠ решение](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-1.-filtr-spama-veroyatnost-reshenie.md)
     * [Кейс 2. Медицинский тест: обновление уверенности (Байес)](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-2.-medicinskii-test-obnovlenie-uverennosti-baies.md)
     * [Кейс 3. Многоклассовая классификация и softmax (RubixML)](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-3.-mnogoklassovaya-klassifikaciya-i-softmax-rubixml.md)
     * [Кейс 4. Переуверенная модель как сигнал проблемы](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-4.-pereuverennaya-model-kak-signal-problemy.md)
