@@ -114,6 +114,46 @@ if ($probabilities['spam'] >= $threshold) {
 
 Если система ведет себя так, будто модель всегда права, это почти гарантированно приведет к плохому пользовательскому опыту.
 
+<details>
+
+<summary>Кейс 1. Полный пример кода.</summary>
+
+```php
+use Rubix\ML\Classifiers\LogisticRegression;
+use Rubix\ML\Datasets\Labeled;
+
+$samples = [
+    [3, 1],   // короткая тема, мало ссылок
+    [15, 8],  // длинная тема, много ссылок
+    [5, 0],   // средняя тем, нет ссылок
+];
+
+$labels = ['normal', 'spam', 'normal'];
+
+$dataset = new Labeled($samples, $labels);
+
+$model = new LogisticRegression();
+$model->train($dataset);
+
+// новое письмо
+$sample = new Unlabeled([[12, 6]]);
+$probabilities = $model->proba($sample)[0];
+
+// Результат:
+// normal: 0.32
+// spam: 0.68
+
+$threshold = 0.7;
+
+if ($probabilities['spam'] >= $threshold) {
+    echo 'Отправить в спам';
+} else {
+    echo 'Оставить во входящих';
+}
+```
+
+</details>
+
 #### Выводы для этого кейса
 
 1. Модель машинного обучения возвращает оценку уверенности, а не решение.
