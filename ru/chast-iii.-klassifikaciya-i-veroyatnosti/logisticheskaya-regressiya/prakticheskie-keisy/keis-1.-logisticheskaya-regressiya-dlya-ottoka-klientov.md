@@ -122,9 +122,11 @@ function sigmoid(float $z): float {
 
 function dot(array $a, array $b): float {
     $sum = 0.0;
+
     foreach ($a as $i => $v) {
         $sum += $v * $b[$i];
     }
+
     return $sum;
 }
 
@@ -148,7 +150,6 @@ for ($epoch = 0; $epoch < $epochs; $epoch++) {
         $z = dot($weights, $x) + $bias;
         $p = sigmoid($z);
 
-        // градиент log loss
         $error = $p - $y[$i];
 
         foreach ($weights as $j => $w) {
@@ -165,7 +166,7 @@ $probability = sigmoid(dot($weights, $newUser) + $bias);
 echo "Вероятность ухода: " . round($probability, 3) . PHP_EOL;
 
 // Результат
-// 
+// Вероятность ухода: 0.994
 ```
 
 </details>
@@ -187,19 +188,24 @@ $samples = [
     [20, 25.0, 800],
 ];
 
-$labels = [1, 0, 1, 0];
+$labels = ['churn', 'stay', 'churn', 'stay'];
 
 $dataset = new Labeled($samples, $labels);
 
-$classifier = new LogisticRegression(0.01, 1000);
+$classifier = new LogisticRegression();
 $classifier->train($dataset);
 
-$prediction = $classifier->predict([[5, 7, 120]]);
+$newUser = [5, 7, 120];
+$dataset = new Unlabeled([$newUser]);
+$probabilities = $classifier->proba($dataset);
 
-print_r($prediction);
+$probaRow = $probabilities[0];
+$churnProbability = $probaRow['churn'];
+
+echo 'Вероятность ухода: ' . number_format($churnProbability, 3) . PHP_EOL;
 
 // Результат
-// 
+// on 0 до 1, например 0.136 (может сильно колебаться, так как мало данных для обучения)
 ```
 
 RubixML скрывает детали оптимизации, но концептуально это та же самая модель: линейная комбинация признаков, сигмоида и decision boundary.
