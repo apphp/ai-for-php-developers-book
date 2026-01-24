@@ -129,11 +129,17 @@ foreach ($classCounts as $class => $count) {
 
 arsort($scores);
 print_r($scores);
+
+// Результат
+// Array (
+//     [buyer] => -1.6739764335717
+//     [browser] => -2.3671236141316
+// )
 ```
 
 Каждый признак добавляет свой вклад в итоговый логарифм вероятности.
 
-Побеждает класс с наибольшим значением.
+Побеждает класс с наибольшим значением, в нашем случае это `buyer`.
 
 #### Что здесь принципиально важно
 
@@ -211,25 +217,40 @@ print_r($scores);
 
 ```php
 use Rubix\ML\Datasets\Labeled;
+use Rubix\ML\Datasets\Unlabeled;
 use Rubix\ML\Classifiers\NaiveBayes;
 
 $samples = [
-    [1, 1],
-    [0, 1],
-    [1, 0],
-    [1, 0],
+    ['from_ads', 'has_account'],
+    ['organic_search', 'has_account'],
+    ['from_ads', 'no_account'],
+    ['from_ads', 'no_account'],
 ];
 
+// Метки классов для каждой строки
 $labels = ['buyer', 'buyer', 'browser', 'browser'];
 
+// Собираем обучающую выборку.
 $dataset = new Labeled($samples, $labels);
 
+// Модель наивного Байеса из RubixML
 $model = new NaiveBayes();
 $model->train($dataset);
 
-$prediction = $model->predict([[1, 1]]);
+// Классификация нового объекта
+$sample = ['from_ads', 'has_account'];
+
+$dataset = new Unlabeled([$sample]);
+$prediction = $model->predict($dataset);
 print_r($prediction);
+
+// Результат
+// Array (
+//     [0] => buyer
+// )
 ```
+
+Как видно из резельтатов, в данном случае опять побеждает `buyer`.
 
 RubixML:
 
