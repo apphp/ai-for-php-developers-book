@@ -1,6 +1,6 @@
 {
     "name": "apphp/ai-for-php-developers-book",
-    "description": "This book will try to explain the basics of Artificial Intelligence and Machine Learning in a way that’s easy to understand.",
+    "description": "A hands-on guide for PHP developers who want to use AI and machine learning in real projects.",
     "license": "CC-BY-4.0",
     "version": "0.1.0"
 }
