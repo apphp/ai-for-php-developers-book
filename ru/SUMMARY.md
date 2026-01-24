@@ -12,6 +12,7 @@
     * [Установка с Docker](vvedenie/ekosistema-ml-v-php/nastroika-sredy-dlya-php/ustanovka-s-docker.md)
     * [Примечания](vvedenie/ekosistema-ml-v-php/nastroika-sredy-dlya-php/primechaniya.md)
 * [Как эта книга устроена](vvedenie/kak-eta-kniga-ustroena/README.md)
+  * [Лицензия и авторские права](vvedenie/kak-eta-kniga-ustroena/licenziya-i-avtorskie-prava.md)
   * [Как контрибьютить](vvedenie/kak-eta-kniga-ustroena/kak-kontribyutit.md)
   * [История изменений книги](vvedenie/kak-eta-kniga-ustroena/istoriya-izmenenii-knigi.md)
 * [Глоссарий](vvedenie/glossarii.md)
