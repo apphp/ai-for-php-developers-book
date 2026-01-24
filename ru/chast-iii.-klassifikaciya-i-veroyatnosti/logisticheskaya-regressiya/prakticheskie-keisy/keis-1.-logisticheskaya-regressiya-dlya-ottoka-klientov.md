@@ -164,9 +164,6 @@ $newUser = [5.0, 7.0, 120.0];
 $probability = sigmoid(dot($weights, $newUser) + $bias);
 
 echo "Вероятность ухода: " . round($probability, 3) . PHP_EOL;
-
-// Результат
-// Вероятность ухода: 0.994
 ```
 
 </details>
