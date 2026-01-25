@@ -52,9 +52,9 @@ $$
 
 Ключевой вопрос kNN – что значит "ближайший"? Ответ задаётся метрикой расстояния.
 
-#### [Евклидово расстояние](../../vvedenie/glossarii.md#evklidovo-rasstoyanie)
+#### Евклидово расстояние
 
-Самая распространённая метрика:
+[Евклидово расстояние](../../vvedenie/glossarii.md#evklidovo-rasstoyanie) - самая распространённая метрика:
 
 $$
 d(x, y) = \sqrt{\sum_{i=1}^{n} (x_i - y_i)^2}
@@ -68,9 +68,9 @@ $$
 
 <div align="left"><figure><img src="../../.gitbook/assets/16.2-euclidean-distance.png" alt="" width="563"><figcaption><p>16.2 Евклидово расстояние</p></figcaption></figure></div>
 
-#### [Манхэттенское расстояние](../../vvedenie/glossarii.md#mankhettenskoe-rasstoyanie)
+#### Манхэттенское расстояние
 
-Иногда важнее не прямая линия, а сумма перемещений по осям:
+[Манхэттенское расстояние](../../vvedenie/glossarii.md#mankhettenskoe-rasstoyanie) - это когда важнее не прямая линия, а сумма перемещений по осям:
 
 $$
 d(x, y) = \sum_{i=1}^{n} |x_i - y_i|
@@ -80,9 +80,9 @@ $$
 
 <div align="left"><figure><img src="../../.gitbook/assets/16.3-manhattan-distance.png" alt="" width="563"><figcaption><p>16.3 Манхэттенское расстояние</p></figcaption></figure></div>
 
-#### [Расстояние Минковского](../../vvedenie/glossarii.md#rasstoyanie-minkovskogo)
+#### Расстояние Минковского
 
-Обобщающая форма:
+Обобщающая форма для [расстояния Минковского](../../vvedenie/glossarii.md#minkovskogo-rasstoyanie):
 
 $$
 d(x, y) = \left( \sum_{i=1}^{n} |x_i - y_i|^p \right)^{1/p}
