@@ -62,7 +62,7 @@ foreach ($data as $row) {
 }
 ```
 
-Фактически это оценка P(C).
+Фактически это оценка $$P(C)$$.
 
 Если класс встречается чаще – он априори вероятнее.
 
@@ -114,14 +114,21 @@ $$
 ```php
 $scores = [];
 
-$totalSamples = count($data);
-
 foreach ($classCounts as $class => $count) {
-    $logProb = log($count / $totalSamples);
+    $logProb = log($count / count($data));
 
     foreach ($input as $feature => $value) {
-        $featureCount = $featureCounts[$class][$feature][$value] ?? 1;
-        $logProb += log($featureCount / $count);
+        // Логические значения становятся ключами 0/1 в PHP-массивах
+        $valueKey = (int)$value;
+
+        // Подсчитываем, как часто feature=value встречается в этом классе
+        $featureCount = $featureCounts[$class][$feature][$valueKey] ?? 0;
+        $total = $classCounts[$class];
+
+        // Добавляем логарифм P(feature=value | class) с использованием сглаживания Лапласа:
+        // (count + 1) / (total + K), где K — количество возможных значений.
+        // Здесь K=2, потому что feature — логическое значение.
+        $logProb += log(($featureCount + 1) / ($total + 2));
     }
 
     $scores[$class] = $logProb;
@@ -184,7 +191,10 @@ foreach ($data as $row) {
     $classCounts[$class] = ($classCounts[$class] ?? 0) + 1;
 
     foreach ($row as $feature => $value) {
-        if ($feature === 'class') continue;
+        if ($feature === 'class') {
+            continue;
+        }
+        
         $featureCounts[$class][$feature][$value] =
             ($featureCounts[$class][$feature][$value] ?? 0) + 1;
     }
@@ -199,9 +209,17 @@ foreach ($classCounts as $class => $count) {
     $logProb = log($count / count($data));
 
     foreach ($input as $feature => $value) {
-        $featureCount = $featureCounts[$class][$feature][$value] ?? 1;
+        // Логические значения становятся ключами 0/1 в PHP-массивах
+        $valueKey = (int)$value;
+
+        // Подсчитываем, как часто feature=value встречается в этом классе
+        $featureCount = $featureCounts[$class][$feature][$valueKey] ?? 0;
         $total = $classCounts[$class];
-        $logProb += log($featureCount / $total);
+
+        // Добавляем логарифм P(feature=value | class) с использованием сглаживания Лапласа:
+        // (count + 1) / (total + K), где K — количество возможных значений.
+        // Здесь K=2, потому что feature — логическое значение.
+        $logProb += log(($featureCount + 1) / ($total + 2));
     }
 
     $scores[$class] = $logProb;
