@@ -68,7 +68,7 @@ $$
 
 <div align="left"><figure><img src="../../.gitbook/assets/16.2-euclidean-distance.png" alt="" width="563"><figcaption><p>16.2 Евклидово расстояние</p></figcaption></figure></div>
 
-#### Манхэттенское расстояние
+#### [Манхэттенское расстояние](../../vvedenie/glossarii.md#mankhettenskoe-rasstoyanie)
 
 Иногда важнее не прямая линия, а сумма перемещений по осям:
 
@@ -80,7 +80,7 @@ $$
 
 <div align="left"><figure><img src="../../.gitbook/assets/16.3-manhattan-distance.png" alt="" width="563"><figcaption><p>16.3 Манхэттенское расстояние</p></figcaption></figure></div>
 
-#### Расстояние Минковского
+#### [Расстояние Минковского](../../vvedenie/glossarii.md#rasstoyanie-minkovskogo)
 
 Обобщающая форма:
 
