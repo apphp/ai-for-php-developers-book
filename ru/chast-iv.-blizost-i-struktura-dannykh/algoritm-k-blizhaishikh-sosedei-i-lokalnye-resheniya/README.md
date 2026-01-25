@@ -129,7 +129,7 @@ $$
 
 <div align="left"><figure><img src="../../.gitbook/assets/16.6-knn-bias-variance.png" alt="" width="563"><figcaption><p>16.6 Сравнение границ принятия решений kNN</p></figcaption></figure></div>
 
-kNN – наглядный пример классического компромисса bias–variance.
+kNN – наглядный пример классического компромисса [bias–variance](../../vvedenie/glossarii.md#bias-variance-tradeoff).
 
 ### Размерность и проклятие размерности
 
