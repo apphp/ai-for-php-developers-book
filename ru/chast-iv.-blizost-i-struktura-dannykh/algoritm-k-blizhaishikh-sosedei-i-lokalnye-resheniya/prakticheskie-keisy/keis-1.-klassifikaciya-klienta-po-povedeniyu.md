@@ -89,6 +89,20 @@ usort($distances, fn($a, $b) => $a['distance'] <=> $b['distance']);
 $neighbors = array_slice($distances, 0, $k);
 
 // Результат
+// Array (
+//  [0] => Array (
+//          [distance] => 1.0440306508911
+//          [label] => engaged
+//      )
+//  [1] => Array (
+//          [distance] => 2.2360679774998
+//          [label] => engaged
+//      )
+//  [2] => Array (
+//         [distance] => 4.2720018726588
+//         [label] => engaged
+//      )
+//  )
 ```
 
 После сортировки по расстоянию в `$neighbors` остаются три пользователя, которые ближе всего к нашему запросу.
@@ -111,11 +125,62 @@ $prediction = array_key_first($votes);
 echo "Prediction: $prediction";
 
 // Результат
+// Prediction: engaged
 ```
 
 В реальных задачах отдельно обрабатывают ситуацию равенства голосов, например с помощью взвешивания по расстоянию – в нашем примере мы этот этап пропускаем. Далее, каждый сосед "голосует" за свой класс. Побеждает тот класс, который встречается чаще всего среди ближайших соседей.&#x20;
 
 В нашем случае большинство (два из трёх) ближайших пользователей относятся к классу _engaged_, поэтому именно его мы и получаем в качестве предсказания.
+
+<details>
+
+<summary>Кейс 1. Полный пример кода на чистом PHP</summary>
+
+```php
+$dataset = [
+    [[5, 2.1], 'casual'],
+    [[3, 1.8], 'casual'],
+    [[10, 6.5], 'engaged'],
+    [[12, 7.0], 'engaged'],
+    [[9, 5.8], 'engaged'],
+];
+
+// Новый пользователь
+$query = [8, 5.5]; 
+$k = 3;
+
+function euclideanDistance(array $a, array $b): float {
+    $sum = 0.0;
+    foreach ($a as $i => $value) {
+        $sum += ($value - $b[$i]) ** 2;
+    }
+    return sqrt($sum);
+}
+
+$distances = [];
+
+foreach ($dataset as [$point, $label]) {
+    $distances[] = [
+        'distance' => euclideanDistance($point, $query),
+        'label' => $label
+    ];
+}
+
+usort($distances, fn($a, $b) => $a['distance'] <=> $b['distance']);
+$neighbors = array_slice($distances, 0, $k);
+
+$votes = [];
+foreach ($neighbors as $neighbor) {
+    $votes[$neighbor['label']] = ($votes[$neighbor['label']] ?? 0) + 1;
+}
+
+arsort($votes);
+$prediction = array_key_first($votes);
+
+echo "Prediction: $prediction";
+```
+
+</details>
 
 #### Почему решение является локальным
 
