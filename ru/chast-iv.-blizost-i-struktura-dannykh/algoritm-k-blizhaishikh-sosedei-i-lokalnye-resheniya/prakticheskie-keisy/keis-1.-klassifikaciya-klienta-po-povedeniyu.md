@@ -75,8 +75,7 @@ function euclideanDistance(array $a, array $b): float {
 
 Теперь для нового пользователя мы считаем расстояние до каждого элемента обучающего набора:
 
-```php
-$distances = [];
+<pre class="language-php"><code class="lang-php">$distances = [];
 
 foreach ($dataset as [$point, $label]) {
     $distances[] = [
@@ -85,9 +84,9 @@ foreach ($dataset as [$point, $label]) {
     ];
 }
 
-usort($distances, fn($a, $b) => $a['distance'] <=> $b['distance']);
-$neighbors = array_slice($distances, 0, $k);
-
+usort($distances, fn($a, $b) => $a['distance'] &#x3C;=> $b['distance']);
+<strong>$neighbors = array_slice($distances, 0, $k);
+</strong>
 // Результат
 // Array (
 //  [0] => Array (
@@ -103,7 +102,7 @@ $neighbors = array_slice($distances, 0, $k);
 //         [label] => engaged
 //      )
 //  )
-```
+</code></pre>
 
 После сортировки по расстоянию в `$neighbors` остаются три пользователя, которые ближе всего к нашему запросу.
 
@@ -205,3 +204,7 @@ echo "Prediction: $prediction";
 Поняв этот пример, вы уже интуитивно сможете понять, как работают более сложные алгоритмы, которые тоже опираются на понятия близости, соседства и локальной структуры данных – просто делают это менее явно.
 
 В следующих кейсах мы расширим эту идею на регрессию и посмотрим, как тот же самый принцип реализуется для неё.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-4/k-nearest-neighbors-algorithm-and-local-solutions) для его запуска.
+{% endhint %}
