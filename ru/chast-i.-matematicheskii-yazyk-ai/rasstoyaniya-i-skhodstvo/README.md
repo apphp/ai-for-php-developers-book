@@ -8,7 +8,7 @@ description: Евклидово расстояние, dot product, cosine simila
 
 Чтобы формализовать такие рассуждения, нам нужны меры расстояния и меры сходства. В математике и ML это не абстрактные термины, а конкретные функции, которые принимают два вектора и возвращают число. По этому числу алгоритм и принимает решения.
 
-В этой главе мы разберем три ключевых инструмента: [евклидово расстояние](../../vvedenie/glossarii.md#evklidovo-rasstoyanie), [скалярное произведение](../../vvedenie/glossarii.md#dot-product-skalyarnoe-proizvedenie) (dot product) и [косинусное сходство](../../vvedenie/glossarii.md#cosine-similarity-kosinusnoe-skhodstvo) (cosine similarity). Они лежат в основе k-NN, линейных моделей, рекомендательных систем, поиска по текстам и эмбеддингов.
+В этой главе мы разберем три ключевых инструмента: [евклидово расстояние](../../vvedenie/glossarii.md#evklidovo-rasstoyanie), [скалярное произведение](../../vvedenie/glossarii.md#dot-product-skalyarnoe-proizvedenie) (dot product) и [косинусное сходство](../../vvedenie/glossarii.md#cosine-similarity-kosinusnoe-skhodstvo) (cosine similarity). Они лежат в основе [k-NN](../../vvedenie/glossarii.md#k-nn-k-nearest-neighbors-k-blizhaishikh-sosedei), линейных моделей, рекомендательных систем, поиска по текстам и [эмбеддингов](../../vvedenie/glossarii.md#embeddings-embeddingi).
 
 ### Евклидово расстояние – "обычная" геометрия
 
