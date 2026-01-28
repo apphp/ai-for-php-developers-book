@@ -92,3 +92,4 @@
 ## ЧАСТЬ V. ТЕКСТ КАК МАТЕМАТИКА
 
 * [Почему слова превращаются в числа](chast-v.-tekst-kak-matematika/pochemu-slova-prevrashayutsya-v-chisla.md)
+* [Bag of Words и TF–IDF](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf.md)
