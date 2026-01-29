@@ -121,7 +121,187 @@ function split(array $data, int $featureIndex, float $threshold): array {
 
 Перебирая возможные пороги и вычисляя information gain, дерево фактически перебирает возможные вопросы и выбирает самый информативный.
 
-На этом этапе уже хорошо видно ключевую идею decision tree: алгоритм не подбирает непрерывные коэффициенты и не использует градиентную оптимизацию, а систематически перебирает возможные вопросы к данным и оценивает их пользу..
+#### Пример использования кода
+
+Теперь посмотрим, как этот код применяется на практике.\
+Наша цель – найти лучший первый вопрос дерева решений, то есть такое разбиение данных, которое максимальнее всего уменьшает неопределённость.
+
+Для простоты:
+
+* возьмём один признак – `visits`
+* переберём возможные пороги
+* выберем разбиение с максимальным _information gain_
+
+**Шаг 1. Выбор признака и возможных порогов**
+
+Мы будем использовать признак `visits` (индекс `0`).\
+В качестве кандидатов на пороги возьмём все уникальные значения этого признака.
+
+```php
+$featureIndex = 0; // visits
+
+$values = array_unique(array_column($data, $featureIndex));
+sort($values);
+```
+
+Идея простая: дерево перебирает возможные вопросы вида "**visits < threshold?"** и смотрит, какой из них лучше всего упорядочивает данные.
+
+**Шаг 2. Перебор разбиений и подсчёт information gain**
+
+Теперь для каждого порога:
+
+1. разбиваем данные на две части
+2. считаем information gain
+3. запоминаем лучшее разбиение
+
+```php
+$bestGain = 0.0;
+$bestThreshold = null;
+$bestSplit = null;
+
+foreach ($values as $threshold) {
+    [$left, $right] = split($data, $featureIndex, $threshold);
+
+    // Пропускаем вырожденные разбиения
+    if (empty($left) || empty($right)) {
+        continue;
+    }
+
+    $gain = informationGain($data, $left, $right);
+
+    if ($gain > $bestGain) {
+        $bestGain = $gain;
+        $bestThreshold = $threshold;
+        $bestSplit = [$left, $right];
+    }
+}
+```
+
+На этом этапе уже хорошо видно ключевую идею decision tree: алгоритм не подбирает непрерывные коэффициенты и не использует градиентную оптимизацию, а систематически перебирает возможные вопросы к данным и оценивает их пользу.
+
+**Шаг 3. Результат — первый вопрос дерева**
+
+Выведем результат:
+
+```php
+echo "Лучшее разбиение:\n";
+echo "Признак: visits\n";
+echo "Порог: $bestThreshold\n";
+echo "Information Gain: $bestGain\n\n";
+
+echo "Левая ветка:\n";
+print_r($bestSplit[0]);
+
+echo "\nПравая ветка:\n";
+print_r($bestSplit[1]);
+```
+
+Интерпретация результата будет выглядеть так:
+
+> Если visits < threshold — идём в левую ветку, иначе в правую.
+
+Это и есть **первый узел дерева решений**.
+
+<details>
+
+<summary>Кейс 1. Полный пример кода на чистом PHP</summary>
+
+```php
+$data = [
+    [5, 10, 'active'],
+    [7, 15, 'active'],
+    [1, 2, 'passive'],
+    [2, 3, 'passive'],
+    [6, 8, 'active'],
+    [3, 4, 'passive'],
+];
+
+function entropy(array $labels): float {
+    $counts = array_count_values($labels);
+    $total = count($labels);
+
+    $entropy = 0.0;
+    foreach ($counts as $count) {
+        $p = $count / $total;
+        $entropy -= $p * log($p, 2);
+    }
+
+    return $entropy;
+}
+
+function informationGain(array $parent, array $left, array $right): float {
+    $parentLabels = array_column($parent, 2);
+    $leftLabels   = array_column($left, 2);
+    $rightLabels  = array_column($right, 2);
+
+    $hParent = entropy($parentLabels);
+    $hLeft   = entropy($leftLabels);
+    $hRight  = entropy($rightLabels);
+
+    $total = count($parent);
+
+    $weighted = (count($left) / $total) * $hLeft
+              + (count($right) / $total) * $hRight;
+
+    return $hParent - $weighted;
+}
+
+function split(array $data, int $featureIndex, float $threshold): array {
+    $left = [];
+    $right = [];
+
+    foreach ($data as $row) {
+        if ($row[$featureIndex] < $threshold) {
+            $left[] = $row;
+        } else {
+            $right[] = $row;
+        }
+    }
+
+    return [$left, $right];
+}
+
+// Возможные признаки: 0 = visits, 1 = time
+$featureIndex = 0;
+
+// Возьмём все уникальные значения признака как кандидаты на пороги
+$values = array_unique(array_column($data, $featureIndex));
+sort($values);
+
+$bestGain = 0.0;
+$bestThreshold = null;
+$bestSplit = null;
+
+foreach ($values as $threshold) {
+    [$left, $right] = split($data, $featureIndex, $threshold);
+
+    // пропускаем вырожденные разбиения
+    if (empty($left) || empty($right)) {
+        continue;
+    }
+
+    $gain = informationGain($data, $left, $right);
+
+    if ($gain > $bestGain) {
+        $bestGain = $gain;
+        $bestThreshold = $threshold;
+        $bestSplit = [$left, $right];
+    }
+}
+
+echo "Лучшее разбиение:\n";
+echo "Признак: visits\n";
+echo "Порог: $bestThreshold\n";
+echo "Information Gain: $bestGain\n\n";
+
+echo "Левая ветка:\n";
+print_r($bestSplit[0]);
+
+echo "\nПравая ветка:\n";
+print_r($bestSplit[1]);
+```
+
+</details>
 
 #### Как из этого вырастает дерево
 
@@ -131,7 +311,7 @@ function split(array $data, int $featureIndex, float $threshold): array {
 * или не будет достигнута максимальная глубина
 * или в узле не останется слишком мало объектов
 
-Даже без полной рекурсивной реализации уже видно, как формируется структура дерева и почему оно выглядит именно так, а не иначе.
+Даже без полной рекурсивной реализации уже видно, как формируется структура дерева и почему оно выглядит именно так, а не иначе. В библиотечных реализациях всё это автоматизировано и оптимизировано, но логика остаётся ровно такой же, как в этом примере.
 
 #### Что важно понять из кейса
 
