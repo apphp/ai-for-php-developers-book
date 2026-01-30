@@ -184,16 +184,32 @@ foreach ($values as $threshold) {
 Выведем результат:
 
 ```php
-echo "Лучшее разбиение:\n";
-echo "Признак: visits\n";
-echo "Порог: $bestThreshold\n";
-echo "Information Gain: $bestGain\n\n";
+echo "Лучшее разбиение:" . PHP_EOL;
+echo "Признак: visits" . PHP_EOL;
+echo "Порог: $bestThreshold" . PHP_EOL;
+echo "Information Gain: $bestGain" . PHP_EOL . PHP_EOL;
 
-echo "Левая ветка:\n";
-print_r($bestSplit[0]);
+echo "Левая ветка:" . PHP_EOL;
+echo array_to_matrix($bestSplit[0]) . PHP_EOL;
 
-echo "\nПравая ветка:\n";
-print_r($bestSplit[1]);
+echo PHP_EOL . "Правая ветка:" . PHP_EOL;
+echo array_to_matrix($bestSplit[1]);
+
+// Результат
+// Лучшее разбиение:
+// Признак: visits
+// Порог: 5
+// Information Gain: 1
+
+// Левая ветка:
+// [1, 2, passive]
+// [2, 3, passive]
+// [3, 4, passive]
+
+// Правая ветка:
+// [5, 10, active]
+// [7, 15, active]
+// [6, 8, active]
 ```
 
 Интерпретация результата будет выглядеть так:
@@ -289,16 +305,16 @@ foreach ($values as $threshold) {
     }
 }
 
-echo "Лучшее разбиение:\n";
-echo "Признак: visits\n";
-echo "Порог: $bestThreshold\n";
-echo "Information Gain: $bestGain\n\n";
+echo "Лучшее разбиение:" . PHP_EOL;
+echo "Признак: visits" . PHP_EOL;
+echo "Порог: $bestThreshold" . PHP_EOL;
+echo "Information Gain: $bestGain" . PHP_EOL . PHP_EOL;
 
-echo "Левая ветка:\n";
-print_r($bestSplit[0]);
+echo "Левая ветка:" . PHP_EOL;
+echo array_to_matrix($bestSplit[0]) . PHP_EOL;
 
-echo "\nПравая ветка:\n";
-print_r($bestSplit[1]);
+echo PHP_EOL . "Правая ветка:" . PHP_EOL;
+echo array_to_matrix($bestSplit[1]);
 ```
 
 </details>
