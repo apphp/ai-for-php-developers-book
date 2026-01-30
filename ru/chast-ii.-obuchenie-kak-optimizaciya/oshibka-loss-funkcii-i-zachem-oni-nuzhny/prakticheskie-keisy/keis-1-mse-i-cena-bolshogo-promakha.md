@@ -78,7 +78,7 @@ $yHat[] = 130;
 Ошибка здесь огромная. Посчитаем MSE снова:
 
 ```php
-echo 'MSE with outlier: ' . mse($y, $yHat)ж
+echo 'MSE with outlier: ' . mse($y, $yHat)
 
 // Результат:
 // MSE with outlier: 4820

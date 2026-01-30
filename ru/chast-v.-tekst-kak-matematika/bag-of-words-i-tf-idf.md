@@ -392,11 +392,11 @@ foreach ($tokenized as $doc) {
 
 ```php
 foreach ($tfidfVectors as $i => $vector) {
-    echo "Документ " . ($i + 1) . ":\n";
+    echo "Документ " . ($i + 1) . ":" . PHP_EOL;
     foreach ($vector as $word => $value) {
-        echo "  $word => " . round($value, 3) . "\n";
+        echo "  $word => " . round($value, 3) . PHP_EOL;
     }
-    echo "\n";
+    echo PHP_EOL;
 }
 ```
 
