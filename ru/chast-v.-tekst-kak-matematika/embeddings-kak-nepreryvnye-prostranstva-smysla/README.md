@@ -20,11 +20,7 @@ $$
 
 Где $$d$$ – размерность пространства, а каждая координата не имеет отдельного человеческого смысла. Важно не значение координат, а геометрические отношения между векторами.
 
-\[IMAGE: embedding\_space\_overview]
-
-\[IMAGE\_PROMPT]
-
-A clean conceptual illustration of a high-dimensional embedding space projected into 2D: points labeled “cat”, “dog”, “tiger” close together, “car”, “bus” in another cluster, “apple (fruit)” separated from “apple (company)”. Minimalistic, educational style, white background.
+<div align="left"><figure><img src="../../.gitbook/assets/20.1-embedding-space-overview.png" alt="" width="563"><figcaption><p>20.1 Обзор embedding-пространства</p></figcaption></figure></div>
 
 ### Геометрия вместо логики
 
@@ -46,11 +42,7 @@ $$
 
 Важно заметить: нас интересует угол между векторами, а не их длина. Длина вектора часто нормализуется и перестает нести смысловую нагрузку.
 
-\[IMAGE: cosine\_similarity]
-
-\[IMAGE\_PROMPT]
-
-Simple 2D vector diagram showing two vectors from the origin with a small angle (high cosine similarity) and two vectors with a large angle (low cosine similarity). Clean math-style illustration.
+<div align="left"><figure><img src="../../.gitbook/assets/20.2-cosine-similarity.png" alt="" width="563"><figcaption><p>20.2 Косинусное сходство</p></figcaption></figure></div>
 
 ### Почему embeddings работают
 
@@ -102,11 +94,7 @@ $$
 
 Это не трюк и не заранее запрограммированное правило. Модель просто выучила, что определенные направления в пространстве соответствуют устойчивым семантическим сдвигам: пол, время, степень, роль.
 
-\[IMAGE: semantic\_analogy]
-
-\[IMAGE\_PROMPT]
-
-2D embedding analogy diagram: king to queen vector parallel to man to woman vector. Minimalistic arrows and labels, educational.
+<div align="left"><figure><img src="../../.gitbook/assets/20.3-semantic-analogy.png" alt="" width="563"><figcaption><p>20.3 Семантическая Аналогия</p></figcaption></figure></div>
 
 Важно понимать: embeddings не хранят знания в виде фактов. Они хранят геометрию отношений.
 
@@ -128,11 +116,7 @@ $$
 
 Где $$\vec{q}$$  – embedding запроса, а $$\vec{d}$$  – embedding документа.
 
-\[IMAGE: semantic\_search\_pipeline]
-
-\[IMAGE\_PROMPT]
-
-Pipeline diagram: user query → embedding model → vector; document corpus → embeddings → vector database; similarity search → ranked results. Clean flat design.
+<div align="left"><figure><img src="../../.gitbook/assets/20.4-semantic-search-pipeline.png" alt="" width="563"><figcaption><p>20.4 Семантический конвейер поиска</p></figcaption></figure></div>
 
 ### Почему semantic search лучше keyword search
 
