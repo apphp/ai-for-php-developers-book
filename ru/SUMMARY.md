@@ -100,3 +100,4 @@
     * [Кейс 4. Детектор «спама» в формах обратной связи (чистый PHP)](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf/prakticheskie-keisy/keis-4.-detektor-spama-v-formakh-obratnoi-svyazi-chistyi-php.md)
     * [Кейс 5. Объяснимый поиск "почему этот документ?" (чистый PHP)](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf/prakticheskie-keisy/keis-5.-obyasnimyi-poisk-pochemu-etot-dokument-chistyi-php.md)
     * [Кейс 6. Сравнение: Bag of Words vs TF–IDF на одном примере](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf/prakticheskie-keisy/keis-6.-sravnenie-bag-of-words-vs-tf-idf-na-odnom-primere.md)
+* [Embeddings как непрерывные пространства смысла](chast-v.-tekst-kak-matematika/embeddings-kak-nepreryvnye-prostranstva-smysla.md)
