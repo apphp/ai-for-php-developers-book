@@ -92,4 +92,11 @@
 ## ЧАСТЬ V. ТЕКСТ КАК МАТЕМАТИКА
 
 * [Почему слова превращаются в числа](chast-v.-tekst-kak-matematika/pochemu-slova-prevrashayutsya-v-chisla.md)
-* [Bag of Words и TF–IDF](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf.md)
+* [Bag of Words и TF–IDF](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf/README.md)
+  * [Практические кейсы](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf/prakticheskie-keisy/README.md)
+    * [Кейс 1. Поиск похожих документов (чистый PHP)](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf/prakticheskie-keisy/keis-1.-poisk-pokhozhikh-dokumentov-chistyi-php.md)
+    * [Кейс 2. Классификация отзывов: "положительный / отрицательный" (RubixML)](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf/prakticheskie-keisy/keis-2.-klassifikaciya-otzyvov-polozhitelnyi-otricatelnyi-rubixml.md)
+    * [Кейс 3. Автоматическая категоризация статей (RubixML)](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf/prakticheskie-keisy/keis-3.-avtomaticheskaya-kategorizaciya-statei-rubixml.md)
+    * [Кейс 4. Детектор «спама» в формах обратной связи (чистый PHP)](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf/prakticheskie-keisy/keis-4.-detektor-spama-v-formakh-obratnoi-svyazi-chistyi-php.md)
+    * [Кейс 5. Объяснимый поиск "почему этот документ?" (чистый PHP)](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf/prakticheskie-keisy/keis-5.-obyasnimyi-poisk-pochemu-etot-dokument-chistyi-php.md)
+    * [Кейс 6. Сравнение: Bag of Words vs TF–IDF на одном примере](chast-v.-tekst-kak-matematika/bag-of-words-i-tf-idf/prakticheskie-keisy/keis-6.-sravnenie-bag-of-words-vs-tf-idf-na-odnom-primere.md)
