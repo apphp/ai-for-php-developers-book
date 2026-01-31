@@ -386,6 +386,101 @@ foreach ($tokenized as $doc) {
 
 Теперь `$tfidfVectors` содержит TF–IDF веса слов для каждого документа.
 
+<details>
+
+<summary>Полный пример кода для TF-IDF</summary>
+
+```php
+// Исходные документы
+$documents = [
+    'кот ест рыбу',
+    'кот любит рыбу',
+    'собака ест мясо',
+];
+
+// --------------------
+// Токенизация
+// --------------------
+function tokenize(string $text): array {
+    return explode(' ', $text);
+}
+
+$tokenized = array_map('tokenize', $documents);
+
+// --------------------
+// Построение словаря
+// --------------------
+$vocab = [];
+foreach ($tokenized as $doc) {
+    foreach ($doc as $word) {
+        $vocab[$word] = true;
+    }
+}
+$vocab = array_keys($vocab);
+
+// --------------------
+// Term Frequency (TF)
+// --------------------
+function termFrequency(array $doc): array {
+    $tf = [];
+    $length = count($doc);
+
+    foreach ($doc as $word) {
+        $tf[$word] = ($tf[$word] ?? 0) + 1;
+    }
+
+    foreach ($tf as $word => $count) {
+        $tf[$word] = $count / $length;
+    }
+
+    return $tf;
+}
+
+// --------------------
+// Document Frequency + IDF
+// --------------------
+function documentFrequency(array $tokenized): array {
+    $df = [];
+
+    foreach ($tokenized as $doc) {
+        foreach (array_unique($doc) as $word) {
+            $df[$word] = ($df[$word] ?? 0) + 1;
+        }
+    }
+
+    return $df;
+}
+
+$df = documentFrequency($tokenized);
+$N  = count($tokenized);
+
+$idf = [];
+foreach ($df as $word => $count) {
+    $idf[$word] = log($N / $count);
+}
+
+// --------------------
+// TF–IDF
+// --------------------
+function tfidf(array $tf, array $idf): array {
+    $vector = [];
+
+    foreach ($tf as $word => $value) {
+        $vector[$word] = $value * ($idf[$word] ?? 0);
+    }
+
+    return $vector;
+}
+
+$tfidfVectors = [];
+foreach ($tokenized as $doc) {
+    $tf = termFrequency($doc);
+    $tfidfVectors[] = tfidf($tf, $idf);
+}
+```
+
+</details>
+
 #### Пример использования и результат
 
 Добавим простой вывод результатов, чтобы увидеть реальные числа:
@@ -404,18 +499,18 @@ foreach ($tfidfVectors as $i => $vector) {
 
 ```
 Документ 1:
-  кот => 0.059
-  ест => 0.059
-  рыбу => 0.059
+  кот => 0.135
+  ест => 0.135
+  рыбу => 0.135
 
 Документ 2:
-  кот => 0.059
+  кот => 0.135
   любит => 0.366
-  рыбу => 0.059
+  рыбу => 0.135
 
 Документ 3:
   собака => 0.366
-  ест => 0.059
+  ест => 0.135
   мясо => 0.366
 ```
 
