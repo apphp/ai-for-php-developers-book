@@ -95,7 +95,7 @@ Section statuses
 
     _Geometry of meaning and semantic search._
 21. ⬜ Transformers and context: from static vectors to understanding meaning\
-    Why the word “key” has different vectors. Self-attention without formulas.
+    Why the word "key" has different vectors. Self-attention without formulas.
 22. ⬜ Practice: embeddings in PHP using transformers\
     Inference instead of training. transformers-php as an engineering tool.
 23. ⬜ RAG: Retrieval-Augmented Generation as an engineering system\
