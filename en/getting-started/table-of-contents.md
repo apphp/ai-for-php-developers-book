@@ -22,12 +22,12 @@ Section statuses
 
 1. 🟩 **Introduction**\
    &#xNAN;_&#x41;I for PHP developers: intuitive, mathematically honest, and practical._
-2.  🟩 Why a PHP developer needs AI
+2.  🟩 **Why a PHP developer needs AI**
 
     _Real use cases, expectations, and limitations._
-3. 🟨 The ML ecosystem in PHP\
+3. 🟩 **The ML ecosystem in PHP**\
    &#xNAN;_&#x41;n overview of the PHP ecosystem for machine learning and scientific computing._
-   1. Environment setup for PHP
+   1. 🟨 Environment setup for PHP
 4. ⬜ How this book is structured
    1. License and copyright
    2. How to contribute
