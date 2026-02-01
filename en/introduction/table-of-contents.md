@@ -1,12 +1,21 @@
 # Table of Contents
 
 {% hint style="info" %}
-This book is being written publicly and is still a work in progress.
+**Book development status**
 
-Section statuses:
+The book is being written publicly and is in active development.
 
-🚧 – empty for now\
-🟡 – in progress
+**Overall progress**
+
+Readines&#x73;**:** 32% (65%)
+
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟨🟨🟨🟨🟨🟨🟨🟨🟩🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+
+Section statuses
+
+🟩 - ready\
+🟨 - at work\
+⬜ - not started
 {% endhint %}
 
 #### Introduction
