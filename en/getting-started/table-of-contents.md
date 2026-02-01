@@ -18,11 +18,11 @@ Section statuses
 ⬜ - not started
 {% endhint %}
 
-#### Introduction
+#### Getting Started
 
-1. 🟩 **Preface**\
+1. 🟩 **Introduction**\
    &#xNAN;_&#x41;I for PHP developers: intuitive, mathematically honest, and practical._
-2.  ⬜ Why a PHP developer needs AI
+2.  🟩 Why a PHP developer needs AI
 
     _Real use cases, expectations, and limitations._
 3. ⬜ The ML ecosystem in PHP\
