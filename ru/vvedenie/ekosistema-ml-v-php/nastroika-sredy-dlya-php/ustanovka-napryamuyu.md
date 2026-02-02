@@ -4,13 +4,13 @@
 
 Ниже вы найдете подробные инструкции по подготовке и настройке среды для PHP непосредственно на вашем компьютере.
 
-#### 1. Установка PHP 8.4
+#### 1. Установка PHP 8.5
 
-(последняя стабильная версия по состоянию на январь 2025 г.)
+(последняя стабильная версия по состоянию на январь 2026 г.)
 
 **Для Windows:**
 
-1. Загрузите последнюю версию PHP 8.4 с официального сайта PHP ([https://windows.php.net/download/](https://windows.php.net/download/))
+1. Загрузите последнюю версию PHP 8.5 с официального сайта PHP ([https://windows.php.net/download/](https://windows.php.net/download/))
 2. Распакуйте ZIP-файл в каталог (например, `C:\php`)
 3. Добавьте каталог PHP в переменную среды PATH вашей системы
 4. Переименуйте `php.ini-development` в `php.ini` в каталоге PHP
@@ -18,8 +18,8 @@
 **Для macOS:**
 
 ```bash
-brew install php@8.4
-echo 'export PATH="/usr/local/opt/php@8.4/bin:$PATH"' >> ~/.zshrc
+brew install php@8.5
+echo 'export PATH="/usr/local/opt/php@8.5/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
@@ -30,7 +30,7 @@ sudo apt update
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 sudo apt update
-sudo apt install php8.4 php8.4-cli php8.4-common
+sudo apt install php8.5 php8.5-cli php8.5-common
 ```
 
 #### 2. Настройка PHP для оптимальной производительности
@@ -52,8 +52,8 @@ opcache.memory_consumption = 128
 
 ```bash
 # Для Ubuntu/Debian
-sudo apt install apache2 libapache2-mod-php8.4
-sudo a2enmod php8.4
+sudo apt install apache2 libapache2-mod-php8.5
+sudo a2enmod php8.5
 sudo systemctl restart apache2
 ```
 
@@ -61,16 +61,16 @@ sudo systemctl restart apache2
 
 ```bash
 # Для Ubuntu/Debian
-sudo apt install nginx php8.4-fpm
-sudo systemctl start php8.4-fpm
-sudo systemctl enable php8.4-fpm
+sudo apt install nginx php8.5-fpm
+sudo systemctl start php8.5-fpm
+sudo systemctl enable php8.5-fpm
 ```
 
 Настройте Nginx для работы с PHP-FPM (отредактируйте `/etc/nginx/sites-available/default`):
 
 ```nginx
 location ~ \.php$ {
-    fastcgi_pass unix:/var/run/php/php8.4-fpm.sock;
+    fastcgi_pass unix:/var/run/php/php8.5-fpm.sock;
     fastcgi_index index.php;
     include fastcgi_params;
 }
@@ -79,7 +79,7 @@ location ~ \.php$ {
 #### 4. Установка необходимых расширений PHP для машинного обучения
 
 ```bash
-sudo apt install php8.4-xml php8.4-mbstring php8.4-curl php8.4-gd php8.4-zip php8.4-mysql php8.4-bcmath
+sudo apt install php8.5-xml php8.5-mbstring php8.5-curl php8.5-gd php8.5-zip php8.5-mysql php8.5-bcmath
 ```
 
 #### 5. Настройка Composer (менеджера пакетов)
@@ -118,6 +118,8 @@ git config --global user.email "your.email@example.com"
 
 #### 9. Настройка системы баз данных (MySQL)
 
+Это опциональная настройка.
+
 ```bash
 sudo apt install mysql-server
 sudo mysql_secure_installation
@@ -126,7 +128,7 @@ sudo mysql_secure_installation
 Настройте PHP для работы с MySQL:
 
 ```bash
-sudo apt install php8.4-mysql
+sudo apt install php8.5-mysql
 ```
 
 #### 10. Настройка виртуальной среды
