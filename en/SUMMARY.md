@@ -11,3 +11,4 @@
     * [Direct installation](getting-started/the-ml-ecosystem-in-php/environment-setup-for-php/direct-installation.md)
     * [Installation with Docker](getting-started/the-ml-ecosystem-in-php/environment-setup-for-php/installation-with-docker.md)
     * [Notes](getting-started/the-ml-ecosystem-in-php/environment-setup-for-php/notes.md)
+* [How this book is structured](getting-started/how-this-book-is-structured.md)

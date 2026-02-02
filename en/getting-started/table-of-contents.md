@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 6% (9%)
+Readines&#x73;**:** 9% (12%)
 
-🟩🟩🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -27,8 +27,8 @@ Section statuses
     _Real use cases, expectations, and limitations._
 3. 🟩 **The ML ecosystem in PHP**\
    &#xNAN;_&#x41;n overview of the PHP ecosystem for machine learning and scientific computing._
-   1. 🟨 Environment setup for PHP
-4. ⬜ How this book is structured
+   1. Environment setup for PHP
+4. 🟨 How this book is structured
    1. License and copyright
    2. How to contribute
    3. Book change history

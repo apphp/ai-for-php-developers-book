@@ -1,6 +1,6 @@
 # Notes
 
-### Additional Notes
+#### Additional Notes
 
 **Ready-to-Use Environment**
 
@@ -10,7 +10,7 @@ You can install a ready-made Docker environment with examples:\
 You can also run all examples from the book directly on my website:\
 [https://aiwithphp.org/books/ai-for-php-developers/examples/](https://aiwithphp.org/books/ai-for-php-developers/examples/)
 
-#### **Additional Notes on PHP-ML and Rubix ML**
+**Additional Notes on PHP-ML and Rubix ML**
 
 1. PHP-ML:
    1. Provides a wide range of machine learning algorithms and preprocessing tools.
