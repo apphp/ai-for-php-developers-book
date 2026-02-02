@@ -110,3 +110,8 @@
     * [Кейс 6. Поиск по событиям и логам (очень нужный кейс)](chast-v.-tekst-kak-matematika/embeddings-kak-nepreryvnye-prostranstva-smysla/prakticheskie-keisy/keis-6.-poisk-po-sobytiyam-i-logam-ochen-nuzhnyi-keis.md)
     * [Кейс 7. Почему embeddings лучше правил](chast-v.-tekst-kak-matematika/embeddings-kak-nepreryvnye-prostranstva-smysla/prakticheskie-keisy/keis-7.-pochemu-embeddings-luchshe-pravil.md)
     * [Кейс 8. Embeddings как интерфейс между человеком и системой](chast-v.-tekst-kak-matematika/embeddings-kak-nepreryvnye-prostranstva-smysla/prakticheskie-keisy/keis-8.-embeddings-kak-interfeis-mezhdu-chelovekom-i-sistemoi.md)
+* [Трансформеры и контекст: от статических векторов к пониманию смысла](chast-v.-tekst-kak-matematika/transformery-i-kontekst-ot-staticheskikh-vektorov-k-ponimaniyu-smysla/README.md)
+  * [Практические кейсы](chast-v.-tekst-kak-matematika/transformery-i-kontekst-ot-staticheskikh-vektorov-k-ponimaniyu-smysla/prakticheskie-keisy/README.md)
+    * [Кейс 1. Один термин – разные смыслы (контекстные эмбеддинги предложений)](chast-v.-tekst-kak-matematika/transformery-i-kontekst-ot-staticheskikh-vektorov-k-ponimaniyu-smysla/prakticheskie-keisy/keis-1.-odin-termin-raznye-smysly-kontekstnye-embeddingi-predlozhenii.md)
+    * [Кейс 2. Длинный контекст важнее соседних слов](chast-v.-tekst-kak-matematika/transformery-i-kontekst-ot-staticheskikh-vektorov-k-ponimaniyu-smysla/prakticheskie-keisy/keis-2.-dlinnyi-kontekst-vazhnee-sosednikh-slov.md)
+    * [Кейс 3. Attention как основа поиска по смыслу (минимальный поиск)](chast-v.-tekst-kak-matematika/transformery-i-kontekst-ot-staticheskikh-vektorov-k-ponimaniyu-smysla/prakticheskie-keisy/keis-3.-attention-kak-osnova-poiska-po-smyslu-minimalnyi-poisk.md)
