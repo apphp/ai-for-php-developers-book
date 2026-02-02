@@ -1,8 +1,8 @@
 # Примечания
 
-## Дополнительные примечания
+#### Дополнительные примечания
 
-#### Готовая среда использования
+**Готовая среда использования**
 
 Вы можете установить готовую среду Docker с примерами:\
 [https://github.com/apphp/ai-for-php-developers-examples](https://github.com/apphp/ai-for-php-developers-examples)
@@ -10,7 +10,7 @@
 Вы также можете запускать все примеры из книги напрямую на моём сайте:\
 [https://aiwithphp.org/books/ai-for-php-developers/examples/](https://aiwithphp.org/books/ai-for-php-developers/examples/)
 
-#### Дополнительные примечания о PHP-ML и Rubix ML
+**Дополнительные примечания о PHP-ML и Rubix ML**
 
 1. PHP-ML:
    1. Предоставляет широкий спектр алгоритмов машинного обучения и инструментов предварительной обработки.
