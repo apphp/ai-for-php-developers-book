@@ -116,7 +116,9 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
-**9. Database System Setup (MySQL - if needed)**
+**9. Database System Setup (MySQL)**
+
+This is an optional setting.
 
 ```bash
 sudo apt install mysql-server
