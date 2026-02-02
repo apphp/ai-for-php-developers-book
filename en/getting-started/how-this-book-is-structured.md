@@ -4,7 +4,7 @@ In this book, I deliberately use professional jargon and terms from the fields o
 
 > Throughout the book, decimal notation with a dot as the decimal separator is used, as is customary in international scientific, technical, and programming practice.
 
-#### What This Book Covers
+### What This Book Covers
 
 The text is written from an engineering perspective. There will be no academic mathematics for the sake of mathematics, and no abstract examples detached from real-world problems (well, almost none). We will gradually break down how machine learning works, starting from the most basic ideas and moving toward modern approaches such as embeddings and attention.
 
@@ -28,7 +28,7 @@ All examples will be:
 * focused on real backend tasks
 * explained from an engineering point of view
 
-#### Who This Book Is Especially For
+### Who This Book Is Especially For
 
 * PHP developers who want to understand AI, not just use it
 * Team leads and architects making technical decisions
