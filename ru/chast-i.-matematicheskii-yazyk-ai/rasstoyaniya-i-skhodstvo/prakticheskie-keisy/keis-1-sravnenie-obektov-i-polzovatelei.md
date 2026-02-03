@@ -180,7 +180,7 @@ $score = dotProduct($userANorm, $item);
 
 Такая оценка (score) – это основа рекомендательных систем:
 
-* матричная факторизация
+* [матричная факторизация](../../../vvedenie/glossarii.md#matrichnaya-faktorizaciya)
 * embeddings пользователей и товаров
 * нейросетевые рекомендатели
 
