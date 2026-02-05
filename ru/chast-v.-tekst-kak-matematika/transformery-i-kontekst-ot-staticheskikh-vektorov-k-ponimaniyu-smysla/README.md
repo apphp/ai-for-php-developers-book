@@ -44,11 +44,7 @@ description: Почему слово "ключ" имеет разные вект
 
 Важно, что контекст – это не только ближайшие слова. Self-attention позволяет слову учитывать информацию из любой части предложения, даже если между ними десятки токенов. Именно это принципиально отличает трансформеры от более ранних подходов, где влияние далёких слов быстро затухает.
 
-\[IMAGE: контекстные векторы слова “ключ”]
-
-Prompt для картинки:
-
-“Vector space visualization: the same word ‘ключ’ appears in two different contexts. Show two clusters: one around door, lock, metal; another around API, token, security. Minimalistic, educational style, white background.”
+<div align="left"><figure><img src="../../.gitbook/assets/21.1-contextual-vectors-of-word-key.png" alt="" width="563"><figcaption><p>21.1 Контекстные векторы слова "ключ"</p></figcaption></figure></div>
 
 ### Self-attention: идея без формул
 
@@ -100,11 +96,7 @@ $$
 
 Эта формула важна не как формула, а как идея: смысл слова – это агрегированный контекст.
 
-\[IMAGE: схема self-attention]
-
-Prompt для картинки:
-
-“Simple diagram of self-attention mechanism without formulas: words as nodes, arrows showing attention weights, thicker arrows for higher importance. Educational, flat design.”
+<div align="left"><figure><img src="../../.gitbook/assets/21.2-self-attention-scheme.png" alt="" width="563"><figcaption><p>21.2 Схема self-attention</p></figcaption></figure></div>
 
 ### Почему трансформер понимает порядок слов
 
@@ -126,6 +118,8 @@ Prompt для картинки:
 
 В итоге итоговый вектор слова – это объединение нескольких разных взглядов на контекст.
 
+<div align="left"><figure><img src="../../.gitbook/assets/21.3-multi-head.attention.png" alt="" width="563"><figcaption><p>21.3 Многоголовочное (multi-head) внимание</p></figcaption></figure></div>
+
 \[IMAGE: multi-head attention]
 
 Prompt для картинки:
@@ -136,7 +130,7 @@ Prompt для картинки:
 
 Мы не будем реализовывать настоящий трансформер на PHP – это слишком тяжёлая задача. Но идею внимания можно показать на игрушечном примере.
 
-Представим, что у нас есть слово "ключ" и три соседних слова с заранее заданной “важностью”:
+Представим, что у нас есть слово "ключ" и три соседних слова с заранее заданной "важностью":
 
 ```php
 $context = [
