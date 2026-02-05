@@ -120,12 +120,6 @@ $$
 
 <div align="left"><figure><img src="../../.gitbook/assets/21.3-multi-head.attention.png" alt="" width="563"><figcaption><p>21.3 Многоголовочное (multi-head) внимание</p></figcaption></figure></div>
 
-\[IMAGE: multi-head attention]
-
-Prompt для картинки:
-
-“Multi-head attention illustration: same sentence processed by multiple attention heads, each highlighting different connections. Clean, educational visualization.”
-
 ### Мини-пример на PHP: внимание как веса
 
 Мы не будем реализовывать настоящий трансформер на PHP – это слишком тяжёлая задача. Но идею внимания можно показать на игрушечном примере.
@@ -153,6 +147,12 @@ foreach ($context as $word => $weight) {
 }
 
 print_r($result);
+
+// Результат
+// Array (
+//    [0] => 1.42
+//    [1] => 0.84
+// )
 ```
 
 Этот код не обучается и ничего не "понимает", но он показывает сам принцип: итоговый вектор складывается из контекста с разными весами.
