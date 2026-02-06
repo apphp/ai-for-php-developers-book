@@ -174,7 +174,7 @@ tiktoken-php – это PHP-порт токенизатора OpenAI. Он ис�
 
 Если вы работаете с GPT, Claude или Gemini из PHP, эта библиотека становится практически обязательной. Она позволяет понимать реальную стоимость запросов, длину контекста и поведение модели еще до вызова API.
 
-#### **Transformers PHP**
+#### **TransformersPHP**
 
 Репозиторий: [https://github.com/CodeWithKyrian/transformers-php](https://github.com/CodeWithKyrian/transformers-php)\
 Статус: <mark style="color:green;">**активный**</mark>
@@ -200,11 +200,18 @@ Transformers PHP поддерживает типовые задачи NLP:
 Пример использования выглядит концептуально просто: вы загружаете предобученную модель и применяете ее к тексту так же, как это делали бы в Python – но уже внутри PHP-кода.
 
 ```php
-use Transformers\Pipeline;
+use function Codewithkyrian\Transformers\Pipelines\pipeline;
 
-$pipeline = Pipeline::create('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
+// Allocate a pipeline for sentiment-analysis
+$classifier = pipeline('sentiment-analysis');
 
-$embeddings = $pipeline('PHP is a pragmatic language for ML integration');
+$out = $classifier(['I love transformers!', 'I hate transformers!']);
+
+echo print_r($out, true);
+// [
+//   {'label': 'POSITIVE', 'score': 0.999808732}, 
+//   {'label': 'NEGATIVE', 'score': 0.953420998}
+// ]
 ```
 
 Результатом будет вектор эмбеддингов, который можно сохранить в базу, отправить в векторное хранилище или использовать для поиска и кластеризации.
