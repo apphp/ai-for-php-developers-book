@@ -205,13 +205,19 @@ use function Codewithkyrian\Transformers\Pipelines\pipeline;
 // Выделить конвейер для анализа настроений
 $classifier = pipeline('sentiment-analysis');
 
-$out = $classifier(['I love transformers!', 'I hate transformers!']);
-
+$out = $classifier(['I love transformers!']);
 echo print_r($out, true);
-// [
-//   {'label': 'POSITIVE', 'score': 0.999808732}, 
-//   {'label': 'NEGATIVE', 'score': 0.953420998}
-// ]
+// Array ( 
+//   [label] => POSITIVE 
+//   [score] => 0.99978870153427 
+// )
+
+$out = $classifier(['I hate transformers!']);
+echo print_r($out, true);
+// Array ( 
+//   [label] => NEGATIVE 
+//   [score] => 0.99863630533218 
+// )
 ```
 
 Результатом будет вектор эмбеддингов, который можно сохранить в базу, отправить в векторное хранилище или использовать для поиска и кластеризации.
