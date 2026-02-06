@@ -202,7 +202,7 @@ Transformers PHP поддерживает типовые задачи NLP:
 ```php
 use function Codewithkyrian\Transformers\Pipelines\pipeline;
 
-// Allocate a pipeline for sentiment-analysis
+// Выделить конвейер для анализа настроений
 $classifier = pipeline('sentiment-analysis');
 
 $out = $classifier(['I love transformers!', 'I hate transformers!']);
