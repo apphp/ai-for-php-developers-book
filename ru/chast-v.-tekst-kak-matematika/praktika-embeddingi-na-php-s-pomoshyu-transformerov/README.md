@@ -74,11 +74,7 @@ text → tokens → embeddings → pooling → vector
 
 Тем не менее полезно иметь интуицию.
 
-\[IMAGE: transformer\_overview]
-
-Промпт для картинки:
-
-“High-level diagram of a transformer encoder: input text, tokenization, embedding layer, attention blocks, output embedding vector, flat and simple, educational”
+<div align="left"><figure><img src="../../.gitbook/assets/22.2-transformer-overview.png" alt="" width="563"><figcaption><p>22.2 Обзор трансформера</p></figcaption></figure></div>
 
 ### Рассмотрим TransformersPHP как инженерный инструмент
 
@@ -116,11 +112,7 @@ Embedding (vector)
 Vector DB / поиск / логика
 ```
 
-\[IMAGE: embedding\_pipeline]
-
-Промпт для картинки:
-
-“Pipeline diagram showing PHP app calling tokenizer, transformer model, producing vector embedding, then used for semantic search, simple flat design”
+<div align="left"><figure><img src="../../.gitbook/assets/22.3-embedding-pipeline.png" alt="" width="563"><figcaption><p>22.3 Конвейер встраивания (embedding pipeline) </p></figcaption></figure></div>
 
 ### Первый пример: получение эмбеддинга текста
 
@@ -180,11 +172,7 @@ print_r($embedding);
 
 На практике mean pooling чаще всего даёт стабильные результаты.
 
-\[IMAGE: pooling\_explanation]
-
-Промпт для картинки:
-
-“Visualization of token embeddings aggregated into a single sentence embedding using mean pooling, educational diagram”
+<div align="left"><figure><img src="../../.gitbook/assets/22.4-pooling-explanation.png" alt="" width="563"><figcaption><p>22.4 Объяснение объединения (pooling_explanation)</p></figcaption></figure></div>
 
 ### Пример: косинусное сходство на PHP
 
@@ -229,11 +217,7 @@ if ($sim > 0.8) {
 
 С точки зрения PHP это выглядит как обычная бизнес-логика, а не ML-экзотика.
 
-\[IMAGE: semantic\_search]
-
-Промпт для картинки:
-
-“Semantic search illustration: query text mapped to vector, nearest document vectors highlighted in embedding space”
+<div align="left"><figure><img src="../../.gitbook/assets/22.5-semantic-search.png" alt="" width="563"><figcaption><p>22.5 Семантический поиск</p></figcaption></figure></div>
 
 ### Инженерные замечания
 
