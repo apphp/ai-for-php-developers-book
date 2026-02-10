@@ -174,7 +174,7 @@ $targets = [
 $dataset = new Labeled($samples, $targets);
 
 // Создаём модель линейной регрессии
-// При alpha = 1e-6 Ridge регрессии линейной регрессии
+// При alpha = 1e-6 Ridge регрессия эквивалентна линейной регрессии
 $regression = new Ridge(1e-6);
 
 // Обучаем модель
