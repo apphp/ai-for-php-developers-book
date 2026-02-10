@@ -123,3 +123,4 @@
     * [Кейс 4. Интеллектуальная навигация по событиям / таймлайнам](chast-v.-tekst-kak-matematika/praktika-embeddingi-na-php-s-pomoshyu-transformerov/prakticheskie-keisy/keis-4.-intellektualnaya-navigaciya-po-sobytiyam-taimlainam.md)
     * [Кейс 5. Классификация без обучения (zero-shot через similarity)](chast-v.-tekst-kak-matematika/praktika-embeddingi-na-php-s-pomoshyu-transformerov/prakticheskie-keisy/keis-5.-klassifikaciya-bez-obucheniya-zero-shot-cherez-similarity.md)
     * [Кейс 6. Семантические рекомендации «похожие статьи»](chast-v.-tekst-kak-matematika/praktika-embeddingi-na-php-s-pomoshyu-transformerov/prakticheskie-keisy/keis-6.-semanticheskie-rekomendacii-pokhozhie-stati.md)
+* [RAG: Retrieval-Augmented Generation как инженерная система](chast-v.-tekst-kak-matematika/rag-retrieval-augmented-generation-kak-inzhenernaya-sistema.md)
