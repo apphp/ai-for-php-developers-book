@@ -20,13 +20,14 @@ In short, we will move through the following structure:
 6. Integration with pre-trained models
 7. Architecture, limitations, and security
 
-All examples will be:
+All examples in the book:
 
-* written in pure PHP or with minimal dependencies
-  * primarily using the RubixML library,
-  * and purely for demonstration purposes using the PHP-ML or other libraries
-* focused on real backend tasks
-* explained from an engineering point of view
+* are written in pure PHP or with minimal dependencies
+* primarily use the **RubixML** library
+* separate sections demonstrate working with **TransformersPHP**, **LLPhant**, and **NeuronAI**
+* several examples are provided solely for demonstration purposes with **PHP-ML**
+* focused on real-world backend tasks
+* explained from an engineering perspective
 
 ### Who This Book Is Especially For
 
