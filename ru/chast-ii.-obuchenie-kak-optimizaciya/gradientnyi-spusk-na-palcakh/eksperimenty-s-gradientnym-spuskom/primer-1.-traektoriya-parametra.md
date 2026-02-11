@@ -44,7 +44,7 @@ $x = [1, 2, 3, 4];
 $y = [2, 4, 6, 8]; // идеальная зависимость y = 2x
 
 $w = 0.0;
-$lr = 0.1;
+$learningRate = 0.1;
 $n = count($x);
 
 echo "epoch\tw\tgradient\tloss\n";
@@ -70,7 +70,7 @@ for ($epoch = 1; $epoch <= 20; $epoch++) {
          round($gradient, 4) . "\t\t" .
          round($loss, 4) . PHP_EOL;
 
-    $w -= $lr * $gradient;
+    $w -= $learningRate * $gradient;
 }
 ```
 
