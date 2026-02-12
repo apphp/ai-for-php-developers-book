@@ -124,3 +124,7 @@ echo "Вероятность: " . round($posterior, 4);
 4. [Байесовское обновление](../../../vvedenie/glossarii.md#bayesian-updating-baiesovskoe-obnovlenie) – это универсальный механизм пересчета уверенности при появлении новых данных.
 
 Этот кейс формирует фундаментальное понимание: модель или тест дают нам новый сигнал, но окончательная уверенность всегда зависит от контекста, в котором этот сигнал получен.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/probability-as-degree-of-confidence) для его запуска.
+{% endhint %}
