@@ -37,13 +37,13 @@
 По формуле Байеса:
 
 $$
-P(D \mid T^+) = \frac{P(T^+ \mid D)\, P(D)}{P(T^+)}
+P(D \mid T^+) = \frac{P(T^+ \mid D) \cdot P(D)}{P(T^+)}
 $$
 
 Где
 
 $$
-P(T^+) = P(T^+ \mid D)\, P(D) + P(T^+ \mid \neg D)\, P(\neg D)
+P(T^+) = P(T^+ \mid D) \cdot P(D) + P(T^+ \mid \neg D) \cdot P(\neg D)
 $$
 
 #### Реализация на PHP
