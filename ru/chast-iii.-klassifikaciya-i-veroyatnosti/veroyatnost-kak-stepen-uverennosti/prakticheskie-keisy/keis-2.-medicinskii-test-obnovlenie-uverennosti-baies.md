@@ -58,7 +58,7 @@ $specificity = 0.95;   // P(отрицательный | здоров)
 $falsePositive = 1 - $specificity;  // P(положительный | здоров)
 
 $posterior = ($sensitivity * $prior) 
-    / (($sensitivity * $prior) + ($falsePositive * (1 - $prior)));
+          / (($sensitivity * $prior) + ($falsePositive * (1 - $prior)));
 
 echo "Истинно положительные случаи: " . ($sensitivity * $prior) . PHP_EOL;
 echo "Ложноположительные результаты: " . ($falsePositive * (1 - $prior)) . PHP_EOL;
