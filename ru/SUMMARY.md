@@ -115,6 +115,7 @@
     * [Кейс 1. Один термин – разные смыслы (контекстные эмбеддинги предложений)](chast-v.-tekst-kak-matematika/transformery-i-kontekst-ot-staticheskikh-vektorov-k-ponimaniyu-smysla/prakticheskie-keisy/keis-1.-odin-termin-raznye-smysly-kontekstnye-embeddingi-predlozhenii.md)
     * [Кейс 2. Длинный контекст важнее соседних слов](chast-v.-tekst-kak-matematika/transformery-i-kontekst-ot-staticheskikh-vektorov-k-ponimaniyu-smysla/prakticheskie-keisy/keis-2.-dlinnyi-kontekst-vazhnee-sosednikh-slov.md)
     * [Кейс 3. Attention как основа поиска по смыслу (минимальный поиск)](chast-v.-tekst-kak-matematika/transformery-i-kontekst-ot-staticheskikh-vektorov-k-ponimaniyu-smysla/prakticheskie-keisy/keis-3.-attention-kak-osnova-poiska-po-smyslu-minimalnyi-poisk.md)
+* [Named Entity Recognition (NER) – извлечение сущностей из текста](chast-v.-tekst-kak-matematika/named-entity-recognition-ner-izvlechenie-sushnostei-iz-teksta.md)
 * [Практика: эмбеддинги на PHP с помощью трансформеров](chast-v.-tekst-kak-matematika/praktika-embeddingi-na-php-s-pomoshyu-transformerov/README.md)
   * [Практические кейсы](chast-v.-tekst-kak-matematika/praktika-embeddingi-na-php-s-pomoshyu-transformerov/prakticheskie-keisy/README.md)
     * [Кейс 1. Семантический поиск по текстовым документам (без БД)](chast-v.-tekst-kak-matematika/praktika-embeddingi-na-php-s-pomoshyu-transformerov/prakticheskie-keisy/keis-1.-semanticheskii-poisk-po-tekstovym-dokumentam-bez-bd.md)

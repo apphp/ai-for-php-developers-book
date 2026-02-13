@@ -532,7 +532,7 @@ Query: санкции против IT-компаний
 
 Чтобы зафиксировать архитектуру решения целиком, полезно посмотреть на неё не через код, а через поток данных. В этом кейсе пайплайн предельно простой и именно поэтому хорошо масштабируется.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/22.4-semantic-event-search-pipeline.png" alt="" width="563"><figcaption><p>22.4 Конвейер поиска семантических событий</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/22.4-semantic-event-search-pipeline.png" alt="" width="563"><figcaption><p>23.6 Конвейер поиска семантических событий</p></figcaption></figure></div>
 
 Диаграмма подчёркивает два ключевых момента:
 
