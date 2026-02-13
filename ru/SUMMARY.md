@@ -140,4 +140,7 @@
 
 ## Часть VIII. Продакшен и здравый смысл
 
-* [Когда AI не нужен и почему это важно](chast-viii.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno.md)
+* [Когда AI не нужен и почему это важно](chast-viii.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/README.md)
+  * [Практические кейсы](chast-viii.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/README.md)
+    * [Кейс 1 – Замена LLM на детерминированный код](chast-viii.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/keis-1-zamena-llm-na-determinirovannyi-kod.md)
+    * [Кейс 2 – Когда AI действительно оправдан](chast-viii.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/keis-2-kogda-ai-deistvitelno-opravdan.md)
