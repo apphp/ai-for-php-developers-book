@@ -168,6 +168,57 @@ $$
 
 Это демонстрационная версия, цель которой – показать механику.
 
+<details>
+
+<summary>Кейс 2. Полный пример кода на чистом PHP</summary>
+
+```php
+$emails = [
+    ['text' => ['free', 'win'], 'class' => 'spam'],
+    ['text' => ['free'],        'class' => 'spam'],
+    ['text' => ['meeting'],     'class' => 'ham'],
+    ['text' => ['project'],     'class' => 'ham'],
+];
+
+$classes = [];
+$totalDocs = count($emails);
+
+foreach ($emails as $email) {
+    $class = $email['class'];
+    $classes[$class] = ($classes[$class] ?? 0) + 1;
+}
+
+$wordCounts = [];
+
+foreach ($emails as $email) {
+    $class = $email['class'];
+
+    foreach ($email['text'] as $word) {
+        $wordCounts[$class][$word] = ($wordCounts[$class][$word] ?? 0) + 1;
+    }
+}
+
+$input = ['free', 'meeting'];
+
+$scores = [];
+
+foreach ($classes as $class => $count) {
+    $logProb = log($count / $totalDocs);
+
+    foreach ($input as $word) {
+        $wordCount = $wordCounts[$class][$word] ?? 1;
+        $logProb += log($wordCount / $count);
+    }
+
+    $scores[$class] = $logProb;
+}
+
+arsort($scores);
+print_r($scores);
+```
+
+</details>
+
 ### Та же задача с использованием RubixML
 
 Теперь посмотрим, как выглядит тот же самый процесс через библиотеку.
