@@ -138,6 +138,14 @@
     * [Кейс 4. RAG для внутренней документации с использованием LLPhant](chast-v.-tekst-kak-matematika/rag-retrieval-augmented-generation-kak-inzhenernaya-sistema/prakticheskie-keisy/keis-4.-rag-dlya-vnutrennei-dokumentacii-s-ispolzovaniem-llphant.md)
     * [Кейс 5. RAG с NeuronAI для аналитики событий и таймлайнов](chast-v.-tekst-kak-matematika/rag-retrieval-augmented-generation-kak-inzhenernaya-sistema/prakticheskie-keisy/keis-5.-rag-s-neuronai-dlya-analitiki-sobytii-i-taimlainov.md)
 
+## Часть VI. Attention и нейросети
+
+* [не начато](chast-vi.-attention-i-neiroseti/ne-nachato.md)
+
+## Часть VII. LLM и современный AI
+
+* [не начато](chast-vii.-llm-i-sovremennyi-ai/ne-nachato.md)
+
 ## Часть VIII. Продакшен и здравый смысл
 
 * [Когда AI не нужен и почему это важно](chast-viii.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/README.md)
