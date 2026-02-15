@@ -177,3 +177,7 @@ Decision boundary определяется условием: $$p = 0.5$$&#x20;
 Дальше мы будем добавлять признаки и измерения.
 
 Но логика останется той же: линейная комбинация → сигмоида → вероятность → порог.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/logistic-regression) для его запуска.
+{% endhint %}
