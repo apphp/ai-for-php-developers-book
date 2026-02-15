@@ -44,6 +44,7 @@ x = [timeOnSite]
 
 ```php
 use Rubix\ML\Classifiers\LogisticRegression;
+use Rubix\ML\Datasets\Unlabeled;
 use Rubix\ML\Datasets\Labeled;
 
 $samples = [
@@ -54,18 +55,37 @@ $samples = [
     [7.0],
 ];
 
-$labels = [0, 0, 0, 1, 1];
+$labels = ['no', 'no', 'no', 'yes', 'yes'];
 
 $dataset = new Labeled($samples, $labels);
 
-$model = new LogisticRegression(0.1, 500);
+$model = new LogisticRegression();
 $model->train($dataset);
 
-$result = $model->predict([[3.0]]);
-print_r($result);
+$prediction = new Unlabeled([[3.0]]);
+$labels = $model->predict($prediction);
+
+echo "Predicted label: ";
+print_r($labels);
+
+// Show probabilities
+$probas = $model->proba($prediction);
+echo "\nProbabilities (per class): ";
+print_r($probas);
+
+// Результат:
+// Predicted label: Array (
+//     [0] => yes
+// )
+// Probabilities (per class): Array (
+//     [0] => Array (
+//         [no] => 0.33716026803845
+//         [yes] => 0.66283973196155
+//      )
+//  )
 ```
 
-В этих данных видно простую закономерность:
+Поигравшись с тестовыми данными, можно заметить простую закономерность:
 
 * меньше 3 минут – чаще не подписываются
 * больше 5 минут – чаще подписываются
