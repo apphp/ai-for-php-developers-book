@@ -201,7 +201,7 @@ $$
 
 В этом примере:
 
-* нет сглаживания (Laplace smoothing)
+* нет сглаживания ([Laplace smoothing](../../../vvedenie/glossarii.md#laplace-smoothing-sglazhivanie-laplasa))
 * не учитывается отсутствие слов
 * в ручной реализации словарь явно не фиксируется (в отличие от примера с RubixML)
 * данные крайне малы
