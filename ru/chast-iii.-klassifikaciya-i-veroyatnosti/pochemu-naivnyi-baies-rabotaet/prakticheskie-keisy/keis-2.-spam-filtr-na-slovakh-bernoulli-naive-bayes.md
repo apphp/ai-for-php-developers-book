@@ -71,10 +71,26 @@ $wordCounts = [];
 foreach ($emails as $email) {
     $class = $email['class'];
 
-    foreach ($email['text'] as $word) {
+    // Учитываем каждое слово только один раз на документ
+    $uniqueWords = array_unique($email['text']);
+
+    // Для Bernoulli учитывается факт присутствия слова,
+    // а не количество его повторений внутри документа
+    foreach ($uniqueWords as $word) {
         $wordCounts[$class][$word] = ($wordCounts[$class][$word] ?? 0) + 1;
     }
 }
+
+// Строим общий словарь
+$vocabulary = [];
+
+foreach ($wordCounts as $classWords) {
+    foreach ($classWords as $word => $_) {
+        $vocabulary[$word] = true;
+    }
+}
+
+$vocabulary = array_keys($vocabulary);
 ```
 
 Здесь мы оцениваем: $$P(word \mid class)$$
@@ -104,9 +120,20 @@ $scores = [];
 foreach ($classes as $class => $count) {
     $logProb = log($count / $totalDocs);
 
-    foreach ($input as $word) {
-        $wordCount = $wordCounts[$class][$word] ?? 1;
-        $logProb += log($wordCount / $count);
+    foreach ($vocabulary as $word) {
+        $wordCount = $wordCounts[$class][$word] ?? 0;
+
+        // Сглаживание Лапласа для уравнения Бернулли
+        // (n + 1) / (N + 2)
+        $prob = ($wordCount + 1) / ($count + 2);
+
+        if (in_array($word, $input)) {
+            // слово присутствует
+            $logProb += log($prob);
+        } else {
+            // слово отсутствует (важно для Bernoulli!)
+            $logProb += log(1 - $prob);
+        }       
     }
 
     $scores[$class] = $logProb;
@@ -124,7 +151,7 @@ print_r($scores);
 
 #### Что здесь важно понять
 
-**1. Каждое слово – независимое доказательство**
+**1. Каждое слово – условно независимое доказательство при фиксированном классе**
 
 Слово "free" голосует за spam.
 
@@ -143,10 +170,10 @@ $$
 После логарифмирования:
 
 $$
-\log P(C \mid \text{words})  = \log P(C) + \sum_{i} \log P(\text{word}_i \mid C)
+\log P(C \mid \text{words})  \propto \log P(C) + \sum_{i} \log P(\text{word}_i \mid C)
 $$
 
-Это уже линейная сумма. Именно поэтому наивный Байес часто ведет себя как линейный классификатор.
+Это уже линейная сумма. Именно поэтому наивный Байес часто ведет себя как линейный классификатор (в лог-пространстве модель эквивалентна линейному классификатору по признакам).
 
 **3. Почему модель работает несмотря на наивность**
 
@@ -163,7 +190,7 @@ $$
 
 * нет сглаживания (Laplace smoothing)
 * не учитывается отсутствие слов
-* не используется словарь фиксированной размерности
+* в ручной реализации словарь явно не фиксируется (в отличие от примера с RubixML)
 * данные крайне малы
 
 Это демонстрационная версия, цель которой – показать механику.
@@ -193,10 +220,26 @@ $wordCounts = [];
 foreach ($emails as $email) {
     $class = $email['class'];
 
-    foreach ($email['text'] as $word) {
+    // Учитываем каждое слово только один раз на документ
+    $uniqueWords = array_unique($email['text']);
+
+    // Для Bernoulli учитывается факт присутствия слова,
+    // а не количество его повторений внутри документа
+    foreach ($uniqueWords as $word) {
         $wordCounts[$class][$word] = ($wordCounts[$class][$word] ?? 0) + 1;
     }
 }
+
+// Строим общий словарь
+$vocabulary = [];
+
+foreach ($wordCounts as $classWords) {
+    foreach ($classWords as $word => $_) {
+        $vocabulary[$word] = true;
+    }
+}
+
+$vocabulary = array_keys($vocabulary);
 
 $input = ['free', 'meeting'];
 
@@ -205,9 +248,20 @@ $scores = [];
 foreach ($classes as $class => $count) {
     $logProb = log($count / $totalDocs);
 
-    foreach ($input as $word) {
-        $wordCount = $wordCounts[$class][$word] ?? 1;
-        $logProb += log($wordCount / $count);
+    foreach ($vocabulary as $word) {
+        $wordCount = $wordCounts[$class][$word] ?? 0;
+
+        // Сглаживание Лапласа для уравнения Бернулли
+        // (n + 1) / (N + 2)
+        $prob = ($wordCount + 1) / ($count + 2);
+
+        if (in_array($word, $input)) {
+            // слово присутствует
+            $logProb += log($prob);
+        } else {
+            // слово отсутствует (важно для Bernoulli!)
+            $logProb += log(1 - $prob);
+        }       
     }
 
     $scores[$class] = $logProb;
