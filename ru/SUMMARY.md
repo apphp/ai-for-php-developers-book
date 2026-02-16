@@ -146,13 +146,17 @@
 
 * [не начато](chast-vii.-llm-i-sovremennyi-ai/ne-nachato.md)
 
-## Часть VIII. Продакшен и здравый смысл
+## Часть VIII. Агентные системы и orchestration
 
-* [Как использовать AI в PHP-проектах](chast-viii.-prodakshen-i-zdravyi-smysl/kak-ispolzovat-ai-v-php-proektakh.md)
-* [Когда AI не нужен и почему это важно](chast-viii.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/README.md)
-  * [Практические кейсы](chast-viii.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/README.md)
-    * [Кейс 1 – Замена LLM на детерминированный код](chast-viii.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/keis-1-zamena-llm-na-determinirovannyi-kod.md)
-    * [Кейс 2 – Когда AI действительно оправдан](chast-viii.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/keis-2-kogda-ai-deistvitelno-opravdan.md)
+* [не начато](chast-viii.-agentnye-sistemy-i-orchestration/ne-nachato.md)
+
+## Часть IX. Продакшен и здравый смысл
+
+* [Как использовать AI в PHP-проектах](chast-ix.-prodakshen-i-zdravyi-smysl/kak-ispolzovat-ai-v-php-proektakh.md)
+* [Когда AI не нужен и почему это важно](chast-ix.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/README.md)
+  * [Практические кейсы](chast-ix.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/README.md)
+    * [Кейс 1 – Замена LLM на детерминированный код](chast-ix.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/keis-1-zamena-llm-na-determinirovannyi-kod.md)
+    * [Кейс 2 – Когда AI действительно оправдан](chast-ix.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/keis-2-kogda-ai-deistvitelno-opravdan.md)
 
 ## Заключение
 
