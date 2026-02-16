@@ -375,6 +375,8 @@ AI Gateway – слой:
 
 ### Мини-кейс: AI для внутренней документации
 
+Мы уже рассматривали подобный кейс в главе [RAG: Retrieval-Augmented Generation как инженерная система](../chast-v.-tekst-kak-matematika/rag-retrieval-augmented-generation-kak-inzhenernaya-sistema/). Просто вспомним его суть ещё раз.
+
 Задача: отвечать по документации.
 
 Архитектура:
