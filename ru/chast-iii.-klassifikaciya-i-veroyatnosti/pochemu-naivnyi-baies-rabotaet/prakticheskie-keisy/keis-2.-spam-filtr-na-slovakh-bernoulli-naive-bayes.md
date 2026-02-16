@@ -141,7 +141,20 @@ foreach ($classes as $class => $count) {
 
 arsort($scores);
 print_r($scores);
+
+// Результат:
+// Array (
+//    [spam] => -3.3479528671433
+//    [ham] => -3.7534179752515
+// )
 ```
+
+Сравниваем:
+
+* spam = -3.3479
+* ham = -3.7534
+
+-3.34 > -3.75 → модель выбирает **spam**
 
 Модель:
 
@@ -280,13 +293,15 @@ print_r($scores);
 ```php
 use Rubix\ML\Classifiers\NaiveBayes;
 use Rubix\ML\Datasets\Labeled;
+use Rubix\ML\Datasets\Unlabeled;
 
-// free, win, meeting
+// То же, что и в примере с чистым PHP
 $samples = [
-    [1, 1, 0], 
-    [1, 0, 0],
-    [0, 0, 1],
-    [0, 0, 0],
+    // ['free', 'win', 'meeting', 'project']
+    ['1', '1', '0', '0'],
+    ['1', '0', '0', '0'],
+    ['0', '0', '1', '0'],
+    ['0', '0', '0', '1'],
 ];
 
 $labels = ['spam', 'spam', 'ham', 'ham'];
@@ -296,14 +311,26 @@ $dataset = new Labeled($samples, $labels);
 $model = new NaiveBayes();
 $model->train($dataset);
 
-$prediction = $model->predict([[1, 0, 1]]);
+// Прогнозирование для входных данных: [free, win, meeting, project] = [1, 0, 1, 0]
+$dataset = new Unlabeled([
+    ['1', '0', '1', '0'],
+]);
+
+$prediction = $model->predict($dataset);
 print_r($prediction);
+
+// Результат:
+// Array (
+//    [0] => spam
+// )
 ```
+
+Как видите, результат такой же как и в примере с чистым PHP.
 
 Здесь:
 
 * каждое слово стало бинарным признаком
-* 1 означает присутствие
+* 1 – означает присутствие
 * 0 – отсутствие
 * RubixML автоматически считает частоты и применяет формулу Байеса
 
@@ -320,3 +347,7 @@ print_r($prediction);
 В-третьих, простота модели – не недостаток, а преимущество. Именно благодаря этой простоте наивный Байес десятилетиями оставался одним из базовых инструментов в задачах фильтрации спама.
 
 Если после этого кейса становится ясно, что спам-фильтр – это не "искусственный интеллект", а аккуратная работа с вероятностями, значит, глава достигла своей цели.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/why-naive-bayes-works) для его запуска.
+{% endhint %}
