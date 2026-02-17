@@ -237,11 +237,7 @@ RAG – Retrieval Augmented Generation.
 Query → Embedding → Vector Search → Context → LLM → Answer
 ```
 
-#### \[Placeholder – Diagram 1: RAG Pipeline]
-
-Промпт для генерации картинки:
-
-“Draw a clean architecture diagram of a RAG pipeline: user query → embedding model → vector database → context builder → large language model → answer. Minimalistic style, white background, arrows between blocks.”
+<div align="left"><figure><img src="../.gitbook/assets/31.1- rag-pipeline.png" alt="" width="563"><figcaption><p>31.1 Пайплайн RAG </p></figcaption></figure></div>
 
 ### Кэширование AI
 
@@ -331,11 +327,7 @@ $$
 State A → Tool → LLM → Decision → State B/C
 ```
 
-#### \[Placeholder – Diagram 2: AI State Machine]
-
-Промпт:
-
-“Draw a state machine diagram for an AI agent: Start → Retrieve tool → LLM reasoning → Decision → either Call API or Return Answer. Clean, minimal, software architecture style.”
+<div align="left"><figure><img src="../.gitbook/assets/31.2-ai-state-machine.png" alt="" width="563"><figcaption><p>32.1 Конечный автомат (state machine) ИИ</p></figcaption></figure></div>
 
 ### Типичные ошибки в PHP AI-проектах
 
