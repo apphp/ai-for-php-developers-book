@@ -88,11 +88,7 @@ $$
 
 И если данные можно разделить одной плоской границей – перцептрон способен это сделать.
 
-\[IMAGE 1: Hyperplane separation]
-
-Промпт:
-
-> Minimal academic diagram showing a hyperplane separating two clusters of points in 2D space, labeled class 0 and class 1, with equation w&#x31;_&#x78;1 + w&#x32;_&#x78;2 + b = 0
+<div align="left"><figure><img src="../.gitbook/assets/25.1-hyperplane-separation.png" alt="" width="563"><figcaption><p>25.1 Разделение гиперплоскостей</p></figcaption></figure></div>
 
 #### Почему это линейный классификатор
 
@@ -176,11 +172,7 @@ $$
 w_1 x_1 + w_2 x_2 + b = 0
 $$
 
-\[IMAGE 2: Decision boundary]
-
-Промпт для генерации изображения:
-
-> 2D plot showing a linear decision boundary separating two classes of points, labeled x1 and x2 axes, simple clean academic style, white background
+<div align="left"><figure><img src="../.gitbook/assets/25.2-decision-boundary.png" alt="" width="563"><figcaption><p>25.2 Граница принятия решений</p></figcaption></figure></div>
 
 Линейная комбинация – это та же идея, что и в линейной регрессии и логистической регрессии. Разница начинается дальше.
 
@@ -205,11 +197,7 @@ $$
 
 Например, XOR (как было упомянуть выше) он решить не может.
 
-\[IMAGE 3: XOR problem]
-
-Промпт:
-
-> 2D scatter plot showing XOR classification problem, four points, two classes diagonally placed, impossible to separate with one straight line
+<div align="left"><figure><img src="../.gitbook/assets/25.3-xor-problem.png" alt="" width="563"><figcaption><p>25.3 Проблема XOR</p></figcaption></figure></div>
 
 XOR требует нелинейности. И здесь начинается история многослойных сетей.
 
@@ -307,17 +295,13 @@ $$
 ReLU(z) = \max(0, z)
 $$
 
-#### 3. Tanh
+#### 3. Hyperbolic Tangent
 
 $$
-\tanh(z)
+\tanh(x)={\frac {e^{x}-e^{-x}}{e^{x}+e^{-x}}}
 $$
 
-\[IMAGE 4: Activation functions]
-
-Промпт:
-
-> Graph showing sigmoid, tanh and ReLU activation functions on the same axes, labeled, academic style
+<div align="left"><figure><img src="../.gitbook/assets/25.4-activation-functions.png" alt="" width="563"><figcaption><p>25.4 Функции активации</p></figcaption></figure></div>
 
 ReLU стал стандартом в глубоких сетях благодаря простоте и отсутствию насыщения на положительной части.
 
