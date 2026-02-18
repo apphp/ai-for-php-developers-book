@@ -97,6 +97,9 @@ foreach ($neighbors as $neighbor) {
 $prediction = $sum / $k;
 
 echo "Estimated price: $prediction";
+
+// Результат
+// Estimated price: 243333
 ```
 
 Алгоритм выполняет следующие шаги:
@@ -125,6 +128,56 @@ kNN не ищет коэффициенты и не предполагает ли
 > Покажи мне похожие квартиры – и я скажу тебе примерную цену.
 
 Это делает отображение "признаки → предсказание" нелинейным. В разных областях пространства признаков поведение может быть разным, потому что решение всегда принимается локально.
+
+<details>
+
+<summary>Кейс 1. Полный пример кода на чистом PHP</summary>
+
+```php
+function euclideanDistance(array $a, array $b): float {
+    $sum = 0.0;
+
+    foreach ($a as $i => $value) {
+        $sum += ($value - $b[$i]) ** 2;
+    }
+
+    return sqrt($sum);
+}
+
+$dataset = [
+    [[40, 12], 120000],
+    [[50, 10], 150000],
+    [[60, 8], 190000],
+    [[70, 6], 240000],
+    [[80, 5], 300000],
+];
+
+$query = [65, 7];
+$k = 3;
+
+$distances = [];
+
+foreach ($dataset as [$features, $price]) {
+    $distances[] = [
+        'distance' => euclideanDistance($features, $query),
+        'price' => $price
+    ];
+}
+
+usort($distances, fn($a, $b) => $a['distance'] <=> $b['distance']);
+$neighbors = array_slice($distances, 0, $k);
+
+$sum = 0;
+foreach ($neighbors as $neighbor) {
+    $sum += $neighbor['price'];
+}
+
+$prediction = $sum / $k;
+
+echo "Estimated price: $prediction";
+```
+
+</details>
 
 #### Почему это нелинейная модель
 
@@ -162,3 +215,7 @@ kNN не ищет коэффициенты и не предполагает ли
 Если в предыдущем кейсе соседи голосовали, то здесь они "складываются и делятся". Но философия алгоритма остаётся неизменной – решение принимается в локальной окрестности точки.
 
 Понимание этого примера формирует интуицию о том, что машинное обучение – это не всегда поиск глобальной формулы. Иногда это просто аккуратная работа с соседством и расстояниями.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-4/k-nearest-neighbors-algorithm-and-local-solutions) для его запуска.
+{% endhint %}

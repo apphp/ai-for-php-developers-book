@@ -140,7 +140,7 @@
 
 ## Часть VI. Attention и нейросети
 
-* [не начато](chast-vi.-attention-i-neiroseti/ne-nachato.md)
+* [Перцептрон и полносвязная сеть](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set.md)
 
 ## Часть VII. LLM и современный AI
 
