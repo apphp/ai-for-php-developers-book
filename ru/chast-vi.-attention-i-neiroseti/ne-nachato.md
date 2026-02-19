@@ -319,11 +319,7 @@ $$
 
 Каждый нейрон связан со всеми нейронами предыдущего слоя – отсюда "полносвязная".
 
-\[IMAGE 5: MLP diagram]
-
-Промпт:
-
-> Simple neural network diagram with input layer, one hidden layer, and output layer, fully connected, minimal academic style
+<div align="left"><figure><img src="../.gitbook/assets/25.5-mlp-diagram.png" alt="" width="563"><figcaption><p>25.5 Диаграмма MLP</p></figcaption></figure></div>
 
 #### Один скрытый слой может всё
 
