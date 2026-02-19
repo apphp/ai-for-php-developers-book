@@ -88,7 +88,7 @@ $$
 
 И если данные можно разделить одной плоской границей – перцептрон способен это сделать.
 
-<div align="left"><figure><img src="../.gitbook/assets/25.1-hyperplane-separation.png" alt="" width="563"><figcaption><p>25.1 Разделение гиперплоскостей</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/25.1-hyperplane-separation.png" alt="" width="563"><figcaption><p>25.1 Разделение гиперплоскостей</p></figcaption></figure></div>
 
 #### Почему это линейный классификатор
 
@@ -172,7 +172,7 @@ $$
 w_1 x_1 + w_2 x_2 + b = 0
 $$
 
-<div align="left"><figure><img src="../.gitbook/assets/25.2-decision-boundary.png" alt="" width="563"><figcaption><p>25.2 Граница принятия решений</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/25.2-decision-boundary.png" alt="" width="563"><figcaption><p>25.2 Граница принятия решений</p></figcaption></figure></div>
 
 Линейная комбинация – это та же идея, что и в линейной регрессии и логистической регрессии. Разница начинается дальше.
 
@@ -197,7 +197,7 @@ $$
 
 Например, XOR (как было упомянуть выше) он решить не может.
 
-<div align="left"><figure><img src="../.gitbook/assets/25.3-xor-problem.png" alt="" width="563"><figcaption><p>25.3 Проблема XOR</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/25.3-xor-problem.png" alt="" width="563"><figcaption><p>25.3 Проблема XOR</p></figcaption></figure></div>
 
 XOR требует нелинейности. И здесь начинается история многослойных сетей.
 
@@ -301,7 +301,7 @@ $$
 \tanh(x)={\frac {e^{x}-e^{-x}}{e^{x}+e^{-x}}}
 $$
 
-<div align="left"><figure><img src="../.gitbook/assets/25.4-activation-functions.png" alt="" width="563"><figcaption><p>25.4 Функции активации</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/25.4-activation-functions.png" alt="" width="563"><figcaption><p>25.4 Функции активации</p></figcaption></figure></div>
 
 ReLU стал стандартом в глубоких сетях благодаря простоте и отсутствию насыщения на положительной части.
 
@@ -319,7 +319,7 @@ $$
 
 Каждый нейрон связан со всеми нейронами предыдущего слоя – отсюда "полносвязная".
 
-<div align="left"><figure><img src="../.gitbook/assets/25.5-mlp-diagram.png" alt="" width="563"><figcaption><p>25.5 Диаграмма MLP</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/25.5-mlp-diagram.png" alt="" width="563"><figcaption><p>25.5 Диаграмма MLP</p></figcaption></figure></div>
 
 #### Один скрытый слой может всё
 
@@ -399,7 +399,7 @@ class SimpleMLP
 
 ### Связь с логистической регрессией
 
-Логистическая регрессия – это перцептрон с sigmoid и обучением по [log loss](../vvedenie/glossarii.md#log-loss-logarifmicheskaya-funkciya-poter).
+Логистическая регрессия – это перцептрон с sigmoid и обучением по [log loss](../../vvedenie/glossarii.md#log-loss-logarifmicheskaya-funkciya-poter).
 
 То есть:
 

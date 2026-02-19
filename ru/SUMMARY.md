@@ -140,7 +140,14 @@
 
 ## Часть VI. Attention и нейросети
 
-* [Перцептрон и полносвязная сеть](chast-vi.-attention-i-neiroseti/ne-nachato.md)
+* [Перцептрон и полносвязная сеть](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/README.md)
+  * [Практические кейсы](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/README.md)
+    * [Кейс 1. Фильтр подозрительных email – линейный перцептрон (чистый PHP)](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/keis-1.-filtr-podozritelnykh-email-lineinyi-perceptron-chistyi-php.md)
+    * [Кейс 2. Скоринг сотрудника – линейная комбинация как интерпретируемая модель](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/keis-2.-skoring-sotrudnika-lineinaya-kombinaciya-kak-interpretiruemaya-model.md)
+    * [Кейс 3. XOR – демонстрация ограничения перцептрона](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/keis-3.-xor-demonstraciya-ogranicheniya-perceptrona.md)
+    * [Кейс 4. MLP для нелинейного риска фишинга (RubixML)](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/keis-4.-mlp-dlya-nelineinogo-riska-fishinga-rubixml.md)
+    * [Кейс 5. Предсказание клика по письму – логистическая регрессия как “мягкий перцептрон”](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/keis-5.-predskazanie-klika-po-pismu-logisticheskaya-regressiya-kak-myagkii-perceptron.md)
+    * [Кейс 6. Мини-MLP на чистом PHP (демонстрация нелинейности)](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/keis-6.-mini-mlp-na-chistom-php-demonstraciya-nelineinosti.md)
 
 ## Часть VII. LLM и современный AI
 
