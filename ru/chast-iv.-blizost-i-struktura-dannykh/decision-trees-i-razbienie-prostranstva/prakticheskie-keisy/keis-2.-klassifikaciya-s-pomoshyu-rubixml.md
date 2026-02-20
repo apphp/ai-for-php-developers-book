@@ -40,9 +40,13 @@ $samples = [
     [2, 3],
     [6, 8],
     [3, 4],
+    [4, 12],
+    [6, 3],
 ];
 
-$labels = ['active', 'active', 'passive', 'passive', 'active', 'passive'];
+$labels = [
+    'active', 'active', 'passive', 'passive', 'active', 'passive', 'active', 'passive'
+];
 
 $dataset = new Labeled($samples, $labels);
 ```
@@ -57,7 +61,7 @@ $dataset = new Labeled($samples, $labels);
 use Rubix\ML\Classifiers\ClassificationTree;
 
 $estimator = new ClassificationTree(
-    maxHeight: 3, 
+    maxHeight: 5,
     maxLeafSize: 2
 );
 
@@ -94,7 +98,7 @@ $prediction = $estimator->predict($dataset);
 echo $prediction[0];
 
 // Результат
-// passive
+// active
 ```
 
 Мы передаём массив признаков нового пользователя – 4 визита в неделю и 6 минут среднего времени на сайте. Модель возвращает предсказанный класс - `passive`.
@@ -119,16 +123,20 @@ $samples = [
     [2, 3],
     [6, 8],
     [3, 4],
+    [4, 12],
+    [6, 3],
 ];
 
 // Метки классов для каждой строки в $samples
-$labels = ['active', 'active', 'passive', 'passive', 'active', 'passive'];
+$labels = [
+    'active', 'active', 'passive', 'passive', 'active', 'passive', 'active', 'passive'
+];
 
 $dataset = new Labeled($samples, $labels);
 
 // Создаёс классификатор на основе дерева решений
 $estimator = new ClassificationTree(
-    maxHeight: 3,
+    maxHeight: 5,
     maxLeafSize: 2
 );
 
