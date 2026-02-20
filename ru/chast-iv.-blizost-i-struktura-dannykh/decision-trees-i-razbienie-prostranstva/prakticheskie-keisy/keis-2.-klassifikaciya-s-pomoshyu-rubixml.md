@@ -57,8 +57,8 @@ $dataset = new Labeled($samples, $labels);
 use Rubix\ML\Classifiers\ClassificationTree;
 
 $estimator = new ClassificationTree(
-    maxDepth: 3,
-    minSamples: 2
+    maxHeight: 3, 
+    maxLeafSize: 2
 );
 
 $estimator->train($dataset);
@@ -85,14 +85,66 @@ $estimator->train($dataset);
 После обучения модель можно использовать для новых пользователей.
 
 ```php
-$prediction = $estimator->predict([[4, 6]]);
+$dataset = new Unlabeled([
+    [4, 6],
+]);
 
-var_dump($prediction);
+$prediction = $estimator->predict($dataset);
+
+echo $prediction[0];
+
+// Результат
+// passive
 ```
 
-Мы передаём массив признаков нового пользователя – 4 визита в неделю и 6 минут среднего времени на сайте. Модель возвращает предсказанный класс.
+Мы передаём массив признаков нового пользователя – 4 визита в неделю и 6 минут среднего времени на сайте. Модель возвращает предсказанный класс - `passive`.
 
 С точки зрения логики, дерево на каждом узле проверяет выбранный признак и соответствующий порог, переходя по ветви до тех пор, пока не дойдёт до листа. Именно этот лист и определяет итоговую метку.
+
+<details>
+
+<summary>Кейс 1. Полный пример кода на RubixML</summary>
+
+```php
+use Rubix\ML\Datasets\Unlabeled;
+use Rubix\ML\Classifiers\ClassificationTree;
+use Rubix\ML\Datasets\Labeled;
+
+// Наш небольшой обучающий набор данных 
+// [visits, time]
+$samples = [
+    [5, 10],
+    [7, 15],
+    [1, 2],
+    [2, 3],
+    [6, 8],
+    [3, 4],
+];
+
+// Метки классов для каждой строки в $samples
+$labels = ['active', 'active', 'passive', 'passive', 'active', 'passive'];
+
+$dataset = new Labeled($samples, $labels);
+
+// Создаёс классификатор на основе дерева решений
+$estimator = new ClassificationTree(
+    maxHeight: 3,
+    maxLeafSize: 2
+);
+
+// Создать неразмеченный набор данных для вывода результатов
+$estimator->train($dataset);
+$dataset = new Unlabeled([
+    [4, 6],
+]);
+
+$prediction = $estimator->predict($dataset);
+
+// Вывести прогнозируемую метку для первого (и единственного) образца.
+echo $prediction[0];
+```
+
+</details>
 
 #### Интерпретация результата
 
@@ -119,3 +171,7 @@ var_dump($prediction);
 #### Итог
 
 Этот кейс показывает, как теория энтропии и information gain превращается в практический инструмент в PHP-проекте. RubixML берёт на себя вычислительную сложность, но логика алгоритма остаётся прозрачной. Понимая эту логику, разработчик может уверенно использовать деревья решений в реальных системах, не превращая модель в чёрный ящик.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-4/decision-trees-and-space-partitioning) для его запуска.
+{% endhint %}
