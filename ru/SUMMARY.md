@@ -148,6 +148,7 @@
     * [Кейс 4. MLP для нелинейного риска фишинга (RubixML)](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/keis-4.-mlp-dlya-nelineinogo-riska-fishinga-rubixml.md)
     * [Кейс 5. Предсказание клика по письму – логистическая регрессия как “мягкий перцептрон”](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/keis-5.-predskazanie-klika-po-pismu-logisticheskaya-regressiya-kak-myagkii-perceptron.md)
     * [Кейс 6. Мини-MLP на чистом PHP (демонстрация нелинейности)](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/keis-6.-mini-mlp-na-chistom-php-demonstraciya-nelineinosti.md)
+* [Backpropagation – почему он работает](chast-vi.-attention-i-neiroseti/backpropagation-pochemu-on-rabotaet.md)
 
 ## Часть VII. LLM и современный AI
 
