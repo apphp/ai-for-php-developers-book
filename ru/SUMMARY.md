@@ -161,7 +161,16 @@
 
 ## Часть VII. LLM и современный AI
 
-* [Почему LLM – это модели next-token prediction](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction.md)
+* [Почему LLM – это модели next-token prediction](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/README.md)
+  * [Практика: строим next-token модель на PHP](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/praktika-stroim-next-token-model-na-php.md)
+  * [Практические кейсы](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/README.md)
+    * [Кейс 1. Умное автодополнение письма (B2B awareness)](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-1.-umnoe-avtodopolnenie-pisma-b2b-awareness.md)
+    * [Кейс 2. Детектор фишингового паттерна как next-token аномалия](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-2.-detektor-fishingovogo-patterna-kak-next-token-anomaliya.md)
+    * [Кейс 3. Температура и управление стилем](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-3.-temperatura-i-upravlenie-stilem.md)
+    * [Кейс 4. Next-token классификатор на RubixML](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-4.-next-token-klassifikator-na-rubixml.md)
+    * [Кейс 5. Мини-GPT на PHP как демонстрационный проект](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-5.-mini-gpt-na-php-kak-demonstracionnyi-proekt.md)
+    * [Кейс 6. Prompt Engineering как изменение распределения](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-6.-prompt-engineering-kak-izmenenie-raspredeleniya.md)
+    * [Кейс 7. Генерация фишинговых писем как учебный эксперимент](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-7.-generaciya-fishingovykh-pisem-kak-uchebnyi-eksperiment.md)
 
 ## Часть VIII. Агентные системы и orchestration
 

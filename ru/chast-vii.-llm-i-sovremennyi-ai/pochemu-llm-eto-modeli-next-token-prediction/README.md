@@ -167,7 +167,7 @@ $$
 * гарантирует положительность
 * делает нормировку удобной
 
-<div align="left"><figure><img src="../.gitbook/assets/28.1-probability-distribution-after-softmax.png" alt="" width="563"><figcaption><p>28.1 Распределение вероятностей после softmax</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/28.1-probability-distribution-after-softmax.png" alt="" width="563"><figcaption><p>28.1 Распределение вероятностей после softmax</p></figcaption></figure></div>
 
 ### Температура и контроль креативности
 
@@ -220,7 +220,7 @@ The capital of France is
 
 Контекст – это просто информация, закодированная в векторе $$h_t$$.
 
-<div align="left"><figure><img src="../.gitbook/assets/28.2-attention-scheme-for-previous-tokens.png" alt="" width="563"><figcaption><p>28.2 Схема внимания на предыдущие токены</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/28.2-attention-scheme-for-previous-tokens.png" alt="" width="563"><figcaption><p>28.2 Схема внимания на предыдущие токены</p></figcaption></figure></div>
 
 ### Почему это работает так хорошо?
 
