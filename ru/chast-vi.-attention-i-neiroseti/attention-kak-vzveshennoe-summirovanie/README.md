@@ -102,7 +102,7 @@ $$
 
 Это ключевая формула трансформера.
 
-<div align="left"><figure><img src="../.gitbook/assets/27.1-scaled-dot-product-attention.png" alt="" width="563"><figcaption><p>27.1 Scaled dot product attention</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/27.1-scaled-dot-product-attention.png" alt="" width="563"><figcaption><p>27.1 Scaled dot product attention</p></figcaption></figure></div>
 
 ### Мини-пример с числами
 
@@ -234,7 +234,7 @@ Attention – это:
 
 Чем меньше угол – тем больше вклад.
 
-<div align="left"><figure><img src="../.gitbook/assets/27.2-query-k-vectors.png" alt="" width="563"><figcaption><p>27.2 Вклад угла между векторами на скалярное произведение</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/27.2-query-k-vectors.png" alt="" width="563"><figcaption><p>27.2 Вклад угла между векторами на скалярное произведение</p></figcaption></figure></div>
 
 ### Почему это революция?
 

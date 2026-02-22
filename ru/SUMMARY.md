@@ -149,7 +149,15 @@
     * [Кейс 5. Предсказание клика по письму – логистическая регрессия как “мягкий перцептрон”](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/keis-5.-predskazanie-klika-po-pismu-logisticheskaya-regressiya-kak-myagkii-perceptron.md)
     * [Кейс 6. Мини-MLP на чистом PHP (демонстрация нелинейности)](chast-vi.-attention-i-neiroseti/perceptron-i-polnosvyaznaya-set/prakticheskie-keisy/keis-6.-mini-mlp-na-chistom-php-demonstraciya-nelineinosti.md)
 * [Backpropagation – почему он работает](chast-vi.-attention-i-neiroseti/backpropagation-pochemu-on-rabotaet.md)
-* [Attention как взвешенное суммирование](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie.md)
+* [Attention как взвешенное суммирование](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/README.md)
+  * [Практические кейсы](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/README.md)
+    * [Кейс 1. Attention для анализа фишингового письма (чистый PHP)](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/keis-1.-attention-dlya-analiza-fishingovogo-pisma-chistyi-php.md)
+    * [Кейс 2. Attention как агрегатор признаков (anti-fraud)](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/keis-2.-attention-kak-agregator-priznakov-anti-fraud.md)
+    * [Кейс 3. Attention поверх embedding-поиска (LLM + PHP backend)](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/keis-3.-attention-poverkh-embedding-poiska-llm-+-php-backend.md)
+    * [Кейс 4. Attention вместо среднего в RubixML](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/keis-4.-attention-vmesto-srednego-v-rubixml.md)
+    * [Кейс 5. Attention для агрегации истории пользователя](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/keis-5.-attention-dlya-agregacii-istorii-polzovatelya.md)
+    * [Кейс 6. Визуализация внимания для awareness-обучения](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/keis-6.-vizualizaciya-vnimaniya-dlya-awareness-obucheniya.md)
+    * [Кейс 7. Мини-Transformer на PHP (toy)](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/keis-7.-mini-transformer-na-php-toy.md)
 
 ## Часть VII. LLM и современный AI
 
