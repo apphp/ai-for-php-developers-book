@@ -172,9 +172,9 @@
     * [Кейс 6. Prompt Engineering как изменение распределения](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-6.-prompt-engineering-kak-izmenenie-raspredeleniya.md)
     * [Кейс 7. Генерация фишинговых писем как учебный эксперимент](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-7.-generaciya-fishingovykh-pisem-kak-uchebnyi-eksperiment.md)
 
-## Часть VIII. Агентные системы и orchestration
+## Часть VIII. Агентные системы и оркестрация
 
-* [не начато](chast-viii.-agentnye-sistemy-i-orchestration/ne-nachato.md)
+* [не начато](chast-viii.-agentnye-sistemy-i-orkestraciya/ne-nachato.md)
 
 ## Часть IX. Продакшен и здравый смысл
 
