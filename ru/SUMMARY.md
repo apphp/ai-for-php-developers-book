@@ -161,7 +161,7 @@
 
 ## Часть VII. LLM и современный AI
 
-* [не начато](chast-vii.-llm-i-sovremennyi-ai/ne-nachato.md)
+* [Почему LLM – это модели next-token prediction](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction.md)
 
 ## Часть VIII. Агентные системы и orchestration
 
