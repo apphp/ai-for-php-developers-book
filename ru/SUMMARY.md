@@ -4,6 +4,7 @@
 
 * [Титульный лист](README.md)
 * [Оглавление](vvedenie/oglavlenie.md)
+* [Дисклеймер](vvedenie/diskleimer.md)
 * [Вступление](vvedenie/vstuplenie.md)
 * [Зачем PHP-разработчику AI](vvedenie/zachem-php-razrabotchiku-ai.md)
 * [Экосистема ML в PHP](vvedenie/ekosistema-ml-v-php/README.md)
@@ -15,8 +16,10 @@
   * [Лицензия и авторские права](vvedenie/kak-eta-kniga-ustroena/licenziya-i-avtorskie-prava.md)
   * [Как контрибьютить](vvedenie/kak-eta-kniga-ustroena/kak-kontribyutit.md)
   * [История изменений книги](vvedenie/kak-eta-kniga-ustroena/istoriya-izmenenii-knigi.md)
-* [Глоссарий](vvedenie/glossarii.md)
-* [Что дальше](vvedenie/chto-dalshe.md)
+* [Заключительные материалы](vvedenie/zaklyuchitelnye-materialy/README.md)
+  * [Глоссарий](vvedenie/zaklyuchitelnye-materialy/glossarii.md)
+  * [Ресурсы и литература](vvedenie/zaklyuchitelnye-materialy/resursy-i-literatura.md)
+  * [Что дальше](vvedenie/zaklyuchitelnye-materialy/chto-dalshe.md)
 
 ## Часть I. Математический язык AI
 

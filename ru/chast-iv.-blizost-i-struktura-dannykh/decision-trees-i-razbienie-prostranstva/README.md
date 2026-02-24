@@ -58,7 +58,7 @@ $$
 
 где $$N_i$$ – количество объектов в $$i$$-м дочернем узле.
 
-[Information gain](../../vvedenie/glossarii.md#information-gain-prirost-informacii) определяется как уменьшение энтропии:
+[Information gain](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#information-gain-prirost-informacii) определяется как уменьшение энтропии:
 
 $$
 IG = H_{parent} - H_{children}

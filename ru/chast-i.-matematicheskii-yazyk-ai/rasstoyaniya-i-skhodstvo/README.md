@@ -8,7 +8,7 @@ description: Евклидово расстояние, dot product, cosine simila
 
 Чтобы формализовать такие рассуждения, нам нужны меры расстояния и меры сходства. В математике и ML это не абстрактные термины, а конкретные функции, которые принимают два вектора и возвращают число. По этому числу алгоритм и принимает решения.
 
-В этой главе мы разберем три ключевых инструмента: [евклидово расстояние](../../vvedenie/glossarii.md#evklidovo-rasstoyanie), [скалярное произведение](../../vvedenie/glossarii.md#dot-product-skalyarnoe-proizvedenie) (dot product) и [косинусное сходство](../../vvedenie/glossarii.md#cosine-similarity-kosinusnoe-skhodstvo) (cosine similarity). Они лежат в основе [k-NN](../../vvedenie/glossarii.md#k-nn-k-nearest-neighbors-k-blizhaishikh-sosedei), линейных моделей, рекомендательных систем, поиска по текстам и [эмбеддингов](../../vvedenie/glossarii.md#embeddings-embeddingi).
+В этой главе мы разберем три ключевых инструмента: [евклидово расстояние](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#evklidovo-rasstoyanie), [скалярное произведение](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#dot-product-skalyarnoe-proizvedenie) (dot product) и [косинусное сходство](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#cosine-similarity-kosinusnoe-skhodstvo) (cosine similarity). Они лежат в основе [k-NN](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#k-nn-k-nearest-neighbors-k-blizhaishikh-sosedei), линейных моделей, рекомендательных систем, поиска по текстам и [эмбеддингов](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#embeddings-embeddingi).
 
 ### Евклидово расстояние – "обычная" геометрия
 
@@ -115,7 +115,7 @@ $$
 
 Поэтому его нельзя считать "чистой" мерой сходства. Два вектора могут быть идеально сонаправлены, но если один из них в 10 раз длиннее, скалярное произведение вырастет в 10 раз – хотя направление осталось тем же.
 
-В машинном обучении это используется осознанно. В линейных моделях большое скалярное произведение означает сильную активацию. В нейросетях и [attention-механизмах](../../vvedenie/glossarii.md#attention-mekhanizm) он интерпретируется как мера важности или связи.
+В машинном обучении это используется осознанно. В линейных моделях большое скалярное произведение означает сильную активацию. В нейросетях и [attention-механизмах](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#attention-mekhanizm) он интерпретируется как мера важности или связи.
 
 <div align="left"><figure><img src="../../.gitbook/assets/7.3-dot-product-as-proection-one-vertor-into-another.png" alt="" width="563"><figcaption><p>9.3 Скалярное произведение как проекция одного вектора на другой</p></figcaption></figure></div>
 
@@ -167,14 +167,14 @@ $$
 Результат лежит в диапазоне от -1 до 1, и хотя в практических задачах NLP и эмбеддингов отрицательные значения встречаются редко, но математически они возможны:
 
 * 1 – одинаковое направление
-* 0 – [ортогональные векторы](../../vvedenie/glossarii.md#ortogonalnye-vektory)
+* 0 – [ортогональные векторы](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#ortogonalnye-vektory)
 * -1 – противоположные направления
 
 <div align="left"><figure><img src="../../.gitbook/assets/7.4-same-angle-different-vector-lengths.png" alt="" width="563"><figcaption><p>9.4 Один и тот же угол, разные длины векторов</p></figcaption></figure></div>
 
 На этой картинке важно увидеть: длины разные, но угол одинаковый – значит, косинусное сходство одинаковое.
 
-Это делает косинусное сходство идеальной мерой для текстов и [эмбеддингов](../../vvedenie/glossarii.md#embeddings-embeddingi), где длина вектора часто отражает не смысл, а масштаб (длина текста, частота слов).
+Это делает косинусное сходство идеальной мерой для текстов и [эмбеддингов](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#embeddings-embeddingi), где длина вектора часто отражает не смысл, а масштаб (длина текста, частота слов).
 
 **PHP-пример**
 

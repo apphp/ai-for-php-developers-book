@@ -1,6 +1,6 @@
 # Кейс 2. Классификация с помощью RubixML
 
-В предыдущем кейсе мы разобрали учебную реализацию дерева решений на чистом PHP и увидели механику алгоритма изнутри. Теперь рассмотрим ту же задачу, но уже с использованием готовой библиотеки. Цель этого кейса – показать, как знакомая [логика энтропии](../../../vvedenie/glossarii.md#logika-entropii) и [information gain](../../../vvedenie/glossarii.md#information-gain-prirost-informacii) применяется в реальном инструменте и как decision tree интегрируется в обычный PHP-проект.
+В предыдущем кейсе мы разобрали учебную реализацию дерева решений на чистом PHP и увидели механику алгоритма изнутри. Теперь рассмотрим ту же задачу, но уже с использованием готовой библиотеки. Цель этого кейса – показать, как знакомая [логика энтропии](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#logika-entropii) и [information gain](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#information-gain-prirost-informacii) применяется в реальном инструменте и как decision tree интегрируется в обычный PHP-проект.
 
 Этот кейс можно воспринимать как переход от учебной модели к продакшен-подходу.
 
@@ -77,7 +77,7 @@ $estimator->train($dataset);
 
 Внутри библиотеки происходит то же самое, что мы реализовывали вручную:
 
-* используется критерий разделения (например, [энтропия](../../../vvedenie/glossarii.md#logika-entropii) или Gini [impurity](../../../vvedenie/glossarii.md#gini-impurity-indeks-dzhini))
+* используется критерий разделения (например, [энтропия](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#logika-entropii) или Gini [impurity](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#gini-impurity-indeks-dzhini))
 * перебираются возможные разбиения
 * выбирается вариант с максимальным приростом информативности
 * процесс повторяется рекурсивно.

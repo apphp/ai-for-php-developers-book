@@ -83,7 +83,7 @@ $$
 
 Когда каждый признак – это слово, мы получаем пространство слов. Геометрически это означает следующее:
 
-* каждое слово соответствует оси (в рамках модели [bag-of-words](../vvedenie/glossarii.md#bag-of-words-meshok-slov))
+* каждое слово соответствует оси (в рамках модели [bag-of-words](../vvedenie/zaklyuchitelnye-materialy/glossarii.md#bag-of-words-meshok-slov))
 * каждый документ – это точка
 * близость документов определяется их словарным составом
 
@@ -219,7 +219,7 @@ $$
 * "это хорошо" и "это не хорошо"
 * близкие по смыслу, но разные по написанию слова
 
-Всё это мотивирует развитие более сложных представлений: [N-грамм](../vvedenie/glossarii.md), [TF–IDF](../vvedenie/glossarii.md#tf-idf), [эмбеддингов](../vvedenie/glossarii.md#embeddings-embeddingi), [контекстных моделей](../vvedenie/glossarii.md#kontekstnye-modeli).
+Всё это мотивирует развитие более сложных представлений: [N-грамм](../vvedenie/zaklyuchitelnye-materialy/glossarii.md), [TF–IDF](../vvedenie/zaklyuchitelnye-materialy/glossarii.md#tf-idf), [эмбеддингов](../vvedenie/zaklyuchitelnye-materialy/glossarii.md#embeddings-embeddingi), [контекстных моделей](../vvedenie/zaklyuchitelnye-materialy/glossarii.md#kontekstnye-modeli).
 
 Но фундамент остаётся тем же самым: текст превращается в числа, числа образуют пространство, а дальше вступает в игру математика.
 

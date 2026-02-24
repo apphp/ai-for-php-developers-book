@@ -162,7 +162,7 @@ print_r($scores);
 
 Здесь намеренно опущены детали, которые важны в реальных задачах:
 
-* строгое сглаживание вероятностей (например, [Laplace smoothing](../../../vvedenie/glossarii.md#laplace-smoothing-sglazhivanie-laplasa))
+* строгое сглаживание вероятностей (например, [Laplace smoothing](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#laplace-smoothing-sglazhivanie-laplasa))
 * аккуратная работа с нулевыми частотами (отсутствующими признаками)
 * кодирование и расширение категориальных признаков (one-hot encoding, target encoding и т.п.)
 
