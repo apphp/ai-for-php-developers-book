@@ -16,8 +16,8 @@
   * [Лицензия и авторские права](vvedenie/kak-eta-kniga-ustroena/licenziya-i-avtorskie-prava.md)
   * [Как контрибьютить](vvedenie/kak-eta-kniga-ustroena/kak-kontribyutit.md)
   * [История изменений книги](vvedenie/kak-eta-kniga-ustroena/istoriya-izmenenii-knigi.md)
+* [Глоссарий](vvedenie/glossarii.md)
 * [Заключительные материалы](vvedenie/zaklyuchitelnye-materialy/README.md)
-  * [Глоссарий](vvedenie/zaklyuchitelnye-materialy/glossarii.md)
   * [Ресурсы и литература](vvedenie/zaklyuchitelnye-materialy/resursy-i-literatura.md)
   * [Что дальше](vvedenie/zaklyuchitelnye-materialy/chto-dalshe.md)
 

@@ -118,9 +118,9 @@ $distance = euclideanDistance($userANorm, $userBNorm);
 
 Именно по этому принципу работают:
 
-* [k-NN](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#k-nn-k-nearest-neighbors-k-blizhaishikh-sosedei) для поиска похожих пользователей
+* [k-NN](../../../vvedenie/glossarii.md#k-nn-k-nearest-neighbors-k-blizhaishikh-sosedei) для поиска похожих пользователей
 * сегментация клиентов
-* [cold-start рекомендации](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#cold-start-problema-kholodnogo-starta-v-rekomendaciyakh)
+* [cold-start рекомендации](../../../vvedenie/glossarii.md#cold-start-problema-kholodnogo-starta-v-rekomendaciyakh)
 
 Важно подчеркнуть: евклидово расстояние отвечает на вопрос "насколько профили близки в целом", а не "насколько они хорошо взаимодействуют с каким-нибудь объектом".
 
@@ -180,7 +180,7 @@ $score = dotProduct($userANorm, $item);
 
 Такая оценка (score) – это основа рекомендательных систем:
 
-* [матричная факторизация](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#matrichnaya-faktorizaciya)
+* [матричная факторизация](../../../vvedenie/glossarii.md#matrichnaya-faktorizaciya)
 * embeddings пользователей и товаров
 * нейросетевые рекомендатели
 

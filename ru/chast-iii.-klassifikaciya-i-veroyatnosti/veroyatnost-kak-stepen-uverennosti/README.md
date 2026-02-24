@@ -182,7 +182,7 @@ $$99 / 5 094 \approx 1.94\%$$
 
 #### Вероятность и softmax
 
-Во многих моделях ([логистическая регрессия](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#logisticheskaya-regressiya), нейросети) на выходе используется функция softmax:
+Во многих моделях ([логистическая регрессия](../../vvedenie/glossarii.md#logisticheskaya-regressiya), нейросети) на выходе используется функция softmax:
 
 $$
 P(y = i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}
