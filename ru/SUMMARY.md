@@ -6,7 +6,7 @@
 * [Оглавление](vvedenie/oglavlenie.md)
 * [Дисклеймер](vvedenie/diskleimer.md)
 * [Введение](vvedenie/vvedenie/README.md)
-  * [Понимание, математика и реализация](vvedenie/vvedenie/ponimanie-matematika-i-realizaciya.md)
+  * [От понимания – к математике и реализации](vvedenie/vvedenie/ot-ponimaniya-k-matematike-i-realizacii.md)
   * [Зачем PHP-разработчику AI](vvedenie/vvedenie/zachem-php-razrabotchiku-ai.md)
 * [Экосистема ML в PHP](vvedenie/ekosistema-ml-v-php/README.md)
   * [Настройка среды для PHP](vvedenie/ekosistema-ml-v-php/nastroika-sredy-dlya-php/README.md)
