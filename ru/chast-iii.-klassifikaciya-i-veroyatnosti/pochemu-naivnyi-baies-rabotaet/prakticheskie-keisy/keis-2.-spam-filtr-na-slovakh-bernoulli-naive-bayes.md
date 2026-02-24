@@ -15,7 +15,7 @@ description: Связать с реальным ML
 * логарифмы превращают произведение вероятностей в линейную сумму
 * простейшая модель решает реальную задачу
 
-Здесь мы используем вариант [Bernoulli Naive Bayes](../../../vvedenie/glossarii.md#bernoulli-naive-bayes) – модель, где важен не счет слов, а сам факт их присутствия.
+Здесь мы используем вариант [Bernoulli Naive Bayes](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#bernoulli-naive-bayes) – модель, где важен не счет слов, а сам факт их присутствия.
 
 #### Сценарий
 
@@ -201,7 +201,7 @@ $$
 
 В этом примере:
 
-* нет сглаживания ([Laplace smoothing](../../../vvedenie/glossarii.md#laplace-smoothing-sglazhivanie-laplasa))
+* нет сглаживания ([Laplace smoothing](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#laplace-smoothing-sglazhivanie-laplasa))
 * не учитывается отсутствие слов
 * в ручной реализации словарь явно не фиксируется (в отличие от примера с RubixML)
 * данные крайне малы

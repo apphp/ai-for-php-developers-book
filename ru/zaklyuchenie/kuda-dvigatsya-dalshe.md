@@ -41,8 +41,8 @@ description: 'Что углублять: математику, системы и
 Теория вероятностей:
 
 * условная вероятность
-* [априорная и апостериорная вероятность](../vvedenie/glossarii.md#apriornaya-i-aposteriornaya-veroyatnost)
-* [байесовское обновление](../vvedenie/glossarii.md#bayesian-updating-baiesovskoe-obnovlenie)
+* [априорная и апостериорная вероятность](../vvedenie/zaklyuchitelnye-materialy/glossarii.md#apriornaya-i-aposteriornaya-veroyatnost)
+* [байесовское обновление](../vvedenie/zaklyuchitelnye-materialy/glossarii.md#bayesian-updating-baiesovskoe-obnovlenie)
 * распределения
 
 Формула Байеса:

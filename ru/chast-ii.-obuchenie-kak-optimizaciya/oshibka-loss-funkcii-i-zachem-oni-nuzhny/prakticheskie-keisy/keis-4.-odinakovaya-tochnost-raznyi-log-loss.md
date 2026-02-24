@@ -1,6 +1,6 @@
 # Кейс 4. Одинаковая точность – разный log loss
 
-На практике часто ограничиваются метрикой [accuracy](../../../vvedenie/glossarii.md#accuracy-tochnost-klassifikacii) – долей объектов, для которых модель дала правильный ответ. Это удобно, интуитивно и... опасно. В этом кейсе мы покажем ситуацию, где две модели имеют одинаковую точность, но при этом одна из них объективно лучше в терминах вероятностных предсказаний, и это видно только через [loss-функцию](../../../vvedenie/glossarii.md#loss-funkciya-funkciya-poter).
+На практике часто ограничиваются метрикой [accuracy](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#accuracy-tochnost-klassifikacii) – долей объектов, для которых модель дала правильный ответ. Это удобно, интуитивно и... опасно. В этом кейсе мы покажем ситуацию, где две модели имеют одинаковую точность, но при этом одна из них объективно лучше в терминах вероятностных предсказаний, и это видно только через [loss-функцию](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#loss-funkciya-funkciya-poter).
 
 #### Цель кейса
 
@@ -40,7 +40,7 @@ Accuracy у обеих моделей равна 100%.
 
 #### Реализация log loss
 
-Используем стандартную бинарную [log loss](../../../vvedenie/glossarii.md#log-loss-logarifmicheskaya-funkciya-poter). Математически log loss определяется следующей формулой:
+Используем стандартную бинарную [log loss](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#log-loss-logarifmicheskaya-funkciya-poter). Математически log loss определяется следующей формулой:
 
 $$
 L = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(p_i) + (1 - y_i)\log(1 - p_i) \right]
