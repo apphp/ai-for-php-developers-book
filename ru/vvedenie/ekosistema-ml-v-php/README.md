@@ -120,6 +120,8 @@ Rubix умеет сохранять модели, применять транс�
 
 Репозиторий: [https://github.com/RubixML/Tensor](https://github.com/RubixML/Tensor)
 
+<div align="left"><figure><img src="https://img.shields.io/github/stars/RubixML/Tensor?style=social" alt=""><figcaption></figcaption></figure></div>
+
 Статус: <mark style="color:green;">**активный**</mark>
 
 RubixML/Tensor – это низкоуровневая библиотека линейной алгебры, оптимизированная именно под задачи машинного обучения. Здесь есть тензоры, матрицы, элементные (поэлементные) операции, преобразования и разложения.
@@ -132,7 +134,9 @@ RubixML/Tensor – это низкоуровневая библиотека ли
 
 Репозиторий: [https://github.com/markrogoyski/math-php](https://github.com/markrogoyski/math-php)&#x20;
 
-Статус: <mark style="color:green;">**активный**</mark>&#x20;
+<div align="left"><figure><img src="https://img.shields.io/github/stars/markrogoyski/math-php?style=social" alt=""><figcaption></figcaption></figure></div>
+
+Статус: <mark style="color:green;">**активный**</mark>
 
 MathPHP – универсальная математическая библиотека на чистом PHP. Линейная алгебра, статистика, вероятности, распределения, численные методы и прочее.
 
