@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 9% (12%)
+Readines&#x73;**:** 15% (21%)
 
-🟩🟩🟩🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟨🟩🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -27,23 +27,20 @@ Section statuses
    _Motivation, realities and goals of the book._
    1. From understanding to mathematics and implementation
    2. Why a PHP developer needs AI
-3.  🟩 **Why a PHP developer needs AI**
-
-    _Real use cases, expectations, and limitations._
-4. 🟩 **The ML ecosystem in PHP**\
+3. 🟩 **The ML ecosystem in PHP**\
    &#xNAN;_&#x41;n overview of the PHP ecosystem for machine learning and scientific computing._
    1. Environment setup for PHP
-5. 🟨 About the book
+4. 🟩 About the book
    1. License and copyright
    2. How to contribute
    3. Book change history
    4. What's next?
-6. ⬜ Glossary
-7. ⬜ What’s next
+5. 🟨 Glossary
+6. 🟩 Resources and Literature
 
 #### Part I. The Mathematical Language of AI
 
-7. ⬜ What a model is in the mathematical sense\
+7. 🟨 What a model is in the mathematical sense\
    &#xNAN;_&#x46;unction, parameters, error._
 8. ⬜ Vectors, dimensions, and feature spaces\
    &#xNAN;_&#x57;hy data are points in space._

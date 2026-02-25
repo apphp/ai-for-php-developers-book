@@ -19,3 +19,10 @@
   * [Book change history](getting-started/about-the-book/book-change-history.md)
   * [What's next?](getting-started/about-the-book/whats-next.md)
 * [Glossary](getting-started/glossary.md)
+* [Resources and Literature](getting-started/resources-and-literature.md)
+
+## Part I. The Mathematical Language of AI
+
+***
+
+* [What a model is in the mathematical sense](what-a-model-is-in-the-mathematical-sense.md)
