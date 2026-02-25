@@ -23,7 +23,7 @@ Let’s go through them one by one.
 
 Let’s start with libraries that implement machine learning algorithms directly in PHP, without calling external services.
 
-**PHP-ML**
+#### **PHP-ML**
 
 Repository: [https://github.com/jorgecasas/php-ml](https://github.com/jorgecasas/php-ml)
 
@@ -64,7 +64,7 @@ This transparency is exactly the algorithm’s main advantage. The code is easy 
 
 But if PHP-ML is a "textbook", then the next library is already an "engineering tool".
 
-**Rubix ML**
+#### **Rubix ML**
 
 Website and repository: [https://github.com/RubixML](https://github.com/RubixML)
 
@@ -118,7 +118,7 @@ Rubix can save models, apply transformers, scale features, and work with pipelin
 
 Any ML code, even the most applied, ultimately boils down to operations on vectors and matrices. In PHP, there are several strong solutions for this.
 
-**RubixML/Tensor**
+#### **RubixML/Tensor**
 
 Repository: [https://github.com/RubixML/Tensor](https://github.com/RubixML/Tensor)
 
@@ -130,7 +130,7 @@ If Rubix ML is the "brain", then Tensor is the "muscle".
 
 This library is especially important if you want to write ML code that not only works, but works stably and predictably in terms of memory usage and performance.
 
-**MathPHP**
+#### **MathPHP**
 
 Repository: [https://github.com/markrogoyski/math-php](https://github.com/markrogoyski/math-php)
 
@@ -142,7 +142,7 @@ In the context of machine learning, MathPHP is often used not directly for model
 
 It’s a library that is ideal for explaining mathematics "plainly", without magic or hidden optimizations.
 
-**NumPower**
+#### **NumPower**
 
 Repository: [https://github.com/RubixML/numpower](https://github.com/RubixML/numpower)
 
@@ -156,7 +156,7 @@ And the answer is yes — if you are willing to work with extensions and specifi
 
 NumPower is relevant where PHP is used not as a web layer, but as a computational engine.
 
-**NumPHP and SciPhp**
+#### **NumPHP and SciPhp**
 
 NumPHP: [https://numphp.org/](https://numphp.org/)
 
@@ -174,7 +174,7 @@ Nevertheless, they are important for understanding that ideas of scientific comp
 
 Modern machine learning rarely consists of just an "algorithm". There is always infrastructure around it: tokenization, data preparation, streaming processing.
 
-**Tiktoken PHP**
+#### **Tiktoken PHP**
 
 Repository: [https://github.com/yethee/tiktoken-php](https://github.com/yethee/tiktoken-php)
 
@@ -184,11 +184,71 @@ tiktoken-php is a PHP port of the OpenAI tokenizer. It is used for counting toke
 
 If you work with GPT, Claude, or Gemini from PHP, this library becomes almost mandatory. It allows you to understand the real cost of requests, context length, and model behavior even before calling the API.
 
-TransformersPHP
+#### TransformersPHP
 
+Repository: [https://github.com/CodeWithKyrian/transformers-php](https://github.com/CodeWithKyrian/transformers-php)
 
+Status: <mark style="color:green;">**active**</mark>
 
-**Rindow Math Matrix**
+Transformers PHP is one of the most interesting and illustrative projects in the modern PHP ML ecosystem. It is a library that allows you to use transformer models – BERT, RoBERTa, DistilBERT, and others – directly from PHP, without Python and without external APIs.
+
+In essence, it is a PHP-oriented adaptation of the [Hugging Face Transformers](https://huggingface.co/docs/transformers/index) concepts, tailored to the PHP ecosystem and real-world application scenarios.
+
+The key feature of the library is local inference. Models are loaded and executed on the PHP application side via [ONNX Runtime](https://onnxruntime.ai/). This enables important architectural advantages:
+
+* no network calls to LLM APIs
+* full control over data – critical for privacy
+* predictable latency
+* offline capability
+
+Transformers PHP supports common NLP tasks:
+
+* generating embeddings
+* text classification
+* semantic similarity
+* feature extraction for downstream tasks
+
+Conceptually, usage is simple: you load a pretrained model and apply it to text just as you would in Python – but entirely within PHP code. TransformersPHP provides a straightforward pipeline API for tasks such as sentiment analysis, text classification, semantic similarity, and more. In the example below, the model determines the sentiment of two phrases and returns a label and a score.
+
+```php
+use function Codewithkyrian\Transformers\Pipelines\pipeline;
+
+// Выделить конвейер для анализа настроений
+$classifier = pipeline('sentiment-analysis');
+
+$out = $classifier(['I love transformers!']);
+echo print_r($out, true);
+// Array ( 
+//   [label] => POSITIVE 
+//   [score] => 0.99978870153427 
+// )
+
+$out = $classifier(['I hate transformers!']);
+echo print_r($out, true);
+// Array ( 
+//   [label] => NEGATIVE 
+//   [score] => 0.99863630533218 
+// )
+```
+
+{% hint style="info" %}
+To test this code yourself, install the examples from the official [GitHub](https://github.com/apphp/ai-for-php-developers-examples) repository or use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
+{% endhint %}
+
+It is important to understand the architectural role of Transformers PHP.
+
+This library does not compete with large LLM services like GPT or Claude. It addresses a different – but very important – layer:
+
+* fast embeddings
+* local classification
+* semantic search
+* lightweight NLP without external dependencies
+
+Within a PHP stack, this makes particular sense. PHP remains the central layer of business logic, while transformers become an embedded tool rather than a remote service.
+
+Transformers PHP is a strong example of how modern ML is gradually becoming less "foreign" to PHP and turning into part of its native ecosystem – even if through careful engineering bridges such as ONNX.
+
+#### **Rindow Math Matrix**
 
 Repository: [https://github.com/rindow/rindow-math-matrix](https://github.com/rindow/rindow-math-matrix)
 
@@ -198,7 +258,7 @@ Rindow Math Matrix is a linear algebra and matrix computation library focused on
 
 A good choice if you need a strict mathematical API and control over numerical operations.
 
-**Flow PHP**
+#### **Flow PHP**
 
 Repository: [https://github.com/flow-php/flow](https://github.com/flow-php/flow)
 
@@ -214,7 +274,82 @@ Flow PHP bridges the gap between "the data is somewhere" and "the model is alrea
 
 In practice, in most production scenarios, using ML in PHP means not training models, but performing inference via APIs.
 
-**OpenAI, Anthropic, Gemini, and other LLMs**
+#### **LLPhant**
+
+Repository: [https://github.com/LLPhant/LLPhant](https://github.com/LLPhant/LLPhant?utm_source=chatgpt.com)
+
+Status: <mark style="color:green;">**active**</mark>
+
+LLPhant is a modern Generative AI framework for PHP that focuses not on "implementing an algorithm", but on "building an AI application".
+
+If PHP-ML and Rubix operate at the level of models and mathematics, and TransformersPHP works at the level of local inference, LLPhant addresses the architectural layer around LLMs.
+
+It is inspired by LangChain and LlamaIndex, but adapted to the PHP ecosystem.
+
+LLPhant provides:
+
+* a unified interface to multiple LLMs – OpenAI, Anthropic, Mistral, Ollama, and others
+* embeddings support
+* integration with vector stores – Redis, Doctrine, Qdrant, in-memory, and more
+* RAG workflows – retrieval + generation
+* chat memory and dialogue management
+* tools for agents and tool calling
+
+Architecturally, LLPhant is important because it allows you to treat an LLM not as "just an HTTP call", but as a system component. You work not simply with an API, but with abstractions:
+
+* Chat
+* Embeddings
+* VectorStore
+* Document
+* Memory
+* Pipeline
+
+This moves LLM usage from the level of "a script that sends a request to OpenAI" to the level of reproducible architecture.
+
+A simplest example:
+
+```php
+use LLPhant\Chat\OpenAIChat;
+use LLPhant\Chat\Message;
+use LLPhant\Chat\Enums\ChatRole;
+
+$chat = new OpenAIChat();
+
+$message = new Message();
+$message->role = ChatRole::User;
+$message->content = 'What is the capital of France?';
+
+$response = $chat->generateText($message);
+echo $response;
+
+// Результат: 
+// The capital of France is Paris.
+```
+
+{% hint style="info" %}
+To test this code yourself, install the examples from the official [GitHub](https://github.com/apphp/ai-for-php-developers-examples) repository or use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
+{% endhint %}
+
+But the real power of LLPhant reveals itself in RAG scenarios:
+
+1. You create embeddings for your documents.
+2. Store them in a vector store.
+3. When a user sends a query, you retrieve the relevant context.
+4. Pass that context to the model.
+5. Receive an answer grounded in your own data.
+
+This is why LLPhant holds a special place in the PHP ML ecosystem. It is not a linear algebra library, not a classical machine learning toolkit, and not just a wrapper for local inference. It is a framework for building full AI systems on top of LLMs – with context management, data storage, and architectural structure.
+
+In simple terms:
+
+* PHP-ML – a textbook
+* Rubix – an engineering tool
+* TransformersPHP – local inference
+* LLPhant – infrastructure for LLM applications
+
+Projects like this show that the modern ML ecosystem in PHP is no longer just about "calling an API". It is becoming a full-fledged architectural layer around models.
+
+#### **OpenAI, Anthropic, Gemini, and other LLMs**
 
 Major LLMs have PHP SDKs or high-quality HTTP wrappers. Through them, PHP obtains:
 
@@ -228,13 +363,13 @@ From an architectural point of view, it looks like this: the model lives outside
 
 This is exactly where PHP is especially strong: it integrates perfectly with queues, databases, caches, payments, and UI.
 
-**ONNX Runtime and Model Inference**
+#### **ONNX Runtime and Model Inference**
 
 ONNX deserves special mention. Through extensions or external services, PHP can run inference on models trained in Python and exported to the ONNX format.
 
 This is a rare but important use case: the model is trained anywhere, but used in a PHP application without Python in production (via ONNX Runtime, extensions, or an external inference service).
 
-**Computer Vision and Signal Processing**
+#### **Computer Vision and Signal Processing**
 
 In computer vision and signal processing tasks, PHP is not a leading language. However, basic tools for integrating such solutions do exist. OpenCV can be used via bindings, CLI calls, or external services, with PHP acting as the control and coordination layer.
 

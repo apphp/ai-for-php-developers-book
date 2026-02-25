@@ -33,10 +33,11 @@ Section statuses
 4. 🟩 **The ML ecosystem in PHP**\
    &#xNAN;_&#x41;n overview of the PHP ecosystem for machine learning and scientific computing._
    1. Environment setup for PHP
-5. 🟨 How this book is structured
+5. 🟨 About the book
    1. License and copyright
    2. How to contribute
    3. Book change history
+   4. What's next?
 6. ⬜ Glossary
 7. ⬜ What’s next
 
