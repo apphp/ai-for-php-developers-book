@@ -19,7 +19,7 @@ The ecosystem here is not noisy, but mature. It consists of four layers:
 
 Let’s go through them one by one.
 
-#### Classical Machine Learning in PHP
+### Classical Machine Learning in PHP
 
 Let’s start with libraries that implement machine learning algorithms directly in PHP, without calling external services.
 
@@ -53,6 +53,10 @@ $prediction = $classifier->predict([3, 2]);
 echo $prediction;
 // Result: 'b'
 ```
+
+{% hint style="info" %}
+To test this code yourself, install the examples from the official [GitHub](https://github.com/apphp/ai-for-php-developers-examples) repository or use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
+{% endhint %}
 
 For the point $$[3, 2]$$, the algorithm returns class "$$b$$" because its nearest neighbors in the training set belong to that class. There is no "magic" here: k-NN simply looks at which points are closest and lets them "vote" based on their labels.
 
@@ -100,13 +104,17 @@ echo $prediction[0];
 // Result: 'M'
 ```
 
+{% hint style="info" %}
+To test this code yourself, install the examples from the official [GitHub](https://github.com/apphp/ai-for-php-developers-examples) repository or use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
+{% endhint %}
+
 Notice an important point.
 
 We are not passing "raw arrays" into the model — we are working with a `Dataset` object. This is a fundamentally different level of abstraction that immediately trains you to think like an ML engineer rather than the author of a script for a pet project.
 
 Rubix can save models, apply transformers, scale features, and work with pipelines. In real PHP systems, this often becomes decisive, which is why Rubix is frequently chosen when a model is not an experiment but part of a long-lived service where versioning, reproducibility, and stability matter.
 
-#### Linear Algebra and Tensors as the Foundation of ML
+### Linear Algebra and Tensors as the Foundation of ML
 
 Any ML code, even the most applied, ultimately boils down to operations on vectors and matrices. In PHP, there are several strong solutions for this.
 
@@ -162,7 +170,7 @@ These are libraries inspired by NumPy and scientific Python, but they have not b
 
 Nevertheless, they are important for understanding that ideas of scientific computing in PHP appeared long before LLMs and the AI hype.
 
-#### Modern ML Integrations: Tokens, Embeddings, Data Pipelines
+### Modern ML Integrations: Tokens, Embeddings, Data Pipelines
 
 Modern machine learning rarely consists of just an "algorithm". There is always infrastructure around it: tokenization, data preparation, streaming processing.
 
@@ -175,6 +183,10 @@ Status: <mark style="color:green;">**active**</mark>
 tiktoken-php is a PHP port of the OpenAI tokenizer. It is used for counting tokens, splitting text, and preparing data for LLMs.
 
 If you work with GPT, Claude, or Gemini from PHP, this library becomes almost mandatory. It allows you to understand the real cost of requests, context length, and model behavior even before calling the API.
+
+TransformersPHP
+
+
 
 **Rindow Math Matrix**
 
@@ -198,7 +210,7 @@ In real ML systems, this layer often turns out to be the most complex. Data must
 
 Flow PHP bridges the gap between "the data is somewhere" and "the model is already working".
 
-#### Integration with External ML Services
+### Integration with External ML Services
 
 In practice, in most production scenarios, using ML in PHP means not training models, but performing inference via APIs.
 
@@ -228,7 +240,7 @@ In computer vision and signal processing tasks, PHP is not a leading language. H
 
 In these scenarios, PHP rarely performs numerical computations directly. Its role is orchestration: launching and controlling CV pipelines, passing data between components, and integrating with queues, storage, and application business logic. This is a typical example of how PHP works effectively with ML components while remaining the central point of control rather than the computational core.
 
-#### How to Read This Ecosystem as a Whole
+### How to Read This Ecosystem as a Whole
 
 One conclusion is important to make before moving on.
 

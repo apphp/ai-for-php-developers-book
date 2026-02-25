@@ -24,7 +24,9 @@ Section statuses
 
     _About the book's boundaries, assumptions and responsibilities._
 2. 🟩 **Introduction**\
-   &#xNAN;_&#x41;I for PHP developers: intuitive, mathematically honest, and practical._
+   _Motivation, realities and goals of the book._
+   1. From understanding to mathematics and implementation
+   2. Why a PHP developer needs AI
 3.  🟩 **Why a PHP developer needs AI**
 
     _Real use cases, expectations, and limitations._
