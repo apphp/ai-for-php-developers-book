@@ -73,7 +73,7 @@ for ($w = 0; $w <= 3; $w += 0.01) {
 echo "Best w ≈ $bestW, loss ≈ $bestLoss";
 ```
 
-**Результат:**
+Результат:
 
 ```
 Best w ≈ 2.0, loss ≈ 0.0
@@ -105,25 +105,27 @@ Best w ≈ 2.0, loss ≈ 0.0
 Теперь покажем то же самое, но через библиотеку. Используем уже хорошо известную нам библиотеку Rubix ML.
 
 ```php
-use Rubix\ML\Regressors\LeastSquares;
 use Rubix\ML\Datasets\Labeled;
+use Rubix\ML\Datasets\Unlabeled;
+use Rubix\ML\Regressors\Ridge;
 
 $samples = [[1], [2], [3], [4]];
 $labels = [2, 4, 6, 8];
 
 $dataset = new Labeled($samples, $labels);
 
-$model = new LeastSquares();
+$model = new Ridge(1e-6);
 $model->train($dataset);
 
-$predictions = $model->predict([[5]]);
-echo "Predict for 5: "  . $predictions[0];
+$predictions = $model->predict(new Unlabeled([[5]]));
+
+echo "Predict for 5: ≈ "  . $predictions[0];
 ```
 
 Результат будет близок к:
 
 ```
-Predict for 5: 10
+Predict for 5: ≈ 9.9999990
 ```
 
 **Что происходит "под капотом"**
@@ -151,3 +153,7 @@ Predict for 5: 10
 > процесс поиска минимума функции ошибки по пространству параметров модели.
 
 Именно поэтому вся теория оптимизации, градиенты и производные существуют – они лишь способы быстрее найти минимум loss, который мы здесь нашли перебором.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-2/errors-and-loss-functions) для его запуска.
+{% endhint %}
