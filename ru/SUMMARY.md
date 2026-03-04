@@ -174,6 +174,14 @@
     * [Кейс 5. Мини-GPT на PHP как демонстрационный проект](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-5.-mini-gpt-na-php-kak-demonstracionnyi-proekt.md)
     * [Кейс 6. Prompt Engineering как изменение распределения](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-6.-prompt-engineering-kak-izmenenie-raspredeleniya.md)
     * [Кейс 7. Генерация фишинговых писем как учебный эксперимент](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-7.-generaciya-fishingovykh-pisem-kak-uchebnyi-eksperiment.md)
+* [Где LLM ошибаются математически](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/README.md)
+  * [Практические кейсы](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/README.md)
+    * [Кейс 1. Галлюцинация числовых фактов и обязательная верификация](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-1.-gallyucinaciya-chislovykh-faktov-i-obyazatelnaya-verifikaciya.md)
+    * [Кейс 2. Ошибка в длинной математической цепочке (error propagation)](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-2.-oshibka-v-dlinnoi-matematicheskoi-cepochke-error-propagation.md)
+    * [Page 3. Base Rate Neglect в phishing-симуляциях](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/page-3.-base-rate-neglect-v-phishing-simulyaciyakh.md)
+    * [Кейс 4. Bias в обучающих данных](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-4.-bias-v-obuchayushikh-dannykh.md)
+    * [Кейс 5. Temperature и управляемая деградация качества](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-5.-temperature-i-upravlyaemaya-degradaciya-kachestva.md)
+    * [Кейс 6. Архитектура “LLM + детерминированный слой”](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-6.-arkhitektura-llm-+-determinirovannyi-sloi.md)
 
 ## Часть VIII. Агентные системы и оркестрация
 
