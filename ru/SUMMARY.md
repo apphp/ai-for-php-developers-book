@@ -185,7 +185,7 @@
 
 ## Часть VIII. Агентные системы и оркестрация
 
-* [не начато](chast-viii.-agentnye-sistemy-i-orkestraciya/ne-nachato.md)
+* [Агентные системы и multi-step reasoning в PHP](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php.md)
 
 ## Часть IX. Продакшен и здравый смысл
 
