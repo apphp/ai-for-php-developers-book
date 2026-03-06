@@ -185,7 +185,14 @@
 
 ## Часть VIII. Агентные системы и оркестрация
 
-* [Агентные системы и multi-step reasoning в PHP](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php.md)
+* [Агентные системы и multi-step reasoning в PHP](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/README.md)
+  * [Практические кейсы](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/README.md)
+    * [Кейс 1. AI-калькулятор как инструмент агента (чистый PHP)](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-1.-ai-kalkulyator-kak-instrument-agenta-chistyi-php.md)
+    * [Кейс 2. AI-аналитик логов безопасности](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-2.-ai-analitik-logov-bezopasnosti.md)
+    * [Кейс 3. AI-ассистент для SQL-аналитики (LLPhant)](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-3.-ai-assistent-dlya-sql-analitiki-llphant.md)
+    * [Кейс 4. Research-агент (Neuron AI)](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-4.-research-agent-neuron-ai.md)
+    * [Кейс 5. Агент обнаружения фишинга](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-5.-agent-obnaruzheniya-fishinga.md)
+    * [Page 6. Агент планирования задач (Task Planner)](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/page-6.-agent-planirovaniya-zadach-task-planner.md)
 
 ## Часть IX. Продакшен и здравый смысл
 

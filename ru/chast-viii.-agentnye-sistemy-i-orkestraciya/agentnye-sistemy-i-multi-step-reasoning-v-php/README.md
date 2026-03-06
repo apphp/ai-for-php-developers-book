@@ -117,11 +117,11 @@ $$
 #### Внутренний цикл агента
 
 ```php
-while (!isGoalReached()) {
-    observe_state();
-    plan_next_step();
-    use_tool();
-    update_state();
+while (!$goalReached) {
+    $plan = $llm->plan($state);
+    $tool = $plan->tool;
+    $result = $tool->execute();
+    $state->update($result);
 }
 ```
 
@@ -201,123 +201,6 @@ calculate(expression)
 $$
 tool: X \rightarrow Y
 $$
-
-### Простая агентная система на PHP
-
-Начнём с минимального агента.
-
-#### Интерфейс инструмента
-
-```php
-interface Tool {
-    public function name(): string;
-    public function execute(array $input): string;
-}
-```
-
-#### Пример инструмента
-
-```php
-class CalculatorTool implements Tool {
-    public function name(): string {
-        return "calculator";
-    }
-
-    public function execute(array $input): string {
-        $expr = $input["expression"];
-        $result = eval("return $expr;");
-        return (string)$result;
-    }
-}
-```
-
-### Планирование через LLM
-
-LLM должна решить:
-
-* какой инструмент использовать
-* какие параметры передать
-
-Например:
-
-```php
-User: 2 + 5 * 10
-
-LLM plan:
-
-{
-  "tool": "calculator",
-  "input": {
-     "expression": "2 + 5 * 10"
-  }
-}
-```
-
-#### PHP вызов LLM
-
-```php
-function askLLM($prompt) {
-    $apiKey = getenv("OPENAI_KEY");
-
-    $data = [
-        "model" => "gpt-4o-mini",
-        "messages" => [
-            ["role" => "user", "content" => $prompt]
-        ]
-    ];
-
-    $ch = curl_init("https://api.openai.com/v1/chat/completions");
-
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        "Authorization: Bearer $apiKey",
-        "Content-Type: application/json"
-    ]);
-
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-    $response = curl_exec($ch);
-
-    return json_decode($response, true);
-}
-```
-
-### Контроллер агента
-
-Контроллер управляет циклом.
-
-```php
-class Agent {
-    private $tools = [];
-
-    public function addTool(Tool $tool) {
-        $this->tools[$tool->name()] = $tool;
-    }
-
-    public function run($task) {
-        $prompt = "You are an AI agent. Decide which tool to use. Task: $task";
-        $response = askLLM($prompt);
-        $plan = json_decode(
-            $response["choices"][0]["message"]["content"],
-            true
-        );
-        $toolName = $plan["tool"];
-        $tool = $this->tools[$toolName];
-
-        return $tool->execute($plan["input"]);
-    }
-}
-```
-
-#### Использование
-
-```php
-$agent = new Agent();
-$agent->addTool(new CalculatorTool());
-$result = $agent->run("What is 5 * 7 + 3 ?");
-
-echo $result;
-```
 
 ### Память агента
 
@@ -454,7 +337,7 @@ $$
 
 LLM может выступать и в роли критика.
 
-## Self-Reflection
+### Self-Reflection
 
 Современные агентные системы используют саморефлексию.
 
