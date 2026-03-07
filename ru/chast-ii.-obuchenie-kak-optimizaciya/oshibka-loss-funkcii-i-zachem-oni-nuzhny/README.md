@@ -42,7 +42,7 @@ $$
 
 Геометрически это выглядит так: мы смотрим, насколько далеко предсказание отстоит от реального значения на числовой прямой.
 
-<div align="left"><figure><img src="../../.gitbook/assets/9.1-distance-between-y-and-y1-on-axis.png" alt="" width="563"><figcaption><p>10.1 Расстояние между y и ŷ на числовой оси</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/10.1-distance-between-y-and-y1-on-axis.png" alt="" width="563"><figcaption><p>10.1 Расстояние между y и ŷ на числовой оси</p></figcaption></figure></div>
 
 По сути, мы хотим превратить отклонение в число, которое ведёт себя как расстояние. Давайте поясним почему. В задачах регрессии ошибку удобно интерпретировать как расстояние между реальным значением и предсказанием, то есть всегда неотрицательное и увеличивается при росте ошибки.
 
@@ -106,7 +106,7 @@ $$
 
 Если представить данные как точки на плоскости, а модель как линию или поверхность, MSE измеряет, насколько далеко точки находятся от этой поверхности.
 
-<div align="left"><figure><img src="../../.gitbook/assets/9.2-data-points-and-regression-line.png" alt="" width="563"><figcaption><p>10.2 Точки данных и линия регрессии, вертикальные отрезки – ошибки</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/10.2-data-points-and-regression-line.png" alt="" width="563"><figcaption><p>10.2 Точки данных и линия регрессии, вертикальные отрезки – ошибки</p></figcaption></figure></div>
 
 #### Немного полезной математики
 
