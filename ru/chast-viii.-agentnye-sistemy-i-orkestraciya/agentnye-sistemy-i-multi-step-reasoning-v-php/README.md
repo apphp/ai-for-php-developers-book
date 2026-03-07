@@ -125,17 +125,7 @@ while (!$goalReached) {
 }
 ```
 
-#### Плейсхолдер для картинки
-
-\[Картинка: цикл работы агента]
-
-Prompt для генерации изображения:
-
-```
-Diagram of an AI agent loop:
-User request → LLM planning → Tool usage → Observation → Next step → Final answer.
-Minimalist technical diagram, white background.
-```
+<div align="left"><figure><img src="../../.gitbook/assets/30.1-ai-agent-loop.png" alt="" width="563"><figcaption><p>30.1 Цикл работы ИИ агента</p></figcaption></figure></div>
 
 ### Архитектура агентной системы
 
@@ -268,19 +258,7 @@ for ($i = 0; $i < 5; $i++) {
 }
 ```
 
-#### Плейсхолдер для картинки
-
-\[Картинка: multi-step reasoning]
-
-Prompt:
-
-```
-Diagram showing multi-step reasoning in an AI agent:
-step1 reasoning → tool → observation
-step2 reasoning → tool → observation
-step3 final answer
-clean technical illustration
-```
+<div align="left"><figure><img src="../../.gitbook/assets/30.2-multi-step-reasoning.png" alt="" width="563"><figcaption><p>30.2 Многошаговое рассуждение</p></figcaption></figure></div>
 
 ### Контроль и безопасность
 
