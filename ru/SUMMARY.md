@@ -60,7 +60,7 @@
   * [Практические кейсы](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/README.md)
     * [Кейс 1. Фильтр спама: вероятность ≠ решение](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-1.-filtr-spama-veroyatnost-reshenie.md)
     * [Кейс 2. Медицинский тест: обновление уверенности (Байес)](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-2.-medicinskii-test-obnovlenie-uverennosti-baies.md)
-    * [Кейс 3. Многоклассовая классификация и softmax (RubixML)](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-3.-mnogoklassovaya-klassifikaciya-i-softmax-rubixml.md)
+    * [Кейс 3. Многоклассовая классификация и softmax](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-3.-mnogoklassovaya-klassifikaciya-i-softmax.md)
     * [Кейс 4. Переуверенная модель как сигнал проблемы](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-4.-pereuverennaya-model-kak-signal-problemy.md)
     * [Кейс 5. Обновление уверенности при новых данных](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-5.-obnovlenie-uverennosti-pri-novykh-dannykh.md)
 * [Логистическая регрессия](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/README.md)
