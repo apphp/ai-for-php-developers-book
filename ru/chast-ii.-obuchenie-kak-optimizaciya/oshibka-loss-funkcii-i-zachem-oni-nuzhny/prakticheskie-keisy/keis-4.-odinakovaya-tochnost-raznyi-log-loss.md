@@ -1,6 +1,6 @@
 # Кейс 4. Одинаковая точность – разный log loss
 
-На практике часто ограничиваются метрикой [accuracy](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#accuracy-tochnost-klassifikacii) – долей объектов, для которых модель дала правильный ответ. Это удобно, интуитивно и... опасно. В этом кейсе мы покажем ситуацию, где две модели имеют одинаковую точность, но при этом одна из них объективно лучше в терминах вероятностных предсказаний, и это видно только через [loss-функцию](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#loss-funkciya-funkciya-poter).
+На практике при оценке моделей классификации часто ограничиваются метрикой [accuracy](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#accuracy-tochnost-klassifikacii) – долей объектов, для которых модель дала правильный ответ. Это удобно, интуитивно и... опасно. В этом кейсе мы покажем ситуацию, где две модели имеют одинаковую точность, но при этом одна из них объективно лучше в терминах вероятностных предсказаний, и это видно только через [loss-функцию](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#loss-funkciya-funkciya-poter).
 
 #### Цель кейса
 
@@ -40,10 +40,10 @@ Accuracy у обеих моделей равна 100%.
 
 #### Реализация log loss
 
-Используем стандартную бинарную [log loss](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#log-loss-logarifmicheskaya-funkciya-poter). Математически log loss определяется следующей формулой:
+Используем стандартную бинарную [log loss](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#log-loss-logarifmicheskaya-funkciya-poter). Как вы помните из предыдущего кейса математически log loss определяется следующей формулой:
 
 $$
-L = -\frac{1}{N} \sum_{i=1}^{N} \left[ y_i \log(p_i) + (1 - y_i)\log(1 - p_i) \right]
+LogLoss = -\frac{1}{n} \sum_{i=1}^{n} \left[ y_i \log(p_i) + (1 - y_i)\log(1 - p_i) \right]
 $$
 
 ```php
@@ -51,6 +51,10 @@ function logLoss(array $y, array $p, float $eps = 1e-15): float {
     $loss = 0.0;
     $n = count($y);
 
+    if ($n === 0) {
+        return 0.0;
+    }
+    
     for ($i = 0; $i < $n; $i++) {
         $pi = max($eps, min(1 - $eps, $p[$i]));
         $loss += $y[$i] * log($pi) + (1 - $y[$i]) * log(1 - $pi);
