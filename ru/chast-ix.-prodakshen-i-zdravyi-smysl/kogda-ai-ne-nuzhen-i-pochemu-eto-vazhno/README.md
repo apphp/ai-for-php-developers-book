@@ -144,7 +144,7 @@ AI нужен там, где невозможно явно и устойчиво
 
 * сумма > 1000
 * клиент новый
-* страна = “US”
+* страна = "US"
 
 ```php
 function isHighRiskOrder(array $order): bool {
