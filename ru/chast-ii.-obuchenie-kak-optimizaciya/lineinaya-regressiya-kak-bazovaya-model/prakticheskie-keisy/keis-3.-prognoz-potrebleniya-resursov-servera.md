@@ -33,8 +33,8 @@
 
 Данные для обучения обычно поступают из инфраструктурных источников:
 
-* метрики CPU, RAM и RPS – из Prometheus
-* дополнительные параметры – из логов или APM
+* метрики CPU, RAM и RPS – например, из [Prometheus](https://prometheus.io/)
+* дополнительные параметры – из логов или APM (Application Performance Monitoring)
 * агрегация – за фиксированные интервалы времени (например, 1 минута)
 
 Модель может переобучаться регулярно – раз в десятки минут или часы, в зависимости от динамики нагрузки. Предсказание используется системой оркестрации (Kubernetes, autoscaler) или внутренним monitoring-tool.
@@ -79,11 +79,16 @@ use Rubix\ML\Regressors\LinearRegression;
 $samples = [
     [1200, 15, 300, 15, 14],
     [800, 10, 200, 9, 2],
+    [1500, 18, 450, 20, 19],
+    [400, 8, 120, 5, 4],
 ];
 
+// CPU %
 $targets = [
-    75.0, // CPU %
+    75.0,
     40.0,
+    82.0,
+    25.0,
 ];
 
 $dataset = Labeled::build($samples, $targets);
@@ -94,7 +99,8 @@ $dataset = Labeled::build($samples, $targets);
 **Обучение модели**
 
 ```php
-$model = new LinearRegression();
+// При alpha = 1e-6 Ridge ведет себя почти как обычный метод наименьших квадратов
+$model = new Ridge(1e-6);
 $model->train($dataset);
 ```
 
@@ -104,12 +110,14 @@ $model->train($dataset);
 
 ```php
 $futureMetrics = [1000, 12, 250, 10, 16];
-$cpuLoad = $model->predict($futureMetrics);
 
-echo "Ожидаемая загрузка CPU: " . round($cpuLoad[0], 1) . "%\n";
+$unlabeled = new Unlabeled([$futureMetrics]);
+$predictions = $model->predict($unlabeled);
+
+echo "Ожидаемая загрузка CPU: " . ound($predictions[0], 1) . "%\n";
 
 // Результат: 
-// Ожидаемая загрузка CPU: 69.2%
+// Ожидаемая загрузка CPU: 69.5%
 ```
 
 Такое предсказание может использоваться как дополнительный сигнал в логике [auto-scaling](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#auto-scaling) или при принятии решений об изменении ресурсов.
@@ -119,8 +127,8 @@ echo "Ожидаемая загрузка CPU: " . round($cpuLoad[0], 1) . "%\n"
 Как и в предыдущих кейсах, линейная модель ценна своей интерпретируемостью.
 
 ```php
-$weights = $model->weights();
-$bias = $model->intercept();
+$weights = $model->coefficients();
+$bias = $model->bias();
 
 print_r($weights);
 echo "Bias: $bias\n";
