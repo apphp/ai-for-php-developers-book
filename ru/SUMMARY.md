@@ -28,8 +28,11 @@
 * [Расстояния и сходство](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/README.md)
   * [Практические кейсы](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/README.md)
     * [Кейс 1: Сравнение объектов и пользователей](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-1-sravnenie-obektov-i-polzovatelei.md)
-    * [Кейс 2: Оценка релевантности объекта](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-2-ocenka-relevantnosti-obekta.md)
-    * [Кейс 3: Сравнение текстов](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-3-sravnenie-tekstov.md)
+    * [🔒 Кейс 2: Оценка релевантности объекта](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-2-ocenka-relevantnosti-obekta.md)
+    * [🔒 Кейс 3: Сравнение текстов](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-3-sravnenie-tekstov.md)
+  * [Copy of Практические кейсы](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/copy-of-prakticheskie-keisy/README.md)
+    * [Кейс 2: Оценка релевантности объекта](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/copy-of-prakticheskie-keisy/keis-2-ocenka-relevantnosti-obekta.md)
+    * [Кейс 3: Сравнение текстов](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/copy-of-prakticheskie-keisy/keis-3-sravnenie-tekstov.md)
 
 ## Часть II. Обучение как оптимизация
 
