@@ -96,8 +96,8 @@ function real_multiplication($a, $b) {
     return $a * $b;
 }
 
-echo "LLM style: " . llm_style_multiplication(347, 829) . PHP_EOL;
-echo "Real math: " . real_multiplication(347, 829) . PHP_EOL;
+echo "LLM style: " . llm_style_multiplication(347, 829) . "\n";
+echo "Real math: " . real_multiplication(347, 829) . "\n";
 ```
 
 Идея в том, что LLM ближе к "статистическому угадыванию", чем к детерминированному вычислению.
