@@ -68,7 +68,7 @@ for ($epoch = 1; $epoch <= 20; $epoch++) {
     echo $epoch . "\t" .
          round($w, 4) . "\t" .
          round($gradient, 4) . "\t\t" .
-         round($loss, 4) . PHP_EOL;
+         round($loss, 4) . "\n";
 
     $w -= $learningRate * $gradient;
 }

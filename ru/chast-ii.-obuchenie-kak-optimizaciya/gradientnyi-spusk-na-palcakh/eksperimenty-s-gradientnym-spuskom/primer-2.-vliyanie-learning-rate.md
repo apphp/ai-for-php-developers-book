@@ -44,7 +44,7 @@ function train(float $lr, array $x, array $y): void {
     $w = 0.0;
     $n = count($x);
 
-    echo PHP_EOL . "Learning rate = $lr" . PHP_EOL;
+    echo PHP_EOL . "Learning rate = $lr\n";
 
     for ($epoch = 1; $epoch <= 10; $epoch++) {
 
@@ -58,7 +58,7 @@ function train(float $lr, array $x, array $y): void {
         $gradient = (2 / $n) * $gradient;
         $w -= $lr * $gradient;
 
-        echo "Epoch $epoch: w = " . round($w, 4) . PHP_EOL;
+        echo "Epoch $epoch: w = " . round($w, 4) . "\n";
     }
 }
 

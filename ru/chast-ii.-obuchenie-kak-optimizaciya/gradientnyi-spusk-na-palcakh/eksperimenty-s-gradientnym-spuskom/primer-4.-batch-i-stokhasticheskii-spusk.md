@@ -12,7 +12,7 @@ $w = 0.0;
 $lr = 0.1;
 $n = count($x);
 
-echo "Batch GD" . PHP_EOL;
+echo "Batch GD\n";
 
 for ($epoch = 1; $epoch <= 10; $epoch++) {
 
@@ -25,7 +25,7 @@ for ($epoch = 1; $epoch <= 10; $epoch++) {
     $gradient = (2 / $n) * $gradient;
     $w -= $lr * $gradient;
 
-    echo "Epoch $epoch: w = " . round($w, 4) . PHP_EOL;
+    echo "Epoch $epoch: w = " . round($w, 4) . "\n";
 }
 ```
 
@@ -39,7 +39,7 @@ $w = 0.0;
 $lr = 0.1;
 $n = count($x);
 
-echo PHP_EOL . "Stochastic GD" . PHP_EOL;
+echo PHP_EOL . "Stochastic GD\n";
 
 for ($epoch = 1; $epoch <= 10; $epoch++) {
 
@@ -48,7 +48,7 @@ for ($epoch = 1; $epoch <= 10; $epoch++) {
         $w -= $lr * $gradient;
     }
 
-    echo "Epoch $epoch: w = " . round($w, 4) . PHP_EOL;
+    echo "Epoch $epoch: w = " . round($w, 4) . "\n";
 }
 ```
 
