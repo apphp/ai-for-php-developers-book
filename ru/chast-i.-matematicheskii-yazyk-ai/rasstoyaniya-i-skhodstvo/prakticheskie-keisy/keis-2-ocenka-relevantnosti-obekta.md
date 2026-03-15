@@ -28,7 +28,7 @@ $$
 \mathbf{w} = (w_1, w_2, \dots, w_n)
 $$
 
-...
+<mark style="color:$info;">— Продолжение кейса —</mark>
 
 ***
 
