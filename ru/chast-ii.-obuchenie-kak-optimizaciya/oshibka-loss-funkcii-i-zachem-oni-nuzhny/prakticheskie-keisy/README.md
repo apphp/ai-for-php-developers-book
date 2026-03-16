@@ -32,8 +32,11 @@
 Практические кейсы показывают, как применять методы машинного обучения для решения реальных задач PHP-разработчика.<br>
 {% endhint %}
 
+{% hint style="info" icon="cc-paypal" %}
 👉 **Получить доступ к PRO кейсам**
 
 <a href="https://www.paypal.com/ncp/payment/Y8TQT4UDATXKQ" class="button primary" data-icon="lock-open">Безопасная оплата через PayPal</a>
 
 После оплаты вы получите ссылку на PRO материалы.
+{% endhint %}
+
