@@ -93,8 +93,8 @@ $unlabeled = new Unlabeled([$customer]);
 $logPrice = $model->predict($unlabeled);
 $predictedPrice = exp($logPrice[0]);
 
-echo 'Прогнозируемый чек: ' . round($predictedPrice, 2) . PHP_EOL;
-echo 'Прогнозируемый log(чек): ' . round($logPrice[0], 6) . PHP_EOL . PHP_EOL;
+echo 'Прогнозируемый чек: ' . round($predictedPrice, 2) . "\n";
+echo 'Прогнозируемый log(чек): ' . round($logPrice[0], 6) . "\n\n";
 
 // Результат: 
 // Прогнозируемый чек: 3282.17
