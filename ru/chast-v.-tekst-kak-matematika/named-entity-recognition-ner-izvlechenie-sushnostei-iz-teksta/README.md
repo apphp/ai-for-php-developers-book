@@ -212,7 +212,7 @@ curl_close($ch);
 $data = json_decode($response, true);
 
 foreach ($data as $entity) {
-    echo $entity['word'] . " → " . $entity['entity_group'] . PHP_EOL;
+    echo $entity['word'] . " → " . $entity['entity_group'] . "\n";
 }
 ```
 

@@ -55,8 +55,8 @@ function mse(array $y, array $yHat): float {
     return $sum / max($n, 1);
 }
 
-echo "MSE A: " . mse($y, $modelA) . PHP_EOL;
-echo "MSE B: " . mse($y, $modelB) . PHP_EOL;
+echo "MSE A: " . mse($y, $modelA) . "\n";
+echo "MSE B: " . mse($y, $modelB) . "\n";
 
 // Результат:
 // MSE A: 1
