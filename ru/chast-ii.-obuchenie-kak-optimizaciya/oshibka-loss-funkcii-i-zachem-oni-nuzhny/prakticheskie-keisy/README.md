@@ -27,13 +27,13 @@
 
 * пошаговое объяснение для каждого кейса
 * примеры кода на чистом PHP и с использованием библиотек ML
-* разбор практического применения
+* объяснение практического применения методов машинного обучения
 
 Практические кейсы показывают, как применять методы машинного обучения для решения реальных задач PHP-разработчика.<br>
 
 👉 **Получить доступ к PRO кейсам**
 
-[**https://www.paypal.com/ncp/payment/Y8TQT4UDATXKQ**](https://www.paypal.com/ncp/payment/Y8TQT4UDATXKQ)
+<a href="https://www.paypal.com/ncp/payment/Y8TQT4UDATXKQ" class="button primary" data-icon="lock-open">Оплата через PayPal</a>
 
 После оплаты вы получите ссылку на PRO материалы.
 {% endhint %}
