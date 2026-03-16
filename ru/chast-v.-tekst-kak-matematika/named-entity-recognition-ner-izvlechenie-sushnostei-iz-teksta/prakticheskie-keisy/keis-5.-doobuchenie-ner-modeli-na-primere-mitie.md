@@ -90,7 +90,7 @@ $text = "Contract #C-2025-001 was signed by Michael Brown in Berlin.";
 $entities = $ner->extractEntities($text);
 
 foreach ($entities as $entity) {
-    echo $entity->getTag() . " → " . $entity->getValue() . PHP_EOL;
+    echo $entity->getTag() . " → " . $entity->getValue() . "\n";
 }
 ```
 
