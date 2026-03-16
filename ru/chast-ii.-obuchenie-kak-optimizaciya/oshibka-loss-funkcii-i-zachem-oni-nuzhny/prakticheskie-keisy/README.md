@@ -10,7 +10,9 @@
 ***
 
 {% hint style="success" %}
-#### **Дополнительные кейсы доступны в PRO версии книги**
+#### Дополнительные материалы доступны в PRO версии книги
+
+**Кейсы:**
 
 * 🔒 **Кейс 2: Выбор модели через loss-функцию**\
   &#xNAN;_&#x421;равнение нескольких моделей на одном наборе данных_
@@ -32,10 +34,10 @@
 Практические кейсы показывают, как применять методы машинного обучения для решения реальных задач PHP-разработчика.<br>
 {% endhint %}
 
-{% hint style="info" icon="cc-paypal" %}
-**Получить доступ к PRO кейсам**
+{% hint style="info" icon="lock-keyhole-open" %}
+#### **Получить доступ к PRO кейсам**
 
-<a href="https://www.paypal.com/ncp/payment/Y8TQT4UDATXKQ" class="button primary" data-icon="lock-keyhole-open">Безопасная оплата через PayPal</a>
+<a href="https://www.paypal.com/ncp/payment/Y8TQT4UDATXKQ" class="button primary" data-icon="cc-paypal">Безопасная оплата через PayPal</a>
 
 После оплаты вы получите ссылку на PRO материалы.
 {% endhint %}
