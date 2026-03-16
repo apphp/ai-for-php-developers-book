@@ -51,6 +51,7 @@ use Rubix\ML\Classifiers\LogisticRegression;
 use Rubix\ML\Datasets\Labeled;
 use Rubix\ML\Datasets\Unlabeled;
 
+// links, length
 $samples = [
     [0, 50],
     [1, 120],
@@ -69,19 +70,19 @@ $model->train($dataset);
 $prediction = new Unlabeled([[3, 200]]);
 $labels = $model->predict($prediction);
 
-echo "Predicted label: ";
+echo "Предсказанная метка: ";
 print_r($labels);
 
 // Show probabilities
 $probas = $model->proba($prediction);
-echo "\nProbabilities (per class): ";
+echo "\nВероятности (по классам): ";
 print_r($probas[0]);
 
 // Результат:
-// Predicted label: Array (
+// Предсказанная метка: Array (
 //     [0] => spam
 // )
-// Probabilities (per class): Array (
+// Вероятности (по классам): Array (
 //     [not_spam] => 0.16068560912089
 //     [spam] => 0.83931439087911
 //  )

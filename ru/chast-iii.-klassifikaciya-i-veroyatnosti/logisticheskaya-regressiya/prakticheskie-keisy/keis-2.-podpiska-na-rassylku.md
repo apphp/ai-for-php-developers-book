@@ -51,6 +51,7 @@ use Rubix\ML\Classifiers\LogisticRegression;
 use Rubix\ML\Datasets\Unlabeled;
 use Rubix\ML\Datasets\Labeled;
 
+// Time in minutes
 $samples = [
     [0.5],
     [1.2],
@@ -69,19 +70,19 @@ $model->train($dataset);
 $prediction = new Unlabeled([[3.0]]);
 $labels = $model->predict($prediction);
 
-echo "Predicted label: ";
+echo "Предсказанная метка: ";
 print_r($labels);
 
 // Show probabilities
 $probas = $model->proba($prediction);
-echo "\nProbabilities (per class): ";
+echo "\nВероятности (по классам): ";
 print_r($probas[0]);
 
 // Результат:
 // Predicted label: Array (
 //     [0] => yes
 // )
-// Probabilities (per class): Array (
+// Вероятности (по классам): Array (
 //     [no] => 0.33716026803845
 //     [yes] => 0.66283973196155
 //  )
