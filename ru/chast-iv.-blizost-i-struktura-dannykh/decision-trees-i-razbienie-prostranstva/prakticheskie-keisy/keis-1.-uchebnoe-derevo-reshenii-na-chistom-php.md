@@ -305,15 +305,15 @@ foreach ($values as $threshold) {
     }
 }
 
-echo "Лучшее разбиение:" . PHP_EOL;
-echo "Признак: visits" . PHP_EOL;
-echo "Порог: $bestThreshold" . PHP_EOL;
-echo "Information Gain: $bestGain" . PHP_EOL . PHP_EOL;
+echo "Лучшее разбиение:\n";
+echo "Признак: visits\n";
+echo "Порог: $bestThreshold\n";
+echo "Information Gain: $bestGain\n\n";
 
-echo "Левая ветка:" . PHP_EOL;
-echo array_to_matrix($bestSplit[0]) . PHP_EOL;
+echo "Левая ветка:\n";
+echo array_to_matrix($bestSplit[0]) . "\n\n";
 
-echo PHP_EOL . "Правая ветка:" . PHP_EOL;
+echo "Правая ветка:\n";
 echo array_to_matrix($bestSplit[1]);
 ```
 
