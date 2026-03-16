@@ -109,12 +109,12 @@ $prediction = $model->predict($unlabeled);
 
 $salary = $prediction[0];
 
-echo 'Ожидаемая зарплата:' . round($salary, 2) . PHP_EOL . PHP_EOL;
-echo 'Коэффициенты (веса признаков):' . PHP_EOL;
-echo '0 - опыт, 1- технологии, 2- размер компании, 3 - удалёнка' . PHP_EOL;
+echo 'Ожидаемая зарплата:' . round($salary, 2) . "\n\n";
+echo 'Коэффициенты (веса признаков):' . "\n";
+echo '0 - опыт, 1- технологии, 2- размер компании, 3 - удалёнка' . "\n";
 print_r($weights);
 
-echo PHP_EOL . 'Bias (intercept): ' . $bias . PHP_EOL;
+echo "\n" . 'Bias (intercept): ' . $bias . "\n";
 
 // Результат: 
 // Ожидаемая зарплата: 3750 USD
