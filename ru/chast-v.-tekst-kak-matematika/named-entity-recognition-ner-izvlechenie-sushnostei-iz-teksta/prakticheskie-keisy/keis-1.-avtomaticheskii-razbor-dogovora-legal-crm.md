@@ -41,7 +41,7 @@ $text = "This Agreement is made on March 12, 2025 between Apple Inc. and John Sm
 $entities = $ner->extractEntities($text);
 
 foreach ($entities as $entity) {
-    echo $entity->getTag() . " → " . $entity->getValue() . PHP_EOL;
+    echo $entity->getTag() . " → " . $entity->getValue() . "\n;
 }
 ```
 
