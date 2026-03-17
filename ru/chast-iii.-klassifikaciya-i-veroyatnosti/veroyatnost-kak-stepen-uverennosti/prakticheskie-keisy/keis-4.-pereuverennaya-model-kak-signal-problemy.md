@@ -11,7 +11,7 @@
 ```
 foreach ($probabilities as $class => $p) {
     if ($p > 0.97) {
-        echo "Подозрительно высокая уверенность: $class = $p" . PHP_EOL;
+        echo "Подозрительно высокая уверенность: $class = $p\n";
     }
 }
 ```

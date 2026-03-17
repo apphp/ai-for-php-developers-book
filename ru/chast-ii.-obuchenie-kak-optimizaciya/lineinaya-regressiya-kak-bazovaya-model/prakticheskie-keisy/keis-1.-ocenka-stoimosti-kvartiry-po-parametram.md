@@ -140,8 +140,8 @@ $predictedPrice = dotProduct($weights, $newApartment);
 
 echo "Оценка стоимости: $" . number_format($predictedPrice) . "\n";
 
-echo 'Веса: ' . implode(', ', array_map(fn ($weight) => number_format($weight, 2, '.', ''), array_splice($weights, 0, 4))) . PHP_EOL;
-echo 'Bias: ' . number_format(array_pop($weights), 2, '.', '') . PHP_EOL;
+echo 'Веса: ' . implode(', ', array_map(fn ($weight) => number_format($weight, 2, '.', ''), array_splice($weights, 0, 4))) . "\n";
+echo 'Bias: ' . number_format(array_pop($weights), 2, '.', '') . "\n";
 
 // Результат: 
 // Оценка стоимости: $78,374
@@ -207,8 +207,8 @@ echo "Оценка стоимости: $" . number_format($predictedPrice) . "\n
 $weights = $regression->coefficients();
 $bias = $regression->bias();
 
-echo 'Веса: ' . implode(', ', array_map(fn ($weight) => number_format($weight, 2, '.', ''), $weights)) . PHP_EOL;
-echo 'Bias: ' . number_format($bias, 2, '.', '') . PHP_EOL;
+echo 'Веса: ' . implode(', ', array_map(fn ($weight) => number_format($weight, 2, '.', ''), $weights)) . "\n";
+echo 'Bias: ' . number_format($bias, 2, '.', '') . "\n";
 
 // Результат: 
 // Оценка стоимости: $78,016
