@@ -89,7 +89,7 @@ class AnalyzeDocumentJob {
 }
 ```
 
-Асинхронность – ключ к контролю latency и стоимости при тяжелых задачах.
+Асинхронность – ключ к контролю [latency](../vvedenie/zaklyuchitelnye-materialy/glossarii.md#latency-zaderzhka) и стоимости при тяжелых задачах.
 
 #### AI как микросервис
 
