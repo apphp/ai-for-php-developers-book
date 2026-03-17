@@ -213,7 +213,7 @@ foreach ($documents as $doc) {
         embed($doc)
     );
 
-    echo $doc . ': ' . round($score, 3) . PHP_EOL;
+    echo $doc . ': ' . round($score, 3) . "\n";
 }
 ```
 

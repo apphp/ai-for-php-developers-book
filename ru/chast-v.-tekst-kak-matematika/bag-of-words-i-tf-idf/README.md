@@ -488,11 +488,11 @@ foreach ($tokenized as $doc) {
 
 ```php
 foreach ($tfidfVectors as $i => $vector) {
-    echo "Документ " . ($i + 1) . ":" . PHP_EOL;
+    echo "Документ " . ($i + 1) . ":\n";
     foreach ($vector as $word => $value) {
-        echo "  $word => " . round($value, 3) . PHP_EOL;
+        echo "  $word => " . round($value, 3) . "\n";
     }
-    echo PHP_EOL;
+    echo "\n";
 }
 ```
 
