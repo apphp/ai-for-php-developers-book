@@ -79,7 +79,7 @@ $w = 0.0;
 $lr = 0.1;
 $n = count($x);
 
-echo PHP_EOL . "Stochastic GD\n";
+echo "Stochastic GD\n";
 
 for ($epoch = 1; $epoch <= 10; $epoch++) {
 
