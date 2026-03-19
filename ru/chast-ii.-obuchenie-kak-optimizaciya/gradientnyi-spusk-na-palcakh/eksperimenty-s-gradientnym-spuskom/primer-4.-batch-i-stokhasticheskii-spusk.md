@@ -4,12 +4,10 @@
 
 Понять разницу между двумя подходами к обучению:
 
-* batch gradient descent – обновление по всему датасету
+* [batch gradient descent](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#batch-gradient-descent) (BGD) – обновление по всему датасету
 * stochastic gradient descent (SGD) – обновление по одному объекту
 
-Этот разбор показывает важную идею:
-
-обучение может быть гладким и стабильным или шумным и дерганым, и это не ошибка, а осознанный выбор алгоритма.
+Этот разбор показывает важную идею: обучение может быть гладким и стабильным, а может быть шумным и дерганым, и это не ошибка, а осознанный выбор алгоритма.
 
 #### Сценарий
 
@@ -66,6 +64,19 @@ for ($epoch = 1; $epoch <= 10; $epoch++) {
 
     echo "Epoch $epoch: w = " . round($w, 4) . "\n";
 }
+
+// Результат:
+// Batch GD
+// Epoch 1: w = 3
+// Epoch 2: w = 1.5
+// Epoch 3: w = 2.25
+// Epoch 4: w = 1.875
+// Epoch 5: w = 2.0625
+// Epoch 6: w = 1.9688
+// Epoch 7: w = 2.0156
+// Epoch 8: w = 1.9922
+// Epoch 9: w = 2.0039
+// Epoch 10: w = 1.998
 ```
 
 **Stochastic Gradient Descent**\
@@ -90,6 +101,19 @@ for ($epoch = 1; $epoch <= 10; $epoch++) {
 
     echo "Epoch $epoch: w = " . round($w, 4) . "\n";
 }
+
+// Результат:
+// Stochastic GD
+// Epoch 1: w = 1.4368
+// Epoch 2: w = 1.8414
+// Epoch 3: w = 1.9553
+// Epoch 4: w = 1.9874
+// Epoch 5: w = 1.9965
+// Epoch 6: w = 1.999
+// Epoch 7: w = 1.9997
+// Epoch 8: w = 1.9999
+// Epoch 9: w = 2
+// Epoch 10: w = 2
 ```
 
 #### Что происходит во время обучения
@@ -191,3 +215,7 @@ Stochastic gradient descent дает:
 * более "живое" поведение
 
 Главное понимание: SGD использует не точный градиент, а его шумную оценку, и этот шум – не ошибка, а полезное свойство
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-2/gradient-descent-on-fingers) для его запуска.
+{% endhint %}
