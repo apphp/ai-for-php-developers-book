@@ -367,5 +367,5 @@ $prediction = $model->predict($features);
 Вся дальнейшая математика машинного обучения строится вокруг этой геометрической интерпретации: данные – это точки, модель – это поверхность, а обучение – процесс поиска формы, которая лучше всего разделяет или аппроксимирует эти точки.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/vectors-dimensions-and-feature-spaces) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/vectors-dimensions-and-feature-spaces) для его запуска.
 {% endhint %}

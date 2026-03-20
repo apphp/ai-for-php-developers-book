@@ -53,7 +53,7 @@ echo $prediction;
 ```
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) для его запуска.
 {% endhint %}
 
 Для точки $$[3, 2]$$ алгоритм возвращает класс "$$b$$", потому что её ближайшие соседи в обучающей выборке относятся именно к этому классу. Никакой "магии" здесь нет: k-NN просто смотрит, какие точки находятся ближе всего, и "голосует" по их меткам.
@@ -333,7 +333,7 @@ echo $response;
 ```
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) для его запуска.
 {% endhint %}
 
 Но реальная сила LLPhant раскрывается в RAG-сценариях:
