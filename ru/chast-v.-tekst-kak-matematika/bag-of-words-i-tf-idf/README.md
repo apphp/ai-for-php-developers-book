@@ -518,7 +518,7 @@ foreach ($tfidfVectors as $i => $vector) {
 ```
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-5/bag-of-words-and-tf-idf) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-5/bag-of-words-and-tf-idf) для его запуска.
 {% endhint %}
 
 #### Как это интерпретировать

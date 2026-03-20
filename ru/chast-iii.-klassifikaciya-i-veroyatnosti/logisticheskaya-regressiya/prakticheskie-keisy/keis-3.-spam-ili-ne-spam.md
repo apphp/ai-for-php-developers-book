@@ -189,5 +189,5 @@ $$
 Дальше, при увеличении числа признаков, decision boundary превращается уже не в линию, а в гиперплоскость в многомерном пространстве. Но принцип работы остается тем же.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/logistic-regression) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/logistic-regression) для его запуска.
 {% endhint %}
