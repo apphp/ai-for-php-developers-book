@@ -174,5 +174,5 @@ Predict for 5: ≈ 9.9999990
 Именно поэтому вся теория оптимизации, градиенты и производные существуют – они лишь способы быстрее найти минимум loss, который мы здесь нашли перебором.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-2/errors-and-loss-functions) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-2/errors-and-loss-functions) для его запуска.
 {% endhint %}

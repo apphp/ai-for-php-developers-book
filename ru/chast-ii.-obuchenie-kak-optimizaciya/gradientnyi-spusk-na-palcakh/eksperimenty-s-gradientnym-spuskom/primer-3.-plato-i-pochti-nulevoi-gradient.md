@@ -149,5 +149,5 @@ $$
 Они не заменяют градиентный спуск, а помогают ему работать там, где он сам по себе замедляется.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-2/gradient-descent-on-fingers) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-2/gradient-descent-on-fingers) для его запуска.
 {% endhint %}

@@ -120,5 +120,5 @@ Loss-функция убирает эту неопределённость.
 Это подводит нас к следующему шагу: если loss определяет, какая модель лучше, то обучение модели – это систематическое уменьшение этого числа. Именно к этому мы и перейдём дальше.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-2/errors-and-loss-functions) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-2/errors-and-loss-functions) для его запуска.
 {% endhint %}
