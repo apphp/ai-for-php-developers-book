@@ -342,5 +342,5 @@ echo array_to_matrix($bestSplit[1]);
 Если вы можете мысленно пройти этот путь – от исходных данных до выбранного порога – значит вы понимаете decision tree на уровне механики. Всё остальное, включая оптимизации и библиотеки, является лишь надстройкой над этой базовой логикой.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-4/decision-trees-and-space-partitioning) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-4/decision-trees-and-space-partitioning) для его запуска.
 {% endhint %}

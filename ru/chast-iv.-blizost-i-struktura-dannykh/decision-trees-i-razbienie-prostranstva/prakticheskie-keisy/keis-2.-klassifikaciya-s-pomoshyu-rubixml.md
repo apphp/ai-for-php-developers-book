@@ -181,5 +181,5 @@ echo $prediction[0];
 Этот кейс показывает, как теория энтропии и information gain превращается в практический инструмент в PHP-проекте. RubixML берёт на себя вычислительную сложность, но логика алгоритма остаётся прозрачной. Понимая эту логику, разработчик может уверенно использовать деревья решений в реальных системах, не превращая модель в чёрный ящик.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-4/decision-trees-and-space-partitioning) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-4/decision-trees-and-space-partitioning) для его запуска.
 {% endhint %}
