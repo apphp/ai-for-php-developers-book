@@ -53,9 +53,10 @@
 * [Градиентный спуск на пальцах](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/README.md)
   * [Эксперименты с градиентным спуском](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/README.md)
     * [Пример 1. Траектория параметра](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/primer-1.-traektoriya-parametra.md)
-    * [Пример 2. Влияние learning rate](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/primer-2.-vliyanie-learning-rate.md)
-    * [Пример 3. Плато и почти нулевой градиент](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/primer-3.-plato-i-pochti-nulevoi-gradient.md)
-    * [Пример 4. Batch и стохастический спуск](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/primer-4.-batch-i-stokhasticheskii-spusk.md)
+  * [Эксперименты с градиентным спуском - Unlocked](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom-unlocked/README.md)
+    * [Пример 2. Влияние learning rate](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom-unlocked/primer-2.-vliyanie-learning-rate.md)
+    * [Пример 3. Плато и почти нулевой градиент](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom-unlocked/primer-3.-plato-i-pochti-nulevoi-gradient.md)
+    * [Пример 4. Batch и стохастический спуск](chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom-unlocked/primer-4.-batch-i-stokhasticheskii-spusk.md)
 
 ## Часть III. Классификация и вероятности
 
