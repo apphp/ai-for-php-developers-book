@@ -217,5 +217,5 @@ echo "Estimated price: $prediction";
 Понимание этого примера формирует интуицию о том, что машинное обучение – это не всегда поиск глобальной формулы. Иногда это просто аккуратная работа с соседством и расстояниями.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-4/k-nearest-neighbors-algorithm-and-local-solutions) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-4/k-nearest-neighbors-algorithm-and-local-solutions) для его запуска.
 {% endhint %}

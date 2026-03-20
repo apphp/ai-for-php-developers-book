@@ -206,5 +206,5 @@ echo "Prediction: $prediction";
 В следующих кейсах мы расширим эту идею на регрессию и посмотрим, как тот же самый принцип реализуется для неё.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-4/k-nearest-neighbors-algorithm-and-local-solutions) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-4/k-nearest-neighbors-algorithm-and-local-solutions) для его запуска.
 {% endhint %}
