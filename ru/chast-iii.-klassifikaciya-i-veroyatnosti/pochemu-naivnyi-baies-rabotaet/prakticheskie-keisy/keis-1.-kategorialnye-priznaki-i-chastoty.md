@@ -291,5 +291,5 @@ RubixML:
 Если после него наивный Байес кажется слишком простым – значит, он наконец стал понятным.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/why-naive-bayes-works) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/why-naive-bayes-works) для его запуска.
 {% endhint %}

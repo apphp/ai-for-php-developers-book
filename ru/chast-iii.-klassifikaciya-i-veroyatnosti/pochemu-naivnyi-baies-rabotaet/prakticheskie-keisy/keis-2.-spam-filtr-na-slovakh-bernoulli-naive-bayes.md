@@ -349,5 +349,5 @@ print_r($prediction);
 Если после этого кейса становится ясно, что спам-фильтр – это не "искусственный интеллект", а аккуратная работа с вероятностями, значит, глава достигла своей цели.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/why-naive-bayes-works) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/why-naive-bayes-works) для его запуска.
 {% endhint %}

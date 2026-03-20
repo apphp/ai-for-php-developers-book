@@ -103,7 +103,7 @@ echo $prediction[0];
 ```
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) для его запуска.
 {% endhint %}
 
 Обратите внимание на важный момент.
@@ -230,7 +230,7 @@ echo print_r($out, true);
 ```
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) для его запуска.
 {% endhint %}
 
 Важно понимать архитектурную роль Transformers PHP.

@@ -302,5 +302,5 @@ foreach ($probabilities as $class => $probability) {
 Если держать эту интуицию в голове, формулы и алгоритмы начинают выглядеть гораздо более человечными – и гораздо менее мистическими.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, установите примеры из официального репозитория [GitHub](https://github.com/apphp/ai-for-php-developers-examples) или воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/probability-as-degree-of-confidence) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/probability-as-degree-of-confidence) для его запуска.
 {% endhint %}
