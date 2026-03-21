@@ -37,7 +37,7 @@ $$
 \hat{y} = w \cdot  x
 $$
 
-Функция ошибки – среднеквадратичная ([MSE](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#mse-mean-squared-error)). Метод оптимизации – [batch gradient descent](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#batch-gradient-descent).
+Функция ошибки – среднеквадратичная ([MSE](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#mse-mean-squared-error)). Метод оптимизации – [batch gradient descent](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#batch-gradient-descent-bgd).
 
 Начинаем обучение с $$w = 0$$.
 
