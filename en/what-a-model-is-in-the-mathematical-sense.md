@@ -76,9 +76,9 @@ Error is a function (commonly called a loss function) that compares the model’
 
 For example, the simplest loss function is the difference between the prediction and the true value:
 
-\$$\
-ŷ - y\
-\$$
+$$
+ŷ - y
+$$
 
 ```php
 function error(float $yTrue, float $yPredicted): float {
@@ -97,9 +97,9 @@ echo error(yTrue: 10.0, yPredicted: 7.0);
 
 In practice, the squared error (SE) is used more often, because it is always positive and penalizes larger mistakes more strongly:
 
-\$$\
-(ŷ - y) ^ 2\
-\$$
+$$
+(ŷ - y) ^ 2
+$$
 
 ```php
 function squaredError(float $yTrue, float $yPredicted): float {
