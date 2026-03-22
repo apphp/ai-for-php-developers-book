@@ -93,15 +93,40 @@ $predictions = [
     ['spam' => 0.99, 'normal' => 0.01],
     ['spam' => 0.98, 'normal' => 0.02],
     ['spam' => 1.00, 'normal' => 0.00],
+    ['spam' => 0.85, 'normal' => 0.15],
+    ['spam' => 0.98, 'normal' => 0.02],
 ];
+
+$threshold = 0.97;
+$flaggedRows = 0;
 
 foreach ($predictions as $i => $probs) {
     foreach ($probs as $class => $p) {
-        if ($p > 0.97) {
-            echo "[$i] высокая уверенность: $class = $p\n";
+        if ($p > $threshold) {
+            echo "[$i] high confidence: $class = $p\n";
+            $flaggedRows++;
         }
     }
 }
+
+$totalRows = count($predictions);
+$isSystemic = $totalRows > 0 && ($flaggedRows / $totalRows) >= 0.8;
+
+echo "Строк с высокой уверенностью: $flaggedRows из $totalRows\n";
+
+if ($isSystemic) {
+    echo 'Почти все строки попадают под это условие – это уже системная проблема.';
+}
+
+// Результат:
+// [0] high confidence: spam = 0.99
+// [1] high confidence: spam = 0.98
+// [2] high confidence: spam = 1
+// [4] high confidence: spam = 0.98
+
+// Интерпретация:
+// Строк с высокой уверенностью: 4 из 5
+// Почти все строки попадают под это условие – это уже системная проблема.
 ```
 
 Если почти все строки попадают под это условие – это уже системная проблема.
