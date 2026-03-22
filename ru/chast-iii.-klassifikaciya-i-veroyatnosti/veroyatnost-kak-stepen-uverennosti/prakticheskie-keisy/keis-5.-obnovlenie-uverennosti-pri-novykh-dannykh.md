@@ -191,3 +191,7 @@ $posterior = $prior + $signalStrength;
 Этот кейс завершает важную мысль всей главы:
 
 > вероятность – это не ответ, а процесс постоянного уточнения знания о мире.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/probability-as-degree-of-confidence) для его запуска.
+{% endhint %}
