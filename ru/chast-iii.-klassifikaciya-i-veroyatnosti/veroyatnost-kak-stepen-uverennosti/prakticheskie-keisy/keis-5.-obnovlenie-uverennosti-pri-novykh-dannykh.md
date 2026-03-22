@@ -42,7 +42,12 @@ $signalStrength = 0.25;  // влияние нового сигнала
 
 $posterior = min(1.0, $prior + $signalStrength);
 
-echo $posterior;
+echo "Prior: $prior\n";
+echo "Posterior: $probability";
+
+// Результат:
+// Prior: 0.55
+// Posterior: 0.65
 ```
 
 Результат:
@@ -91,6 +96,8 @@ echo $posterior;
 ```php
 $prior = 0.3;
 
+echo "Prior: $prior\n";
+
 $signals = [
     0.1,  // не зашел сегодня
     0.05, // не открыл письмо
@@ -103,7 +110,11 @@ foreach ($signals as $signal) {
     $probability = min(1.0, $probability + $signal);
 }
 
-echo $probability;
+echo "Posterior: $probability";
+
+// Результат:
+// Prior: 0.3
+// Posterior: 0.65
 ```
 
 Так формируется динамическая оценка риска.
