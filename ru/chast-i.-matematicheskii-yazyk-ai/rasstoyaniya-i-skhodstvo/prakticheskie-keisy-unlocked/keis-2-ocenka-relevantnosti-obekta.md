@@ -34,7 +34,7 @@ $$
 Скалярное произведение вычисляет взвешенную сумму признаков:
 
 $$
-\mathbf{x} \cdot \mathbf{w} = \sum_i x_i w_i
+\mathbf{x} \cdot \mathbf{w} = \sum_i x_i \cdot w_i
 $$
 
 В этом кейсе:
@@ -133,13 +133,13 @@ print_r($prediction);
 Ridge – это линейная регрессия с [L2-регуляризацией](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#l2-regulyarizaciya) (т.е. Ridge = Linear Regression + L2):
 
 $$
-\hat y = w_1​x_1​+w_2 x_2​+w_3x_3​ + b
+\hat y = w_1​ \cdot x_1​+w_2 \cdot x_2​+w_3 \cdot x_3​ + b
 $$
 
 где веса находятся решением:
 
 $$
-\mathbf{w} = \left( \mathbf{X}^\top \mathbf{X} + \alpha \mathbf{I} \right)^{-1} \mathbf{X}^\top \mathbf{y}
+\mathbf{w} = \left( \mathbf{X}^\top \cdot \mathbf{X} + \alpha \cdot \mathbf{I} \right)^{-1} \mathbf{X}^\top \cdot\mathbf{y}
 $$
 
 #### Связь с линейными моделями

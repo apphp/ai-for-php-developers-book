@@ -91,13 +91,13 @@ for ($epoch = 1; $epoch <= 20; $epoch++) {
 Ошибка:
 
 $$
-L(w) = \frac{1}{n} \sum (w x_i - y_i)^2
+L(w) = \frac{1}{n} \sum (w \cdot x_i - y_i)^2
 $$
 
 Производная:
 
 $$
-\frac{dL}{dw} = \frac{2}{n} \sum x_i (w x_i - y_i)
+\frac{dL}{dw} = \frac{2}{n} \sum x_i (w \cdot x_i - y_i)
 $$
 
 Каждая эпоха делает одно и то же:

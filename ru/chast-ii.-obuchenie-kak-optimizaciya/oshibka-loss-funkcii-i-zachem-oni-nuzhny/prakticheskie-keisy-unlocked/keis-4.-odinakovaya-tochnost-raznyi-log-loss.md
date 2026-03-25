@@ -48,7 +48,7 @@ Accuracy у обеих моделей равна 100%.
 Используем стандартную бинарную [log loss](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#log-loss-logarifmicheskaya-funkciya-poter). Как вы помните из предыдущего кейса математически log loss определяется следующей формулой:
 
 $$
-LogLoss = -\frac{1}{n} \sum_{i=1}^{n} \left[ y_i \log(p_i) + (1 - y_i)\log(1 - p_i) \right]
+LogLoss = -\frac{1}{n} \sum_{i=1}^{n} \left[ y_i \cdot \log(p_i) + (1 - y_i) \cdot \log(1 - p_i) \right]
 $$
 
 ```php

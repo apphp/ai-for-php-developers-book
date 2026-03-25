@@ -23,7 +23,7 @@ description: Формула, геометрический смысл, PHP-реа
 Линейная регрессия предполагает, что зависимость можно аппроксимировать линейной функцией:
 
 $$
-\hat{y} = w x + b
+\hat{y} = w \cdot x + b
 $$
 
 {% hint style="info" %}
@@ -42,7 +42,7 @@ $$
 Если признаков несколько, формула обобщается:
 
 $$
-\hat{y} = w_1 x_1 + w_2 x_2 + \dots + w_n x_n + b
+\hat{y} = w_1 \cdot x_1 + w_2 \cdot x_2 + \dots + w_n \cdot x_n + b
 $$
 
 Или в векторной форме, которая важна для ML:
@@ -135,11 +135,11 @@ $$
 Обновление параметров выглядит так:
 
 $$
-w := w - \eta \frac{\partial L}{\partial w}
+w := w - \eta \cdot \frac{\partial L}{\partial w}
 $$
 
 $$
-b := b - \eta \frac{\partial L}{\partial b}
+b := b - \eta \cdot \frac{\partial L}{\partial b}
 $$
 
 Где $$\eta$$ – learning rate, шаг обучения.
