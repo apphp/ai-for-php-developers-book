@@ -45,9 +45,10 @@ $$
 Учебный пример:
 
 ```php
+use Rubix\ML\Classifiers\LogisticRegression;
 use Rubix\ML\Datasets\Labeled;
+use Rubix\ML\Datasets\Unlabeled;
 
-// признаки: [доход, скоринг, долговая нагрузка]
 $samples = [
     [3000, 600, 0.4],
     [8000, 750, 0.2],
@@ -55,11 +56,32 @@ $samples = [
     [10000, 800, 0.1],
 ];
 
-$labels = [0, 1, 0, 1];
+$labels = ['decline', 'approve', 'decline', 'approve'];
 
-$model->train(new Labeled($samples, $labels));
+$dataset = new Labeled($samples, $labels);
 
-print_r($model->predict([[5000, 680, 0.3]]));
+$model = new LogisticRegression();
+$model->train($dataset);
+
+$client = new Unlabeled([[5000, 680, 0.3]]);
+$prediction = $model->predict($client);
+
+echo "Predicted label: \n";
+print_r($prediction);
+
+$probas = $model->proba($client);
+$probabilityOfApproval = $probas[0]['approve'] ?? null;
+
+echo  "\nProbability of approval (class=approve): ";
+print_r($probabilityOfApproval);
+
+echo PHP_EOL;
+
+$threshold = 0.6;
+$approved = $probabilityOfApproval !== null && $probabilityOfApproval >= $threshold;
+
+echo 'Threshold: ' . $threshold . "\n";
+echo 'Decision: ' . ($approved ? 'APPROVE' : 'DECLINE') . "\n";
 ```
 
 Мы оцениваем нового клиента:
