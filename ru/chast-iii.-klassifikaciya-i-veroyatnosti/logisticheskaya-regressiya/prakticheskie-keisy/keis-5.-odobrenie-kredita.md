@@ -82,6 +82,15 @@ $approved = $probabilityOfApproval !== null && $probabilityOfApproval >= $thresh
 
 echo 'Threshold: ' . $threshold . "\n";
 echo 'Decision: ' . ($approved ? 'APPROVE' : 'DECLINE') . "\n";
+
+// Результат:
+// Predicted label: 
+// Array (
+//    [0] => approve
+// )
+// Probability of approval (class=approve): 1
+// Threshold: 0.6
+// Decision: APPROVE
 ```
 
 Мы оцениваем нового клиента:

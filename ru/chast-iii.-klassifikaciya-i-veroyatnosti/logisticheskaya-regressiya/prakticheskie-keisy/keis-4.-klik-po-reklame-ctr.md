@@ -79,11 +79,13 @@ echo "\nProbabilities (per class): ";
 print_r($probas[0]);
 
 // Результат:
-// Predicted label: Array (
+// Predicted label: 
+// Array (
 //    [0] => click
 // )
 // Probability of click (CTR): 0.68015274582898
-// Probabilities (per class): Array (
+// Probabilities (per class): 
+// Array (
 //    [no_click] => 0.31984725417102
 //    [click] => 0.68015274582898
 // )
