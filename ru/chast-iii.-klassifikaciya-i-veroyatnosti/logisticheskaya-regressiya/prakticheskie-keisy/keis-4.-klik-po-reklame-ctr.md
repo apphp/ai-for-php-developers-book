@@ -46,7 +46,9 @@ $$
 ```php
 use Rubix\ML\Classifiers\LogisticRegression;
 use Rubix\ML\Datasets\Labeled;
+use Rubix\ML\Datasets\Unlabeled;
 
+// Features: [time_on_page, clicked_before]
 $samples = [
     [9, 0],
     [12, 1],
@@ -55,14 +57,36 @@ $samples = [
     [14, 1],
 ];
 
-$labels = [0, 1, 1, 0, 1];
+$labels = ['no_click', 'click', 'click', 'no_click', 'click'];
 
 $dataset = new Labeled($samples, $labels);
 
-$model = new LogisticRegression(0.05, 800);
+$model = new LogisticRegression();
 $model->train($dataset);
 
-print_r($model->predict([[20, 1]]));
+$sampleToPredict = new Unlabeled([[20, 1]]);
+$prediction = $model->predict($sampleToPredict);
+
+echo 'Predicted label: ';
+print_r($prediction);
+
+$probas = $model->proba($sampleToPredict);
+$ctr = $probas[0]['click'] ?? null;
+
+echo "\nProbability of click (CTR): ";
+print_r($ctr);
+echo "\nProbabilities (per class): ";
+print_r($probas[0]);
+
+// Результат:
+// Predicted label: Array (
+//    [0] => click
+// )
+// Probability of click (CTR): 0.68015274582898
+// Probabilities (per class): Array (
+//    [no_click] => 0.31984725417102
+//    [click] => 0.68015274582898
+// )
 ```
 
 В примере мы проверяем ситуацию, когда время - 20:00, а устройство - mobile.
