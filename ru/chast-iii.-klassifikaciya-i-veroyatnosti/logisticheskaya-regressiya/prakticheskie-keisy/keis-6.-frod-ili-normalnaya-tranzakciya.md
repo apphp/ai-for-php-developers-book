@@ -38,15 +38,17 @@ $$
 
 Целевая переменная:
 
-* 1 – фрод
-* 0 – нормальная операция
+* "fraud" – фрод
+* "normal" – нормальная операция
 
 #### Данные
 
 Минимальный учебный пример:
 
 ```php
+use Rubix\ML\Classifiers\LogisticRegression;
 use Rubix\ML\Datasets\Labeled;
+use Rubix\ML\Datasets\Unlabeled;
 
 $samples = [
     [50, 1, 2],
@@ -55,18 +57,45 @@ $samples = [
     [7000, 0, 20],
 ];
 
-$labels = [0, 1, 0, 1];
+$labels = ['normal', 'fraud', 'normal', 'fraud'];
 
+$model = new LogisticRegression();
 $model->train(new Labeled($samples, $labels));
 
-print_r($model->predict([[3000, 0, 10]]));
+$transaction = new Unlabeled([[3000, 0, 9]]);
+$prediction = $model->predict($transaction);
+
+echo "Predicted label (normal or fraud): \n";
+print_r($prediction);
+
+$probas = $model->proba($transaction);
+$probabilityOfFraud = $probas[0]['fraud'] ?? null;
+
+echo "\nProbability of fraud (class=fraud): ";
+print_r($probabilityOfFraud);
+echo "\n";
+
+$threshold = 0.7;
+$fraud = $probabilityOfFraud !== null && $probabilityOfFraud >= $threshold;
+
+echo 'Threshold: ' . $threshold . "\n";
+echo 'Decision: ' . ($fraud ? 'BLOCK' : 'ALLOW') . "\n";
+
+// Результат:
+// Predicted label (normal or fraud): 
+// Array (
+//    [0] => fraud
+// )
+// Probability of fraud (class=fraud): 1
+// Threshold: 0.7
+// Decision: BLOCK
 ```
 
 Мы анализируем новую транзакцию:
 
 * сумма: 3000
 * страна: 0 (подозрительная)
-* операций за день: 10
+* операций за день: 9
 
 Модель должна оценить вероятность того, что это фрод.
 
