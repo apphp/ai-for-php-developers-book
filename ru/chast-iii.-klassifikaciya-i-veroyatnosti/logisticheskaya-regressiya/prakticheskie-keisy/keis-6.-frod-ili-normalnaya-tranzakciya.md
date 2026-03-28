@@ -62,7 +62,7 @@ $labels = ['normal', 'fraud', 'normal', 'fraud'];
 $model = new LogisticRegression();
 $model->train(new Labeled($samples, $labels));
 
-$transaction = new Unlabeled([[3000, 0, 9]]);
+$transaction = new Unlabeled([[3000, 0, 10]]);
 $prediction = $model->predict($transaction);
 
 echo "Predicted label (normal or fraud): \n";
@@ -95,7 +95,7 @@ echo 'Decision: ' . ($fraud ? 'BLOCK' : 'ALLOW') . "\n";
 
 * сумма: 3000
 * страна: 0 (подозрительная)
-* операций за день: 9
+* операций за день: 10
 
 Модель должна оценить вероятность того, что это фрод.
 
