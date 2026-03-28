@@ -37,8 +37,8 @@ $$
 
 Целевая переменная:
 
-* 1 – есть риск заболевания
-* 0 – низкий риск
+* "high\_risk" – есть риск заболевания
+* "low\_risk" – низкий риск
 
 Важно: речь не о диагнозе, а о вероятности риска.
 
@@ -47,8 +47,11 @@ $$
 Учебный пример (в этот раз чуть расширим датасет, но без перегруза – чтобы он оставался читаемым и "учебным", а не шумным):
 
 ```php
+use Rubix\ML\Classifiers\LogisticRegression;
 use Rubix\ML\Datasets\Labeled;
+use Rubix\ML\Datasets\Unlabeled;
 
+// age, blood pressure, BMI, glucose
 $samples = [
     [30, 120, 22, 90],
     [60, 150, 30, 140],
@@ -63,12 +66,43 @@ $samples = [
 ];
 
 $labels = [
-    0, 1, 1, 0, 1, 1, 0, 0, 1, 0,
+    'low_risk',
+    'high_risk',
+    'high_risk',
+    'low_risk',
+    'high_risk',
+    'high_risk',
+    'low_risk',
+    'low_risk',
+    'high_risk',
+    'low_risk',
 ];
 
-$model->train(new Labeled($samples, $labels));
+$dataset = new Labeled($samples, $labels);
 
-print_r($model->predict([[50, 145, 27, 135]]));
+$model = new LogisticRegression();
+$model->train($dataset);
+
+$patient = new Unlabeled([[50, 145, 27, 135]]);
+
+echo "Predicted label (low_risk or high_risk):\n";
+print_r($model->predict($patient));
+
+echo "\nClass probabilities: \n";
+print_r($model->proba($patient));
+
+// Результат:
+// Predicted label (low_risk or high_risk):
+// Array (
+//    [0] => high_risk
+// )
+// Class probabilities:
+// Array (
+//    [0] => Array (
+//        [low_risk] => 0.082380118020031
+//        [high_risk] => 0.91761988197997
+//    )
+// )
 ```
 
 Мы анализируем пациента:
@@ -125,7 +159,7 @@ $$
 
 Модель может сказать:
 
-> вероятность риска: 0.72
+> вероятность риска: 0.91
 
 Но это не означает, что:
 
