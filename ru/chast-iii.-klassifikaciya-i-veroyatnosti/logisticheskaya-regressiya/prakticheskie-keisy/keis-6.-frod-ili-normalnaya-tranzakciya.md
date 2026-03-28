@@ -58,9 +58,10 @@ $samples = [
 ];
 
 $labels = ['normal', 'fraud', 'normal', 'fraud'];
+$dataset = new Labeled($samples, $labels);
 
 $model = new LogisticRegression();
-$model->train(new Labeled($samples, $labels));
+$model->train($dataset);
 
 $transaction = new Unlabeled([[3000, 0, 10]]);
 $prediction = $model->predict($transaction);
