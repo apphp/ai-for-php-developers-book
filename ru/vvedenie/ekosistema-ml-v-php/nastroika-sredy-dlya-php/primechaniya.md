@@ -27,13 +27,13 @@
 3. Если вы работаете с большими наборами данных, возможно, потребуется увеличить лимит памяти в конфигурации PHP.
 4. Для Rubix ML может потребоваться установить дополнительные системные библиотеки. Добавьте следующее, если возникнут проблемы:
 
-Для установки напрямую (запустите в терминале)
+Для установки напрямую (запустите в терминале):
 
 ```
 apt-get install -y libopenblas-dev liblapacke-dev && docker-php-ext-install gd
 ```
 
-Для Docker (в Dockerfile)
+Для Docker (в Dockerfile):
 
 ```dockerfile
 RUN apt-get install -y libopenblas-dev liblapacke-dev && docker-php-ext-install gd
