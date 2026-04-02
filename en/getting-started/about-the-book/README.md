@@ -4,15 +4,9 @@ In this book, I deliberately use professional jargon and terms from the fields o
 
 > Throughout the book, decimal notation with a dot as the decimal separator is used, as is customary in international scientific, technical, and programming practice.
 
-Also
+In addition
 
-> In addition, standard linear algebra notation is used throughout mathematical expressions: ordinary multiplication is written without additional symbols (for example, $$wx$$  or $$𝑋𝑤$$), while the dot product of vectors is expressed either using transposition (for example, $$w ^⊤ x$$\
-> ⊤\
-> x) or with a dot (for example,\
-> 𝑤\
-> ⋅\
-> 𝑥\
-> w⋅x).
+> Standard linear algebra notation is used throughout mathematical expressions: ordinary multiplication is written without additional symbols (for example, $$wx$$  or $$X\mathbf{w}$$), while the dot product of vectors is expressed either using transposition (for example, $$\mathbf{w}^\top \mathbf{x}$$) or with a dot (for example, $$\mathbf{w} \cdot \mathbf{x}$$).
 
 ### What This Book Covers
 

@@ -227,13 +227,13 @@ In practice, such vectors are often normalized to unit length so that cosine sim
 Formally, this is expressed via the dot product. The dot product of two vectors $$x$$ and $$y$$ is defined as:
 
 $$
-x \cdot y = \sum_{i} x_i y_i
+\mathbf{x} \cdot \mathbf{y} = \sum_{i=1}^{n} x_i y_i
 $$
 
 From this, the cosine of the angle between vectors is:
 
 $$
-\cos(\theta) = \frac{x \cdot y}{|x| \cdot |y|}
+\cos(\theta) = \frac{\mathbf{x} \cdot \mathbf{y}}{\|\mathbf{x}\| \|\mathbf{y}\|}
 $$
 
 This is directly used, for example, when comparing text embeddings or user profiles.
@@ -283,7 +283,7 @@ A more "engineering-style" way to say this:
 The function below computes:
 
 $$
-f(x) = \mathbf{w} \cdot \mathbf{x} + b = \sum_{i=1}^{n} w_i \cdot x_i + b
+f(x) = \mathbf{w} \cdot \mathbf{x} + b = \sum_{i=1}^{n} w_i x_i + b
 $$
 
 Geometric meaning:
@@ -326,7 +326,7 @@ echo $result;
 Neural networks are the next level of complexity. Each layer performs an [affine transformation](getting-started/glossary.md#affine-transformation):
 
 $$
-z = W \cdot x + b
+z = W x + b
 $$
 
 Then applies a nonlinear activation function. Geometrically, this means the space is first linearly rotated and stretched, and then nonlinearly "bent". After several such transformations, data that was not linearly separable becomes separable.
