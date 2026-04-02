@@ -1,8 +1,18 @@
-# How this book is structured
+# About the book
 
 In this book, I deliberately use professional jargon and terms from the fields of machine learning and software development. This is done for precision of wording and to align with established practice: many concepts do not have clear or concise equivalents in other languages. When key terms are first introduced, they are accompanied by brief explanations.
 
 > Throughout the book, decimal notation with a dot as the decimal separator is used, as is customary in international scientific, technical, and programming practice.
+
+Also
+
+> In addition, standard linear algebra notation is used throughout mathematical expressions: ordinary multiplication is written without additional symbols (for example, $$wx$$  or $$𝑋𝑤$$), while the dot product of vectors is expressed either using transposition (for example, $$w ^⊤ x$$\
+> ⊤\
+> x) or with a dot (for example,\
+> 𝑤\
+> ⋅\
+> 𝑥\
+> w⋅x).
 
 ### What This Book Covers
 
