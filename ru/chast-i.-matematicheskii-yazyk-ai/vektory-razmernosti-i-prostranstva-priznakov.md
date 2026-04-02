@@ -211,7 +211,7 @@ echo 'Blue: ' . encodeColor(color: 'blue');
 
 Именно поэтому даже самые разные модели в итоге сводятся к геометрическим операциям над векторами.
 
-<div align="left"><figure><img src="../.gitbook/assets/6.1-points-in-2d-feature-space.png" alt="" width="563"><figcaption><p>8.1 Точки в 2D-пространстве признаков</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/8.1-points-in-2d-feature-space.png" alt="" width="563"><figcaption><p>8.1 Точки в 2D-пространстве признаков</p></figcaption></figure></div>
 
 #### **Геометрический смысл расстояний и углов**
 
