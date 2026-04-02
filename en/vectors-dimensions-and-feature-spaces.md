@@ -224,7 +224,7 @@ That’s why cosine similarity is commonly used with text embeddings and other h
 
 In practice, such vectors are often normalized to unit length so that cosine similarity reflects only direction, not scale.
 
-Formally, this is expressed via the dot product. The dot product of two vectors $$x$$ and $$y$$ is defined as:
+Formally, this is expressed via the dot product. The dot product of two vectors $$\mathbf{x}$$ and $$\mathbf{y}$$ is defined as:
 
 $$
 \mathbf{x} \cdot \mathbf{y} = \sum_{i=1}^{n} x_i y_i
@@ -248,7 +248,7 @@ In other words, its entire behavior is determined by how we measure distance bet
 
 That’s why feature scaling is critical for k-NN. If features are on different scales, distances will be dominated by features with the largest values, regardless of their actual importance.
 
-Mathematically, for a new vector x, we look for vectors $$xᵢ$$ from the training set such that the distance $$d(x, xᵢ)$$ is minimal.
+Mathematically, for a new vector $$\mathbf{x}$$, we look for vectors $$xᵢ$$ from the training set such that the distance $$d(x, xᵢ)$$ is minimal.
 
 The function below implements the classic Euclidean distance between two points:
 
