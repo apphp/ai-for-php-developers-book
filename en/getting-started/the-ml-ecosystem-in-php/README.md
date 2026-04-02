@@ -351,15 +351,15 @@ Projects like this show that the modern ML ecosystem in PHP is no longer just ab
 
 Here is a clean translation that preserves your tone and structure:
 
-#### **NeuronAI**
+#### **Neuron AI**
 
 Website: [https://www.neuron-ai.dev](https://www.neuron-ai.dev/)
 
 Status: <mark style="color:green;">**active**</mark>
 
-NeuronAI is a modern framework for building AI applications in PHP that operates at the level of agents and workflows rather than individual model calls.
+Neuron AI is a modern framework for building AI applications in PHP that operates at the level of agents and workflows rather than individual model calls.
 
-If LLPhant can be seen as a PHP analogue of LangChain, focusing on integrating LLMs into applications – chats, embeddings, vector stores, and RAG – then NeuronAI moves one level higher and describes not isolated model calls, but the behavior of the system as a whole.
+If LLPhant can be seen as a PHP analogue of LangChain, focusing on integrating LLMs into applications – chats, embeddings, vector stores, and RAG – then Neuron AI moves one level higher and describes not isolated model calls, but the behavior of the system as a whole.
 
 The key idea is that the model is only part of the process. It is not enough to simply get a response –you also need to define:
 
@@ -368,7 +368,7 @@ The key idea is that the model is only part of the process. It is not enough to 
 3. When to call the model
 4. How to handle the result
 
-To support this, NeuronAI provides a set of core building blocks:
+To support this, Neuron AI provides a set of core building blocks:
 
 * agents – components that make decisions
 * tools – functions that an agent can invoke
@@ -384,7 +384,7 @@ This approach is especially useful in cases where a single model call is not eno
 * process automation
 * building AI assistants
 
-If LLPhant is responsible for the infrastructure around LLMs, then NeuronAI is responsible for the logic and orchestration of the process.
+If LLPhant is responsible for the infrastructure around LLMs, then Neuron AI is responsible for the logic and orchestration of the process.
 
 #### **OpenAI, Anthropic, Gemini, and other LLMs**
 
