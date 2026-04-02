@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 15% (21%)
+Readines&#x73;**:** 18% (24%)
 
-🟩🟩🟩🟩🟨🟩🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟨🟩🟩🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -40,9 +40,9 @@ Section statuses
 
 #### Part I. The Mathematical Language of AI
 
-7. 🟨 What a model is in the mathematical sense\
+7. 🟩 What a model is in the mathematical sense\
    &#xNAN;_&#x46;unction, parameters, error._
-8. ⬜ Vectors, dimensions, and feature spaces\
+8. 🟨 Vectors, dimensions, and feature spaces\
    &#xNAN;_&#x57;hy data are points in space._
 9. ⬜ Distances and similarity\
    &#xNAN;_&#x45;uclidean distance, dot product, cosine similarity._
@@ -98,39 +98,45 @@ Section statuses
 
     _Geometry of meaning and semantic search._
 21. ⬜ Transformers and context: from static vectors to understanding meaning\
-    Why the word "key" has different vectors. Self-attention without formulas.
-22. ⬜ Practice: embeddings in PHP using transformers\
+    &#xNAN;_&#x57;hy the word "key" has different vectors. Self-attention without formulas._
+22. ⬜ Named Entity Recognition (NER) – extracting entities from text\
+    &#xNAN;_&#x53;equence labeling, BIO markup, practical case study in PHP._
+23. ⬜ Practice: embeddings in PHP using transformers\
     Inference instead of training. transformers-php as an engineering tool.
-23. ⬜ RAG: Retrieval-Augmented Generation as an engineering system\
+24. ⬜ RAG: Retrieval-Augmented Generation as an engineering system\
     &#xNAN;_&#x53;earch → context → generation. Why an LLM "remembers" documents._
 
 #### Part VI. Attention and Neural Networks
 
-24. ⬜ Perceptron and fully connected network\
+25. ⬜ Perceptron and fully connected network\
     &#xNAN;_&#x4C;inear combinations and nonlinearities._
-25. ⬜ Backpropagation — why it works\
+26. ⬜ Backpropagation — why it works\
     &#xNAN;_&#x54;he chain rule without academic horror._
-26. ⬜ Attention as weighted summation
+27. ⬜ Attention as weighted summation
 
     _Q/K/V formulas + simplified implementation._
 
 #### Part VII. LLMs and Modern AI
 
-27. ⬜ Why LLMs are next-token prediction models\
+28. ⬜ Why LLMs are next-token prediction models\
     &#xNAN;_&#x50;robabilities, softmax, context._
-28. ⬜ Where LLMs fail mathematically
+29. ⬜ Where LLMs fail mathematically
 
     _Hallucinations, distributions, bias._
 
-#### Part VIII. Production and Common Sense
+#### Part VIII. Agent Systems and Orchestration
 
-29. ⬜ How to use AI in PHP projects\
+30. ⬜ Agent Systems and Multi-Step Reasoning in PHP\
+    &#xNAN;_&#x4C;LM as a managed system: planning, tools and control._
+
+#### Part IX. Production and Common Sense
+
+31. ⬜ How to use AI in PHP projects\
     &#xNAN;_&#x41;rchitectures, integrations, orchestration._
-30. ⬜ When AI is not needed and why it matters
-
-    _Clear engineering boundaries._
+32. ⬜ When AI is not needed and why it matters\
+    &#xNAN;_&#x43;lear engineering boundaries._
 
 #### Conclusion
 
-31. ⬜ Where to go next\
+33. ⬜ Where to go next\
     &#xNAN;_&#x57;hat to deepen: mathematics, systems, or practice._

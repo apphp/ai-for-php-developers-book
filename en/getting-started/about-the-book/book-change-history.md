@@ -6,11 +6,21 @@ This book evolves gradually. New chapters are added, existing ones are revised a
 
 Added:
 
-* New chapter ""
+* New chapter "Vectors, dimensions, and feature spaces" in Part I. The Mathematical Language of AI
 
 Changes:
 
-* Rewritten ""
+* Extended Glossary chapter in Getting Started
+
+#### _March 2026_
+
+Added:
+
+* New chapter "What a model is in the mathematical sense" in Part I. The Mathematical Language of AI
+
+Changes:
+
+* Extended Glossary chapter in Getting Started
 
 #### _February 2026_
 

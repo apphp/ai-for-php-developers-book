@@ -26,3 +26,4 @@
 ***
 
 * [What a model is in the mathematical sense](what-a-model-is-in-the-mathematical-sense.md)
+* [Vectors, dimensions, and feature spaces](vectors-dimensions-and-feature-spaces.md)
