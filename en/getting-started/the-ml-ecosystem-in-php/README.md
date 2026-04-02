@@ -332,11 +332,11 @@ To test this code yourself, install the examples from the official [GitHub](http
 
 But the real power of LLPhant reveals itself in RAG scenarios:
 
-1. You create embeddings for your documents.
-2. Store them in a vector store.
-3. When a user sends a query, you retrieve the relevant context.
-4. Pass that context to the model.
-5. Receive an answer grounded in your own data.
+1. You create embeddings for your documents
+2. Store them in a vector store
+3. When a user sends a query, you retrieve the relevant context
+4. Pass that context to the model
+5. Receive an answer grounded in your own data
 
 This is why LLPhant holds a special place in the PHP ML ecosystem. It is not a linear algebra library, not a classical machine learning toolkit, and not just a wrapper for local inference. It is a framework for building full AI systems on top of LLMs – with context management, data storage, and architectural structure.
 
@@ -348,6 +348,43 @@ In simple terms:
 * LLPhant – infrastructure for LLM applications
 
 Projects like this show that the modern ML ecosystem in PHP is no longer just about "calling an API". It is becoming a full-fledged architectural layer around models.
+
+Here is a clean translation that preserves your tone and structure:
+
+#### **NeuronAI**
+
+Website: [https://www.neuron-ai.dev](https://www.neuron-ai.dev/)
+
+Status: <mark style="color:green;">**active**</mark>
+
+NeuronAI is a modern framework for building AI applications in PHP that operates at the level of agents and workflows rather than individual model calls.
+
+If LLPhant can be seen as a PHP analogue of LangChain, focusing on integrating LLMs into applications – chats, embeddings, vector stores, and RAG – then NeuronAI moves one level higher and describes not isolated model calls, but the behavior of the system as a whole.
+
+The key idea is that the model is only part of the process. It is not enough to simply get a response –you also need to define:
+
+1. Which steps should be executed
+2. Which tools should be used
+3. When to call the model
+4. How to handle the result
+
+To support this, NeuronAI provides a set of core building blocks:
+
+* agents – components that make decisions
+* tools – functions that an agent can invoke
+* execution scenarios (workflows)
+* integration with LLM providers
+
+Instead of manually writing chains of API calls, the developer describes the structure of the task, and the framework takes care of execution.
+
+This approach is especially useful in cases where a single model call is not enough:
+
+* multi-step scenarios
+* interaction with external services
+* process automation
+* building AI assistants
+
+If LLPhant is responsible for the infrastructure around LLMs, then NeuronAI is responsible for the logic and orchestration of the process.
 
 #### **OpenAI, Anthropic, Gemini, and other LLMs**
 
