@@ -58,7 +58,9 @@ $$
 
 Здесь $$\hat{y}$$ – предсказанная цена квартиры.
 
-#### Реализация на чистом PHP
+#### Реализация на чистом PHP&#x20;
+
+_(итеративная оптимизация – градиентный спуск)_
 
 Начнём с варианта без библиотек. Это полезно не для продакшена, а для понимания.
 
@@ -76,9 +78,9 @@ $X = [
 
 // Цена в долларах
 $y = [
-    66_000,
-    95_000,
-    45_000,
+    66000,
+    95000,
+    45000,
 ];
 ```
 
@@ -158,6 +160,231 @@ echo 'Bias: ' . number_format(array_pop($weights), 2, '.', '') . "\n";
 
 Минусы тоже очевидны. Нет масштабирования признаков (признаки имеют разные порядки величин, из-за чего градиентный спуск обучается медленно, нестабильно или вообще не сходится). На больших датасетах такой код будет работать медленно. Поддержка и развитие такого решения в продакшене – отдельная задача.
 
+#### Реализация на чистом PHP&#x20;
+
+_(аналитическое решение – через нормальные уравнения)_
+
+Для начала нам понадобится создать класс Matrix, которые умеет совершать минимум необходимых операций над матрицами.
+
+<details>
+
+<summary>Класс Matrix</summary>
+
+```php
+class Matrix
+{
+    public array $data;
+    public int $rows;
+    public int $cols;
+
+    public function __construct(array $data) {
+        $this->data = $data;
+        $this->rows = count($data);
+        $this->cols = count($data[0]);
+    }
+
+    public function transpose(): Matrix {
+        $result = [];
+
+        for ($i = 0; $i < $this->cols; $i++) {
+            $row = [];
+            for ($j = 0; $j < $this->rows; $j++) {
+                $row[] = $this->data[$j][$i];
+            }
+            $result[] = $row;
+        }
+
+        return new Matrix($result);
+    }
+
+    public function multiply(Matrix $other): Matrix {
+        if ($this->cols !== $other->rows) {
+            throw new Exception("Matrix dimensions do not match for multiplication");
+        }
+
+        $result = [];
+
+        for ($i = 0; $i < $this->rows; $i++) {
+            $row = [];
+            for ($j = 0; $j < $other->cols; $j++) {
+                $sum = 0.0;
+                for ($k = 0; $k < $this->cols; $k++) {
+                    $sum += $this->data[$i][$k] * $other->data[$k][$j];
+                }
+                $row[] = $sum;
+            }
+            $result[] = $row;
+        }
+
+        return new Matrix($result);
+    }
+
+    public function determinant(): float {
+        if ($this->rows !== $this->cols) {
+            throw new Exception("Determinant requires square matrix");
+        }
+
+        if ($this->rows === 1) {
+            return $this->data[0][0];
+        }
+
+        if ($this->rows === 2) {
+            return $this->data[0][0] * $this->data[1][1]
+                - $this->data[0][1] * $this->data[1][0];
+        }
+
+        $det = 0.0;
+
+        for ($c = 0; $c < $this->cols; $c++) {
+            $det += pow(-1, $c) * $this->data[0][$c] * $this->minor(0, $c)->determinant();
+        }
+
+        return $det;
+    }
+
+    private function minor(int $row, int $col): Matrix {
+        $minor = [];
+
+        foreach ($this->data as $i => $r) {
+            if ($i === $row) continue;
+
+            $newRow = [];
+            foreach ($r as $j => $value) {
+                if ($j === $col) continue;
+                $newRow[] = $value;
+            }
+            $minor[] = $newRow;
+        }
+
+        return new Matrix($minor);
+    }
+
+    public function inverse(): Matrix {
+        $det = $this->determinant();
+
+        if (abs($det) < 1e-10) {
+            throw new Exception("Matrix is singular (det = 0)");
+        }
+
+        if ($this->rows === 2) {
+            $a = $this->data;
+
+            return new Matrix([
+                [$a[1][1] / $det, -$a[0][1] / $det],
+                [-$a[1][0] / $det, $a[0][0] / $det],
+            ]);
+        }
+
+        $cofactors = [];
+
+        for ($i = 0; $i < $this->rows; $i++) {
+            $row = [];
+            for ($j = 0; $j < $this->cols; $j++) {
+                $minor = $this->minor($i, $j);
+                $row[] = pow(-1, $i + $j) * $minor->determinant();
+            }
+            $cofactors[] = $row;
+        }
+
+        $cofactorMatrix = new Matrix($cofactors);
+        $adjugate = $cofactorMatrix->transpose();
+
+        $result = [];
+
+        for ($i = 0; $i < $adjugate->rows; $i++) {
+            $row = [];
+            for ($j = 0; $j < $adjugate->cols; $j++) {
+                $row[] = $adjugate->data[$i][$j] / $det;
+            }
+            $result[] = $row;
+        }
+
+        return new Matrix($result);
+    }
+}
+
+```
+
+</details>
+
+Теперь используем формулу:
+
+$$
+\mathbf{w}^* = (X^\top X)^{-1} X^\top y
+$$
+
+**Подготовка данных**
+
+```php
+require 'Matrix.php';
+
+// X: [площадь, этаж, расстояние до центра, возраст дома, bias]
+$X = new Matrix([
+    [50, 3, 5, 10, 1],
+    [80, 12, 2, 3, 1],
+    [45, 5, 7, 20, 1],
+    [60, 8, 4, 15, 1],
+    [30, 1, 10, 40, 1],
+]);
+
+$y = new Matrix([
+    [60000],
+    [120000],
+    [55000],
+    [80000],
+    [30000],
+]);
+```
+
+**Вычисление весов**
+
+```php
+$Xt = $X->transpose();           // X^T
+$XtX = $Xt->multiply($X);        // X^T * X
+$XtX_inv = $XtX->inverse();      // (X^T X)^-1
+$Xt_y = $Xt->multiply($y);       // X^T y
+
+$w = $XtX_inv->multiply($Xt_y);  // финальные веса
+```
+
+**Результат**
+
+```php
+echo "Weights:\n";
+print_r($w->data);
+```
+
+**Предсказание**
+
+```php
+function predict(array $x, Matrix $w): float {
+    $sum = 0.0;
+    foreach ($x as $i => $value) {
+        $sum += $value * $w->data[$i][0];
+    }
+    return $sum;
+}
+
+$newApartment = [60, 5, 4, 12, 1];
+
+$price = predict($newApartment, $w);
+
+echo "Predicted price: " . round($price) . "\n";
+```
+
+Этот метод:
+
+* даёт точное решение за один шаг
+* не требует эпох и learning rate
+
+Но:
+
+* плохо масштабируется (инверсия матрицы дорогая операция - )
+* может ломаться, если матрица вырождена (det = 0)
+* чувствителен к мультиколлинеарности
+
+И именно поэтому на практике часто используют градиентный спуск или Ridge-регрессию.
+
 #### Реализация с библиотекой RubixML
 
 Теперь реализуем тот же подход, но в формате, характерном для реальных production-проектов. Воспользуемся линейной регрессией с L2-регуляризацией (Ridge Regression). В этом случае библиотека самостоятельно решает задачу оптимизации и аналитически вычисляет веса модели.
@@ -179,9 +406,9 @@ $samples = [
 ];
 
 $targets = [
-    66_000,
-    95_000,
-    45_000,
+    66000,
+    95000,
+    45000,
 ];
 
 // Создаём датасет
