@@ -240,6 +240,8 @@ This is directly used, for example, when comparing text embeddings or user profi
 
 From a machine learning perspective, this means something simple: two objects can be considered similar not because they are close in all coordinates, but because they "point" in the same direction in feature space.
 
+<div align="left"><figure><img src=".gitbook/assets/8.2-angle-between-2-vectors.png" alt="" width="563"><figcaption><p>8.2 Angle between two vectors</p></figcaption></figure></div>
+
 #### **Connection to specific algorithms**
 
 The k-nearest neighbors algorithm (k-NN) literally lives in feature space. It doesn’t "learn" in the classical sense – it simply finds the k closest points to a new point using a chosen distance metric.
