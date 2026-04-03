@@ -55,7 +55,7 @@ echo $prediction;
 ```
 
 {% hint style="info" %}
-To test this code yourself, install the examples from the official [GitHub](https://github.com/apphp/ai-for-php-developers-examples) repository or use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
+To test this code yourself, use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
 {% endhint %}
 
 For the point $$[3, 2]$$, the algorithm returns class "$$b$$" because its nearest neighbors in the training set belong to that class. There is no "magic" here: k-NN simply looks at which points are closest and lets them "vote" based on their labels.
@@ -105,7 +105,7 @@ echo $prediction[0];
 ```
 
 {% hint style="info" %}
-To test this code yourself, install the examples from the official [GitHub](https://github.com/apphp/ai-for-php-developers-examples) repository or use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
+To test this code yourself, use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
 {% endhint %}
 
 Notice an important point.
@@ -232,7 +232,7 @@ echo print_r($out, true);
 ```
 
 {% hint style="info" %}
-To test this code yourself, install the examples from the official [GitHub](https://github.com/apphp/ai-for-php-developers-examples) repository or use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
+To test this code yourself, use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
 {% endhint %}
 
 It is important to understand the architectural role of Transformers PHP.
@@ -309,11 +309,16 @@ This moves LLM usage from the level of "a script that sends a request to OpenAI"
 A simplest example:
 
 ```php
-use LLPhant\Chat\OpenAIChat;
-use LLPhant\Chat\Message;
 use LLPhant\Chat\Enums\ChatRole;
+use LLPhant\Chat\Message;
+use LLPhant\Chat\OpenAIChat;
+use LLPhant\OpenAIConfig;
 
-$chat = new OpenAIChat();
+$config = new OpenAIConfig(
+    apiKey: config('OPENAI_API_KEY'),
+    model: config('OPENAI_API_MODEL')
+);
+$chat = new OpenAIChat($config);
 
 $message = new Message();
 $message->role = ChatRole::User;
@@ -322,12 +327,12 @@ $message->content = 'What is the capital of France?';
 $response = $chat->generateText($message);
 echo $response;
 
-// Результат: 
+// Result: 
 // The capital of France is Paris.
 ```
 
 {% hint style="info" %}
-To test this code yourself, install the examples from the official [GitHub](https://github.com/apphp/ai-for-php-developers-examples) repository or use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
+To test this code yourself, use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) to run it.
 {% endhint %}
 
 But the real power of LLPhant reveals itself in RAG scenarios:
@@ -374,6 +379,53 @@ To support this, Neuron AI provides a set of core building blocks:
 * tools – functions that an agent can invoke
 * execution scenarios (workflows)
 * integration with LLM providers
+
+Example:
+
+```php
+use NeuronAI\Agent\Agent;
+use NeuronAI\Chat\Messages\UserMessage;
+use NeuronAI\Providers\AIProviderInterface;
+use NeuronAI\Providers\OpenAI\OpenAI;
+
+class MyAgent extends Agent {
+    protected function provider(): AIProviderInterface {
+        return new OpenAI(
+            key:  config('OPENAI_API_KEY', ''),
+            model: config('OPENAI_API_MODEL', ''),
+            parameters: [], // Add custom params (temperature, logprobs, etc)
+            strict_response: false, // Strict structured output
+        );
+    }
+}
+
+$message = MyAgent::make()
+    ->chat(new UserMessage("Hi!"))
+    ->getMessage();
+
+echo "Q1: Hi!\n";
+echo "A: " . $message->getContent() . "\n\n";
+echo "Q2: Explain who you are?\n";
+echo "A: ". MyAgent::make()
+    ->chat(new UserMessage("Explain who you are?"))
+    ->getMessage()
+    ->getContent();
+
+// Result: 
+// Q1: Hi!
+// A: Hello! How can I assist you today?
+
+// Q2: Explain who you are?
+// A: Hello! I’m an AI assistant created using Neuron AI, 
+// which is a powerful agentic framework designed for the PHP ecosystem. 
+// My purpose is to help answer your questions, provide explanations, 
+// assist with coding tasks, and support you in various topics, 
+// especially related to PHP development. How can I assist you today?
+```
+
+{% hint style="info" %}
+To try this code yourself, use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/what-is-a-model) to run it.
+{% endhint %}
 
 Instead of manually writing chains of API calls, the developer describes the structure of the task, and the framework takes care of execution.
 
