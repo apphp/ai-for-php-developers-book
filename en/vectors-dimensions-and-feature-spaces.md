@@ -73,7 +73,7 @@ If the dimensionality is 2, the feature space is a plane. If it’s 3, it’s th
 
 Each point in this space is a real-world object translated into numbers. A user, a product, a document, an image – after preprocessing, all of them become points in feature space.
 
-Feature space is the environment where the machine learning algorithm operates. Everything that used to be strings, dates, categories, and JSON becomes pure math – a set of numbers – after feature engineering.
+Feature space is the environment where the machine learning algorithm operates. Everything that used to be strings, dates, categories, and JSON becomes pure math – a set of numbers – after [feature engineering](getting-started/glossary.md#feature-engineering).
 
 #### **Features as coordinate axes**
 
