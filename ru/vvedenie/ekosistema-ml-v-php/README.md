@@ -316,11 +316,16 @@ LLPhant предоставляет:
 Простейший пример:
 
 ```php
-use LLPhant\Chat\OpenAIChat;
-use LLPhant\Chat\Message;
 use LLPhant\Chat\Enums\ChatRole;
+use LLPhant\Chat\Message;
+use LLPhant\Chat\OpenAIChat;
+use LLPhant\OpenAIConfig;
 
-$chat = new OpenAIChat();
+$config = new OpenAIConfig(
+    apiKey: config('OPENAI_API_KEY'), 
+    model: config('OPENAI_API_MODEL')
+);
+$chat = new OpenAIChat($config);
 
 $message = new Message();
 $message->role = ChatRole::User;
@@ -379,6 +384,53 @@ Neuron AI предоставляет для этого базовые строи
 * инструменты – функции, которые агент может вызывать
 * сценарии выполнения (workflow)
 * интеграцию с LLM-провайдерами
+
+Пример:
+
+```php
+use NeuronAI\Agent\Agent;
+use NeuronAI\Chat\Messages\UserMessage;
+use NeuronAI\Providers\AIProviderInterface;
+use NeuronAI\Providers\OpenAI\OpenAI;
+
+class MyAgent extends Agent {
+    protected function provider(): AIProviderInterface {
+        return new OpenAI(
+            key:  config('OPENAI_API_KEY', ''),
+            model: config('OPENAI_API_MODEL', ''),
+            parameters: [], // Add custom params (temperature, logprobs, etc)
+            strict_response: false, // Strict structured output
+        );
+    }
+}
+
+$message = MyAgent::make()
+    ->chat(new UserMessage("Hi!"))
+    ->getMessage();
+
+echo "Q1: Hi!\n";
+echo "A: " . $message->getContent() . "\n\n";
+echo "Q2: Explain who you are?\n";
+echo "A: ". MyAgent::make()
+    ->chat(new UserMessage("Explain who you are?"))
+    ->getMessage()
+    ->getContent();
+
+// Результат: 
+// Q1: Hi!
+// A: Hello! How can I assist you today?
+
+// Q2: Explain who you are?
+// A: Hello! I’m an AI assistant created using Neuron AI, 
+// which is a powerful agentic framework designed for the PHP ecosystem. 
+// My purpose is to help answer your questions, provide explanations, 
+// assist with coding tasks, and support you in various topics, 
+// especially related to PHP development. How can I assist you today?
+```
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/ml-ecosystem-in-php) для его запуска.
+{% endhint %}
 
 Вместо того чтобы писать последовательность вызовов API вручную, разработчик описывает структуру задачи, а выполнение берет на себя фреймворк.
 
