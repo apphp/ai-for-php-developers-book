@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 18% (24%)
+Readines&#x73;**:** 18% (27%)
 
-🟩🟩🟩🟩🟨🟩🟩🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟨🟩🟩🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -44,7 +44,7 @@ Section statuses
    &#xNAN;_&#x46;unction, parameters, error._
 8. 🟨 Vectors, dimensions, and feature spaces\
    &#xNAN;_&#x57;hy data are points in space._
-9. ⬜ Distances and similarity\
+9. 🟨 Distances and similarity\
    &#xNAN;_&#x45;uclidean distance, dot product, cosine similarity._
    1. Practical use cases
 
