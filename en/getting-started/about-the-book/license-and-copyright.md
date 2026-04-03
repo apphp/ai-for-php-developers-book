@@ -5,7 +5,8 @@
 Email: [admin@apphp.com](mailto:admin@apphp.com)\
 Website: [**https://apphp.com**](https://apphp.com/)
 
-This book is distributed under the\
+#### This book is distributed under license
+
 **Creative Commons Attribution 4.0 International (CC-BY-4.0)** license.
 
 Any contribution (pull request) accepted into the book repository is considered to be provided under the terms of the **CC-BY-4.0** license, unless explicitly stated otherwise.
@@ -15,3 +16,10 @@ If changes are made, you must indicate that the original material has been modif
 
 The full license text is available at:\
 [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
+
+#### Free and Complete Version of the Book
+
+The current version of the book is distributed free of charge and is available for free reading.\
+However, some practical cases, additional analyses, and expanded materials may only be available in the complete version of the book.\
+\
+The CC-BY-4.0 license applies to all open source content in the book. Materials available only in the complete version may be distributed under separate terms.
