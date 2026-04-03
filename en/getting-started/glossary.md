@@ -51,7 +51,7 @@ Here’s a clean English version adapted for your _AI with PHP_ book:
 
 #### **Affine Transformation**
 
-An **affine transformation** is a transformation of the form:
+An affine transformation is a transformation of the form:
 
 $$
 y=Wx+b
@@ -71,3 +71,60 @@ In practice, almost any model first applies an affine transformation to the inpu
 
 Intuitively, an affine transformation determines how a model reweights input features and shifts the result into the appropriate region of the feature space.
 
+#### **Attention Mechanism**
+
+The attention mechanism is a way for a model to selectively "focus" on different parts of the input data depending on the task context.
+
+The core idea of attention is that not all elements of the input are equally important. For each element, the model computes how strongly it is related to the current query and, based on this, weights its contribution.
+
+In mathematical form, attention is built around dot products. For each element, three vectors are computed:
+
+* **Query (Q)** – what we are currently looking for
+* **Key (K)** – what each element represents
+* **Value (V)** – what information it carries
+
+The importance score is typically computed as the dot product $$Q ⋅ K$$, followed by normalization (most commonly softmax). The final result is a weighted sum of the vectors $$V$$.
+
+Attention mechanisms are at the core of transformers and modern language models. They allow the model to capture dependencies between words regardless of their distance in the text, which fundamentally distinguishes them from classical sequential models.
+
+Intuitively, attention can be seen as a dynamic focusing mechanism: the model continuously decides which parts of the input are important at each step. From a practical perspective, attention is a generalization of vector similarity, scaled up to the level of entire models.
+
+#### **Auto-scaling**
+
+Auto-scaling is a mechanism for automatically adjusting a system’s computational resources based on workload.
+
+In the context of machine learning, auto-scaling is applied to:
+
+* model inference services
+* data processing pipelines
+* training and retraining systems
+
+When the number of requests increases, the system automatically adds computational resources; when the load decreases, it releases them. This helps maintain stable response times and optimize infrastructure costs.
+
+From a practical perspective, auto-scaling is not about the model itself, but about its lifecycle within a real system: even a good model becomes useless if it cannot handle the load.
+
+
+
+\>>>
+
+
+
+#### **Feature Engineering**
+
+Feature engineering is the process of transforming raw data into features that a model can effectively work with.
+
+A model does not inherently understand text, events, users, or real-world numbers. It operates only on feature vectors. Feature engineering determines what those vectors will look like.
+
+Feature engineering includes:
+
+* normalization and scaling of numerical data
+* encoding of categorical features (one-hot encoding, target encoding)
+* text processing (stop words removal, stemming, lemmatization, TF-IDF, embeddings)
+* generation of new features from existing ones
+* aggregations, time windows, counters, and flags
+
+The quality of feature engineering often has a greater impact on performance than the choice of a specific algorithm. A simple model with well-designed features can outperform a complex model with poor ones.
+
+Intuitively, feature engineering is the process of translating reality into a language that the model can understand.
+
+From a practical perspective, feature engineering is a key competency in applied machine learning, especially when working with limited data and classical algorithms.
