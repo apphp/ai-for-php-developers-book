@@ -5,8 +5,9 @@
 Email: admin@apphp.com\
 Сайт: [**https://apphp.com**](https://apphp.com/)
 
-Эта книга распространяется по лицензии \
-**Creative Commons Attribution 4.0 International (CC-BY-4.0)**.
+**Эта книга распространяется по лицензии**
+
+Creative Commons Attribution 4.0 International (CC-BY-4.0)
 
 Любой вклад (pull request), принятый в репозиторий книги, считается предоставленным на условиях лицензии **CC-BY-4.0**, если иное не указано явно.
 
