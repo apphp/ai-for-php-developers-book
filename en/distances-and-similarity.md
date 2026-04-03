@@ -84,7 +84,7 @@ $$
 At first glance, this is just the sum of products of corresponding coordinates – a convenient way to multiply two sets of numbers. However, the dot product also has a geometric meaning:
 
 $$
-x \cdot y = |x| \cdot |y| \cdot \cos(\theta)
+x \cdot y = |x| |y| \cos(\theta)
 $$
 
 where $$\theta$$ is the angle between the vectors, and the length (magnitude) of a vector is defined as:&#x20;
