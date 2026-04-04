@@ -119,7 +119,7 @@ print_r($model->proba($patient));
 Как и в предыдущих кейсах, логистическая регрессия считает:
 
 $$
-z = w_1 \cdot age + w_2 \cdot pressure + w_3 \cdot bmi + w_4 \cdot glucose + b
+z = w_1 \ age + w_2 \ pressure + w_3 \ bmi + w_4 \ glucose + b
 $$
 
 Затем:

@@ -106,7 +106,7 @@ $input = [
 Для каждого класса мы считаем:
 
 $$
-P(class | features) ∝ P(class) · Π P(feature | class)
+P(\text{class} \mid \text{features}) \propto P(\text{class}) \prod_{i} P(\text{feature}_i \mid \text{class})
 $$
 
 На практике – в логарифмах:

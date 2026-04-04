@@ -100,7 +100,7 @@ $$
 Когда важна не длина вектора, а направление. Формально это [косинусное сходство](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#cosine-similarity-kosinusnoe-skhodstvo), а не расстояние.
 
 $$
-\cos(\theta) = \frac{x \cdot y}{||x|| \cdot ||y||}
+\cos(\theta) = \frac{x \ y}{||x|| \ ||y||}
 $$
 
 На практике в k-NN обычно используют косинусное расстояние:

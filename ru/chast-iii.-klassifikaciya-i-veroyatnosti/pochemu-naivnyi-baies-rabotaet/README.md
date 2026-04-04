@@ -49,7 +49,7 @@ $$
 Формула Байеса связывает эти вероятности:
 
 $$
-P(C \mid X) = \frac{P(X \mid C) \cdot P(C)}{P(X)}
+P(C \mid X) = \frac{P(X \mid C) \ P(C)}{P(X)}
 $$
 
 Где:
@@ -63,7 +63,7 @@ $$
 В классификации нас обычно не интересует точное значение $$P(X)$$, потому что оно одинаково для всех классов. Мы сравниваем относительные значения:
 
 $$
-P(C \mid X) \propto P(X \mid C) \cdot P(C)
+P(C \mid X) \propto P(X \mid C) \ P(C)
 $$
 
 ### Много признаков и главная проблема
@@ -89,7 +89,7 @@ $$
 Формально:
 
 $$
-P(x₁, …, xₙ \mid C) = P(x₁ \mid C) \cdot P(x₂ \mid C) \cdot … \cdot P(xₙ \mid C)
+P(x₁, …, xₙ \mid C) = P(x₁ \mid C) \ P(x₂ \mid C) \ … \ (xₙ \mid C)
 $$
 
 Это и есть "наивность" модели.
@@ -166,7 +166,7 @@ $$
 Модель считает:
 
 $$
-P(\text{спам} \mid \text{письмо}) \propto P(\text{``free''} \mid \text{спам}) \cdot P(\text{``win''} \mid \text{спам}) \cdot P(\text{``meeting''} \mid \text{спам}) \cdot P(\text{спам})
+P(\text{спам} \mid \text{письмо}) \propto P(\text{``free''} \mid \text{спам}) \ P(\text{``win''} \mid \text{спам}) \ P(\text{``meeting''} \mid \text{спам}) \ P(\text{спам})
 $$
 
 Каждое слово независимо "голосует" за или против спама.

@@ -105,7 +105,7 @@ echo 'Decision: ' . ($fraud ? 'BLOCK' : 'ALLOW') . "\n";
 Как и в других кейсах, логистическая регрессия считает:
 
 $$
-z = w_1 \cdot amount + w_2 \cdot country + w_3 \cdot transactions + b
+z = w_1 \ amount + w_2 \ country + w_3 \ transactions + b
 $$
 
 И затем:

@@ -118,7 +118,7 @@ echo "Estimated price: $prediction";
 Важно подчеркнуть: мы не строим формулу вида
 
 $$
-price = a * area + b * distance + c
+\text{price} = a \ \text{area} + b \ \text{distance} + c
 $$
 
 kNN не ищет коэффициенты и не предполагает линейную зависимость.

@@ -145,7 +145,7 @@ $item = [0.2, 0.9, 0.7];
 Именно здесь появляется dot product:
 
 $$
-x \cdot y = \sum_{i=1}^{n} x_i \cdot y_i
+x \cdot y = \sum_{i=1}^{n} x_i y_i
 $$
 
 PHP-код:

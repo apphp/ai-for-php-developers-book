@@ -71,7 +71,7 @@ $$
 Именно поэтому шаг градиентного спуска выглядит так:
 
 $$
-w_{new} = w_{old} - \eta \cdot \frac{dL}{dw}
+w_{new} = w_{old} - \eta \frac{dL}{dw}
 $$
 
 Здесь $$\eta$$ (эта буква называется "_эта_") – это скорость обучения, или [learning rate](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#learning-rate-skorost-obucheniya).

@@ -187,7 +187,7 @@ p = 0.01 → ошибка огромная
 Для одного объекта:
 
 $$
-LogLoss = - \left( y \cdot \log(\hat{p}) + (1 - y) \cdot \log(1 - \hat{p}) \right)
+LogLoss = - \left( y \log(\hat{p}) + (1 - y) \log(1 - \hat{p}) \right)
 $$
 
 Если $$y = 1$$, остаётся только:
@@ -211,7 +211,7 @@ $$
 На практике модель делает предсказания сразу для многих объектов. Поэтому общая функция потерь – это среднее значение log loss по всем наблюдениям:
 
 $$
-LogLoss = -\frac{1}{n} \sum_{i=1}^{n} \left(y_i \cdot \log(\hat{p}_i) + (1 - y_i) \cdot \log(1 - \hat{p}_i)\right)
+LogLoss = -\frac{1}{n} \sum_{i=1}^{n} \left(y_i \log(\hat{p}_i) + (1 - y_i) \log(1 - \hat{p}_i)\right)
 $$
 
 Рассмотрим простой пример для трёх объектов.

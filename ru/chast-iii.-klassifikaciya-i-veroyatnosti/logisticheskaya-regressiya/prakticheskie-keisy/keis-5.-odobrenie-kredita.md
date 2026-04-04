@@ -106,7 +106,7 @@ echo 'Decision: ' . ($approved ? 'APPROVE' : 'DECLINE') . "\n";
 Как и в предыдущих кейсах, логистическая регрессия считает:
 
 $$
-z = w_1 \cdot income + w_2 \cdot score + w_3 \cdot debtLoad + b
+z = w_1 \ income + w_2 \ score + w_3 \ debtLoad + b
 $$
 
 Затем применяет сигмоиду:
@@ -142,7 +142,7 @@ $$
 В этом кейсе признаков уже три, поэтому decision boundary становится:
 
 $$
-w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + b = 0
+w_1 x_1 + w_2 x_2 + w_3 x_3 + b = 0
 $$
 
 Это уже не линия, а плоскость в трехмерном пространстве.

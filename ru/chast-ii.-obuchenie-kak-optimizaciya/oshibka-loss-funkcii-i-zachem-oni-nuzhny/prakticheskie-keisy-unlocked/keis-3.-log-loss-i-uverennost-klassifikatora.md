@@ -37,7 +37,7 @@ $p = [0.95, 0.1, 0.55, 0.4];
 Реализуем log loss в чистом PHP для:
 
 $$
-LogLoss = -\frac{1}{n} \sum_{i=1}^{n} [y_i \cdot \log(p_i) + (1 - y_i) \cdot \log(1 - p_i)]
+LogLoss = -\frac{1}{n} \sum_{i=1}^{n} [y_i \log(p_i) + (1 - y_i) \log(1 - p_i)]
 $$
 
 где
