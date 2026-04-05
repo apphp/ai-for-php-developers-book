@@ -109,7 +109,7 @@ echo "Real math: " . real_multiplication(347, 829) . "\n";
 Формула Байеса:
 
 $$
-P(A \mid B) = \frac{P(B \mid A) P(A)}{P(B)}
+P(A \mid B) = \frac{P(B \mid A) \ P(A)}{P(B)}
 $$
 
 LLM часто демонстрируют поведение, похожее на игнорирование P(A).

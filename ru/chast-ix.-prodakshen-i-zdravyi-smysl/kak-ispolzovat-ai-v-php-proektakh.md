@@ -161,7 +161,7 @@ $$
 Сравнение:
 
 $$
-\cos(\theta) = \frac{\mathbf{A} \mathbf{B}}{|\mathbf{A}|  |\mathbf{B}|}
+\cos(\theta) = \frac{\mathbf{A} \mathbf{B}}{|\mathbf{A}| \  |\mathbf{B}|}
 $$
 
 Где:
