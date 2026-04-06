@@ -114,11 +114,35 @@ function normalize(float $value, float $min, float $max): float {
 Пример:
 
 ```php
-$result = normalize(value: 75, min: 50, max: 100);
-echo $result; 
+$features = [0.12, 0.85, 0.33, 0.67, 0.91, 0.44, 0.58, 0.76, 0.29, 0.50];
 
-// Результат: 0.5
-// Объяснение: (75 - 50) / (100 - 50) = 0.5
+$min = min($features);
+$max = max($features);
+$result = [];
+
+foreach ($features as $feature) {
+    $normalizedFeature = normalize(value: $feature, min: $min, max: $max);
+    $result[] = round($normalizedFeature, 2);
+}
+
+echo "Результат (normalized): \n";
+echo print_r($result, true);
+
+// Результат: 0.5 (normalized)
+Array (
+    [0] => 0
+    [1] => 0.92
+    [2] => 0.27
+    [3] => 0.7
+    [4] => 1
+    [5] => 0.41
+    [6] => 0.58
+    [7] => 0.81
+    [8] => 0.22
+    [9] => 0.48
+)
+
+// Объяснение: (0.85 - 0.12) / (0.91 - 0.12) = 0.92
 ```
 
 После такой обработки возраст, количество покупок и средний чек начинают "весить" примерно одинаково в пространстве признаков.
