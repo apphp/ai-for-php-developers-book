@@ -140,7 +140,7 @@ for ($epoch = 0; $epoch < $epochs; $epoch++) {
 $newApartment = [60, 5, 4, 12, 1];
 $predictedPrice = dotProduct($weights, $newApartment);
 
-echo "Оценка стоимости: $" . number_format($predictedPrice) . "\n";
+echo "Оценка стоимости: $" . number_format($predictedPrice) . "\n\n";
 
 echo 'Веса: ' . implode(', ', array_map(fn ($weight) => number_format($weight, 2, '.', ''), array_splice($weights, 0, 4))) . "\n";
 echo 'Bias: ' . number_format(array_pop($weights), 2, '.', '') . "\n";
@@ -151,7 +151,7 @@ echo 'Bias: ' . number_format(array_pop($weights), 2, '.', '') . "\n";
 // Веса: 1333.29, 198.45, -0.94, -219.01
 // Bias: 16.06
 // Формула:
-// ŷ = 1333.29 * x1 + 198.45 * x2 -0.94 * x3 -219.01 * x4 + 16.06
+// ŷ = 1333.29 * x1 + 198.45 * x2 - 0.94 * x3 - 219.01 * x4 + 16.06
 ```
 
 **Плюсы и минусы подхода**
@@ -301,8 +301,35 @@ class Matrix
 
         return new Matrix($result);
     }
-}
 
+    public function regularizedInverse(float $lambda = 0.0, ?int $excludeIndex = null): Matrix {
+        if ($lambda <= 0.0) {
+            return $this->inverse();
+        }
+
+        if ($this->rows !== $this->cols) {
+            throw new Exception("Regularized inverse requires square matrix");
+        }
+
+        $regularized = [];
+
+        for ($i = 0; $i < $this->rows; $i++) {
+            $row = [];
+            for ($j = 0; $j < $this->cols; $j++) {
+                $value = $this->data[$i][$j];
+
+                if ($i === $j && ($excludeIndex === null || $i !== $excludeIndex)) {
+                    $value += $lambda;
+                }
+
+                $row[] = $value;
+            }
+            $regularized[] = $row;
+        }
+
+        return (new Matrix($regularized))->inverse();
+    }
+}
 ```
 
 </details>
@@ -328,33 +355,26 @@ $X = new Matrix([
 ]);
 
 $y = new Matrix([
-    [60000],
-    [120000],
-    [55000],
-    [80000],
-    [30000],
+    [60_000],
+    [120_000],
+    [55_000],
+    [80_000],
+    [30_000],
 ]);
 ```
 
 **Вычисление весов**
 
 ```php
-$Xt = $X->transpose();           // X^T
-$XtX = $Xt->multiply($X);        // X^T * X
-$XtX_inv = $XtX->inverse();      // (X^T X)^-1
-$Xt_y = $Xt->multiply($y);       // X^T y
+$Xt = $X->transpose();            // X^T
+$XtX = $Xt->multiply($X);         // X^T * X
+$XtX_inv = $XtX->inverse();       // (X^T X)^-1
+$Xt_y = $Xt->multiply($y);        // X^T y
 
-$w = $XtX_inv->multiply($Xt_y);  // финальные веса
+$w = $XtX_inv->multiply($Xt_y);   // финальные веса
 ```
 
-**Результат**
-
-```php
-echo "Weights:\n";
-print_r($w->data);
-```
-
-**Предсказание**
+**Предсказание цены**
 
 ```php
 function predict(array $x, Matrix $w): float {
@@ -366,10 +386,23 @@ function predict(array $x, Matrix $w): float {
 }
 
 $newApartment = [60, 5, 4, 12, 1];
-
 $price = predict($newApartment, $w);
 
-echo "Predicted price: " . round($price) . "\n";
+$bias = array_pop($w->data);
+$weights = $w->data;
+
+echo 'Оценка стоимости: $' . number_format($price) . "\n\n";
+
+echo 'Веса: ' . implode(', ', array_map(fn ($weight) => number_format($weight[0], 2, '.', ''), $weights)) . "\n";
+echo 'Bias: ' . number_format(array_pop($bias), 2, '.', '') . "\n";
+
+// Результат: 
+// Оценка стоимости: $80,003
+
+// Веса: 2326.89, 6.71, 3286.87, 3.65
+// Bias: -72834.76
+// Формула:
+// ŷ = 2326.89 * x1 + 6.71 * x2 + 3286.87 * x3 + 3.65 * x4 + -72834.76
 ```
 
 Этот метод:
@@ -443,7 +476,7 @@ echo 'Bias: ' . number_format($bias, 2, '.', '') . "\n";
 // Веса: 1192.98, 401.07, -132.48, -413.58
 // Bias: 9945.90
 // Формула:
-// ŷ = 1192.98 * x1 + 401.07 * x2 -132.48 * x3 -413.58 * x4 + 9945.90
+// ŷ = 1192.98 * x1 + 401.07 * x2 - 132.48 * x3 - 413.58 * x4 + 9945.90
 ```
 
 **Интерпретация весов**
