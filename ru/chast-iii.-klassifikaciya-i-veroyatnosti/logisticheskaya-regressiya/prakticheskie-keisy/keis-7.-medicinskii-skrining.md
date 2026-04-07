@@ -85,18 +85,18 @@ $model->train($dataset);
 
 $patient = new Unlabeled([[50, 145, 27, 135]]);
 
-echo "Predicted label (low_risk or high_risk):\n";
+echo "Предсказанная метка (low_risk или high_risk):\n";
 print_r($model->predict($patient));
 
-echo "\nClass probabilities: \n";
+echo "\nВероятности классов: \n";
 print_r($model->proba($patient));
 
 // Результат:
-// Predicted label (low_risk or high_risk):
+// Предсказанная метка (low_risk or high_risk):
 // Array (
 //    [0] => high_risk
 // )
-// Class probabilities:
+// Вероятности классов:
 // Array (
 //    [0] => Array (
 //        [low_risk] => 0.082380118020031
