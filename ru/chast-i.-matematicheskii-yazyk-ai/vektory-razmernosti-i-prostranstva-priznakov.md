@@ -174,7 +174,7 @@ $std  = 2.0;   // стандартное отклонение
 
 $zScore = standardize($value, $mean, $std);
 
-echo "Z-score: " . round($zScore, 2) . PHP_EOL;
+echo "Z-score для " . $value . " - " . round($zScore, 2) . "\n";
 
 // Интерпретация
 if ($zScore > 2) {
@@ -189,7 +189,10 @@ if ($zScore > 2) {
     echo "В пределах нормы";
 }
 
-// Результат: 1.75
+// Результат: 
+// Z-score для 8.5 - 1.75
+// Выше среднего
+
 // Объяснение: (8.5 − 5.0) / 2.0 = 1.75
 ```
 
