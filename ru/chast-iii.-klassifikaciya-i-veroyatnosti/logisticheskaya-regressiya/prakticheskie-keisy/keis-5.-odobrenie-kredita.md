@@ -66,13 +66,13 @@ $model->train($dataset);
 $client = new Unlabeled([[5000, 680, 0.3]]);
 $prediction = $model->predict($client);
 
-echo "Predicted label: \n";
+echo "Предсказанная метка: \n";
 print_r($prediction);
 
 $probas = $model->proba($client);
 $probabilityOfApproval = $probas[0]['approve'] ?? null;
 
-echo  "\nProbability of approval (class=approve): ";
+echo  "\nВероятность одобрения (class=approve): ";
 print_r($probabilityOfApproval);
 
 echo PHP_EOL;
@@ -80,17 +80,17 @@ echo PHP_EOL;
 $threshold = 0.6;
 $approved = $probabilityOfApproval !== null && $probabilityOfApproval >= $threshold;
 
-echo 'Threshold: ' . $threshold . "\n";
-echo 'Decision: ' . ($approved ? 'APPROVE' : 'DECLINE') . "\n";
+echo 'Порог: ' . $threshold . "\n";
+echo 'Решение: ' . ($approved ? 'APPROVE' : 'DECLINE') . "\n";
 
 // Результат:
-// Predicted label: 
+// Предсказанная метка: 
 // Array (
 //    [0] => approve
 // )
-// Probability of approval (class=approve): 1
-// Threshold: 0.6
-// Decision: APPROVE
+// Вероятность одобрения (class=approve): 1
+// Порог: 0.6
+// Решение: APPROVE
 ```
 
 Мы оцениваем нового клиента:

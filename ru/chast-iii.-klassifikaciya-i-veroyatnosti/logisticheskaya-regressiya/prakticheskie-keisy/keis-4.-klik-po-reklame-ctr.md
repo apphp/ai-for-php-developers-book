@@ -67,24 +67,24 @@ $model->train($dataset);
 $sampleToPredict = new Unlabeled([[20, 1]]);
 $prediction = $model->predict($sampleToPredict);
 
-echo 'Predicted label: ';
+echo 'Предсказанная метка: ';
 print_r($prediction);
 
 $probas = $model->proba($sampleToPredict);
 $ctr = $probas[0]['click'] ?? null;
 
-echo "\nProbability of click (CTR): ";
+echo "\nВероятность клика (CTR): ";
 print_r($ctr);
-echo "\nProbabilities (per class): ";
+echo "\nВероятности (по классам): ";
 print_r($probas[0]);
 
 // Результат:
-// Predicted label: 
+// Предсказанная метка: 
 // Array (
 //    [0] => click
 // )
-// Probability of click (CTR): 0.68015274582898
-// Probabilities (per class): 
+// Вероятность клика (CTR): 0.68015274582898
+// Вероятности (по классам): 
 // Array (
 //    [no_click] => 0.31984725417102
 //    [click] => 0.68015274582898
