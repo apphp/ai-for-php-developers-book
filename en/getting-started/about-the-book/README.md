@@ -39,3 +39,7 @@ All examples in the book:
 * Team leads and architects making technical decisions
 * Backend engineers working with text, search, and data
 * Anyone tired of “magic” and wanting to understand how things work under the hood
+
+### Distribution Rules
+
+This book is distributed free of charge and is available for anyone to read (see the "License and Copyright" section for details).
