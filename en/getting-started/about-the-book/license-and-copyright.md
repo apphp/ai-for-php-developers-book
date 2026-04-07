@@ -7,7 +7,7 @@ Website: [**https://apphp.com**](https://apphp.com/)
 
 **This book is distributed under license**
 
-Creative Commons Attribution 4.0 International (**CC-BY-4.0**) license.
+Creative Commons Attribution 4.0 International (CC-BY-4.0) license.
 
 Any contribution (pull request) accepted into the book repository is considered to be provided under the terms of the **CC-BY-4.0** license, unless explicitly stated otherwise.
 
@@ -19,4 +19,4 @@ The full license text is available at:\
 
 The current version of the book is distributed free of charge and is available for free reading.
 
-The CC-BY-4.0 license applies to all open source content in the book.
+The **CC-BY-4.0** license applies to all open source content in the book.
