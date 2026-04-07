@@ -30,7 +30,6 @@
     * [Кейс 1: Сравнение объектов и пользователей](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-1-sravnenie-obektov-i-polzovatelei.md)
     * [Кейс 2: Оценка релевантности объекта](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-2-ocenka-relevantnosti-obekta.md)
     * [Кейс 3: Сравнение текстов](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/keis-3-sravnenie-tekstov.md)
-  * [Практические кейсы - Unlocked](chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy-unlocked.md)
 
 ## Часть II. Обучение как оптимизация
 
@@ -41,7 +40,6 @@
     * [Кейс 3. Log loss и уверенность классификатора](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/keis-3.-log-loss-i-uverennost-klassifikatora.md)
     * [Кейс 4. Одинаковая точность – разный log loss](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/keis-4.-odinakovaya-tochnost-raznyi-log-loss.md)
     * [Кейс 5. Обучение модели как минимизация ошибки](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/keis-5.-obuchenie-modeli-kak-minimizaciya-oshibki.md)
-  * [Практические кейсы - Unlocked](chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy-unlocked.md)
 * [Линейная регрессия как базовая модель](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/README.md)
   * [Практические кейсы](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/README.md)
     * [Кейс 1. Оценка стоимости квартиры по параметрам](chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/keis-1.-ocenka-stoimosti-kvartiry-po-parametram.md)
@@ -61,11 +59,10 @@
 * [Вероятность как степень уверенности](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/README.md)
   * [Практические кейсы](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/README.md)
     * [Кейс 1. Фильтр спама: вероятность ≠ решение](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-1.-filtr-spama-veroyatnost-reshenie.md)
-  * [Практические кейсы - Unlocked](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy-unlocked/README.md)
-    * [Кейс 2. Медицинский тест: обновление уверенности (Байес)](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy-unlocked/keis-2.-medicinskii-test-obnovlenie-uverennosti-baies.md)
-    * [Кейс 3. Многоклассовая классификация и softmax](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy-unlocked/keis-3.-mnogoklassovaya-klassifikaciya-i-softmax.md)
-    * [Кейс 4. Переуверенная модель как сигнал проблемы](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy-unlocked/keis-4.-pereuverennaya-model-kak-signal-problemy.md)
-    * [Кейс 5. Обновление уверенности при новых данных](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy-unlocked/keis-5.-obnovlenie-uverennosti-pri-novykh-dannykh.md)
+    * [Кейс 2. Медицинский тест: обновление уверенности (Байес)](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-2.-medicinskii-test-obnovlenie-uverennosti-baies.md)
+    * [Кейс 3. Многоклассовая классификация и softmax](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-3.-mnogoklassovaya-klassifikaciya-i-softmax.md)
+    * [Кейс 4. Переуверенная модель как сигнал проблемы](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-4.-pereuverennaya-model-kak-signal-problemy.md)
+    * [Кейс 5. Обновление уверенности при новых данных](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-5.-obnovlenie-uverennosti-pri-novykh-dannykh.md)
 * [Логистическая регрессия](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/README.md)
   * [Практические кейсы](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/README.md)
     * [Кейс 1. Логистическая регрессия для оттока клиентов](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-1.-logisticheskaya-regressiya-dlya-ottoka-klientov.md)

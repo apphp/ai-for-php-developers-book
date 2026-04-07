@@ -1,6 +1,5 @@
 ---
 description: Когда accuracy вводит в заблуждение
-hidden: true
 ---
 
 # Кейс 4. Одинаковая точность – разный log loss
