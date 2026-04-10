@@ -127,7 +127,7 @@ Decision boundary определяется условием: $$p = 0.5$$&#x20;
 
 #### Визуализация
 
-<div align="left"><figure><img src="../../../.gitbook/assets/14.5-newsletter-sigmoid-1d.png" alt="" width="563"><figcaption><p>14.5 График сигмоиды для подписки на рассылку</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/14.7-newsletter-sigmoid-1d.png" alt="" width="563"><figcaption><p>14.7 График сигмоиды для подписки на рассылку</p></figcaption></figure></div>
 
 #### Интерпретация
 

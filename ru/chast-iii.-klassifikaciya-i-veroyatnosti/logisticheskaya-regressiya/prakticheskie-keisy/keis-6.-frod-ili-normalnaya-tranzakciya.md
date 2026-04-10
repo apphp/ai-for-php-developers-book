@@ -162,7 +162,7 @@ $$
 
 Чем дальше точка от границы, тем выше уверенность модели (относительно порога вероятности, например 0.5).
 
-<div align="left"><figure><img src="../../../.gitbook/assets/14.9-fraud-decision-boundary.png" alt="" width="563"><figcaption><p>14.9 Граница принятия решения о мошенничестве</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/14.11-fraud-decision-boundary.png" alt="" width="563"><figcaption><p>14.11 Граница принятия решения о мошенничестве</p></figcaption></figure></div>
 
 #### Интерпретация
 
