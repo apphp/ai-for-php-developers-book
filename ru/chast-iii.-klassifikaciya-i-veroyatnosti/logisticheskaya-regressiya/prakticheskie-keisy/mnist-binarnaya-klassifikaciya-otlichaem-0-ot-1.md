@@ -127,29 +127,25 @@ label,1x1,1x2,1x3,1x4,1x5,1x6,...,,1x26,1x27,1x28,2x1,2x2,2x3,2x4,2x5,2x6,..,28x
 
 <details>
 
-<summary><strong>LogisticRegression.php</strong></summary>
+<summary><strong>Class LogisticRegression</strong></summary>
 
 ```php
-class LogisticRegression
-{
+class LogisticRegression {
     private array $weights;
     private float $bias;
     private float $learningRate;
 
-    public function __construct(int $numFeatures, float $learningRate = 0.1)
-    {
+    public function __construct(int $numFeatures, float $learningRate = 0.1) {
         $this->learningRate = $learningRate;
         $this->weights = array_fill(0, $numFeatures, 0.0);
         $this->bias = 0.0;
     }
 
-    private function sigmoid(float $z): float
-    {
+    private function sigmoid(float $z): float {
         return 1.0 / (1.0 + exp(-$z));
     }
 
-    private function dot(array $a, array $b): float
-    {
+    private function dot(array $a, array $b): float {
         $sum = 0.0;
         foreach ($a as $i => $v) {
             $sum += $v * $b[$i];
@@ -157,18 +153,15 @@ class LogisticRegression
         return $sum;
     }
 
-    public function predictProb(array $x): float
-    {
+    public function predictProb(array $x): float {
         return $this->sigmoid($this->dot($this->weights, $x) + $this->bias);
     }
 
-    public function predict(array $x): int
-    {
+    public function predict(array $x): int {
         return $this->predictProb($x) >= 0.5 ? 1 : 0;
     }
 
-    public function train(array $X, array $y, int $epochs = 5): void
-    {
+    public function train(array $X, array $y, int $epochs = 5): void {
         foreach (range(1, $epochs) as $epoch) {
             foreach ($X as $i => $x) {
                 $p = $this->predictProb($x);
@@ -193,47 +186,68 @@ class LogisticRegression
 
 Теперь загрузим две наши подвыборки&#x20;
 
+<details>
+
+<summary><strong>Class MnistLoader</strong></summary>
+
 ```php
-function loadMNIST(string $file): array {
-    $X = [];
-    $y = [];
+class MnistLoader {
 
-    $handle = fopen($file, 'r');
+    static public function loadMNIST(string $file, string $directory = ''): array {
+        $X = [];
+        $y = [];
 
-    while (($row = fgetcsv($handle)) !== false) {
+        $handle = fopen($directory . $file, 'r');
 
-        $label = (int)$row[0];
+        while (($row = fgetcsv($handle)) !== false) {
+            if ($row === [] || $row[0] === null || $row[0] === '') {
+                continue;
+            }
 
-        // 1. Оставляем только 0 и 1
-        if ($label !== 0 && $label !== 1) {
-            continue;
+            $label = (int)$row[0];
+
+            // 1. Оставляем только 0 и 1
+            if ($label !== 0 && $label !== 1) {
+                continue;
+            }
+
+            $pixels = array_slice($row, 1);
+
+            // 2. Нормализация (0–255 → 0–1)
+            $pixels = array_map(function ($p): float {
+                return ((float) trim((string) $p)) / 255.0;
+            }, $pixels);
+
+            $X[] = $pixels;
+            $y[] = $label;
         }
 
-        $pixels = array_slice($row, 1);
-        
-        // 2. Нормализация (0–255 → 0–1)
-        $pixels = array_map(fn($p) => $p / 255.0, $pixels);
-
-        $X[] = $pixels;
-        $y[] = $label;
+        return [$X, $y];
     }
-
-    return [$X, $y];
 }
-
-[$X_train, $y_train] = loadMNIST('mnist/train.csv');
-[$X_test, $y_test] = loadMNIST('mnist/test.csv');
 ```
+
+
+
+</details>
 
 И начнём и тренировать:
 
 ```php
-$model = new LogisticRegression(784, 0.1);
-
-$model->train($X_train, $y_train, 3);
+use app\classes\LogisticRegression;
+use app\classes\MnistLoader;
 
 // оценка
 $correct = 0;
+
+[$X_train, $y_train] = MnistLoader::loadMNIST('train.csv');
+[$X_test, $y_test] = MnistLoader::loadMNIST('test.csv');
+
+echo 'Обработано данных для обучения: ' . number_format(count($X_train)) . PHP_EOL;
+echo 'Обработано данных для тестирования: ' . number_format(count($X_test)) . PHP_EOL . PHP_EOL;
+
+$model = new LogisticRegression(784, 0.1);
+$model->train($X_train, $y_train, epochs: 5);
 
 foreach ($X_test as $i => $x) {
     if ($model->predict($x) === $y_test[$i]) {
@@ -242,17 +256,27 @@ foreach ($X_test as $i => $x) {
 }
 
 $accuracy = $correct / count($X_test);
-
-echo "Accuracy: " . round($accuracy * 100, 2) . "%\n";
+echo PHP_EOL . "Точность: " . round($accuracy * 100, 2) . "%" . PHP_EOL;
 ```
 
-Результат:&#x20;
+**Результат:**&#x20;
 
-Accuracy: 95.21%
+```
+Обработано данных для обучения: 12,666
+Обработано данных для тестирования: 2,116
 
-Объяснение:
+Epoch 1 done
+Epoch 2 done
+Epoch 3 done
+Epoch 4 done
+Epoch 5 done
 
-Для данной задачи 0 vs 1 MNIST (очень простой) – классы хорошо разделимы, поэтому даже линейная модель даёт \~95% точности.
+Точность: 99.91%
+```
+
+**Объяснение:**
+
+Для данной задачи 0 vs 1 MNIST (очень простой) – классы хорошо разделимы, поэтому даже линейная модель даёт \~99% точности.
 
 ### Реализация с RubixML
 
