@@ -308,8 +308,8 @@ $testRows = mnistRows('test.csv');
 $dataset = Labeled::fromIterator($trainRows);
 $testDataset = Labeled::fromIterator($testRows);
 
-echo 'Обработано данных для обучения: ' . number_format($dataset->numSamples()) . "\n";
-echo 'Обработано данных для тестирования: ' . number_format($testDataset->numSamples()) . "\n\n";
+echo 'Обработано данных для обучения: ' . $dataset->numSamples() . "\n";
+echo 'Обработано данных для тестирования: ' . $testDataset->numSamples() . "\n\n";
 
 $model = new LogisticRegression(epochs: 5);
 $model->train($dataset);
