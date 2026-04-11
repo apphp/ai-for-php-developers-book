@@ -393,7 +393,7 @@ echo 'Точность: ' . round($accuracy * 100, 2) . '%';
 
 Прогресс моделей на MNIST
 
-<table><thead><tr><th width="193.01953125">Модель</th><th width="181.01171875">Задача</th><th width="168.92578125">Точность</th><th>Комментарий</th></tr></thead><tbody><tr><td>Logistic</td><td>0 vs 1 (binary)</td><td>~99%</td><td>линейная</td></tr><tr><td>...</td><td></td><td>...</td><td>...</td></tr></tbody></table>
+<table><thead><tr><th width="193.01953125">Модель</th><th width="181.01171875">Задача</th><th width="168.92578125">Точность</th><th>Комментарий</th></tr></thead><tbody><tr><td><a href="../../pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/mnist-veroyatnostnaya-model-klassifikacii-cifr-naive-bayes.md">Logistic</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>линейная</td></tr><tr><td>...</td><td></td><td>...</td><td>...</td></tr></tbody></table>
 
 {% hint style="info" %}
 Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/logistic-regression) для его запуска.
