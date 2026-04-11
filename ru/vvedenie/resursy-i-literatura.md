@@ -51,4 +51,6 @@
 * Make Your Own Neural Network\
   Tariq Rashid \
   [https://www.amazon.com/Make-Your-Own-Neural-Network-ebook/dp/B01EER4Z4G](https://www.amazon.com/Make-Your-Own-Neural-Network-ebook/dp/B01EER4Z4G)
-
+* Глубокое обучение. Погружение в мир нейронных сетей.\
+  С. Николенко, Е. В. Архангельская, А. Кадурин\
+  [https://www.litres.ru/book/a-kadurin-13464223/glubokoe-obuchenie-pogruzhenie-v-mir-neyronnyh-setey-29817855/](https://www.litres.ru/book/a-kadurin-13464223/glubokoe-obuchenie-pogruzhenie-v-mir-neyronnyh-setey-29817855/)
