@@ -308,13 +308,13 @@ $testRows = mnistRows('test.csv');
 $dataset = Labeled::fromIterator($trainRows);
 $testDataset = Labeled::fromIterator($testRows);
 
-echo 'Train rows handled: ' . number_format($dataset->numSamples()) . "\n";
-echo 'Test rows handled: ' . number_format($testDataset->numSamples()) . "\n\n";
+echo 'Обработано данных для обучения: ' . number_format($dataset->numSamples()) . "\n";
+echo 'Обработано данных для тестирования: ' . number_format($testDataset->numSamples()) . "\n\n";
 
 $model = new LogisticRegression(epochs: 5);
 $model->train($dataset);
 
-echo 'Number of epochs: ' . $model->params()['epochs'] . "\n\n";
+echo 'Колличество эпох: ' . $model->params()['epochs'] . "\n\n";
 
 $correct = 0;
 
@@ -327,7 +327,7 @@ foreach ($testDataset->samples() as $i => $x) {
 }
 
 $accuracy = $correct / $testDataset->numSamples();
-echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
+echo 'Точность: ' . round($accuracy * 100, 2) . '%';
 ```
 
 **Результат:**
@@ -386,3 +386,7 @@ echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 > А можно ли подойти к задаче иначе – не через поиск границы между классами, а через моделирование вероятности самих данных?
 
 К этому подходу мы перейдём в следующей главе, где рассмотрим вероятностную модель классификации – Naive Bayes.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-3/logistic-regression) для его запуска.
+{% endhint %}
