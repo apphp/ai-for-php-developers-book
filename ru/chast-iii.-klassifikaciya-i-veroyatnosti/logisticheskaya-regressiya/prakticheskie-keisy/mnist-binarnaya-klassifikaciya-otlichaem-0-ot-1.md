@@ -277,37 +277,57 @@ echo 'Точность: ' . round($accuracy * 100, 2) . '%';
 #### Реализация с RubixML
 
 ```php
-use app\classes\MnistLoader;
+<?php
+
 use Rubix\ML\Classifiers\LogisticRegression;
 use Rubix\ML\Datasets\Labeled;
 use Rubix\ML\Datasets\Unlabeled;
+use Rubix\ML\Extractors\CSV;
 
-[$X_train, $y_train] = MnistLoader::loadMNIST('mnist-digits/train.csv', '', true);
-[$X_test, $y_test] = MnistLoader::loadMNIST('.mnist-digits/test.csv', '', true);
+function mnistRows(string $file): iterable {
+    foreach (new CSV($file, false) as $row) {
+        if (!isset($row[0])) {
+            continue;
+        }
 
-echo 'Обработано данных для обучения: ' . number_format(count($X_train)) . "\n";
-echo 'Обработано данных для тестирования: ' . number_format(count($X_test)) . "\n\n";
+        $label = (int) $row[0];
 
-$dataset = new Labeled($X_train, $y_train);
+        if ($label !== 0 && $label !== 1) {
+            continue;
+        }
+
+        $pixels = array_map(static fn ($value): float => (float) $value, array_slice($row, 1));
+
+        yield array_merge($pixels, [$label === 1 ? 'one' : 'zero']);
+    }
+}
+
+$trainRows = mnistRows('train.csv');
+$testRows = mnistRows('test.csv');
+
+$dataset = Labeled::fromIterator($trainRows);
+$testDataset = Labeled::fromIterator($testRows);
+
+echo 'Train rows handled: ' . number_format($dataset->numSamples()) . "\n";
+echo 'Test rows handled: ' . number_format($testDataset->numSamples()) . "\n\n";
 
 $model = new LogisticRegression(epochs: 5);
 $model->train($dataset);
 
-echo 'Колличество эпох: ' . $model->params()['epochs'] . "\n\n";
+echo 'Number of epochs: ' . $model->params()['epochs'] . "\n\n";
 
 $correct = 0;
 
-foreach ($X_test as $i => $x) {
+foreach ($testDataset->samples() as $i => $x) {
     $prediction = $model->predict(new Unlabeled([$x]))[0];
 
-    if ($prediction === $y_test[$i]) {
+    if ($prediction === $testDataset->labels()[$i]) {
         $correct++;
     }
 }
 
-$accuracy = $correct / count($X_test);
-echo 'Точность: ' . round($accuracy * 100, 2) . '%';
-
+$accuracy = $correct / $testDataset->numSamples();
+echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 ```
 
 **Результат:**
