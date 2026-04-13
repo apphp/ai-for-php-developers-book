@@ -220,7 +220,7 @@ The capital of France is
 
 Контекст – это просто информация, закодированная в векторе $$h_t$$.
 
-<div align="left"><figure><img src="../../.gitbook/assets/30.2-attention-scheme-for-previous-tokens.png" alt="" width="563"><figcaption><p>28.2 Схема внимания на предыдущие токены</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/30.2-attention-scheme-for-previous-tokens.png" alt="" width="563"><figcaption><p>30.2 Схема внимания на предыдущие токены</p></figcaption></figure></div>
 
 ### Почему это работает так хорошо?
 

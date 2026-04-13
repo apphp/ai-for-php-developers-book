@@ -54,7 +54,7 @@ $$
 
 То есть наиболее вероятное ≠ истинное.
 
-<div align="left"><figure><img src="../../.gitbook/assets/31.1-probability-distribution-of-tokens.png" alt="" width="563"><figcaption><p>31.1 Распределение вероятностей токенов</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/32.1-probability-distribution-of-tokens.png" alt="" width="563"><figcaption><p>32.1 Распределение вероятностей токенов</p></figcaption></figure></div>
 
 ### Ошибка накопления вероятностей
 
@@ -131,7 +131,7 @@ $$
 
 Почему? Потому что корпус текстов чаще содержит линейные объяснения, чем аккуратные байесовские расчёты.
 
-<div align="left"><figure><img src="../../.gitbook/assets/31.2-bayesian-updating.png" alt="" width="563"><figcaption><p>31.2 Байесовское обновление</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/32.2-bayesian-updating.png" alt="" width="563"><figcaption><p>32.2 Байесовское обновление</p></figcaption></figure></div>
 
 ### Distribution Shift – сдвиг распределения
 
@@ -189,7 +189,7 @@ $$
 
 Если определённая точка зрения встречается чаще – она получает больший вес.
 
-<div align="left"><figure><img src="../../.gitbook/assets/31.3-skewed-distribution.png" alt="" width="563"><figcaption><p>31.3 Смещённое распределение</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/32.3-skewed-distribution.png" alt="" width="563"><figcaption><p>32.3 Смещённое распределение</p></figcaption></figure></div>
 
 ### Temperature усиливает или ослабляет ошибки
 

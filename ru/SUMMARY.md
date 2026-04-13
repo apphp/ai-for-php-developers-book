@@ -173,7 +173,7 @@
 ## Часть VII. Обучение с подкреплением
 
 * [Обучение с подкреплением: как модели учатся через опыт](chast-vii.-obuchenie-s-podkrepleniem/obuchenie-s-podkrepleniem-kak-modeli-uchatsya-cherez-opyt.md)
-* [RLHF и обучение поведения LLM](chast-vii.-obuchenie-s-podkrepleniem/rlhf-i-obuchenie-povedeniya-llm.md)
+* [Почему обучение с подкреплением плохо подходит для текста](chast-vii.-obuchenie-s-podkrepleniem/pochemu-obuchenie-s-podkrepleniem-plokho-podkhodit-dlya-teksta.md)
 
 ## Часть VIII. LLM и современный AI
 
@@ -187,6 +187,8 @@
     * [Кейс 5. Мини-GPT на PHP как демонстрационный проект](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-5.-mini-gpt-na-php-kak-demonstracionnyi-proekt.md)
     * [Кейс 6. Prompt Engineering как изменение распределения](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-6.-prompt-engineering-kak-izmenenie-raspredeleniya.md)
     * [Кейс 7. Генерация фишинговых писем как учебный эксперимент](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-7.-generaciya-fishingovykh-pisem-kak-uchebnyi-eksperiment.md)
+* [RLHF и обучение поведения LLM](chast-viii.-llm-i-sovremennyi-ai/rlhf-i-obuchenie-povedeniya-llm/README.md)
+  * [Практические кейсы](chast-viii.-llm-i-sovremennyi-ai/rlhf-i-obuchenie-povedeniya-llm/prakticheskie-keisy.md)
 * [Где LLM ошибаются математически](chast-viii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/README.md)
   * [Практические кейсы](chast-viii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/README.md)
     * [Кейс 1. Галлюцинация числовых фактов и обязательная верификация](chast-viii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-1.-gallyucinaciya-chislovykh-faktov-i-obyazatelnaya-verifikaciya.md)
