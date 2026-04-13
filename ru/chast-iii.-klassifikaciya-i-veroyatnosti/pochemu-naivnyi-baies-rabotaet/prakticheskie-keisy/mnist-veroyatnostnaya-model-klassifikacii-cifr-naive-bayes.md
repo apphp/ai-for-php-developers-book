@@ -44,13 +44,7 @@ MNIST – это классический датасет рукописных ц
 Далее для нового изображения считается:
 
 $$
-P(class | image) ∝
-$$
-
-и
-
-$$
-P(class) · Π P(pixelᵢ | class)
+P(\text{class} \mid \text{image}) \propto P(\text{class}) \cdot \prod_i P(\text{pixel}_i \mid \text{class})
 $$
 
 Где $$P(pixelᵢ | class)$$ задается через нормальное распределение.
