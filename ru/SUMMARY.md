@@ -173,7 +173,7 @@
 ## Часть VII. Обучение с подкреплением
 
 * [Обучение с подкреплением: как модели учатся через опыт](chast-vii.-obuchenie-s-podkrepleniem/obuchenie-s-podkrepleniem-kak-modeli-uchatsya-cherez-opyt.md)
-* [Почему обучение с подкреплением плохо подходит для текста](chast-vii.-obuchenie-s-podkrepleniem/pochemu-obuchenie-s-podkrepleniem-plokho-podkhodit-dlya-teksta.md)
+* [Почему обучение с подкреплением плохо подходит для текста](chast-vii.-obuchenie-s-podkrepleniem/rlhf-i-obuchenie-povedeniya-llm.md)
 
 ## Часть VIII. LLM и современный AI
 
