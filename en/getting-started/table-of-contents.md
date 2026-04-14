@@ -120,7 +120,10 @@ Section statuses
 
 28. ⬜ Why LLMs are next-token prediction models\
     &#xNAN;_&#x50;robabilities, softmax, context._
-29. ⬜ Where LLMs fail mathematically
+29. ⬜Why LLMs Behave "Intelligently": RLHF and Behavioral Learning\
+    &#xNAN;_&#x46;rom Token Prediction to Useful Responses_
+    1. Understanding RLHF in Practice
+30. ⬜ Where LLMs fail mathematically
 
     _Hallucinations, distributions, bias._
 
