@@ -391,7 +391,7 @@ echo 'Точность: ' . round($accuracy * 100, 2) . '%';
 
 Мы будем возвращаться к этому кейсу в разных главах и постепенно улучшать модель – от простой линейной до более мощных методов. Ниже – прогресс, который мы будем строить по ходу книги.
 
-Прогресс моделей на MNIST
+Прогресс моделей на MNIST:
 
 <table><thead><tr><th width="193.01953125">Модель</th><th width="181.01171875">Задача</th><th width="168.92578125">Точность</th><th>Комментарий</th></tr></thead><tbody><tr><td><a href="mnist-binarnaya-klassifikaciya-otlichaem-0-ot-1.md">Logistic</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>линейная</td></tr><tr><td>...</td><td></td><td>...</td><td>...</td></tr></tbody></table>
 
