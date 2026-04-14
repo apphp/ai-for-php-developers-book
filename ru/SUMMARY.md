@@ -16,8 +16,8 @@
 * [О книге](vvedenie/o-knige/README.md)
   * [Лицензия и авторские права](vvedenie/o-knige/licenziya-i-avtorskie-prava.md)
   * [Как контрибьютить](vvedenie/o-knige/kak-kontribyutit.md)
-  * [Что дальше](vvedenie/o-knige/chto-dalshe/README.md)
-    * [История изменений книги](vvedenie/o-knige/chto-dalshe/istoriya-izmenenii-knigi.md)
+  * [История изменений книги](vvedenie/o-knige/istoriya-izmenenii-knigi.md)
+  * [Что дальше](vvedenie/o-knige/chto-dalshe.md)
 * [Глоссарий](vvedenie/zaklyuchitelnye-materialy/glossarii.md)
 * [Ресурсы и литература](vvedenie/resursy-i-literatura.md)
 
