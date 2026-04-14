@@ -170,52 +170,47 @@
     * [Кейс 6. Визуализация внимания для awareness-обучения](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/keis-6.-vizualizaciya-vnimaniya-dlya-awareness-obucheniya.md)
     * [Кейс 7. Мини-Transformer на PHP (toy)](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/keis-7.-mini-transformer-na-php-toy.md)
 
-## Часть VII. Обучение с подкреплением
+## Часть VII. LLM и современный AI
 
-* [Обучение с подкреплением: как модели учатся через опыт](chast-vii.-obuchenie-s-podkrepleniem/obuchenie-s-podkrepleniem-kak-modeli-uchatsya-cherez-opyt.md)
-* [Почему обучение с подкреплением плохо подходит для текста](chast-vii.-obuchenie-s-podkrepleniem/rlhf-i-obuchenie-povedeniya-llm.md)
+* [Почему LLM – это модели next-token prediction](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/README.md)
+  * [Практика: строим next-token модель на PHP](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/praktika-stroim-next-token-model-na-php.md)
+  * [Практические кейсы](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/README.md)
+    * [Кейс 1. Умное автодополнение письма (B2B awareness)](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-1.-umnoe-avtodopolnenie-pisma-b2b-awareness.md)
+    * [Кейс 2. Детектор фишингового паттерна как next-token аномалия](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-2.-detektor-fishingovogo-patterna-kak-next-token-anomaliya.md)
+    * [Кейс 3. Температура и управление стилем](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-3.-temperatura-i-upravlenie-stilem.md)
+    * [Кейс 4. Next-token классификатор на RubixML](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-4.-next-token-klassifikator-na-rubixml.md)
+    * [Кейс 5. Мини-GPT на PHP как демонстрационный проект](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-5.-mini-gpt-na-php-kak-demonstracionnyi-proekt.md)
+    * [Кейс 6. Prompt Engineering как изменение распределения](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-6.-prompt-engineering-kak-izmenenie-raspredeleniya.md)
+    * [Кейс 7. Генерация фишинговых писем как учебный эксперимент](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-7.-generaciya-fishingovykh-pisem-kak-uchebnyi-eksperiment.md)
+* [Почему LLM ведут себя "разумно": RLHF и обучение поведения](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-vedut-sebya-razumno-rlhf-i-obuchenie-povedeniya/README.md)
+  * [Практические кейсы](chast-vii.-llm-i-sovremennyi-ai/pochemu-llm-vedut-sebya-razumno-rlhf-i-obuchenie-povedeniya/prakticheskie-keisy.md)
+* [Где LLM ошибаются математически](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/README.md)
+  * [Практические кейсы](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/README.md)
+    * [Кейс 1. Галлюцинация числовых фактов и обязательная верификация](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-1.-gallyucinaciya-chislovykh-faktov-i-obyazatelnaya-verifikaciya.md)
+    * [Кейс 2. Ошибка в длинной математической цепочке (error propagation)](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-2.-oshibka-v-dlinnoi-matematicheskoi-cepochke-error-propagation.md)
+    * [Page 3. Base Rate Neglect в phishing-симуляциях](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/page-3.-base-rate-neglect-v-phishing-simulyaciyakh.md)
+    * [Кейс 4. Bias в обучающих данных](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-4.-bias-v-obuchayushikh-dannykh.md)
+    * [Кейс 5. Temperature и управляемая деградация качества](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-5.-temperature-i-upravlyaemaya-degradaciya-kachestva.md)
+    * [Кейс 6. Архитектура “LLM + детерминированный слой”](chast-vii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-6.-arkhitektura-llm-+-determinirovannyi-sloi.md)
 
-## Часть VIII. LLM и современный AI
+## Часть VIII. Агентные системы и оркестрация
 
-* [Почему LLM – это модели next-token prediction](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/README.md)
-  * [Практика: строим next-token модель на PHP](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/praktika-stroim-next-token-model-na-php.md)
-  * [Практические кейсы](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/README.md)
-    * [Кейс 1. Умное автодополнение письма (B2B awareness)](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-1.-umnoe-avtodopolnenie-pisma-b2b-awareness.md)
-    * [Кейс 2. Детектор фишингового паттерна как next-token аномалия](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-2.-detektor-fishingovogo-patterna-kak-next-token-anomaliya.md)
-    * [Кейс 3. Температура и управление стилем](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-3.-temperatura-i-upravlenie-stilem.md)
-    * [Кейс 4. Next-token классификатор на RubixML](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-4.-next-token-klassifikator-na-rubixml.md)
-    * [Кейс 5. Мини-GPT на PHP как демонстрационный проект](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-5.-mini-gpt-na-php-kak-demonstracionnyi-proekt.md)
-    * [Кейс 6. Prompt Engineering как изменение распределения](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-6.-prompt-engineering-kak-izmenenie-raspredeleniya.md)
-    * [Кейс 7. Генерация фишинговых писем как учебный эксперимент](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-eto-modeli-next-token-prediction/prakticheskie-keisy/keis-7.-generaciya-fishingovykh-pisem-kak-uchebnyi-eksperiment.md)
-* [Почему LLM ведут себя "разумно": RLHF и обучение поведения](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-vedut-sebya-razumno-rlhf-i-obuchenie-povedeniya/README.md)
-  * [Практические кейсы](chast-viii.-llm-i-sovremennyi-ai/pochemu-llm-vedut-sebya-razumno-rlhf-i-obuchenie-povedeniya/prakticheskie-keisy.md)
-* [Где LLM ошибаются математически](chast-viii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/README.md)
-  * [Практические кейсы](chast-viii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/README.md)
-    * [Кейс 1. Галлюцинация числовых фактов и обязательная верификация](chast-viii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-1.-gallyucinaciya-chislovykh-faktov-i-obyazatelnaya-verifikaciya.md)
-    * [Кейс 2. Ошибка в длинной математической цепочке (error propagation)](chast-viii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-2.-oshibka-v-dlinnoi-matematicheskoi-cepochke-error-propagation.md)
-    * [Page 3. Base Rate Neglect в phishing-симуляциях](chast-viii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/page-3.-base-rate-neglect-v-phishing-simulyaciyakh.md)
-    * [Кейс 4. Bias в обучающих данных](chast-viii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-4.-bias-v-obuchayushikh-dannykh.md)
-    * [Кейс 5. Temperature и управляемая деградация качества](chast-viii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-5.-temperature-i-upravlyaemaya-degradaciya-kachestva.md)
-    * [Кейс 6. Архитектура “LLM + детерминированный слой”](chast-viii.-llm-i-sovremennyi-ai/gde-llm-oshibayutsya-matematicheski/prakticheskie-keisy/keis-6.-arkhitektura-llm-+-determinirovannyi-sloi.md)
+* [Агентные системы и multi-step reasoning в PHP](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/README.md)
+  * [Практические кейсы](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/README.md)
+    * [Кейс 1. AI-калькулятор как инструмент агента (чистый PHP)](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-1.-ai-kalkulyator-kak-instrument-agenta-chistyi-php.md)
+    * [Кейс 2. AI-аналитик логов безопасности](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-2.-ai-analitik-logov-bezopasnosti.md)
+    * [Кейс 3. AI-ассистент для SQL-аналитики (LLPhant)](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-3.-ai-assistent-dlya-sql-analitiki-llphant.md)
+    * [Кейс 4. Research-агент (Neuron AI)](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-4.-research-agent-neuron-ai.md)
+    * [Кейс 5. Агент обнаружения фишинга](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-5.-agent-obnaruzheniya-fishinga.md)
+    * [Page 6. Агент планирования задач (Task Planner)](chast-viii.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/page-6.-agent-planirovaniya-zadach-task-planner.md)
 
-## Часть IX. Агентные системы и оркестрация
+## Часть IX. Продакшен и здравый смысл
 
-* [Агентные системы и multi-step reasoning в PHP](chast-ix.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/README.md)
-  * [Практические кейсы](chast-ix.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/README.md)
-    * [Кейс 1. AI-калькулятор как инструмент агента (чистый PHP)](chast-ix.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-1.-ai-kalkulyator-kak-instrument-agenta-chistyi-php.md)
-    * [Кейс 2. AI-аналитик логов безопасности](chast-ix.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-2.-ai-analitik-logov-bezopasnosti.md)
-    * [Кейс 3. AI-ассистент для SQL-аналитики (LLPhant)](chast-ix.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-3.-ai-assistent-dlya-sql-analitiki-llphant.md)
-    * [Кейс 4. Research-агент (Neuron AI)](chast-ix.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-4.-research-agent-neuron-ai.md)
-    * [Кейс 5. Агент обнаружения фишинга](chast-ix.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/keis-5.-agent-obnaruzheniya-fishinga.md)
-    * [Page 6. Агент планирования задач (Task Planner)](chast-ix.-agentnye-sistemy-i-orkestraciya/agentnye-sistemy-i-multi-step-reasoning-v-php/prakticheskie-keisy/page-6.-agent-planirovaniya-zadach-task-planner.md)
-
-## Часть X. Продакшен и здравый смысл
-
-* [Как использовать AI в PHP-проектах](chast-x.-prodakshen-i-zdravyi-smysl/kak-ispolzovat-ai-v-php-proektakh.md)
-* [Когда AI не нужен и почему это важно](chast-x.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/README.md)
-  * [Практические кейсы](chast-x.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/README.md)
-    * [Кейс 1 – Замена LLM на детерминированный код](chast-x.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/keis-1-zamena-llm-na-determinirovannyi-kod.md)
-    * [Кейс 2 – Когда AI действительно оправдан](chast-x.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/keis-2-kogda-ai-deistvitelno-opravdan.md)
+* [Как использовать AI в PHP-проектах](chast-ix.-prodakshen-i-zdravyi-smysl/kak-ispolzovat-ai-v-php-proektakh.md)
+* [Когда AI не нужен и почему это важно](chast-ix.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/README.md)
+  * [Практические кейсы](chast-ix.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/README.md)
+    * [Кейс 1 – Замена LLM на детерминированный код](chast-ix.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/keis-1-zamena-llm-na-determinirovannyi-kod.md)
+    * [Кейс 2 – Когда AI действительно оправдан](chast-ix.-prodakshen-i-zdravyi-smysl/kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/prakticheskie-keisy/keis-2-kogda-ai-deistvitelno-opravdan.md)
 
 ## Заключение
 
