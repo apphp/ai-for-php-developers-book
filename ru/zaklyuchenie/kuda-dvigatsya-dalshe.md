@@ -164,7 +164,7 @@ MLOps:
 
 На практике специалисты по машинному обучению редко идут по абсолютно одинаковому пути. Однако большинство карьер в ML можно условно описать через несколько типичных ролей.
 
-<div align="left"><figure><img src="../.gitbook/assets/35.1-map-of-development-directions.png" alt="" width="563"><figcaption><p>3761 Карта направлений развития</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/34.1-map-of-development-directions.png" alt="" width="563"><figcaption><p>34.1 Карта направлений развития</p></figcaption></figure></div>
 
 Упрощенно можно выделить три роли:
 

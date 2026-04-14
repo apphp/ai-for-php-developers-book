@@ -125,7 +125,7 @@ while (!$goalReached) {
 }
 ```
 
-<div align="left"><figure><img src="../../.gitbook/assets/32.1-ai-agent-loop.png" alt="" width="563"><figcaption><p>33.1 Цикл работы ИИ агента</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/31.1-ai-agent-loop.png" alt="" width="563"><figcaption><p>31.1 Цикл работы ИИ агента</p></figcaption></figure></div>
 
 ### Архитектура агентной системы
 
@@ -258,7 +258,7 @@ for ($i = 0; $i < 5; $i++) {
 }
 ```
 
-<div align="left"><figure><img src="../../.gitbook/assets/32.2-multi-step-reasoning.png" alt="" width="563"><figcaption><p>33.2 Многошаговое рассуждение</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/31.2-multi-step-reasoning.png" alt="" width="563"><figcaption><p>31.2 Многошаговое рассуждение</p></figcaption></figure></div>
 
 ### Контроль и безопасность
 

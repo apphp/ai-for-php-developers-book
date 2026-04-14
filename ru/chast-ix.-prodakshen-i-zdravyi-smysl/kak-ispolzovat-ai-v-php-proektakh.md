@@ -239,7 +239,7 @@ RAG (Retrieval Augmented Generation) – это частный случай orch
 Query → Embedding → Vector Search → Context → LLM → Answer
 ```
 
-<div align="left"><figure><img src="../.gitbook/assets/33.1- rag-pipeline.png" alt="" width="563"><figcaption><p>34.1 Пайплайн RAG </p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/32.1- rag-pipeline.png" alt="" width="563"><figcaption><p>32.1 Пайплайн RAG </p></figcaption></figure></div>
 
 ### Кэширование AI
 
@@ -333,7 +333,7 @@ $$
 State A → Tool → LLM → Decision → State B/C
 ```
 
-<div align="left"><figure><img src="../.gitbook/assets/33.2-ai-state-machine.png" alt="" width="563"><figcaption><p>34.1 Конечный автомат (state machine) ИИ</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/32.2-ai-state-machine.png" alt="" width="563"><figcaption><p>32.1 Конечный автомат (state machine) ИИ</p></figcaption></figure></div>
 
 ### Типичные ошибки в PHP AI-проектах
 
