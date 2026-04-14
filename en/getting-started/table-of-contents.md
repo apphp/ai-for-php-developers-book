@@ -7,7 +7,7 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 18% (27%)
+Readines&#x73;**:** 18% (26%)
 
 🟩🟩🟩🟩🟨🟩🟩🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
@@ -129,17 +129,17 @@ Section statuses
 
 #### Part VIII. Agent Systems and Orchestration
 
-30. ⬜ Agent Systems and Multi-Step Reasoning in PHP\
+31. ⬜ Agent Systems and Multi-Step Reasoning in PHP\
     &#xNAN;_&#x4C;LM as a managed system: planning, tools and control._
 
 #### Part IX. Production and Common Sense
 
-31. ⬜ How to use AI in PHP projects\
+32. ⬜ How to use AI in PHP projects\
     &#xNAN;_&#x41;rchitectures, integrations, orchestration._
-32. ⬜ When AI is not needed and why it matters\
+33. ⬜ When AI is not needed and why it matters\
     &#xNAN;_&#x43;lear engineering boundaries._
 
 #### Conclusion
 
-33. ⬜ Where to go next\
+34. ⬜ Where to go next\
     &#xNAN;_&#x57;hat to deepen: mathematics, systems, or practice._
