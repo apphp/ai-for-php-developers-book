@@ -154,59 +154,7 @@ class LogisticRegression {
 
 </details>
 
-Теперь загрузим две наши подвыборки&#x20;
-
-<details>
-
-<summary><strong>Class MnistLoader</strong></summary>
-
-```php
-class MnistLoader {
-
-    static public function loadMNIST(string $file, string $directory = '', bool $categoricalLabels = false): array {
-        $X = [];
-        $y = [];
-
-        $handle = fopen($directory . $file, 'r');
-
-        if ($handle === false) {
-            throw new Exception('File not found.');
-        }
-
-        while (($row = fgetcsv($handle)) !== false) {
-            if ($row === [] || $row[0] === null || $row[0] === '') {
-                continue;
-            }
-
-            $label = (int)$row[0];
-
-            // 1. Оставляем только 0 и 1
-            if ($label !== 0 && $label !== 1) {
-                continue;
-            }
-
-            $pixels = array_slice($row, 1);
-
-            // 2. Нормализация (0–255 → 0–1)
-            $pixels = array_map(function ($p): float {
-                return ((float) trim((string) $p)) / 255.0;
-            }, $pixels);
-
-            $X[] = $pixels;
-            $y[] = $categoricalLabels
-                ? ($label === 1 ? 'one' : 'zero')
-                : $label;
-        }
-
-        return [$X, $y];
-    }
-}
-
-```
-
-</details>
-
-И начнём и тренировать:
+Теперь загрузим две наши подвыборки и начнём и тренировать:
 
 ```php
 [$trainSamples, $trainLabels] = MnistLoader::loadMNIST('train.csv');

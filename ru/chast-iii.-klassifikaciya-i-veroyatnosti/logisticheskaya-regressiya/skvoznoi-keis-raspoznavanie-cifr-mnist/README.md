@@ -69,6 +69,65 @@ label,1x1,1x2,1x3,1x4,1x5,1x6,...,1x26,1x27,1x28,2x1,2x2,2x3,2x4,2x5,2x6,..,28x2
 ```
 {% endhint %}
 
+#### **Загрузка данных**
+
+Для загрузки данных создадим специальный класс, которым будем пользоваться в нашим примерах **MnistLoader.**
+
+<details>
+
+<summary><strong>Class MnistLoader</strong></summary>
+
+```php
+class MnistLoader {
+
+    static public function loadMNIST(string $file, string $directory = '', bool $categoricalLabels = false, bool $normalize = true, array $digits = [0, 1]): array {
+        $features = [];
+        $labels = [];
+
+        // Open the CSV file from the requested directory.
+        $handle = @fopen($directory . $file, 'r');
+
+        if ($handle === false) {
+            throw new Exception('Dataset file not found.');
+        }
+
+        // Read each sample, skip malformed rows, and keep only the digits we need.
+        while (($row = fgetcsv($handle)) !== false) {
+            if ($row === [] || $row[0] === null || $row[0] === '') {
+                continue;
+            }
+
+            // The first value is the digit label.
+            $label = (int)$row[0];
+
+            // 1. Leave only required classes: 0 and 1 (by default)
+            if (!in_array($label, $digits)) {
+                continue;
+            }
+
+            // The remaining columns contain pixel intensity values.
+            $pixels = array_slice($row, 1);
+
+            // 2. Normalize (0–255 → 0–1)
+            if ($normalize) {
+                $pixels = array_map(function ($p): float {
+                    return ((float) trim((string) $p)) / 255.0;
+                }, $pixels);
+            }
+
+            // Store the normalized features and the chosen label format.
+            $features[] = $pixels;
+            $labels[] = $categoricalLabels ? ($label === 1 ? 'one' : 'zero') : $label;
+        }
+
+        // Return features and labels in the format expected by callers.
+        return [$features, $labels];
+    }
+}
+```
+
+</details>
+
 #### **Визуализация**
 
 <div align="left"><figure><img src="../../../.gitbook/assets/14.4-mnist-samples-0-1.png" alt="" width="563"><figcaption><p>14.4 MNIST примеры</p></figcaption></figure></div>
