@@ -149,8 +149,8 @@ class GaussianNB {
         return (int) array_key_first($scores);
     }
 
-    // Calculate accuracy of the classifier on test data
-    public function accuracy(array $X, array $y): float {
+    // Calculate score a set of predictions
+    public function score(array $X, array $y): float {
         $predictions = $this->predict($X);
         $correct = 0;
 
@@ -246,7 +246,7 @@ $model = new GaussianNB();
 $model->train($trainSamples, $trainLabels);
 
 // Calculate model accuracy
-$accuracy = $model->accuracy($testSamples, $testLabels);
+$accuracy = $model->score($testSamples, $testLabels);
 
 echo 'Train samples handled: ' . number_format(count($trainSamples)) . "\n";
 echo 'Test samples handled: ' . number_format(count($testSamples)) . "\n\n"
@@ -307,59 +307,54 @@ echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 
 ```php
 use Rubix\ML\Classifiers\GaussianNB;
+use Rubix\ML\CrossValidation\Metrics\Accuracy;
 use Rubix\ML\Datasets\Labeled;
 use Rubix\ML\Datasets\Unlabeled;
 use Rubix\ML\Extractors\CSV;
 
-try {
-    function mnistRows(string $file): iterable {
-        // Read the CSV file row by row and keep only valid samples.
-        foreach (new CSV($file, false) as $row) {
-            if (!isset($row[0])) {
-                continue;
-            }
-
-            // The first column is the digit label.
-            $label = (int) $row[0];
-
-            // This example only trains on digits 0 and 1.
-            if ($label !== 0 && $label !== 1) {
-                continue;
-            }
-
-            // Normalize pixel values to the [0, 1] range for training.
-            $pixels = array_map(static fn ($value): float => ((float) $value) / 255.0, array_slice($row, 1));
-
-            // Rubix expects the features followed by the class label.
-            yield array_merge($pixels, [$label === 1 ? 'one' : 'zero']);
+function mnistRows(string $file): iterable {
+    // Read the CSV file row by row and keep only valid samples.
+    foreach (new CSV($file, false) as $row) {
+        if (!isset($row[0])) {
+            continue;
         }
+
+        // The first column is the digit label.
+        $label = (int) $row[0];
+
+        // This example only trains on digits 0 and 1.
+        if ($label !== 0 && $label !== 1) {
+            continue;
+        }
+
+        // Normalize pixel values to the [0, 1] range for training.
+        $pixels = array_map(static fn ($value): float => ((float) $value) / 255.0, array_slice($row, 1));
+
+        // Rubix expects the features followed by the class label.
+        yield array_merge($pixels, [$label === 1 ? 'one' : 'zero']);
     }
-
-    // Build the training and test datasets from the filtered CSV rows.
-    $trainRows = mnistRows('train.csv');
-    $testRows = mnistRows('test.csv');
-
-    $dataset = Labeled::fromIterator($trainRows);
-    $testDataset = Labeled::fromIterator($testRows);
-} catch (Exception $e) {
-    echo '<div class="alert alert-danger" role="alert">' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</div>';
-    exit;
 }
+
+// Build the training and test datasets from the filtered CSV rows.
+$trainRows = mnistRows('train.csv');
+$testRows = mnistRows('test.csv');
+
+$dataset = Labeled::fromIterator($trainRows);
+$testDataset = Labeled::fromIterator($testRows);
 
 $model = new GaussianNB();
 $model->train($dataset);
 
-$correct = 0;
+$predictions = [];
+$testingLabels = $testDataset->labels();
 
 foreach ($testDataset->samples() as $i => $x) {
     $prediction = $model->predict(new Unlabeled([$x]))[0];
-
-    if ($prediction === $testDataset->labels()[$i]) {
-        $correct++;
-    }
+    $predictions[] = $prediction;
 }
 
-$accuracy = $correct / $testDataset->numSamples();
+$metric = new Accuracy();
+$score = $metric->score($predictions, $testingLabels);
 
 echo 'Train samples handled: ' . number_format($dataset->numSamples()) . PHP_EOL;
 echo 'Test samples handled: ' . number_format($testDataset->numSamples()) . PHP_EOL . PHP_EOL;

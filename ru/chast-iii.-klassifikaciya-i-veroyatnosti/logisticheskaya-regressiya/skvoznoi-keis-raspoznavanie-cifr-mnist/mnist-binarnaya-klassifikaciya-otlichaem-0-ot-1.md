@@ -136,8 +136,8 @@ class LogisticRegression {
         }
     }
 
-    // Calculate model accuracy
-    public function accuracy(array $X, array $y): float {
+    // Calculate score a set of predictions
+    public function score(array $X, array $y): float {
         $correct = 0;
 
         foreach ($X as $i => $x) {
@@ -218,7 +218,7 @@ $model->train($trainSamples, $trainLabels, epochs: $epochs = 5);
 echo 'Number of epochs: ' . $epochs . "\n";
 
 // Calculate model accuracy
-$accuracy = $model->accuracy($testSamples, $testLabels);
+$accuracy = $model->score($testSamples, $testLabels);
 
 echo 'Train samples handled: ' . number_format(count($trainSamples)) . "\n";
 echo 'Test samples handled: ' . number_format(count($testSamples)) . "\n\n";
@@ -245,6 +245,7 @@ echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 
 ```php
 use Rubix\ML\Classifiers\LogisticRegression;
+use Rubix\ML\CrossValidation\Metrics\Accuracy;
 use Rubix\ML\Datasets\Labeled;
 use Rubix\ML\Datasets\Unlabeled;
 use Rubix\ML\Extractors\CSV;
@@ -278,17 +279,16 @@ $testDataset = Labeled::fromIterator($testRows);
 $model = new LogisticRegression(epochs: 5);
 $model->train($dataset);
 
-$correct = 0;
+$predictions = [];
+$testingLabels = $testDataset->labels();
 
 foreach ($testDataset->samples() as $i => $x) {
     $prediction = $model->predict(new Unlabeled([$x]))[0];
-
-    if ($prediction === $testDataset->labels()[$i]) {
-        $correct++;
-    }
+    $predictions[] = $prediction;
 }
 
-$accuracy = $correct / $testDataset->numSamples();
+$metric = new Accuracy();
+$score = $metric->score($predictions, $testingLabels);
 
 echo 'Обработано данных для обучения: ' . $dataset->numSamples() . "\n";
 echo 'Обработано данных для тестирования: ' . $testDataset->numSamples() . "\n\n";
