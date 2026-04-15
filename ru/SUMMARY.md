@@ -64,9 +64,7 @@
     * [Кейс 4. Переуверенная модель как сигнал проблемы](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-4.-pereuverennaya-model-kak-signal-problemy.md)
     * [Кейс 5. Обновление уверенности при новых данных](chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/keis-5.-obnovlenie-uverennosti-pri-novykh-dannykh.md)
 * [Логистическая регрессия](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/README.md)
-  * [Сквозной кейс: распознавание цифр (MNIST)](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist.md)
   * [Практические кейсы](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/README.md)
-    * [MNIST: бинарная классификация - отличаем 0 от 1](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/mnist-binarnaya-klassifikaciya-otlichaem-0-ot-1.md)
     * [Кейс 1. Логистическая регрессия для оттока клиентов](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-1.-logisticheskaya-regressiya-dlya-ottoka-klientov.md)
     * [Кейс 2. Подписка на рассылку](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-2.-podpiska-na-rassylku.md)
     * [Кейс 3. Спам или не спам](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-3.-spam-ili-ne-spam.md)
@@ -75,12 +73,15 @@
     * [Кейс 6. Фрод или нормальная транзакция](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-6.-frod-ili-normalnaya-tranzakciya.md)
     * [Кейс 7. Медицинский скрининг](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-7.-medicinskii-skrining.md)
     * [Кейс 8. Технический дефект оборудования](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/keis-8.-tekhnicheskii-defekt-oborudovaniya.md)
+  * [Сквозной кейс: распознавание цифр (MNIST)](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist/README.md)
+    * [MNIST: бинарная классификация - отличаем 0 от 1](chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-binarnaya-klassifikaciya-otlichaem-0-ot-1.md)
 * [Почему наивный Байес работает](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/README.md)
   * [Практические кейсы](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/README.md)
-    * [MNIST: вероятностная модель классификации цифр (Naive Bayes)](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/mnist-veroyatnostnaya-model-klassifikacii-cifr-naive-bayes.md)
     * [Кейс 1. Категориальные признаки и частоты](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/keis-1.-kategorialnye-priznaki-i-chastoty.md)
     * [Кейс 2. Спам-фильтр на словах (Bernoulli Naive Bayes)](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/keis-2.-spam-filtr-na-slovakh-bernoulli-naive-bayes.md)
     * [Кейс 3. Числовые признаки (Gaussian Naive Bayes)](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/keis-3.-chislovye-priznaki-gaussian-naive-bayes.md)
+  * [Сквозной кейс: распознавание цифр (MNIST)](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/skvoznoi-keis-raspoznavanie-cifr-mnist/README.md)
+    * [MNIST: вероятностная модель классификации цифр (Naive Bayes)](chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-veroyatnostnaya-model-klassifikacii-cifr-naive-bayes.md)
 
 ## Часть IV. Близость и структура данных
 
