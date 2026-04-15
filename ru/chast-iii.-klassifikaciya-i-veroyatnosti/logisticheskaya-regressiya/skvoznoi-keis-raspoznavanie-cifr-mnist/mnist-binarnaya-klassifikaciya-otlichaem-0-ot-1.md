@@ -157,20 +157,19 @@ class LogisticRegression {
 Теперь загрузим две наши подвыборки и начнём и тренировать:
 
 ```php
-[$trainSamples, $trainLabels] = MnistLoader::loadMNIST('train.csv');
-[$testSamples, $testLabels] = MnistLoader::loadMNIST('test.csv');
+[$trainSamples, $trainLabels] = MnistLoader::load('train.csv');
+[$testSamples, $testLabels] = MnistLoader::load('test.csv');
 
 $model = new LogisticRegression(784, 0.1);
 $model->train($trainSamples, $trainLabels, epochs: $epochs = 5);
 
-echo 'Number of epochs: ' . $epochs . "\n";
-
 // Calculate model accuracy
 $score = $model->score($testSamples, $testLabels);
 
-echo 'Train samples handled: ' . number_format(count($trainSamples)) . "\n";
-echo 'Test samples handled: ' . number_format(count($testSamples)) . "\n\n";
-echo 'Accuracy: ' . round($score * 100, 2) . '%';
+echo 'бработано данных для обучения: ' . number_format(count($trainSamples)) . "\n";
+echo 'Обработано данных для тестирования: ' . number_format(count($testSamples)) . "\n\n";
+echo 'Количество эпох: ' . $epochs . "\n\n";
+echo 'Точность: ' . round($score * 100, 2) . '%';
 
 ```
 
@@ -198,28 +197,9 @@ use Rubix\ML\Datasets\Labeled;
 use Rubix\ML\Datasets\Unlabeled;
 use Rubix\ML\Extractors\CSV;
 
-function mnistRows(string $file): iterable {
-    foreach (new CSV($file, false) as $row) {
-        if (!isset($row[0])) {
-            continue;
-        }
-
-        $label = (int) $row[0];
-
-        // 1. Оставляем только 0 и 1
-        if ($label !== 0 && $label !== 1) {
-            continue;
-        }
-
-        // 2. Нормализация (0–255 → 0–1)
-        $pixels = array_map(static fn ($value): float => ((float) $value) / 255.0, array_slice($row, 1));
-        
-        yield array_merge($pixels, [$label === 1 ? 'one' : 'zero']);
-    }
-}
-
-$trainRows = mnistRows('train.csv');
-$testRows = mnistRows('test.csv');
+// Build the training and test datasets from the filtered CSV rows.
+$trainRows = MnistLoader::loadIterable('train.csv', categoricalLabels: true, normalize: true, digits: [0, 1]);
+$testRows = MnistLoader::loadIterable('test.csv', categoricalLabels: true, normalize: true, digits: [0, 1]);
 
 $dataset = Labeled::fromIterator($trainRows);
 $testDataset = Labeled::fromIterator($testRows);

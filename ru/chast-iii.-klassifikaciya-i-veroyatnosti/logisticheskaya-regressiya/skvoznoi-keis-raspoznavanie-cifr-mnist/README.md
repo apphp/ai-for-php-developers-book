@@ -78,52 +78,83 @@ label,1x1,1x2,1x3,1x4,1x5,1x6,...,1x26,1x27,1x28,2x1,2x2,2x3,2x4,2x5,2x6,..,28x2
 <summary><strong>Class MnistLoader</strong></summary>
 
 ```php
+/**
+ * MnistLoader - Utility class for loading and preprocessing MNIST digit dataset
+ *
+ * This class provides methods to load MNIST data from CSV files with various
+ * preprocessing options including normalization, digit filtering, and label formatting.
+ * It supports both array-based loading (for custom implementations) and
+ * iterable loading (for Rubix ML compatibility).
+ */
 class MnistLoader {
 
-    static public function loadMNIST(string $file, string $directory = '', bool $categoricalLabels = false, bool $normalize = true, array $digits = [0, 1]): array {
-        $features = [];
-        $labels = [];
+    /**
+     * Load MNIST data as arrays for custom ML implementations
+     */
+    static public function load(string $file, string $directory = '', bool $categoricalLabels = false, bool $normalize = true, array $digits = [0, 1]): array {
+        $features = [];  // 2D array: each element is an array of 784 pixel values
+        $labels = [];   // 1D array: each element is the corresponding digit label
 
-        // Open the CSV file from the requested directory.
-        $handle = @fopen($directory . $file, 'r');
+        $handle = self::openFile($file, $directory);
 
-        if ($handle === false) {
-            throw new Exception('Dataset file not found.');
-        }
-
-        // Read each sample, skip malformed rows, and keep only the digits we need.
+        // Process each row in the CSV file
+        // Each row contains: [label, pixel1, pixel2, ..., pixel784]
         while (($row = fgetcsv($handle)) !== false) {
-            if ($row === [] || $row[0] === null || $row[0] === '') {
-                continue;
+            if ($processed = self::processRow($row, $digits, $normalize, $categoricalLabels)) {
+                $features[] = $processed[0];
+                $labels[] = $processed[1];
             }
-
-            // The first value is the digit label.
-            $label = (int)$row[0];
-
-            // 1. Leave only required classes: 0 and 1 (by default)
-            if (!in_array($label, $digits)) {
-                continue;
-            }
-
-            // The remaining columns contain pixel intensity values.
-            $pixels = array_slice($row, 1);
-
-            // 2. Normalize (0–255 → 0–1)
-            if ($normalize) {
-                $pixels = array_map(function ($p): float {
-                    return ((float) trim((string) $p)) / 255.0;
-                }, $pixels);
-            }
-
-            // Store the normalized features and the chosen label format.
-            $features[] = $pixels;
-            $labels[] = $categoricalLabels ? ($label === 1 ? 'one' : 'zero') : $label;
         }
 
         // Return features and labels in the format expected by callers.
         return [$features, $labels];
     }
+
+    /**
+     * Load MNIST data as an iterator for Rubix ML compatibility
+     */
+    static public function loadIterable(string $file, string $directory = '', bool $categoricalLabels = false, bool $normalize = true, array $digits = [0, 1]): iterable {
+
+        $handle = self::openFile($file, $directory);
+
+        // Read the CSV file row by row and keep only valid samples.
+        while (($row = fgetcsv($handle)) !== false) {
+            if ($processed = self::processRow($row, $digits, $normalize, $categoricalLabels)) {
+                yield array_merge($processed[0], [$processed[1]]);
+            }
+        }
+    }
+
+    private static function openFile(string $file, string $directory) {
+        $handle = @fopen($directory . $file, 'r');
+
+        if ($handle === false) {
+            throw new Exception('Dataset file not found: ' . $directory . $file);
+        }
+
+        return $handle;
+    }
+
+    private static function processRow(array &$row, array &$digits, bool $normalize, bool $categoricalLabels): ?array {
+        if ($row === [] || $row[0] === null || $row[0] === '') {
+            return null;
+        }
+
+        $label = (int)$row[0];
+        if (!in_array($label, $digits)) {
+            return null;
+        }
+
+        $pixels = array_slice($row, 1);
+        if ($normalize) {
+            $pixels = array_map(static fn($v): float => ((float)$v) / 255.0, $pixels);
+        }
+
+        $formattedLabel = $categoricalLabels ? ($label === 1 ? 'one' : 'zero') : $label;
+        return [$pixels, $formattedLabel];
+    }
 }
+
 ```
 
 </details>

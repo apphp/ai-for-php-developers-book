@@ -182,8 +182,8 @@ class GaussianNB {
 
 ```php
 try {
-    [$trainSamples, $trainLabels] = MnistLoader::loadMNIST('train.csv');;
-    [$testSamples, $testLabels] = MnistLoader::loadMNIST('test.csv');
+    [$trainSamples, $trainLabels] = MnistLoader::load('train.csv');;
+    [$testSamples, $testLabels] = MnistLoader::load('test.csv');
 } catch (Exception $e) {
     echo '<div class="alert alert-danger" role="alert">' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</div>';
     exit;
@@ -196,9 +196,9 @@ $model->train($trainSamples, $trainLabels);
 // Calculate model accuracy
 $score = $model->score($testSamples, $testLabels);
 
-echo 'Train samples handled: ' . number_format(count($trainSamples)) . "\n";
-echo 'Test samples handled: ' . number_format(count($testSamples)) . "\n\n"
-echo 'Accuracy: ' . round($score * 100, 2) . '%';
+echo 'Обработано данных для обучения: ' . number_format(count($trainSamples)) . "\n";
+echo 'Обработано данных для тестирования: ' . number_format(count($testSamples)) . "\n\n"
+echo 'Точность: ' . round($score * 100, 2) . '%';
 ```
 
 **Результат:**
@@ -254,38 +254,16 @@ echo 'Accuracy: ' . round($score * 100, 2) . '%';
 #### Та же задача с использованием RubixML
 
 ```php
+use app\classes\MnistLoader;
 use Rubix\ML\Classifiers\GaussianNB;
 use Rubix\ML\CrossValidation\Metrics\Accuracy;
 use Rubix\ML\Datasets\Labeled;
 use Rubix\ML\Datasets\Unlabeled;
 use Rubix\ML\Extractors\CSV;
 
-function mnistRows(string $file): iterable {
-    // Read the CSV file row by row and keep only valid samples.
-    foreach (new CSV($file, false) as $row) {
-        if (!isset($row[0])) {
-            continue;
-        }
-
-        // The first column is the digit label.
-        $label = (int) $row[0];
-
-        // This example only trains on digits 0 and 1.
-        if ($label !== 0 && $label !== 1) {
-            continue;
-        }
-
-        // Normalize pixel values to the [0, 1] range for training.
-        $pixels = array_map(static fn ($value): float => ((float) $value) / 255.0, array_slice($row, 1));
-
-        // Rubix expects the features followed by the class label.
-        yield array_merge($pixels, [$label === 1 ? 'one' : 'zero']);
-    }
-}
-
 // Build the training and test datasets from the filtered CSV rows.
-$trainRows = mnistRows('train.csv');
-$testRows = mnistRows('test.csv');
+$trainRows = MnistLoader::loadIterable('train.csv', categoricalLabels: true, normalize: true, digits: [0, 1]);
+$testRows = MnistLoader::loadIterable('test.csv', categoricalLabels: true, normalize: true, digits: [0, 1]);
 
 $dataset = Labeled::fromIterator($trainRows);
 $testDataset = Labeled::fromIterator($testRows);
@@ -304,12 +282,9 @@ foreach ($testDataset->samples() as $i => $x) {
 $metric = new Accuracy();
 $score = $metric->score($predictions, $testingLabels);
 
-echo 'Train samples handled: ' . number_format($dataset->numSamples()) . PHP_EOL;
-echo 'Test samples handled: ' . number_format($testDataset->numSamples()) . PHP_EOL . PHP_EOL;
-echo 'Accuracy: ' . round($score * 100, 2) . '%';
-```
-
-```php
+echo 'Обработано данных для обучения: ' . number_format($dataset->numSamples()) . "\n";
+echo 'Обработано данных для тестирования: ' . number_format($testDataset->numSamples()) . "\n\n";
+echo 'Точность: ' . round($score * 100, 2) . '%';
 ```
 
 **Результат:**
