@@ -134,15 +134,18 @@ class LogisticRegression {
     private float $learningRate;
 
     public function __construct(int $numFeatures, float $learningRate = 0.1) {
+        // Start with zeroed parameters for every feature.
         $this->learningRate = $learningRate;
         $this->weights = array_fill(0, $numFeatures, 0.0);
         $this->bias = 0.0;
     }
 
+    // Convert a linear score into a probability in the range [0, 1].
     private function sigmoid(float $z): float {
         return 1.0 / (1.0 + exp(-$z));
     }
 
+    // Compute the weighted sum of the input features.
     private function dot(array $a, array $b): float {
         $sum = 0.0;
         foreach ($a as $i => $v) {
@@ -151,29 +154,51 @@ class LogisticRegression {
         return $sum;
     }
 
+    // Return the probability that the sample belongs to class 1.
     public function predictProb(array $x): float {
         return $this->sigmoid($this->dot($this->weights, $x) + $this->bias);
     }
 
+    // Convert the probability into a binary class prediction.
     public function predict(array $x): int {
         return $this->predictProb($x) >= 0.5 ? 1 : 0;
     }
 
+    // Train the model with simple gradient descent.
     public function train(array $X, array $y, int $epochs = 5): void {
         foreach (range(1, $epochs) as $epoch) {
             foreach ($X as $i => $x) {
+                // Compare the prediction to the expected label.
                 $p = $this->predictProb($x);
                 $error = $p - $y[$i];
 
+                // Update each weight using the feature value and error.
                 foreach ($this->weights as $j => $w) {
                     $this->weights[$j] -= $this->learningRate * $error * $x[$j];
                 }
 
+                // Update the bias term separately.
                 $this->bias -= $this->learningRate * $error;
             }
+
+            // echo "Epoch $epoch done\n";
         }
     }
+
+    // Calculate model accuracy
+    public function accuracy(array $X, array $y): float {
+        $correct = 0;
+
+        foreach ($X as $i => $x) {
+            if ($this->predict($x) === $y[$i]) {
+                $correct++;
+            }
+        }
+
+        return count($X) > 0 ? ($correct / count($X)) : 0.0;
+    }
 }
+
 ```
 
 </details>
@@ -233,28 +258,24 @@ class MnistLoader {
 И начнём и тренировать:
 
 ```php
-// Оценка
-$correct = 0;
-
 [$X_train, $y_train] = MnistLoader::loadMNIST('train.csv');
 [$X_test, $y_test] = MnistLoader::loadMNIST('test.csv');
 
-echo 'Обработано данных для обучения: ' . number_format(count($X_train)) . "\n";
-echo 'Обработано данных для тестирования: ' . number_format(count($X_test)) . "\n\n";
+echo 'Train samples handled: ' . number_format(count($X_train)) . PHP_EOL;
+echo 'Test samples handled: ' . number_format(count($X_test)) . PHP_EOL . PHP_EOL;
 
 $model = new LogisticRegression(784, 0.1);
 $model->train($X_train, $y_train, epochs: $epochs = 5);
 
-echo 'Количество эпох: ' . $epochs . "\n\n";
+echo 'Number of epochs: ' . $epochs . PHP_EOL . PHP_EOL;
 
-foreach ($X_test as $i => $x) {
-    if ($model->predict($x) === $y_test[$i]) {
-        $correct++;
-    }
-}
+// Calculate model accuracy
+$accuracy = $model->accuracy($X_test, $y_test);
 
-$accuracy = $correct / count($X_test);
-echo 'Точность: ' . round($accuracy * 100, 2) . '%';
+echo 'Train samples handled: ' . number_format(count($X_train)) . PHP_EOL;
+echo 'Test samples handled: ' . number_format(count($X_test)) . PHP_EOL . PHP_EOL;
+echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
+
 ```
 
 **Результат:**

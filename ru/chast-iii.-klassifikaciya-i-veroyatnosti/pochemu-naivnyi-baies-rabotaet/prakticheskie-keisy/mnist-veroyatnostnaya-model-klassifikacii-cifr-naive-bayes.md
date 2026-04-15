@@ -54,116 +54,217 @@ $$
 Чтобы код оставался понятным, используем:
 
 * только цифры 0 и 1 (связь с предыдущим кейсом)
-* небольшую выборку
 * нормализацию пикселей
 
-### Подготовка данных
+#### Реализация на чистом PHP
+
+Для начала создадим класс Naive Bayes.&#x20;
+
+<details>
+
+<summary><strong>Class GaussianNB</strong></summary>
 
 ```php
-function normalize($image) {
-    return array_map(fn($pixel) => $pixel / 255, $image);
-}
+class GaussianNB {
+    private array $stats = [];
+    private array $grouped = [];
+    private int $totalSamples = 0;
 
-// Пример: 4 изображения по 4 пикселя (упрощенная версия MNIST)
-$samples = [
-    normalize([0, 0, 255, 255]), // 0
-    normalize([0, 10, 240, 250]), // 0
-    normalize([255, 0, 0, 255]), // 1
-    normalize([250, 5, 5, 240]), // 1
-];
-
-$labels = [0, 0, 1, 1];
-```
-
-В реальном MNIST:
-
-* 784 признака,
-* тысячи примеров.
-
-Но логика полностью совпадает.
-
-**Шаг 1. Группировка по классам**
-
-```php
-$grouped = [];
-
-foreach ($samples as $i => $sample) {
-    $class = $labels[$i];
-    $grouped[$class][] = $sample;
-}
-```
-
-**Шаг 2. Оценка параметров (mean, variance)**
-
-```php
-function mean($values) {
-    return array_sum($values) / count($values);
-}
-
-function variance($values, $mean) {
-    $sum = 0;
-    foreach ($values as $v) {
-        $sum += pow($v - $mean, 2);
-    }
-    return $sum / count($values);
-}
-
-$stats = [];
-
-foreach ($grouped as $class => $rows) {
-    $features = array_map(null, ...$rows);
-
-    foreach ($features as $i => $values) {
-        $m = mean($values);
-        $v = variance($values, $m);
-
-        $stats[$class][$i] = [
-            'mean' => $m,
-            'variance' => $v ?: 1e-6,
-        ];
-    }
-}
-```
-
-Каждый пиксель теперь имеет:
-
-* среднее значение для класса
-* разброс значений
-
-**Шаг 3. Функция Gaussian**
-
-```php
-function gaussian($x, $mean, $variance)
-{
-    return (1 / sqrt(2 * pi() * $variance)) *
-           exp(-pow($x - $mean, 2) / (2 * $variance));
-}
-```
-
-**Шаг 4. Классификация изображения**
-
-```php
-$input = normalize([0, 5, 250, 255]);
-
-$classCounts = array_count_values($labels);
-$total = count($labels);
-
-$scores = [];
-
-foreach ($stats as $class => $features) {
-    $logProb = log($classCounts[$class] / $total);
-
-    foreach ($features as $i => $params) {
-        $prob = gaussian($input[$i], $params['mean'], $params['variance']);
-        $logProb += log($prob);
+    // Calculate arithmetic mean of values
+    private function mean(array $values): float {
+        return array_sum($values) / count($values);
     }
 
-    $scores[$class] = $logProb;
+    // Calculate variance of values given their mean
+    private function variance(array $values, float $mean): float {
+        $sum = 0;
+        foreach ($values as $v) {
+            $sum += pow($v - $mean, 2);
+        }
+        return $sum / count($values);
+    }
+
+    // Calculate Gaussian probability density function
+    private function gaussian(float $x, float $mean, float $variance): float {
+        return (1 / sqrt(2 * pi() * $variance)) * exp(-pow($x - $mean, 2) / (2 * $variance));
+    }
+
+    // Train the classifier by calculating mean and variance for each class/feature
+    public function train(array $X, array $y): void {
+        $this->totalSamples = count($X);
+
+        // Group samples by class
+        $this->grouped = [];
+        foreach ($X as $i => $sample) {
+            $this->grouped[$y[$i]][] = $sample;
+        }
+
+        // Calculate statistics for each class and feature
+        $this->stats = [];
+        foreach ($this->grouped as $class => $rows) {
+            $features = array_map(null, ...$rows);
+
+            foreach ($features as $i => $values) {
+                $m = $this->mean($values);
+                $v = $this->variance($values, $m);
+
+                $this->stats[$class][$i] = [
+                    'mean' => $m,
+                    'variance' => $v ?: 1e-6,
+                ];
+            }
+        }
+    }
+
+    // Predict class labels for multiple samples
+    public function predict(array $X): array {
+        $predictions = [];
+
+        foreach ($X as $sample) {
+            $predictions[] = $this->predictSingle($sample);
+        }
+
+        return $predictions;
+    }
+
+    // Predict class label for a single sample using Bayes' theorem
+    public function predictSingle(array $input): int {
+        $scores = [];
+
+        foreach ($this->stats as $class => $features) {
+            // Start with prior probability (class frequency)
+            $logProb = log(count($this->grouped[$class]) / $this->totalSamples);
+
+            // Add likelihood for each feature (naive independence assumption)
+            foreach ($features as $i => $params) {
+                $prob = $this->gaussian($input[$i], $params['mean'], $params['variance']);
+                $logProb += log($prob);
+            }
+
+            $scores[$class] = $logProb;
+        }
+
+        // Return class with highest score
+        arsort($scores);
+        return (int) array_key_first($scores);
+    }
+
+    // Calculate accuracy of the classifier on test data
+    public function accuracy(array $X, array $y): float {
+        $predictions = $this->predict($X);
+        $correct = 0;
+
+        foreach ($predictions as $i => $prediction) {
+            if ($prediction === $y[$i]) {
+                $correct++;
+            }
+        }
+
+        return count($y) > 0 ? ($correct / count($y)) : 0.0;
+    }
+
+    // Get calculated statistics (mean and variance) for each class/feature
+    public function getStats(): array {
+        return $this->stats;
+    }
+
+    // Get grouped training data by class
+    public function getGrouped(): array {
+        return $this->grouped;
+    }
 }
 
-arsort($scores);
-print_r($scores);
 ```
+
+</details>
+
+Теперь загрузим две наши подвыборки&#x20;
+
+<details>
+
+<summary><strong>Class MnistLoader</strong></summary>
+
+```php
+class MnistLoader {
+
+    static public function loadMNIST(string $file, string $directory = '', bool $categoricalLabels = false): array {
+        $X = [];
+        $y = [];
+
+        $handle = fopen($directory . $file, 'r');
+
+        if ($handle === false) {
+            throw new Exception('File not found.');
+        }
+
+        while (($row = fgetcsv($handle)) !== false) {
+            if ($row === [] || $row[0] === null || $row[0] === '') {
+                continue;
+            }
+
+            $label = (int)$row[0];
+
+            // 1. Оставляем только 0 и 1
+            if ($label !== 0 && $label !== 1) {
+                continue;
+            }
+
+            $pixels = array_slice($row, 1);
+
+            // 2. Нормализация (0–255 → 0–1)
+            $pixels = array_map(function ($p): float {
+                return ((float) trim((string) $p)) / 255.0;
+            }, $pixels);
+
+            $X[] = $pixels;
+            $y[] = $categoricalLabels
+                ? ($label === 1 ? 'one' : 'zero')
+                : $label;
+        }
+
+        return [$X, $y];
+    }
+}
+
+```
+
+</details>
+
+И начнём и тренировать:
+
+```php
+try {
+    [$X_train, $y_train] = MnistLoader::loadMNIST('train.csv');;
+    [$X_test, $y_test] = MnistLoader::loadMNIST('test.csv');
+} catch (Exception $e) {
+    echo '<div class="alert alert-danger" role="alert">' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</div>';
+    exit;
+}
+
+// Initialize and train the Gaussian Naive Bayes classifier
+$model = new GaussianNB();
+$model->train($X_train, $y_train);
+
+// Calculate model accuracy
+$accuracy = $model->accuracy($X_test, $y_test);
+
+echo 'Train samples handled: ' . number_format(count($X_train)) . PHP_EOL;
+echo 'Test samples handled: ' . number_format(count($X_test)) . PHP_EOL . PHP_EOL;
+echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
+```
+
+**Результат:**
+
+```
+Обработано данных для обучения: 12,666
+Обработано данных для тестирования: 2,116
+
+Точность: 98.58%
+```
+
+**Объяснение:**
+
+
 
 Модель выбирает класс, для которого изображение наиболее вероятно.
 
