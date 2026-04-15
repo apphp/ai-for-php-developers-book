@@ -261,19 +261,16 @@ class MnistLoader {
 [$X_train, $y_train] = MnistLoader::loadMNIST('train.csv');
 [$X_test, $y_test] = MnistLoader::loadMNIST('test.csv');
 
-echo 'Train samples handled: ' . number_format(count($X_train)) . PHP_EOL;
-echo 'Test samples handled: ' . number_format(count($X_test)) . PHP_EOL . PHP_EOL;
-
 $model = new LogisticRegression(784, 0.1);
 $model->train($X_train, $y_train, epochs: $epochs = 5);
 
-echo 'Number of epochs: ' . $epochs . PHP_EOL . PHP_EOL;
+echo 'Number of epochs: ' . $epochs . "\n";
 
 // Calculate model accuracy
 $accuracy = $model->accuracy($X_test, $y_test);
 
-echo 'Train samples handled: ' . number_format(count($X_train)) . PHP_EOL;
-echo 'Test samples handled: ' . number_format(count($X_test)) . PHP_EOL . PHP_EOL;
+echo 'Train samples handled: ' . number_format(count($X_train)) . "\n";
+echo 'Test samples handled: ' . number_format(count($X_test)) . "\n\n";
 echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 
 ```
@@ -296,8 +293,6 @@ echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 #### Реализация с RubixML
 
 ```php
-<?php
-
 use Rubix\ML\Classifiers\LogisticRegression;
 use Rubix\ML\Datasets\Labeled;
 use Rubix\ML\Datasets\Unlabeled;
@@ -329,13 +324,8 @@ $testRows = mnistRows('test.csv');
 $dataset = Labeled::fromIterator($trainRows);
 $testDataset = Labeled::fromIterator($testRows);
 
-echo 'Обработано данных для обучения: ' . $dataset->numSamples() . "\n";
-echo 'Обработано данных для тестирования: ' . $testDataset->numSamples() . "\n\n";
-
 $model = new LogisticRegression(epochs: 5);
 $model->train($dataset);
-
-echo 'Количество эпох: ' . $model->params()['epochs'] . "\n\n";
 
 $correct = 0;
 
@@ -348,6 +338,10 @@ foreach ($testDataset->samples() as $i => $x) {
 }
 
 $accuracy = $correct / $testDataset->numSamples();
+
+echo 'Обработано данных для обучения: ' . $dataset->numSamples() . "\n";
+echo 'Обработано данных для тестирования: ' . $testDataset->numSamples() . "\n\n";
+echo 'Количество эпох: ' . $model->params()['epochs'] . "\n\n";
 echo 'Точность: ' . round($accuracy * 100, 2) . '%';
 ```
 

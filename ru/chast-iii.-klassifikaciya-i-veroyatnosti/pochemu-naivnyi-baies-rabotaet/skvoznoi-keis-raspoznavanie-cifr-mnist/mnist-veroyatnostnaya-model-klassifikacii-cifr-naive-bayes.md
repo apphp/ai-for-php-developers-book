@@ -248,8 +248,8 @@ $model->train($X_train, $y_train);
 // Calculate model accuracy
 $accuracy = $model->accuracy($X_test, $y_test);
 
-echo 'Train samples handled: ' . number_format(count($X_train)) . PHP_EOL;
-echo 'Test samples handled: ' . number_format(count($X_test)) . PHP_EOL . PHP_EOL;
+echo 'Train samples handled: ' . number_format(count($X_train)) . "\n";
+echo 'Test samples handled: ' . number_format(count($X_test)) . "\n\n"
 echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 ```
 
@@ -264,11 +264,9 @@ echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 
 **Объяснение:**
 
-
-
 Модель выбирает класс, для которого изображение наиболее вероятно.
 
-#### Что здесь происходит интуитивно
+**Что здесь происходит интуитивно**
 
 Каждый пиксель задает вопрос:
 
@@ -278,7 +276,7 @@ echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 
 Это снова то же самое голосование признаков, только теперь признаков сотни.
 
-#### Связь с предыдущим кейсом (0 vs 1)
+**Связь с предыдущим кейсом (0 vs 1)**
 
 Здесь происходит важный переход:
 
@@ -291,7 +289,7 @@ echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 * та же независимость
 * та же логика выбора максимума
 
-#### Ограничения модели на MNIST
+**Ограничения модели на MNIST**
 
 Наивный Байес здесь работает, но:
 
@@ -310,24 +308,83 @@ echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 ```php
 use Rubix\ML\Classifiers\GaussianNB;
 use Rubix\ML\Datasets\Labeled;
+use Rubix\ML\Datasets\Unlabeled;
+use Rubix\ML\Extractors\CSV;
 
-$dataset = new Labeled($samples, $labels);
+try {
+    function mnistRows(string $file): iterable {
+        // Read the CSV file row by row and keep only valid samples.
+        foreach (new CSV($file, false) as $row) {
+            if (!isset($row[0])) {
+                continue;
+            }
+
+            // The first column is the digit label.
+            $label = (int) $row[0];
+
+            // This example only trains on digits 0 and 1.
+            if ($label !== 0 && $label !== 1) {
+                continue;
+            }
+
+            // Normalize pixel values to the [0, 1] range for training.
+            $pixels = array_map(static fn ($value): float => ((float) $value) / 255.0, array_slice($row, 1));
+
+            // Rubix expects the features followed by the class label.
+            yield array_merge($pixels, [$label === 1 ? 'one' : 'zero']);
+        }
+    }
+
+    // Build the training and test datasets from the filtered CSV rows.
+    $trainRows = mnistRows('train.csv');
+    $testRows = mnistRows('test.csv');
+
+    $dataset = Labeled::fromIterator($trainRows);
+    $testDataset = Labeled::fromIterator($testRows);
+} catch (Exception $e) {
+    echo '<div class="alert alert-danger" role="alert">' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</div>';
+    exit;
+}
 
 $model = new GaussianNB();
 $model->train($dataset);
 
-$prediction = $model->predict([
-    normalize([0, 5, 250, 255])
-]);
+$correct = 0;
 
-print_r($prediction);
+foreach ($testDataset->samples() as $i => $x) {
+    $prediction = $model->predict(new Unlabeled([$x]))[0];
+
+    if ($prediction === $testDataset->labels()[$i]) {
+        $correct++;
+    }
+}
+
+$accuracy = $correct / $testDataset->numSamples();
+
+echo 'Train samples handled: ' . number_format($dataset->numSamples()) . PHP_EOL;
+echo 'Test samples handled: ' . number_format($testDataset->numSamples()) . PHP_EOL . PHP_EOL;
+echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 ```
+
+```php
+```
+
+**Результат:**
+
+```
+Обработано данных для обучения: 12,666
+Обработано данных для тестирования: 2,116
+
+Точность: 99.15%
+```
+
+**Объяснение:**
 
 RubixML делает то же самое:
 
-* считает средние и дисперсии по каждому пикселю,
-* применяет Gaussian Naive Bayes,
-* возвращает наиболее вероятный класс.
+* считает средние и дисперсии по каждому пикселю
+* применяет Gaussian Naive Bayes
+* возвращает наиболее вероятный класс
 
 #### Вывод и следующие шаги
 
