@@ -234,8 +234,8 @@ class MnistLoader {
 
 ```php
 try {
-    [$X_train, $y_train] = MnistLoader::loadMNIST('train.csv');;
-    [$X_test, $y_test] = MnistLoader::loadMNIST('test.csv');
+    [$trainSamples, $trainLabels] = MnistLoader::loadMNIST('train.csv');;
+    [$testSamples, $testLabels] = MnistLoader::loadMNIST('test.csv');
 } catch (Exception $e) {
     echo '<div class="alert alert-danger" role="alert">' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</div>';
     exit;
@@ -243,13 +243,13 @@ try {
 
 // Initialize and train the Gaussian Naive Bayes classifier
 $model = new GaussianNB();
-$model->train($X_train, $y_train);
+$model->train($trainSamples, $trainLabels);
 
 // Calculate model accuracy
-$accuracy = $model->accuracy($X_test, $y_test);
+$accuracy = $model->accuracy($testSamples, $testLabels);
 
-echo 'Train samples handled: ' . number_format(count($X_train)) . "\n";
-echo 'Test samples handled: ' . number_format(count($X_test)) . "\n\n"
+echo 'Train samples handled: ' . number_format(count($trainSamples)) . "\n";
+echo 'Test samples handled: ' . number_format(count($testSamples)) . "\n\n"
 echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 ```
 

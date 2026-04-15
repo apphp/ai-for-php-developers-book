@@ -68,56 +68,7 @@ $$
 * $$p \approx 1$$ → это "1"
 * $$p \approx 0$$ → это "0"
 
-#### Подготовка данных
-
-Мы используем реальный MNIST датасет (в формате CSV - считайте, что это картинка, которая уже была трансформирована в удобный нам формат):
-
-* первый столбец – label
-* остальные 784 – пиксели
-
-Что мы делаем:
-
-* оставляем только 0 и 1
-* нормализуем пиксели: делим значение пикселя на 255
-* затем нужно разделить датасет на две подвыборки (subsets): train и test, но в нашем случае мы используем уже готовое разбиение MNIST на train и test, поэтому дополнительное разделение не требуется
-
-{% hint style="info" %}
-Использование датасет MNIST в формате CSV для практических примеров.
-
-1. Перейдите на страницу:\
-   [https://www.kaggle.com/datasets/oddrationale/mnist-in-csv](https://www.kaggle.com/datasets/oddrationale/mnist-in-csv)
-2. Скачайте файлы:
-   * mnist\_train.csv
-   * mnist\_test.csv
-3. Поместите их в папку своего проекта:
-
-```
-mnist/
- ├── train.csv
- └── test.csv
-```
-
-\
-CSV-формат позволяет работать с данными напрямую в PHP без дополнительных библиотек.
-
-Что внутри:
-
-Каждая строка хранится в следующем формате:
-
-```
-label,1x1,1x2,1x3,1x4,1x5,1x6,...,1x26,1x27,1x28,2x1,2x2,2x3,2x4,2x5,2x6,..,28x28
-```
-
-Пример:
-
-```
-7,0,0,0,0,0,0,0,0,169,253,253,253,253,253,253,218,30,0,0,0,0,0,0,0,0,0,0,0,0,...,0
-```
-{% endhint %}
-
-#### Визуализация
-
-<div align="left"><figure><img src="../../../.gitbook/assets/14.4-mnist-samples-0-1.png" alt="" width="563"><figcaption><p>14.4 MNIST примеры</p></figcaption></figure></div>
+####
 
 #### Реализация на чистом PHP
 
@@ -258,19 +209,19 @@ class MnistLoader {
 И начнём и тренировать:
 
 ```php
-[$X_train, $y_train] = MnistLoader::loadMNIST('train.csv');
-[$X_test, $y_test] = MnistLoader::loadMNIST('test.csv');
+[$trainSamples, $trainLabels] = MnistLoader::loadMNIST('train.csv');
+[$testSamples, $testLabels] = MnistLoader::loadMNIST('test.csv');
 
 $model = new LogisticRegression(784, 0.1);
-$model->train($X_train, $y_train, epochs: $epochs = 5);
+$model->train($trainSamples, $trainLabels, epochs: $epochs = 5);
 
 echo 'Number of epochs: ' . $epochs . "\n";
 
 // Calculate model accuracy
-$accuracy = $model->accuracy($X_test, $y_test);
+$accuracy = $model->accuracy($testSamples, $testLabels);
 
-echo 'Train samples handled: ' . number_format(count($X_train)) . "\n";
-echo 'Test samples handled: ' . number_format(count($X_test)) . "\n\n";
+echo 'Train samples handled: ' . number_format(count($trainSamples)) . "\n";
+echo 'Test samples handled: ' . number_format(count($testSamples)) . "\n\n";
 echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
 
 ```
