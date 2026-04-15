@@ -246,11 +246,11 @@ $model = new GaussianNB();
 $model->train($trainSamples, $trainLabels);
 
 // Calculate model accuracy
-$accuracy = $model->score($testSamples, $testLabels);
+$score = $model->score($testSamples, $testLabels);
 
 echo 'Train samples handled: ' . number_format(count($trainSamples)) . "\n";
 echo 'Test samples handled: ' . number_format(count($testSamples)) . "\n\n"
-echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
+echo 'Accuracy: ' . round($score * 100, 2) . '%';
 ```
 
 **Результат:**
@@ -358,7 +358,7 @@ $score = $metric->score($predictions, $testingLabels);
 
 echo 'Train samples handled: ' . number_format($dataset->numSamples()) . PHP_EOL;
 echo 'Test samples handled: ' . number_format($testDataset->numSamples()) . PHP_EOL . PHP_EOL;
-echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
+echo 'Accuracy: ' . round($score * 100, 2) . '%';
 ```
 
 ```php

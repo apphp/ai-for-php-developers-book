@@ -218,11 +218,11 @@ $model->train($trainSamples, $trainLabels, epochs: $epochs = 5);
 echo 'Number of epochs: ' . $epochs . "\n";
 
 // Calculate model accuracy
-$accuracy = $model->score($testSamples, $testLabels);
+$score = $model->score($testSamples, $testLabels);
 
 echo 'Train samples handled: ' . number_format(count($trainSamples)) . "\n";
 echo 'Test samples handled: ' . number_format(count($testSamples)) . "\n\n";
-echo 'Accuracy: ' . round($accuracy * 100, 2) . '%';
+echo 'Accuracy: ' . round($score * 100, 2) . '%';
 
 ```
 
@@ -293,7 +293,7 @@ $score = $metric->score($predictions, $testingLabels);
 echo 'Обработано данных для обучения: ' . $dataset->numSamples() . "\n";
 echo 'Обработано данных для тестирования: ' . $testDataset->numSamples() . "\n\n";
 echo 'Количество эпох: ' . $model->params()['epochs'] . "\n\n";
-echo 'Точность: ' . round($accuracy * 100, 2) . '%';
+echo 'Точность: ' . round($score * 100, 2) . '%';
 ```
 
 **Результат:**
