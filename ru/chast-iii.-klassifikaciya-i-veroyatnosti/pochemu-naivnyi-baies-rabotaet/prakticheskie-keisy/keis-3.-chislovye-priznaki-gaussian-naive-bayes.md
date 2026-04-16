@@ -143,7 +143,20 @@ foreach ($stats as $class => $features) {
 
 arsort($scores);
 print_r($scores);
+
+// Результат:
+// Array (
+//   [active] => -18.640462159403
+//   [inactive] => -228.44731497884
+// )
 ```
+
+Сравниваем:
+
+* active = -18.64
+* inactive = -228.447
+
+-18.64 > -228.447 → модель выбирает **active**
 
 Модель:
 
@@ -214,7 +227,14 @@ $model->train($dataset);
 
 $prediction = $model->predict([[100, 9]]);
 print_r($prediction);
+
+// Результат:
+// Array (
+//    [0] => active
+// )
 ```
+
+Как видите, результат такой же как и в примере с чистым PHP.
 
 RubixML автоматически:
 
