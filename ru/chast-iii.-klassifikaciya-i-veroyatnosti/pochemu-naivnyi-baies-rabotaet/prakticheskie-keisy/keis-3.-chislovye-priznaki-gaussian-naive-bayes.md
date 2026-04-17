@@ -6,7 +6,7 @@ description: Увидеть, что Байес не только про текс
 
 До этого момента мы работали с категориальными признаками: слово есть или нет, признак равен 0 или 1. Но в реальных задачах данные чаще числовые – время, количество, температура, расстояние.
 
-В этом кейсе мы рассмотрим, как наивный Байес работает с такими признаками. Для этого используется вариант модели, называемый Gaussian Naive Bayes, где предполагается, что значения признаков внутри каждого класса распределены нормально.
+В этом кейсе мы рассмотрим, как наивный Байес работает с такими признаками. Для этого используется вариант модели, называемый [Gaussian Naive Bayes](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#gaussian-naive-bayes), где предполагается, что значения признаков внутри каждого класса распределены нормально.
 
 #### Цель кейса
 
@@ -107,10 +107,15 @@ foreach ($grouped as $class => $rows) {
 
 #### Шаг 2. Функция плотности нормального распределения
 
+Реализуем функции плотности нормального (гауссовского) распределения
+
+$$
+f(x)=\frac{1}{\sqrt{2\pi\,\sigma^2}}\,\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+$$
+
 ```php
 function gaussian($x, $mean, $variance) {
-    return (1 / sqrt(2 * pi() * $variance)) *
-           exp(-pow($x - $mean, 2) / (2 * $variance));
+    return (1 / sqrt(2 * pi() * $variance)) * exp(-pow($x - $mean, 2) / (2 * $variance));
 }
 ```
 
@@ -169,9 +174,9 @@ print_r($scores);
 
 #### 1. Частоты заменяются распределением
 
-В категориальном случае: $$P(word | class)$$
+В категориальном случае: $$P(word \mid class)$$
 
-В числовом: $$P(x | class)$$ через нормальное распределение
+В числовом: $$P(x \mid class)$$ через нормальное распределение
 
 Это ключевое отличие Gaussian Naive Bayes.
 
@@ -204,6 +209,98 @@ print_r($scores);
 * при маленьких данных оценки нестабильны
 
 Тем не менее, модель часто дает хороший baseline.
+
+<details>
+
+<summary>Кейс 3. Полный пример кода на чистом PHP</summary>
+
+```php
+// Числовой набор данных: каждый образец содержит 2 числовых признака.
+$samples = [
+    [120, 10],
+    [130, 12],
+    [20, 1],
+    [30, 2],
+];
+
+// Метка класса для каждого образца.
+$labels = ['active', 'active', 'inactive', 'inactive'];
+
+// Оценки среднего значения и дисперсии (дисперсия генеральной совокупности).
+function mean(array $values): float {
+    return array_sum($values) / count($values);
+}
+
+function variance(array $values, float $mean): float {
+    $sum = 0.0;
+    foreach ($values as $v) {
+        $sum += pow($v - $mean, 2);
+    }
+
+    return $sum / count($values);
+}
+
+// Гауссова функция плотности вероятности (вероятность для числового признака).
+function gaussian(float $x, float $mean, float $variance): float {
+    return (1 / sqrt(2 * pi() * $variance)) * exp(-pow($x - $mean, 2) / (2 * $variance));
+}
+
+// Примеры группового обучения по классам.
+$grouped = [];
+
+foreach ($samples as $i => $sample) {
+    $class = $labels[$i];
+    $grouped[$class][] = $sample;
+}
+
+// Статистика по классам и признакам: [class][featureIndex] => ['mean' => ..., 'variance' => ...]
+$stats = [];
+
+foreach ($grouped as $class => $rows) {
+    // Чтобы получить массивы значений, отображающие отдельные признаки, 
+    // преобразуем строки в столбцы.
+    $features = array_map(null, ...$rows);
+
+    foreach ($features as $i => $values) {
+        $m = mean($values);
+        $v = variance($values, $m);
+
+        $stats[$class][$i] = [
+            'mean'     => $m,
+            'variance' => $v ?: 1e-6,
+        ];
+    }
+}
+
+// Новый числовой образец для классификации.
+$input = [100, 9];
+
+// Классовые априорные значения P(класс) на основе частоты встречаемости меток.
+$classCounts = array_count_values($labels);
+$total = count($labels);
+
+// Вычисляем логарифмическую оценку для каждого класса.
+$scores = [];
+
+foreach ($stats as $class => $features) {
+    // Начинаем с логарифма априорной вероятности log P(класс).
+    $logProb = log($classCounts[$class] / $total);
+
+    foreach ($features as $i => $params) {
+        // Складываем логарифм гауссовой функции правдоподобия для каждого признака.
+        $prob = gaussian($input[$i], $params['mean'], $params['variance']);
+        $logProb += log($prob);
+    }
+
+    $scores[$class] = $logProb;
+}
+
+// Сортируем классы по оценке (наивысшая / наиболее близкая к 0 оценка является прогнозом).
+arsort($scores);
+print_r($scores);
+```
+
+</details>
 
 #### Та же задача с использованием RubixML
 
