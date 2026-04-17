@@ -87,10 +87,10 @@
 
 * [Алгоритм k-ближайших соседей и локальные решения](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/README.md)
   * [Практические кейсы](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/README.md)
-    * [MNIST: распознавание цифр через kNN (без обучения)](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/mnist-raspoznavanie-cifr-cherez-knn-bez-obucheniya.md)
     * [Кейс 1. Классификация клиента по поведению](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/keis-1.-klassifikaciya-klienta-po-povedeniyu.md)
     * [Кейс 2. Регрессия: оценка цены квартиры](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/keis-2.-regressiya-ocenka-ceny-kvartiry.md)
     * [Кейс 3. Классификация с RubixML](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/keis-3.-klassifikaciya-s-rubixml.md)
+  * [Сквозной кейс: распознавание цифр (MNIST)](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist.md)
 * [Decision Trees и разбиение пространства](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/README.md)
   * [Практические кейсы](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/README.md)
     * [MNIST: дерево решений – как модель “смотрит” на пиксели](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/mnist-derevo-reshenii-kak-model-smotrit-na-pikseli.md)
