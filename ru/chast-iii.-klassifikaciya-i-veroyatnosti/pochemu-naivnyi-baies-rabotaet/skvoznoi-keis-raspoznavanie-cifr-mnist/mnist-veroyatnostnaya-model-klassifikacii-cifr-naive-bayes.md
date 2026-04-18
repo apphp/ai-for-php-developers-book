@@ -34,7 +34,7 @@
 
 > делим на 255 → получаем диапазон \[0, 1]
 
-Таким образом, одно изображение превращается в вектор из 784 числовых признаков. Это упрощает вычисления, однако не делает распределение пикселей нормальным (гауссовым), как предполагает модель Gaussian Naive Bayes.
+Таким образом, одно изображение превращается в вектор из 784 числовых признаков. Это упрощает вычисления, хотя и не делает распределение пикселей нормальным (гауссовым), как предполагает модель Gaussian Naive Bayes.
 
 #### Идея модели
 
@@ -113,6 +113,7 @@ class GaussianNB {
         // Calculate statistics for each class and feature
         $this->stats = [];
         foreach ($this->grouped as $class => $rows) {
+            // Transpose rows into columns to get feature-wise arrays of values.
             $features = array_map(null, ...$rows);
 
             foreach ($features as $i => $values) {
