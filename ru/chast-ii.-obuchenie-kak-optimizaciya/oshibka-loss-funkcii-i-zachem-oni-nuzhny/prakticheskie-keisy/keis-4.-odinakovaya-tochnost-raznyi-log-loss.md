@@ -1,5 +1,5 @@
 ---
-description: Когда accuracy вводит в заблуждение
+description: Когда accuracy вводит в заблуждение.
 ---
 
 # Кейс 4. Одинаковая точность – разный log loss
