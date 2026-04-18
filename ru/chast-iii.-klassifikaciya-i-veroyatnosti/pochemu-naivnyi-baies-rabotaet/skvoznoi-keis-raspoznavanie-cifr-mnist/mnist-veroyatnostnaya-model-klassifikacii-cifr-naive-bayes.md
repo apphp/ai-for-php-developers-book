@@ -81,12 +81,12 @@ class GaussianNB {
     private array $grouped = [];
     private int $totalSamples = 0;
 
-    // Calculate arithmetic mean of values
+    // Вычислим среднее арифметическое значений
     private function mean(array $values): float {
         return array_sum($values) / count($values);
     }
 
-    // Calculate variance of values given their mean
+    // Вычислим дисперсию значений, зная их среднее значение
     private function variance(array $values, float $mean): float {
         $sum = 0;
         foreach ($values as $v) {
@@ -95,25 +95,26 @@ class GaussianNB {
         return $sum / count($values);
     }
 
-    // Calculate Gaussian probability density function
+    // Вычислим гауссову функцию плотности вероятности.
     private function gaussian(float $x, float $mean, float $variance): float {
         return (1 / sqrt(2 * pi() * $variance)) * exp(-pow($x - $mean, 2) / (2 * $variance));
     }
 
-    // Train the classifier by calculating mean and variance for each class/feature
+    // Обучим классификатор, вычислив среднее значение и дисперсию для каждого класса/признака
     public function train(array $X, array $y): void {
         $this->totalSamples = count($X);
 
-        // Group samples by class
+        // Сгруппируем образцы по классам.
         $this->grouped = [];
         foreach ($X as $i => $sample) {
             $this->grouped[$y[$i]][] = $sample;
         }
 
-        // Calculate statistics for each class and feature
+        // Рассчитаем статистические данные для каждого класса и признака
         $this->stats = [];
         foreach ($this->grouped as $class => $rows) {
-            // Transpose rows into columns to get feature-wise arrays of values.
+            // Чтобы получить массивы значений, отображающие отдельные признаки, 
+            // преобразуем строки в столбцы
             $features = array_map(null, ...$rows);
 
             foreach ($features as $i => $values) {
@@ -122,14 +123,14 @@ class GaussianNB {
 
                 $this->stats[$class][$i] = [
                     'mean' => $m,
-                    // protection against zero variance
+                    // защита от нулевой дисперсии
                     'variance' => $v ?: 1e-6,
                 ];
             }
         }
     }
 
-    // Predict class labels for multiple samples
+    // Прогнозирование меток классов для нескольких образцов
     public function predict(array $X): array {
         $predictions = [];
 
@@ -140,15 +141,15 @@ class GaussianNB {
         return $predictions;
     }
 
-    // Predict class label for a single sample using Bayes' theorem
+    // Предсказывание метки класса для одного образца, используя теорему Байеса
     public function predictSingle(array $input): int {
         $scores = [];
 
         foreach ($this->stats as $class => $features) {
-            // Start with prior probability (class frequency)
+            // Начнём с априорной вероятности (частоты класса).
             $logProb = log(count($this->grouped[$class]) / $this->totalSamples);
 
-            // Add likelihood for each feature (naive independence assumption)
+            // Добавим вероятность для каждого признака (наивное предположение о независимости).
             foreach ($features as $i => $params) {
                 $prob = $this->gaussian($input[$i], $params['mean'], $params['variance']);
                 $logProb += log($prob);
@@ -157,12 +158,12 @@ class GaussianNB {
             $scores[$class] = $logProb;
         }
 
-        // Return class with highest score
+        // Возвращение класса с наивысшим баллом
         arsort($scores);
         return (int) array_key_first($scores);
     }
 
-    // Calculate score a set of predictions
+    // Вычислим оценку для набора прогнозов
     public function score(array $X, array $y): float {
         $predictions = $this->predict($X);
         $correct = 0;
@@ -176,17 +177,16 @@ class GaussianNB {
         return count($y) > 0 ? ($correct / count($y)) : 0.0;
     }
 
-    // Get calculated statistics (mean and variance) for each class/feature
+    // Получим вычисленные статистические данные (среднее значение и дисперсию) для каждого класса/признака
     public function getStats(): array {
         return $this->stats;
     }
 
-    // Get grouped training data by class
+    // Получим сгруппированных обучающих данных по классам.
     public function getGrouped(): array {
         return $this->grouped;
     }
 }
-
 ```
 
 </details>
