@@ -94,10 +94,11 @@
     * [MNIST: распознавание цифр через kNN (без обучения)](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-raspoznavanie-cifr-cherez-knn-bez-obucheniya.md)
 * [Decision Trees и разбиение пространства](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/README.md)
   * [Практические кейсы](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/README.md)
-    * [MNIST: дерево решений – как модель “смотрит” на пиксели](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/mnist-derevo-reshenii-kak-model-smotrit-na-pikseli.md)
     * [Кейс 1. Учебное дерево решений на чистом PHP](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/keis-1.-uchebnoe-derevo-reshenii-na-chistom-php.md)
     * [Кейс 2. Классификация с помощью RubixML](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/keis-2.-klassifikaciya-s-pomoshyu-rubixml.md)
     * [Кейс 3. Когда дерево удобно в реальном продукте](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/keis-3.-kogda-derevo-udobno-v-realnom-produkte.md)
+  * [Сквозной кейс: распознавание цифр (MNIST)](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/skvoznoi-keis-raspoznavanie-cifr-mnist/README.md)
+    * [MNIST: дерево решений – как модель “смотрит” на пиксели](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-derevo-reshenii-kak-model-smotrit-na-pikseli.md)
 
 ## ЧАСТЬ V. ТЕКСТ КАК МАТЕМАТИКА
 
