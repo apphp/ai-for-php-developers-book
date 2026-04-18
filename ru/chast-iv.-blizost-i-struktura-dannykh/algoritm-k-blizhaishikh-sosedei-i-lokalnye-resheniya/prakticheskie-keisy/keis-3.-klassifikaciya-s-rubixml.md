@@ -43,13 +43,14 @@ $labels = ['casual', 'casual', 'engaged', 'engaged', 'engaged'];
 
 $dataset = new Labeled($samples, $labels);
 
+// 3 соседа, без взвешивания голосов, евклидово расстояние
 $model = new KNearestNeighbors(3, false, new Euclidean());
 $model->train($dataset);
 
 $query = new Unlabeled([[8, 5.5]]);
 $prediction = $model->predict($query);
 
-echo $prediction[0];
+echo 'Prediction: ' . $prediction[0];
 
 // Результат
 // Prediction: engaged
