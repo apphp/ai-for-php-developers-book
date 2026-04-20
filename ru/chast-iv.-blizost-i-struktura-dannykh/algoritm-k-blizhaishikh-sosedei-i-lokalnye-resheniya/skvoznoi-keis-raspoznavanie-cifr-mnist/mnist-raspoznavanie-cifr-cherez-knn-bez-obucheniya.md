@@ -40,59 +40,120 @@
 
 #### Реализация на чистом PHP
 
-**Подготовка данных**
+Для начала создадим класс KNearestNeighbors.&#x20;
 
-(упрощённо)
+<details>
 
-```php
-$dataset = [
-    [[0,0,0, ..., 1,1,0], 0],
-    [[0,0,1, ..., 1,0,0], 0],
-    [[1,1,1, ..., 0,0,0], 1],
-    [[1,0,1, ..., 0,0,0], 1],
-];
-
-$query = [...]; // 784 пикселя
-$k = 3;
-```
-
-**Функция расстояния**
+<summary><strong>Class KNearestNeighbors</strong></summary>
 
 ```php
-function euclideanDistance(array $a, array $b): float {
-    $sum = 0.0;
-    foreach ($a as $i => $value) {
-        $diff = $value - $b[$i];
-        $sum += $diff * $diff;
+class KNearestNeighbors {
+
+    private array $trainSamples = [];
+    private array $trainLabels = [];
+
+    public function __construct(array $samples, array $labels) {
+        $this->trainSamples = $samples;
+        $this->trainLabels = $labels;
     }
-    return sqrt($sum);
+
+    public function euclideanDistance(array $a, array $b): float {
+        $sum = 0.0;
+
+        foreach ($a as $i => $value) {
+            $diff = $value - $b[$i];
+            $sum += $diff * $diff;
+        }
+
+        return sqrt($sum);
+    }
+
+    public function predict(array $query, int $k = 3, ?int $trainLimit = null): int|string {
+        $trainLimit = $trainLimit ?? count($this->trainSamples);
+        $trainLimit = min($trainLimit, count($this->trainSamples), count($this->trainLabels));
+
+        $distances = [];
+
+        for ($i = 0; $i < $trainLimit; $i++) {
+            $distances[] = [
+                'distance' => $this->euclideanDistance($this->trainSamples[$i], $query),
+                'label' => $this->trainLabels[$i],
+            ];
+        }
+
+        usort($distances, static fn ($a, $b) => $a['distance'] <=> $b['distance']);
+        $neighbors = array_slice($distances, 0, $k);
+
+        $votes = [];
+        foreach ($neighbors as $neighbor) {
+            $votes[$neighbor['label']] = ($votes[$neighbor['label']] ?? 0) + 1;
+        }
+
+        arsort($votes);
+
+        return array_key_first($votes);
+    }
+
+    public function predictBatch(array $X, int $k = 3, ?int $trainLimit = null): array {
+        if ($this->trainSamples === [] || $this->trainLabels === []) {
+            throw new \RuntimeException('Model has no training data. Provide samples and labels in the constructor.');
+        }
+
+        $predictions = [];
+
+        foreach ($X as $x) {
+            $predictions[] = $this->predict($x, $k, $trainLimit);
+        }
+
+        return $predictions;
+    }
+
+    public function score(array $X, array $y, int $k = 3, ?int $trainLimit = null): float {
+        $predictions = $this->predictBatch($X, $k, $trainLimit);
+        $correct = 0;
+
+        foreach ($predictions as $i => $prediction) {
+            if (isset($y[$i]) && $prediction === $y[$i]) {
+                $correct++;
+            }
+        }
+
+        return count($y) > 0 ? ($correct / count($y)) : 0.0;
+    }
 }
+
 ```
 
-**Предсказание**
+</details>
+
+Теперь загрузим две наши подвыборки и запустим подсчёт `score`:
 
 ```php
-$distances = [];
-
-foreach ($dataset as [$image, $label]) {
-    $distances[] = [
-        'distance' => euclideanDistance($image, $query),
-        'label' => $label
-    ];
+try {
+    [$trainSamples, $trainLabels] = MnistLoader::load('train.csv');
+    [$testSamples, $testLabels] = MnistLoader::load('test.csv');
+} catch (Exception $e) {
+    echo '<div class="alert alert-danger" role="alert">' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</div>';
+    exit;
 }
 
-usort($distances, fn($a, $b) => $a['distance'] <=> $b['distance']);
-$neighbors = array_slice($distances, 0, $k);
+$knn = new KNearestNeighbors($trainSamples, $trainLabels);
 
-$votes = [];
-foreach ($neighbors as $neighbor) {
-    $votes[$neighbor['label']] = ($votes[$neighbor['label']] ?? 0) + 1;
-}
+// Рассчитайте точность модели.
+$score = $knn->score($testSamples, $testLabels, k: 3, trainLimit: 300);
 
-arsort($votes);
-$prediction = array_key_first($votes);
+echo 'Обработано данных для обучения: ' . number_format(count($trainSamples)) . "\n";
+echo 'Обработано данных для тестирования: ' . number_format(count($testSamples)) . "\n\n";
+echo 'Точность: ' . round($score * 100, 2) . '%';
+```
 
-echo "Predicted digit: $prediction";
+**Результат:**
+
+```
+Train samples handled: 12,666
+Test samples handled: 2,116
+
+Accuracy: 99.81%
 ```
 
 **Что здесь происходит**
@@ -201,7 +262,7 @@ MNIST хорошо показывает и слабые стороны kNN:
 
 **Прогресс**
 
-Мы будем возвращаться к этому кейсу в следующих главах и постепенно улучшать модель, добавляя новые идеи и методы. Важно не просто увидеть разные алгоритмы, а понять, как они меняют поведение модели на одной и той же задаче.  Ниже – прогресс, который мы имеет на текущий момент.
+Мы будем возвращаться к этому кейсу в следующих главах и постепенно улучшать модель, добавляя новые идеи и методы. Важно не просто увидеть разные алгоритмы, а понять, как они меняют поведение модели на одной и той же задаче. Ниже – прогресс, который мы имеет на текущий момент.
 
 Прогресс моделей на MNIST:
 
