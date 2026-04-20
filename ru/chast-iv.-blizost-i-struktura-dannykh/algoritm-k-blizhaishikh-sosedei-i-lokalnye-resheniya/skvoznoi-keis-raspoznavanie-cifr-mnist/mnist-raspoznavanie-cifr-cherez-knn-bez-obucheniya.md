@@ -137,10 +137,10 @@ try {
     exit;
 }
 
-$knn = new KNearestNeighbors($trainSamples, $trainLabels);
+$model = new KNearestNeighbors($trainSamples, $trainLabels);
 
 // Рассчитайте точность модели.
-$score = $knn->score($testSamples, $testLabels, k: 3, trainLimit: 300);
+$score = $model->score($testSamples, $testLabels, k: 3, trainLimit: 300);
 
 echo 'Обработано данных для обучения: ' . number_format(count($trainSamples)) . "\n";
 echo 'Обработано данных для тестирования: ' . number_format(count($testSamples)) . "\n\n";
