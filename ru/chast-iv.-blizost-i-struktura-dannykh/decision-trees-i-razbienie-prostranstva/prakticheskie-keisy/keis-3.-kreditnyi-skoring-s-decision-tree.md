@@ -73,10 +73,8 @@ $dataset = new Labeled($samples, $labels);
 use Rubix\ML\Classifiers\ClassificationTree;
 
 $tree = new ClassificationTree(
-    maxDepth: 5,
-    minSamples: 5,
-    minLeaf: 2,
-    maxFeatures: null
+    maxHeight: 10,
+    maxLeafSize: 2
 );
 
 $tree->train($dataset);
@@ -84,10 +82,8 @@ $tree->train($dataset);
 
 **Что означают параметры**
 
-* `maxDepth` – насколько глубоко дерево может «копать»
-* `minSamples` – минимальный размер узла для разбиения
-* `minLeaf` – минимальное количество объектов в листе
-* `maxFeatures` – сколько признаков рассматривать на каждом шаге
+* `maxHeight` – количество уровней (разветвлений), которые может иметь дерево
+* `maxLeafSize` – когда следует прекратить разделение узла дерева
 
 Это уже реальные рычаги управления: переобучением, стабильностью модели и интерпретируемостью.
 
@@ -106,9 +102,9 @@ $applicant = [[
     1       // owns home
 ]];
 
-$prediction = $tree->predict($applicant);
+$dataset = new Unlabeled([$applicant]);
 
-var_dump($prediction);
+$prediction = $tree->predict($dataset);
 ```
 
 #### Добавим объяснимость (ключевой момент)
@@ -157,8 +153,23 @@ $result = [
     'explanation' => explainDecision($applicant[0]),
 ];
 
-var_dump($result);
+echo "Решение: \n";
+echo print_r($result, 1);
 ```
+
+**Результат**
+
+```
+Решение: 
+Array (
+   [decision] => approve
+   [explanation] => стабильный профиль заемщика
+)
+```
+
+**Объяснение**
+
+Результат состоит из двух частей: предсказание дерева (approve/reject) и текстовое объяснение. В реальном продукте часто важно показывать не только итоговое решение модели, но и понятную человеку причину, почему заявка выглядит рискованной.
 
 Да, это упрощение. Но оно показывает ключевую идею: дерево решений легко "перевести" в язык бизнес-правил.
 
