@@ -49,7 +49,14 @@
 ```php
 class KNearestNeighbors {
 
+    /**
+     * Training feature vectors.
+     */
     private array $trainSamples = [];
+
+    /**
+     * Training labels aligned by index with `$trainSamples`.
+     */
     private array $trainLabels = [];
 
     public function __construct(array $samples, array $labels) {
@@ -57,6 +64,9 @@ class KNearestNeighbors {
         $this->trainLabels = $labels;
     }
 
+    /**
+     * Compute Euclidean distance between two vectors.
+     */
     public function euclideanDistance(array $a, array $b): float {
         $sum = 0.0;
 
@@ -68,9 +78,19 @@ class KNearestNeighbors {
         return sqrt($sum);
     }
 
+    /**
+     * Predict a label for a single query vector.
+     *
+     * @param array    $query      Feature vector to classify
+     * @param int      $k          Number of neighbors to vote (top-K)
+     * @param int|null $trainLimit Optional cap on how many training rows are used
+     *
+     * @return int|string The winning label (depends on how labels were provided)
+     */
     public function predict(array $query, int $k = 3, ?int $trainLimit = null): int|string {
-        $trainLimit = $trainLimit ?? count($this->trainSamples);
         $trainLimit = min($trainLimit, count($this->trainSamples), count($this->trainLabels));
+
+        $k = max(1, min($k, $trainLimit));
 
         $distances = [];
 
@@ -84,10 +104,7 @@ class KNearestNeighbors {
         usort($distances, static fn ($a, $b) => $a['distance'] <=> $b['distance']);
         $neighbors = array_slice($distances, 0, $k);
 
-        $votes = [];
-        foreach ($neighbors as $neighbor) {
-            $votes[$neighbor['label']] = ($votes[$neighbor['label']] ?? 0) + 1;
-        }
+        $votes = array_count_values(array_column($neighbors, 'label'));
 
         arsort($votes);
 
@@ -95,10 +112,6 @@ class KNearestNeighbors {
     }
 
     public function predictBatch(array $X, int $k = 3, ?int $trainLimit = null): array {
-        if ($this->trainSamples === [] || $this->trainLabels === []) {
-            throw new \RuntimeException('Model has no training data. Provide samples and labels in the constructor.');
-        }
-
         $predictions = [];
 
         foreach ($X as $x) {
@@ -108,6 +121,9 @@ class KNearestNeighbors {
         return $predictions;
     }
 
+    /**
+     * Compute simple accuracy score for a labeled dataset.
+     */
     public function score(array $X, array $y, int $k = 3, ?int $trainLimit = null): float {
         $predictions = $this->predictBatch($X, $k, $trainLimit);
         $correct = 0;
