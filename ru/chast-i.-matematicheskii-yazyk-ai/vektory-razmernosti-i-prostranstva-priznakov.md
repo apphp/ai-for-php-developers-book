@@ -240,13 +240,11 @@ echo 'Blue: ' . encodeColor(color: 'blue');
 
 
 
-
-
-<div align="left"><figure><img src="../.gitbook/assets/ChatGPT Image Apr 22, 2026, 12_52_46 AM.png" alt="" width="563"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/ChatGPT Image Apr 22, 2026, 12_52_46 AM.png" alt=""><figcaption></figcaption></figure></div>
 
 
 
-<div align="left"><figure><img src="../.gitbook/assets/8.1-points-in-2d-feature-space.png" alt="" width="563"><figcaption><p>8.1 Точки в 2D-пространстве признаков</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/8.1-points-in-2d-feature-space.png" alt=""><figcaption><p>8.1 Точки в 2D-пространстве признаков</p></figcaption></figure></div>
 
 #### **Геометрический смысл расстояний и углов**
 
