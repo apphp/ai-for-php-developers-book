@@ -279,7 +279,7 @@ $$
 
 Математически это выглядит так: для нового вектора x мы ищем такие векторы $$xᵢ$$ из обучающей выборки, для которых расстояние $$d(x, xᵢ)$$ минимально.
 
-<div align="left"><figure><img src="../.gitbook/assets/8.3-knn-in-feature-space.png" alt=""><figcaption><p>8.3 Алгоритм k-NN в пространстве признаков</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/6.3.-knn-in-feature-space.png" alt=""><figcaption><p>8.3 Алгоритм k-NN в пространстве признаков</p></figcaption></figure></div>
 
 Функция указанная ниже реализует классическую формулу евклидова расстояния между двумя точками:
 
@@ -311,7 +311,7 @@ $$
 
 > Линейная модель разбивает пространство признаков гиперплоскостью, а знак линейной функции определяет класс объекта.
 
-<div align="left"><figure><img src="../.gitbook/assets/8.4-linear-decision-boundary.png" alt="" width="563"><figcaption><p>8.4 Линейная граница принятия решений</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/6.4-linear-decision-boundary.png" alt=""><figcaption><p>8.4 Линейная граница принятия решений</p></figcaption></figure></div>
 
 Функция ниже вычисляет:
 
@@ -364,7 +364,7 @@ $$
 
 А затем применяет нелинейную функцию активации. Геометрически это означает, что пространство сначала линейно поворачивается и растягивается, а затем нелинейно "ломается". После нескольких таких преобразований данные, которые были неразделимы линейно, становятся разделимыми.
 
-<div align="left"><figure><img src="../.gitbook/assets/6.5-nonlinear-transformation-of-space.png" alt="Нелинейное преобразование пространства" width="563"><figcaption><p>8.5 Нелинейное преобразование пространства</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/8.5-nonlinear-transformation-of-space.png" alt="Нелинейное преобразование пространства"><figcaption><p>8.5 Нелинейное преобразование пространства</p></figcaption></figure></div>
 
 Независимо от сложности архитектуры, вход у нейросети всегда один и тот же – вектор фиксированной размерности.
 
