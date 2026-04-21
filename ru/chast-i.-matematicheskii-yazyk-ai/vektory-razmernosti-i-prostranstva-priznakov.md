@@ -311,7 +311,7 @@ $$
 
 > Линейная модель разбивает пространство признаков гиперплоскостью, а знак линейной функции определяет класс объекта.
 
-<div align="left"><figure><img src="../.gitbook/assets/6.4-linear-decision-boundary.png" alt=""><figcaption><p>8.4 Линейная граница принятия решений</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/8.4-linear-decision-boundary.png" alt=""><figcaption><p>8.4 Линейная граница принятия решений</p></figcaption></figure></div>
 
 Функция ниже вычисляет:
 
