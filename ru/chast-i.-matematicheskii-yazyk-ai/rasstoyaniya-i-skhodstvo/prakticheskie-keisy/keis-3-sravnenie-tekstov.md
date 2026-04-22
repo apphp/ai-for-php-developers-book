@@ -6,7 +6,7 @@ description: Использование косинусного сходства.
 
 Предположим, мы представили тексты в виде векторов – через [bag-of-words](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#bag-of-words-meshok-slov), [TF-IDF](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#tf-idf) или [эмбеддинги](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#embeddings-embeddingi) языковой модели. Каждый текст теперь – точка в пространстве.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/7.5-texts-as-points-in-vector-space (1).png" alt="" width="563"><figcaption><p>9.6 Тексты как точки в векторном пространстве</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/9.6-texts-as-points-in-vector-space.png" alt=""><figcaption><p>9.6 Тексты как точки в векторном пространстве</p></figcaption></figure></div>
 
 Как мы уже обсуждали, евклидово расстояние плохо подходит для сравнения текстов разной длины. Косинусное сходство, напротив, учитывает только направление векторов, то есть относительное распределение слов и смыслов. Поэтому оно широко используется в задачах поиска по документам и семантического сравнения.
 

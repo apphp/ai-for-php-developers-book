@@ -30,7 +30,7 @@ $$
 
 Если $$n = 1$$, это расстояние между точками на прямой, если $$n = 2$$, то это расстояние между точками на плоскости, при $$n = 3$$ – уже в трёхмерном пространстве и т.д. Если $$n = 100$$ или, например, $$768$$, то по сути геометрия остается той же самой, просто ее уже нельзя нарисовать напрямую, так как человек не в состоянии воспринимать изображения в пространстве, имеющем больше, чем 3 измерения.
 
-<div align="left"><figure><img src="../../.gitbook/assets/7.1-euclidean-distance.png" alt="" width="563"><figcaption><p>9.1 Евклидово расстояние в 2D</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/9.1-euclidean-distance.png" alt=""><figcaption><p>9.1 Евклидово расстояние в 2D</p></figcaption></figure></div>
 
 Но, при этом, на плоскости это выглядит очень наглядно: две точки и отрезок между ними. В машинном обучении мы делаем ровно то же самое, только в пространстве большей размерности.
 
@@ -95,7 +95,7 @@ $$
 |x| = \sqrt{x \cdot x}
 $$
 
-<div align="left"><figure><img src="../../.gitbook/assets/7.2-2-vectors-and-angle-between-them.png" alt="" width="563"><figcaption><p>9.2 Два вектора и угол между ними</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/9.2-two-vectors-and-angle-between-them.png" alt=""><figcaption><p>9.2 Два вектора и угол между ними</p></figcaption></figure></div>
 
 Скалярное произведение становится больше, когда одновременно выполняются два условия:
 
@@ -117,7 +117,7 @@ $$
 
 В машинном обучении это используется осознанно. В линейных моделях большое скалярное произведение означает сильную активацию. В нейросетях и [attention-механизмах](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#attention-mekhanizm) он интерпретируется как мера важности или связи.
 
-<div align="left"><figure><img src="../../.gitbook/assets/9.3-dot-product-as-proection-one-vertor-into-another.png" alt="" width="563"><figcaption><p>9.3 Скалярное произведение как проекция одного вектора на другой</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/9.3-dot-product-as-proection-one-vertor-into-another.png" alt=""><figcaption><p>9.3 Скалярное произведение как проекция одного вектора на другой</p></figcaption></figure></div>
 
 Если представить $$x \cdot y$$ геометрически, то это можно интерпретировать как длину проекции одного вектора на направление другого, умноженную на длину второго вектора.
 
@@ -170,7 +170,7 @@ $$
 * 0 – [ортогональные векторы](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#ortogonalnye-vektory)
 * -1 – противоположные направления
 
-<div align="left"><figure><img src="../../.gitbook/assets/7.4-same-angle-different-vector-lengths.png" alt="" width="563"><figcaption><p>9.4 Один и тот же угол, разные длины векторов</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/9.4-same-angle-different-vector-lengths.png" alt=""><figcaption><p>9.4 Один и тот же угол, разные длины векторов</p></figcaption></figure></div>
 
 На этой картинке важно увидеть: длины разные, но угол одинаковый – значит, косинусное сходство одинаковое.
 
