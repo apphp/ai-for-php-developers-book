@@ -195,32 +195,58 @@ Accuracy: 99.81%
 Теперь тот же подход через библиотеку:
 
 ```php
+use app\classes\MnistLoader;
+use Rubix\ML\CrossValidation\Metrics\Accuracy;
 use Rubix\ML\Datasets\Labeled;
+use Rubix\ML\Datasets\Unlabeled;
 use Rubix\ML\Classifiers\KNearestNeighbors;
 use Rubix\ML\Kernels\Distance\Euclidean;
 
-$samples = [
-    [/* 784 пикселя */],
-    [/* ... */],
-];
+try {
+    // Build the training and test datasets from the filtered CSV rows.
+    $trainRows = MnistLoader::loadIterable('train.csv', categoricalLabels: true, normalize: true, digits: [0, 1]);
+    $testRows = MnistLoader::loadIterable('test.csv', categoricalLabels: true, normalize: true, digits: [0, 1]);
 
-$labels = [0, 0, 1, 1];
+    $dataset = Labeled::fromIterator($trainRows);
+    $testDataset = Labeled::fromIterator($testRows);
+} catch (Exception $e) {
+    echo '<div class="alert alert-danger" role="alert">' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</div>';
+    exit;
+}
 
-$dataset = new Labeled($samples, $labels);
-
-$model = new KNearestNeighbors(3, new Euclidean());
+$model = new KNearestNeighbors(3, false, new Euclidean());
 $model->train($dataset);
 
-$prediction = $model->predict([$query]);
+$predictions = [];
+$testingLabels = $testDataset->labels();
 
-print_r($prediction);
+foreach ($testDataset->samples() as $i => $x) {
+    $prediction = $model->predict(new Unlabeled([$x]))[0];
+    $predictions[] = $prediction;
+}
+
+$metric = new Accuracy();
+$score = $metric->score($predictions, $testingLabels);
+
+echo 'Обработано данных для обучения: ' . number_format($dataset->numSamples()) . "\n";
+echo 'Обработано данных для тестирования: ' . number_format($testDataset->numSamples()) . "\n\n";
+echo 'Точность: ' . round($score * 100, 2) . '%';
 ```
+
+**Результат:**
+
+```
+Обработано данных для обучения: 12,666
+Обработано данных для тестирования: 2,116
+
+Точность: 99.92%
+```
+
+**Объяснение:**
 
 Здесь важно понимать: `train()` не обучает модель – он просто сохраняет датасет.
 
-**Что изменилось, а что нет**
-
-Код стал короче, но логика не изменилась.
+Что изменилось, а что нет.  Код стал короче, но логика не изменилась.
 
 Внутри происходит всё то же самое:
 
