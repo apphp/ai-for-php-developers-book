@@ -151,7 +151,7 @@ $$
 
 * нормализации признаков
 * отбора признаков
-* снижения размерности (PCA, autoencoders)
+* снижения размерности ([PCA](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#pca-principal-component-analysis-metod-glavnykh-komponent), [autoencoders](../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#autoencoders-avtoenkodery))
 
 ### Почему k-NN важен концептуально
 
