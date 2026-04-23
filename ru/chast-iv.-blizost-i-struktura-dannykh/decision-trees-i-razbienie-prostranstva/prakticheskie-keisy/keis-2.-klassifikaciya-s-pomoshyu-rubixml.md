@@ -107,7 +107,7 @@ echo $prediction[0];
 
 <details>
 
-<summary>Кейс 1. Полный пример кода на RubixML</summary>
+<summary>Кейс 2. Полный пример кода на RubixML</summary>
 
 ```php
 use Rubix\ML\Datasets\Unlabeled;
