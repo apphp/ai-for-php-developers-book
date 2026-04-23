@@ -36,7 +36,7 @@ $$
 
 Главное отличие от предыдущих примеров – форма функции. Вблизи минимума она становится очень "плоской". Это пример области с почти нулевым градиентом (иногда её неформально называют плато).
 
-<div align="left"><figure><img src="../../../.gitbook/assets/12.5-function-and-its-derivative.png" alt="" width="437"><figcaption><p>12.5 Функция и её производная</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/12.5-function-and-its-derivative.png" alt=""><figcaption><p>12.5 Функция L(w) = (w - 3)⁴ и её производная</p></figcaption></figure></div>
 
 #### Реализация на PHP
 
