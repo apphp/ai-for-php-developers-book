@@ -183,7 +183,7 @@ $posterior = $prior + $signalStrength;
 
 #### Визуальная интуиция
 
-<div align="left"><figure><img src="../../../.gitbook/assets/13.5-increase-in-prob-over-time.png" alt="" width="563"><figcaption><p>13.5 Рост вероятности со временем при поступлении сигналов</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/13.5-increase-in-prob-over-time.png" alt=""><figcaption><p>13.5 Рост вероятности со временем при поступлении сигналов</p></figcaption></figure></div>
 
 #### Выводы
 
