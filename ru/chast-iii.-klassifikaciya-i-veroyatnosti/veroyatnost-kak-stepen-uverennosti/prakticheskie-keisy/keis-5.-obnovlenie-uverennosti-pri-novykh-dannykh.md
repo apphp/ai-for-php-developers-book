@@ -56,7 +56,7 @@ echo "Posterior: $probability";
 
 Результат:
 
-```php
+```
 0.55
 ```
 

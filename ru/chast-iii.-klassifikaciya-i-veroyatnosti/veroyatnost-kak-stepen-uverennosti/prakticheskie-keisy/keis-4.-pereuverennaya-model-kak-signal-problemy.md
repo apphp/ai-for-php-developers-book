@@ -198,7 +198,7 @@ if ($isSystemic) {
 
 #### Визуальная интуиция
 
-<div align="left"><figure><img src="../../../.gitbook/assets/13.4-normal-prob-distr-vs-over-confident.png" alt="" width="563"><figcaption><p>13.4 Нормальное распределение вероятностей vs переуверенное</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/13.4-normal-prob-distr-vs-over-confident.png" alt=""><figcaption><p>13.4 Нормальное распределение вероятностей vs переуверенное</p></figcaption></figure></div>
 
 #### Выводы
 
