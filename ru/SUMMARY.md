@@ -98,7 +98,7 @@
     * [Кейс 2. Классификация с помощью RubixML](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/keis-2.-klassifikaciya-s-pomoshyu-rubixml.md)
     * [Кейс 3. Кредитный скоринг с Decision Tree](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/keis-3.-kreditnyi-skoring-s-decision-tree.md)
   * [Сквозной кейс: распознавание цифр (MNIST)](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/skvoznoi-keis-raspoznavanie-cifr-mnist/README.md)
-    * [MNIST: дерево решений – как модель “смотрит” на пиксели](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-derevo-reshenii-kak-model-smotrit-na-pikseli.md)
+    * [MNIST: дерево решений – как модель "смотрит" на пиксели](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-derevo-reshenii-kak-model-smotrit-na-pikseli.md)
 
 ## ЧАСТЬ V. ТЕКСТ КАК МАТЕМАТИКА
 
