@@ -257,7 +257,7 @@ echo 'Точность: ' . round($score * 100, 2) . '%';
 * "тонкие" нули похожи на единицы
 * шум и артефакты
 
-<div align="left"><figure><img src="../../../.gitbook/assets/14.5-mnist-errors-0-1.png" alt="" width="563"><figcaption><p>14.5 Ошибки классификации MNIST</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/14.5-mnist-errors-0-1.png" alt="" width="563"><figcaption><p>14.11 Ошибки классификации MNIST</p></figcaption></figure></div>
 
 #### Практический результат
 

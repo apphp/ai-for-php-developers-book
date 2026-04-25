@@ -137,7 +137,7 @@ $$
 * область обычных писем
 * область спама
 
-<div align="left"><figure><img src="../../../.gitbook/assets/14.8-spam-decision-boundary.png" alt="" width="563"><figcaption><p>14.8 Граница принятия решения по спаму</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/14.8-spam-decision-boundary.png" alt="" width="563"><figcaption><p>14.6 Граница принятия решения по спаму</p></figcaption></figure></div>
 
 #### Интерпретация
 
