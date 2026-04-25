@@ -91,7 +91,7 @@
     * [Кейс 2. Регрессия: оценка цены квартиры](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/keis-2.-regressiya-ocenka-ceny-kvartiry.md)
     * [Кейс 3. Классификация с RubixML](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/keis-3.-klassifikaciya-s-rubixml.md)
   * [Сквозной кейс: распознавание цифр (MNIST)](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/README.md)
-    * [MNIST: распознавание цифр через kNN (без обучения)](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-raspoznavanie-cifr-cherez-knn-bez-obucheniya.md)
+    * [MNIST: распознавание цифр через k-NN (без обучения)](chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-raspoznavanie-cifr-cherez-k-nn-bez-obucheniya.md)
 * [Decision Trees и разбиение пространства](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/README.md)
   * [Практические кейсы](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/README.md)
     * [Кейс 1. Учебное дерево решений на чистом PHP](chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/prakticheskie-keisy/keis-1.-uchebnoe-derevo-reshenii-na-chistom-php.md)
