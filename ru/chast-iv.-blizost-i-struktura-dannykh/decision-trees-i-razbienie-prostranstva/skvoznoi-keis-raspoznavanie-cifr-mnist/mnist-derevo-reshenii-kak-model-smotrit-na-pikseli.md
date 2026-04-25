@@ -128,7 +128,7 @@ echo 'Точность: ' . round($score * 100, 2) . '%';
 Обработано данных для обучения: 12,666
 Обработано данных для тестирования: 2,116
 
-Точность: 99.92%
+Точность: 99.72%
 ```
 
 **Объяснение:**
@@ -218,5 +218,5 @@ echo 'Точность: ' . round($score * 100, 2) . '%';
 
 Прогресс моделей на MNIST:
 
-<table><thead><tr><th width="193.01953125">Модель</th><th width="181.01171875">Задача</th><th width="168.92578125">Точность</th><th>Комментарий</th></tr></thead><tbody><tr><td><a href="../../../chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-binarnaya-klassifikaciya-otlichaem-0-ot-1.md">Logistic</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>линейная</td></tr><tr><td><a href="../../../chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-veroyatnostnaya-model-klassifikacii-cifr-naive-bayes.md">Naive Bayes</a></td><td>0 vs 1 (binary)</td><td>~98–99%</td><td>простая вероятностная модель, предполагает независимость пикселей</td></tr><tr><td><a href="../../algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-raspoznavanie-cifr-cherez-k-nn-bez-obucheniya.md">k-NN</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>локальная модель, основанная на расстояниях, без обучения</td></tr><tr><td><a href="mnist-derevo-reshenii-kak-model-smotrit-na-pikseli.md">Decision Tree</a></td><td>0 vs 1 (binary)</td><td>~95–98%</td><td>задаёт локальные вопросы к пикселям, игнорирует структуру</td></tr><tr><td>…</td><td>…</td><td>…</td><td>далее: нейросети</td></tr></tbody></table>
+<table><thead><tr><th width="193.01953125">Модель</th><th width="181.01171875">Задача</th><th width="168.92578125">Точность</th><th>Комментарий</th></tr></thead><tbody><tr><td><a href="../../../chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-binarnaya-klassifikaciya-otlichaem-0-ot-1.md">Logistic</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>линейная</td></tr><tr><td><a href="../../../chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-veroyatnostnaya-model-klassifikacii-cifr-naive-bayes.md">Naive Bayes</a></td><td>0 vs 1 (binary)</td><td>~98–99%</td><td>простая вероятностная модель, предполагает независимость пикселей</td></tr><tr><td><a href="../../algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-raspoznavanie-cifr-cherez-k-nn-bez-obucheniya.md">k-NN</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>локальная модель, основанная на расстояниях, без обучения</td></tr><tr><td><a href="mnist-derevo-reshenii-kak-model-smotrit-na-pikseli.md">Decision Tree</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>задаёт локальные вопросы к пикселям, игнорирует структуру</td></tr><tr><td>…</td><td>…</td><td>…</td><td>далее: нейросети</td></tr></tbody></table>
 
