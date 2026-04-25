@@ -82,27 +82,56 @@
 Упрощённый пример (две цифры: 0 и 1):
 
 ```php
+use app\classes\MnistLoader;
+use Rubix\ML\CrossValidation\Metrics\Accuracy;
 use Rubix\ML\Datasets\Labeled;
 use Rubix\ML\Classifiers\ClassificationTree;
+use Rubix\ML\Datasets\Unlabeled;
 
-// $samples — массив из 784 признаков на изображение
-// $labels — соответствующие цифры
+try {
+    $trainRows = MnistLoader::loadIterable('train.csv', categoricalLabels: true, normalize: true, digits: [0, 1]);
+    $testRows = MnistLoader::loadIterable('test.csv', categoricalLabels: true, normalize: true, digits: [0, 1]);
 
-$dataset = new Labeled($samples, $labels);
+    $dataset = Labeled::fromIterator($trainRows);
+    $testDataset = Labeled::fromIterator($testRows);
+} catch (Exception $e) {
+    echo '<div class="alert alert-danger" role="alert">' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . '</div>';
+    exit;
+}
 
-$tree = new ClassificationTree(
-    maxDepth: 10,
-    minSamples: 5
+$model = new ClassificationTree(
+    maxHeight: 10,
+    maxLeafSize: 5
 );
 
-$tree->train($dataset);
+$model->train($dataset);
 
-$prediction = $tree->predict([$image]);
+$predictions = [];
+$testingLabels = $testDataset->labels();
 
-var_dump($prediction);
+foreach ($testDataset->samples() as $i => $x) {
+    $prediction = $model->predict(new Unlabeled([$x]))[0];
+    $predictions[] = $prediction;
+}
+
+$metric = new Accuracy();
+$score = $metric->score($predictions, $testingLabels);
+
+echo 'Обработано данных для обучения: ' . number_format($dataset->numSamples()) . "\n";
+echo 'Обработано данных для тестирования: ' . number_format($testDataset->numSamples()) . "\n\n";
+echo 'Точность: ' . round($score * 100, 2) . '%';
 ```
 
-#### Что начинает происходить
+**Результат:**
+
+```
+Обработано данных для обучения: 12,666
+Обработано данных для тестирования: 2,116
+
+Точность: 99.92%
+```
+
+**Объяснение:**
 
 На практике дерево:
 
@@ -112,7 +141,7 @@ var_dump($prediction);
 
 То есть: оно работает как "набор тестов по координатам", а не как анализ изображения.
 
-#### Почему это ограничение
+**Почему это ограничение**
 
 Изображения имеют структуру:
 
@@ -123,7 +152,7 @@ var_dump($prediction);
 
 Оно делает axis-aligned разбиения: проверяет пиксели по одному, не видит паттерны целиком. В результате: требуется очень глубокое дерево, модель легко переобучается и его точность ограничена.
 
-#### Сравнение с "правильным" подходом
+**Сравнение с "правильным" подходом**
 
 Для изображений лучше подходят:
 
@@ -134,7 +163,7 @@ var_dump($prediction);
 
 Потому что они смотрят не на отдельные пиксели, а на: комбинации пикселей, их формы, текстуры и прочее.
 
-#### Но почему этот кейс важен
+#### Почему этот кейс важен
 
 Несмотря на ограничения, этот кейс даёт очень сильную интуицию.
 
