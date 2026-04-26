@@ -161,7 +161,7 @@ class MnistLoader {
 
 #### **Визуализация**
 
-<div align="left"><figure><img src="../../../.gitbook/assets/14.4-mnist-samples-0-1.png" alt="" width="563"><figcaption><p>14.4 MNIST примеры</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/14.11-mnist-samples-0-1.png" alt=""><figcaption><p>14.11 MNIST примеры цифр 0 и 1</p></figcaption></figure></div>
 
 #### **Как мы будем с этим работать**
 
