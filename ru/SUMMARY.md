@@ -163,6 +163,8 @@
 * [Backpropagation – почему он работает](chast-vi.-attention-i-neiroseti/backpropagation-pochemu-on-rabotaet/README.md)
   * [Практические кейсы](chast-vi.-attention-i-neiroseti/backpropagation-pochemu-on-rabotaet/prakticheskie-keisy/README.md)
     * [MNIST: как нейросеть учится - backpropagation на практике](chast-vi.-attention-i-neiroseti/backpropagation-pochemu-on-rabotaet/prakticheskie-keisy/mnist-kak-neiroset-uchitsya-backpropagation-na-praktike.md)
+* [Свёрточные нейронные сети (CNN)](chast-vi.-attention-i-neiroseti/svyortochnye-neironnye-seti-cnn.md)
+* [Автокодировщики](chast-vi.-attention-i-neiroseti/avtokodirovshiki.md)
 * [Attention как взвешенное суммирование](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/README.md)
   * [Практические кейсы](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/README.md)
     * [Кейс 1. Attention для анализа фишингового письма (чистый PHP)](chast-vi.-attention-i-neiroseti/attention-kak-vzveshennoe-summirovanie/prakticheskie-keisy/keis-1.-attention-dlya-analiza-fishingovogo-pisma-chistyi-php.md)
