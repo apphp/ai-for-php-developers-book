@@ -67,7 +67,7 @@ D3: "собака ест мясо"
 
 Каждое число – это количество вхождений слова.
 
-<div align="left"><figure><img src="../../.gitbook/assets/19.1-bow-vectors.png" alt="" width="563"><figcaption><p>19.1 BOW - Мешок слов</p></figcaption></figure></div>
+<figure><img src="../../.gitbook/assets/19.1-bow-vectors.png" alt=""><figcaption><p>19.1 BOW - Мешок слов: векторы</p></figcaption></figure>
 
 ### Немного математики
 
