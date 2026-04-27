@@ -10,7 +10,7 @@
 
 * как изображение превращается в признаки для дерева
 * какие "вопросы" дерево задаёт пикселям
-* почему дерево решений плохо подходит для изображений, но при этом даёт ценную интуицию
+* почему дерево решений плохо масштабируется на задачи с изображениями, но при этом даёт ценную интуицию
 
 Этот кейс не про достижение высокой точности. Он про понимание того, как модель видит данные.
 
@@ -77,6 +77,8 @@
 
 > модель не видит "форму цифры" – она видит набор условий по пикселям.
 
+При этом комбинация таких условий может косвенно отражать форму, но делает это неэффективно и без явного понимания структуры.
+
 #### Пример на RubixML
 
 Упрощённый пример (две цифры: 0 и 1):
@@ -131,13 +133,15 @@ echo 'Точность: ' . round($score * 100, 2) . '%';
 Точность: 99.72%
 ```
 
+> Важно: здесь рассматривается упрощённая задача (0 vs 1). Эти цифры визуально сильно отличаются, поэтому даже простые модели могут показывать очень высокую точность. На более сложной задаче (10 классов) дерево решений работает значительно хуже.
+
 **Объяснение:**
 
 На практике дерево:
 
-* выбирает несколько "важных" пикселей
+* выбирает подмножество пикселей (часто довольно большое)
 * строит на них правила
-* игнорирует структуру изображения
+* не учитывает пространственную структуру изображения явно
 
 То есть: оно работает как "набор тестов по координатам", а не как анализ изображения.
 
@@ -150,7 +154,7 @@ echo 'Точность: ' . round($score * 100, 2) . '%';
 
 Дерево этого не учитывает.
 
-Оно делает axis-aligned разбиения: проверяет пиксели по одному, не видит паттерны целиком. В результате: требуется очень глубокое дерево, модель легко переобучается и его точность ограничена.
+Оно делает axis-aligned разбиения: проверяет пиксели по одному и не умеет эффективно захватывать паттерны целиком. В результате: требуется очень глубокое дерево, модель легко переобучается и его точность ограничена.
 
 **Сравнение с "правильным" подходом**
 
@@ -170,7 +174,7 @@ echo 'Точность: ' . round($score * 100, 2) . '%';
 Он показывает:
 
 * что любой алгоритм работает с числами
-* что "понимание изображения" – это иллюзия
+* что модели не "понимают" изображение в человеческом смысле
 * что всё сводится к преобразованию признаков
 
 И самое главное: как выглядит decision tree в "сыром" пространстве признаков.
@@ -218,5 +222,5 @@ echo 'Точность: ' . round($score * 100, 2) . '%';
 
 Прогресс моделей на MNIST:
 
-<table><thead><tr><th width="193.01953125">Модель</th><th width="181.01171875">Задача</th><th width="168.92578125">Точность</th><th>Комментарий</th></tr></thead><tbody><tr><td><a href="../../../chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-binarnaya-klassifikaciya-otlichaem-0-ot-1.md">Logistic</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>линейная</td></tr><tr><td><a href="../../../chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-veroyatnostnaya-model-klassifikacii-cifr-naive-bayes.md">Naive Bayes</a></td><td>0 vs 1 (binary)</td><td>~98–99%</td><td>простая вероятностная модель, предполагает независимость пикселей</td></tr><tr><td><a href="../../algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-raspoznavanie-cifr-cherez-k-nn-bez-obucheniya.md">k-NN</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>локальная модель, основанная на расстояниях, без обучения</td></tr><tr><td><a href="mnist-derevo-reshenii-kak-model-smotrit-na-pikseli.md">Decision Tree</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>задаёт локальные вопросы к пикселям, игнорирует структуру</td></tr><tr><td>…</td><td>…</td><td>…</td><td>далее: нейросети</td></tr></tbody></table>
+<table><thead><tr><th width="193.01953125">Модель</th><th width="181.01171875">Задача</th><th width="168.92578125">Точность</th><th>Комментарий</th></tr></thead><tbody><tr><td><a href="../../../chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-binarnaya-klassifikaciya-otlichaem-0-ot-1.md">Logistic</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>линейная</td></tr><tr><td><a href="../../../chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-veroyatnostnaya-model-klassifikacii-cifr-naive-bayes.md">Naive Bayes</a></td><td>0 vs 1 (binary)</td><td>~98–99%</td><td>простая вероятностная модель, предполагает независимость пикселей</td></tr><tr><td><a href="../../algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-raspoznavanie-cifr-cherez-k-nn-bez-obucheniya.md">k-NN</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>локальная модель, основанная на расстояниях, без обучения параметров (запоминает данные)</td></tr><tr><td><a href="mnist-derevo-reshenii-kak-model-smotrit-na-pikseli.md">Decision Tree</a></td><td>0 vs 1 (binary)</td><td>~99%</td><td>задаёт простые пороговые вопросы к отдельным пикселям</td></tr><tr><td>…</td><td>…</td><td>…</td><td>далее: нейросети</td></tr></tbody></table>
 
