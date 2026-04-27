@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 17% (26%)
+Readines&#x73;**:** 16% (24%)
 
-🟩🟩🟩🟩🟨🟩🟩🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟨🟩🟩🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -113,37 +113,41 @@ Section statuses
 26. ⬜ Backpropagation — why it works\
     &#xNAN;_&#x54;he chain rule without academic horror._
 27. ⬜ Convolutional neural networks (CNN)\
-    &#xNAN;_&#x46;ilters, local features, and why images are “understood” as matrices._
+    &#xNAN;_&#x46;ilters, local features, and why images are "understood" as matrices._
 28. ⬜ Autoencoders\
     &#xNAN;_&#x44;ata compression, latent space and login recovery._
-29. ⬜ Attention as weighted summation
+29. Recurrent neural networks (RNN)\
+    &#xNAN;_&#x4D;odels that take into account the context over time._
+30. ⬜ Attention as weighted summation
 
     _Q/K/V formulas + simplified implementation._
 
 #### Part VII. LLMs and Modern AI
 
-30. ⬜ Why LLMs are next-token prediction models\
+31. ⬜ Why LLMs are next-token prediction models\
     &#xNAN;_&#x50;robabilities, softmax, context._
-31. ⬜Why LLMs Behave "Intelligently": RLHF and Behavioral Learning\
+    1. Hands-on: Building a Next-Token Model in PHP
+    2. Practical use cases
+32. ⬜ Why LLMs Behave "Intelligently": RLHF and Behavioral Learning\
     &#xNAN;_&#x46;rom Token Prediction to Useful Responses_
     1. Understanding RLHF in Practice
-32. ⬜ Where LLMs fail mathematically
+33. ⬜ Where LLMs fail mathematically
 
     _Hallucinations, distributions, bias._
 
 #### Part VIII. Agent Systems and Orchestration
 
-33. ⬜ Agent Systems and Multi-Step Reasoning in PHP\
+34. ⬜ Agent Systems and Multi-Step Reasoning in PHP\
     &#xNAN;_&#x4C;LM as a managed system: planning, tools and control._
 
 #### Part IX. Production and Common Sense
 
-33. ⬜ How to use AI in PHP projects\
+35. ⬜ How to use AI in PHP projects\
     &#xNAN;_&#x41;rchitectures, integrations, orchestration._
-34. ⬜ When AI is not needed and why it matters\
+36. ⬜ When AI is not needed and why it matters\
     &#xNAN;_&#x43;lear engineering boundaries._
 
 #### Conclusion
 
-35. ⬜ Where to go next\
+37. ⬜ Where to go next\
     &#xNAN;_&#x57;hat to deepen: mathematics, systems, or practice._
