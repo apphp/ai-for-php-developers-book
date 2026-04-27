@@ -195,7 +195,7 @@ $$
 
 Это очень важно: несмотря на вероятностную природу, граница решений у наивного Байеса часто линейная после лог-преобразования вероятностей (например, в мультиномиальной модели для текста). То есть наивный Байес – это сумма "доказательств" за класс.
 
-<div align="left"><figure><img src="../../.gitbook/assets/15.1-geometry-of-naive-bayes.png" alt="" width="563"><figcaption><p>15.1 Геометрия наивного Байеса</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/15.1-geometry-of-naive-bayes.png" alt=""><figcaption><p>15.1 Геометрия наивного Байеса</p></figcaption></figure></div>
 
 #### Пример: классификация писем
 
@@ -218,7 +218,7 @@ $$
 
 Модель рассматривает каждое слово как независимое "свидетельство" за или против спама.
 
-<div align="left"><figure><img src="../../.gitbook/assets/15.2-voting-of-features.png" alt="" width="563"><figcaption><p>15.2 Голосование признаков</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/15.2-voting-of-features.png" alt=""><figcaption><p>15.2 Голосование признаков</p></figcaption></figure></div>
 
 #### Немного математики
 
