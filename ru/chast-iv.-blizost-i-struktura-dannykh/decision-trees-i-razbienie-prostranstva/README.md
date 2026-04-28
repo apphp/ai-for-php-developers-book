@@ -14,7 +14,7 @@ description: Энтропия, information gain, объяснимость.
 
 Если смотреть на это геометрически, то дерево шаг за шагом разрезает пространство признаков на области. Сначала грубо, потом всё более точно. Каждый новый вопрос уточняет, в какой части пространства мы находимся.
 
-<div align="left"><figure><img src="../../.gitbook/assets/17-1-decision_tree_simple.png" alt="" width="563"><figcaption><p>17.1 Простое дерево решений</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/17.1-decision-tree-simple.png" alt=""><figcaption><p>17.1 Простое дерево решений</p></figcaption></figure></div>
 
 Важно понимать, что дерево не ищет сразу идеальное решение. Оно действует жадно: на каждом шаге выбирает такой вопрос, который прямо сейчас лучше всего упорядочивает данные.
 
@@ -24,7 +24,7 @@ description: Энтропия, information gain, объяснимость.
 
 Сначала может появиться, например, линия $$x1 < 4$$. Затем в одной из половин – линия $$x2 < 7$$. Так постепенно пространство разбивается на мозаику прямоугольников.
 
-<div align="left"><figure><img src="../../.gitbook/assets/17.2-feature_space_splitting.png" alt="" width="563"><figcaption><p>17.2 Разделение пространства признаков</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/17.2-feature-space-splitting.png" alt=""><figcaption><p>17.2 Разделение пространства признаков</p></figcaption></figure></div>
 
 Это ключевое отличие деревьев от линейных моделей. Линейная регрессия или логистическая регрессия проводят одну линейную границу в исходном пространстве признаков. Дерево строит ломаную, ступенчатую границу, приближая даже очень сложные формы.
 
@@ -44,7 +44,7 @@ $$
 
 Если $$p = 0$$ или $$p = 1$$, энтропия равна $$0$$ – никакой неопределённости нет. Если $$p = 0.5$$, энтропия максимальна – мы не можем уверенно угадать класс.
 
-<div align="left"><figure><img src="../../.gitbook/assets/17.3-entropy-curve.png" alt="" width="563"><figcaption><p>17.3 Кривая энтропии</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/17.3-entropy-curve.png" alt=""><figcaption><p>17.3 Кривая энтропии</p></figcaption></figure></div>
 
 Энтропия – это мера неопределённости. Чем она выше, тем сложнее принять решение.
 
