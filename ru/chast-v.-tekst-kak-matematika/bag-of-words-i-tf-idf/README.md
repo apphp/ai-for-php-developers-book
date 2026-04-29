@@ -188,7 +188,7 @@ $$
 * слово часто в документе → вес растёт
 * слово часто во всех документах → вес падает
 
-<div align="left"><figure><img src="../../.gitbook/assets/19.2-tfidf-heatmap.png" alt="" width="563"><figcaption><p>19.2 Тепловая карта, отображающая значения TF-IDF</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/19.2-tfidf-heatmap.png" alt=""><figcaption><p>19.2 Тепловая карта, отображающая значения TF-IDF</p></figcaption></figure></div>
 
 ### Пример расчёта
 
@@ -249,7 +249,7 @@ TF–IDF часто используют вместе с cosine similarity.
 
 Cosine similarity измеряет угол между векторами, а не расстояние между точками.
 
-<div align="left"><figure><img src="../../.gitbook/assets/19.3-cosine-vectors.png" alt="" width="563"><figcaption><p>19.3 Косинусное сходство документов</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/19.3-cosine-vectors.png" alt=""><figcaption><p>19.3 Косинусное сходство документов</p></figcaption></figure></div>
 
 ### Ограничения Bag of Words и TF–IDF
 

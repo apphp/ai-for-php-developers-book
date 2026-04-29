@@ -20,7 +20,7 @@ $$
 
 Где $$d$$ – размерность пространства, а каждая координата не имеет отдельного человеческого смысла. Важно не значение координат, а геометрические отношения между векторами.
 
-<div align="left"><figure><img src="../../.gitbook/assets/20.1-embedding-space-overview.png" alt="" width="563"><figcaption><p>20.1 Обзор embedding-пространства</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/20.1-embedding-space-overview.png" alt=""><figcaption><p>20.1 Обзор embedding-пространства</p></figcaption></figure></div>
 
 ### Геометрия вместо логики
 
@@ -42,7 +42,7 @@ $$
 
 Важно заметить: нас интересует угол между векторами, а не их длина. Длина вектора часто нормализуется и перестает нести смысловую нагрузку.
 
-<div align="left"><figure><img src="../../.gitbook/assets/20.2-cosine-similarity.png" alt="" width="563"><figcaption><p>20.2 Косинусное сходство</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/20.2-cosine-similarity.png" alt=""><figcaption><p>20.2 Косинусное сходство</p></figcaption></figure></div>
 
 ### Почему embeddings работают
 
@@ -94,7 +94,7 @@ $$
 
 Это не трюк и не заранее запрограммированное правило. Модель просто выучила, что определенные направления в пространстве соответствуют устойчивым семантическим сдвигам: пол, время, степень, роль.
 
-<div align="left"><figure><img src="../../.gitbook/assets/20.3-semantic-analogy.png" alt="" width="563"><figcaption><p>20.3 Семантическая Аналогия</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/20.3-semantic-analogy.png" alt=""><figcaption><p>20.3 Семантическая Аналогия</p></figcaption></figure></div>
 
 Важно понимать: embeddings не хранят знания в виде фактов. Они хранят геометрию отношений.
 
