@@ -116,7 +116,7 @@ $$
 
 Где $$\vec{q}$$  – embedding запроса, а $$\vec{d}$$  – embedding документа.
 
-<div align="left"><figure><img src="../../.gitbook/assets/20.4-semantic-search-pipeline.png" alt="" width="563"><figcaption><p>20.4 Семантический конвейер поиска</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/20.4-semantic-search-pipeline.png" alt=""><figcaption><p>20.4 Семантический конвейер поиска</p></figcaption></figure></div>
 
 ### Почему semantic search лучше keyword search
 
