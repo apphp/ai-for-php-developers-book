@@ -1,3 +1,7 @@
+---
+description: Практическое применение готовой модели без "чёрного ящика".
+---
+
 # Кейс 2. Классификация с помощью RubixML
 
 В предыдущем кейсе мы разобрали учебную реализацию дерева решений на чистом PHP и увидели механику алгоритма изнутри. Теперь рассмотрим ту же задачу, но уже с использованием готовой библиотеки. Цель этого кейса – показать, как знакомая [логика энтропии](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#logika-entropii) и [information gain](../../../vvedenie/zaklyuchitelnye-materialy/glossarii.md#information-gain-prirost-informacii) применяется в реальном инструменте и как decision tree интегрируется в обычный PHP-проект.
