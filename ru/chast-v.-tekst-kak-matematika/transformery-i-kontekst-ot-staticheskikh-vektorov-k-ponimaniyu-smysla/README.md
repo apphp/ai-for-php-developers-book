@@ -118,7 +118,7 @@ $$
 
 В итоге итоговый вектор слова – это объединение нескольких разных взглядов на контекст.
 
-<div align="left"><figure><img src="../../.gitbook/assets/21.3-multi-head.attention.png" alt="" width="563"><figcaption><p>21.3 Многоголовочное (multi-head) внимание</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/21.3-multi-head.attention.png" alt=""><figcaption><p>21.3 Многоголовочное (multi-head) внимание</p></figcaption></figure></div>
 
 ### Мини-пример на PHP: внимание как веса
 
