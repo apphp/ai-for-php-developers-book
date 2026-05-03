@@ -54,11 +54,13 @@ function entropy(array $labels): float {
     $total = count($labels);
     $entropy = 0.0;
     
-    if ($total) {
-        foreach ($counts as $count) {
-            $p = $count / $total;
-            $entropy -= $p * log($p, 2);
-        }
+    if (!$total) {
+        return $entropy;
+    }
+    
+    foreach ($counts as $count) {
+        $p = $count / $total;
+        $entropy -= $p * log($p, 2);
     }
     
     return $entropy;
