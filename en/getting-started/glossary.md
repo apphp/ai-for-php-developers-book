@@ -30,25 +30,6 @@ An algorithm is a finite sequence of steps that transforms input data into a res
 
 It is important to distinguish between a model and an algorithm: a model is the form of the relationship, while an algorithm is the method used to train or apply it.
 
-#### **Prior and Posterior Probability**
-
-Prior probability is the probability of an event before taking new data into account.\
-Posterior probability is the probability after incorporating observations.
-
-The relationship between them is described by Bayes’ theorem:
-
-$$
-posterior ∝ likelihood × prior
-$$
-
-Intuitively, the prior is "what we believed beforehand", while the posterior is "what we believe after seeing the data."
-
-Example:
-
-If we know that 1% of emails are spam (the prior probability), and an email contains typical spam indicators, then after taking those indicators into account, the probability that the email is spam increases - that is the posterior probability.
-
-Here’s a clean English version adapted for your _AI with PHP_ book:
-
 #### **Affine Transformation**
 
 An affine transformation is a transformation of the form:
@@ -89,6 +70,17 @@ Attention mechanisms are at the core of transformers and modern language models.
 
 Intuitively, attention can be seen as a dynamic focusing mechanism: the model continuously decides which parts of the input are important at each step. From a practical perspective, attention is a generalization of vector similarity, scaled up to the level of entire models.
 
+#### Autoencoders
+
+Autoencoders are neural network models that learn to compress data into a compact representation (code) and then reconstruct it.
+
+They consist of two parts:
+
+* encoder (compression)
+* decoder (reconstruction)
+
+They are used for dimensionality reduction, noise removal, and embedding training.
+
 #### **Auto-scaling**
 
 Auto-scaling is a mechanism for automatically adjusting a system’s computational resources based on workload.
@@ -103,11 +95,68 @@ When the number of requests increases, the system automatically adds computation
 
 From a practical perspective, auto-scaling is not about the model itself, but about its lifecycle within a real system: even a good model becomes useless if it cannot handle the load.
 
+#### **Backpropagation (error backpropagation)**
+
+Backpropagation, or backprop, is an algorithm for computing the gradients of a loss function with respect to the parameters of a neural network by sequentially applying the chain rule from the model’s output back to its inputs.
+
+The key idea of backprop is that the error computed at the network’s output is propagated backward through the layers, making it possible to determine the contribution of each parameter to the final error.
+
+Mathematically, backprop is based on the chain rule of derivatives. Each layer receives the gradient from the next layer, multiplies it by its local derivative, and passes it further backward.
+
+Backprop is not a standalone learning algorithm; rather, it is a mechanism for computing gradients. The parameters themselves are updated using gradient descent, SGD, or their variants.
+
+In practical terms, backprop makes it possible to train deep, multi-layer models. Without it, computing gradients for neural networks would be computationally impractical.
+
+Intuitively, backprop can be seen as a step-by-step analysis of the error: the model identifies which layer and which weights are responsible for an incorrect prediction and adjusts them accordingly.
+
+#### **Bag-of-Words (BoW)**
+
+Bag-of-Words (BoW) is a method for representing text as a numerical vector. Each element of the vector corresponds to a word in a vocabulary, and its value indicates how many times that word appears in the text.
+
+In this representation, word order is completely ignored. For example, the phrases “PHP loves ML” and “ML loves PHP” will have identical representations.
+
+BoW is simple, fast, and well-suited for initial experiments, but it does a poor job of capturing meaning and context.
+
+#### **Base Rate Neglect**
+
+Base rate neglect is a cognitive bias in which the prior probability of an event (the base rate) is ignored, and attention is focused only on new evidence or observed features.
+
+In simpler terms, it is a situation where a person or a model fails to take into account how rare an event actually is.
+
+**Example:**&#x20;
+
+If a disease occurs in 1% of the population and a test has 95% accuracy, many people overestimate the probability of having the disease after a positive result. In practice, without considering the base rate, the true probability can be significantly lower than expected.
+
+In machine learning, base rate neglect appears when:
+
+* class imbalance is ignored
+* prior probabilities are not taken into account
+* models are evaluated using accuracy alone
+* the data distribution is overlooked
+
+This effect is directly related to:
+
+* prior and posterior probabilities
+* Bayes’ theorem
+* probability calibration
+
+Intuitively, base rate neglect is the error of thinking:
+
+"The evidence looks convincing, so the event almost certainly occurred", even though the event itself may be extremely rare.
+
+In practical applications, ignoring base rates can lead to overestimating risks, making incorrect decisions, and misinterpreting model results.
+
+#### Batch
+
+A batch is a group of samples that a model processes in a single training step.
+
+Instead of using the entire dataset at once or updating parameters after each individual example, the model updates its parameters using small subsets of the data.
+
+Intuitively, a batch is a "small portion of data for one training step".
 
 
-\>>>
 
-
+\>>>>>>>>>
 
 #### **Feature Engineering**
 
@@ -128,3 +177,20 @@ The quality of feature engineering often has a greater impact on performance tha
 Intuitively, feature engineering is the process of translating reality into a language that the model can understand.
 
 From a practical perspective, feature engineering is a key competency in applied machine learning, especially when working with limited data and classical algorithms.
+
+#### **Prior and Posterior Probability**
+
+Prior probability is the probability of an event before taking new data into account.\
+Posterior probability is the probability after incorporating observations.
+
+The relationship between them is described by Bayes’ theorem:
+
+$$
+posterior ∝ likelihood × prior
+$$
+
+Intuitively, the prior is "what we believed beforehand", while the posterior is "what we believe after seeing the data."
+
+Example:
+
+If we know that 1% of emails are spam (the prior probability), and an email contains typical spam indicators, then after taking those indicators into account, the probability that the email is spam increases - that is the posterior probability.

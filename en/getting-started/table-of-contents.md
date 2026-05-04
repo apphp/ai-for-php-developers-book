@@ -151,3 +151,14 @@ Section statuses
 
 37. ⬜ Where to go next\
     &#xNAN;_&#x57;hat to deepen: mathematics, systems, or practice._
+
+
+
+{% hint style="success" %}
+#### Support the book
+
+If you find this material useful, you can support the development of the book.\
+This helps continue the work and speeds up the release of new chapters.\
+\
+❤️ [Support the book](https://github.com/sponsors/apphp?o=esb)
+{% endhint %}

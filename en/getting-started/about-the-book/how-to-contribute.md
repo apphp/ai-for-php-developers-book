@@ -41,3 +41,13 @@ This book is about practice and experience.
 
 Everyone who contributes will be acknowledged.\
 If you are unsure whether you should write – you probably should 🙂
+
+
+
+{% hint style="success" %}
+#### Support the book
+
+If you don’t have time to contribute but find the book useful, you can support its development financially. This helps continue working on the materials and improving them.\
+\
+❤️ [Support the book](https://github.com/sponsors/apphp?o=esb)
+{% endhint %}
