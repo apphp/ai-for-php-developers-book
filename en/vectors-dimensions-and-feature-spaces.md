@@ -211,7 +211,7 @@ The distance between two points $$||x − y||$$ reflects how similar they are. T
 
 That’s why even very different models ultimately reduce to geometric operations on vectors.
 
-<div align="left"><figure><img src=".gitbook/assets/8.1-points-in-2d-feature-space.png" alt="" width="563"><figcaption><p>8.1 Points in 2D feature space</p></figcaption></figure></div>
+<div align="left"><figure><img src=".gitbook/assets/8.1-points-in-2d-feature-space.png" alt=""><figcaption><p>8.1 Points in 2D feature space</p></figcaption></figure></div>
 
 #### **Geometric meaning of distances and angles**
 
@@ -240,7 +240,7 @@ This is directly used, for example, when comparing text embeddings or user profi
 
 From a machine learning perspective, this means something simple: two objects can be considered similar not because they are close in all coordinates, but because they "point" in the same direction in feature space.
 
-<div align="left"><figure><img src=".gitbook/assets/8.2-angle-between-2-vectors.png" alt="" width="563"><figcaption><p>8.2 Angle between two vectors</p></figcaption></figure></div>
+<div align="left"><figure><img src=".gitbook/assets/8.2-angle-between-2-vectors.png" alt=""><figcaption><p>8.2 Angle between two vectors</p></figcaption></figure></div>
 
 #### **Connection to specific algorithms**
 
@@ -251,6 +251,8 @@ In other words, its entire behavior is determined by how we measure distance bet
 That’s why feature scaling is critical for k-NN. If features are on different scales, distances will be dominated by features with the largest values, regardless of their actual importance.
 
 Mathematically, for a new vector $$\mathbf{x}$$, we look for vectors $$xᵢ$$ from the training set such that the distance $$d(x, xᵢ)$$ is minimal.
+
+<figure><img src=".gitbook/assets/8.3-knn-in-feature-space.png" alt=""><figcaption><p>8.3 k-NN algorithm in feature space</p></figcaption></figure>
 
 The function below implements the classic Euclidean distance between two points:
 
