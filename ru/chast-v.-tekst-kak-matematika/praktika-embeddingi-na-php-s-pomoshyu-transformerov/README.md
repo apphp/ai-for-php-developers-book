@@ -60,7 +60,7 @@ $$
 
 Она отвечает на вопрос: "насколько одинаково направлены два вектора". Для эмбеддингов это обычно важнее, чем их длина. Подробно мы разбирали эту тему в главе "[Расстояния и сходство](../../chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/)".
 
-<div align="left"><figure><img src="../../.gitbook/assets/22.1-cosine-similarity-vectors.png" alt="" width="563"><figcaption><p>23.1 Векторы косинусного сходства</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/23.1-cosine-similarity-vectors.png" alt=""><figcaption><p>23.1 Векторы косинусного сходства</p></figcaption></figure></div>
 
 ### Трансформер как чёрный ящик
 
