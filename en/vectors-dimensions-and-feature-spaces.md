@@ -284,6 +284,8 @@ A more "engineering-style" way to say this:
 
 > A linear model splits the feature space with a hyperplane, and the sign of the linear function determines the class of the object.
 
+<figure><img src=".gitbook/assets/8.4-linear-decision-boundary.png" alt=""><figcaption><p>8.4 Linear decision boundary</p></figcaption></figure>
+
 The function below computes:
 
 $$
@@ -336,6 +338,8 @@ $$
 Then applies a nonlinear activation function. Geometrically, this means the space is first linearly rotated and stretched, and then nonlinearly "bent". After several such transformations, data that was not linearly separable becomes separable.
 
 Regardless of architectural complexity, the input to a neural network is always the same – a vector of fixed dimensionality.
+
+<figure><img src=".gitbook/assets/8.5-nonlinear-transformation-of-space.png" alt=""><figcaption><p>8.5 Nonlinear transformation of space</p></figcaption></figure>
 
 ### **High dimensionality and its consequences**
 
