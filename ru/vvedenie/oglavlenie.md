@@ -22,23 +22,23 @@
 
 ### Введение
 
-1.  **Дисклеймер**
+1.  [**Дисклеймер**](diskleimer.md)
 
     _О границах книги, допущениях и ответственности._
-2. **Введение**\
+2. [**Введение**](vvedenie/)\
    &#xNAN;_&#x41C;отивация, реалии и цели книги._
-   1. От понимания – к математике и реализации
-   2. Зачем PHP-разработчику AI
-3. **Экосистема ML в PHP**\
+   1. [От понимания – к математике и реализации](vvedenie/ot-ponimaniya-k-matematike-i-realizacii.md)
+   2. [Зачем PHP-разработчику AI](vvedenie/zachem-php-razrabotchiku-ai.md)
+3. [**Экосистема ML в PHP**](ekosistema-ml-v-php/)\
    &#xNAN;_&#x41E;бзор экосистемы PHP для машинного обучения и научных вычислений._
-   1. Настройка среды для PHP
-4. **О книге**
-   1. Лицензия и авторские права
-   2. Как контрибьютить
-   3. История изменений книги
-   4. Что дальше
-5. **Глоссарий**
-6. **Ресурсы и литература**
+   1. [Настройка среды для PHP](ekosistema-ml-v-php/nastroika-sredy-dlya-php/)
+4. [**О книге**](o-knige/)
+   1. [Лицензия и авторские права](o-knige/licenziya-i-avtorskie-prava.md)
+   2. [Как контрибьютить](o-knige/kak-kontribyutit.md)
+   3. [История изменений книги](o-knige/istoriya-izmenenii-knigi.md)
+   4. [Что дальше](o-knige/chto-dalshe.md)
+5. [**Глоссарий**](zaklyuchitelnye-materialy/glossarii.md)
+6. [**Ресурсы и литература**](resursy-i-literatura.md)
 
 ### Часть I. Математический язык AI
 
