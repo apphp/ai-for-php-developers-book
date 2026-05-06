@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 16% (29%)
+Readines&#x73;**:** 16% (31%)
 
-🟩🟩🟩🟩🟨🟩🟩🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟨🟩🟩🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -53,7 +53,7 @@ Section statuses
 10. 🟨 Error, loss functions, and why they are needed\
     &#xNAN;_&#x4D;SE, log loss – without formal hell._
     1. Practical use cases
-11. ⬜ Linear regression as a base model\
+11. 🟨 Linear regression as a base model\
     &#xNAN;_&#x46;ormula, geometric meaning, PHP implementation._
     1. Practical use cases
 12. ⬜ Gradient descent explained on fingers\

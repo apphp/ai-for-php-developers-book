@@ -32,3 +32,4 @@
 ## Part II. Learning as Optimization
 
 * [Error, loss functions, and why they are needed](part-ii.-learning-as-optimization/error-loss-functions-and-why-they-are-needed.md)
+* [Linear regression as a base model](part-ii.-learning-as-optimization/linear-regression-as-a-base-model.md)

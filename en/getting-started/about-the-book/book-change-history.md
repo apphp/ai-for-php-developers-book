@@ -2,11 +2,12 @@
 
 This book evolves gradually. New chapters are added, existing ones are revised and clarified, code examples are updated, and explanations become more precise over time. Below is a record of the key changes, so readers can see what was updated and when.
 
-#### dsfdsf
+#### Current version
 
 Added:
 
 * New chapter "Error, loss functions, and why they are needed" in Part II. Learning as Optimization
+* New chapter "Linear regression as a base model" in Part II. Learning as Optimization&#x20;
 
 Changes:
 
