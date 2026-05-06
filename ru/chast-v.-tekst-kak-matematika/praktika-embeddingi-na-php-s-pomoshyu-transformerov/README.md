@@ -74,7 +74,7 @@ text → tokens → embeddings → pooling → vector
 
 Тем не менее полезно иметь интуицию.
 
-<div align="left"><figure><img src="../../.gitbook/assets/22.2-transformer-overview.png" alt="" width="563"><figcaption><p>23.2 Обзор трансформера</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/23.2-transformer-overview.png" alt=""><figcaption><p>23.2 Обзор трансформера</p></figcaption></figure></div>
 
 ### Рассмотрим TransformersPHP как инженерный инструмент
 
@@ -112,7 +112,7 @@ Embedding (vector)
 Vector DB / поиск / логика
 ```
 
-<div align="left"><figure><img src="../../.gitbook/assets/22.3-embedding-pipeline.png" alt="" width="563"><figcaption><p>23.3 Конвейер встраивания (embedding pipeline) </p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/23.3-embedding-pipeline.png" alt=""><figcaption><p>23.3 Конвейер встраивания (embedding pipeline) </p></figcaption></figure></div>
 
 ### Первый пример: получение эмбеддинга текста
 
