@@ -31,6 +31,8 @@ $$
 
 If $$n = 1$$, this is the distance between points on a line; if $$n = 2$$ , it is the distance on a plane; if $$n = 3$$  – in three-dimensional space, and so on. If $$n = 100$$ or, say, $$768$$, the geometry is essentially the same – we just cannot visualize it directly, because humans cannot perceive spaces with more than three dimensions.
 
+<figure><img src=".gitbook/assets/9.1-euclidean-distance.png" alt=""><figcaption><p>9.1 Euclidean distance in 2D</p></figcaption></figure>
+
 On a plane, it is very intuitive: two points and a segment between them. In machine learning, we do exactly the same thing, just in higher-dimensional space.
 
 As you may remember from the previous chapter, Euclidean distance is sensitive to scale. That is why data is often normalized or standardized before using it, especially when features have different scales.
