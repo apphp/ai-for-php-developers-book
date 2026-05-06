@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 16% (24%)
+Readines&#x73;**:** 16% (29%)
 
-🟩🟩🟩🟩🟨🟩🟩🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟨🟩🟩🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -50,7 +50,7 @@ Section statuses
 
 #### Part II. Learning as Optimization
 
-10. ⬜ Error, loss functions, and why they are needed\
+10. 🟨 Error, loss functions, and why they are needed\
     &#xNAN;_&#x4D;SE, log loss – without formal hell._
     1. Practical use cases
 11. ⬜ Linear regression as a base model\

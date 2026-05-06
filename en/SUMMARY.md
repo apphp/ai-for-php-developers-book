@@ -28,3 +28,7 @@
 * [What a model is in the mathematical sense](what-a-model-is-in-the-mathematical-sense.md)
 * [Vectors, dimensions, and feature spaces](vectors-dimensions-and-feature-spaces.md)
 * [Distances and similarity](distances-and-similarity.md)
+
+## Part II. Learning as Optimization
+
+* [Error, loss functions, and why they are needed](part-ii.-learning-as-optimization/error-loss-functions-and-why-they-are-needed.md)

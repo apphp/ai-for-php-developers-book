@@ -2,7 +2,17 @@
 
 This book evolves gradually. New chapters are added, existing ones are revised and clarified, code examples are updated, and explanations become more precise over time. Below is a record of the key changes, so readers can see what was updated and when.
 
-#### Current version
+#### dsfdsf
+
+Added:
+
+* New chapter "Error, loss functions, and why they are needed" in Part II. Learning as Optimization
+
+Changes:
+
+* added illustrations in chapter "Vectors, dimensions, and feature spaces"
+
+#### _April 2026_
 
 Added:
 

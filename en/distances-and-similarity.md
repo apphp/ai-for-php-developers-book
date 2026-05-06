@@ -95,6 +95,8 @@ $$
 |x| = \sqrt{x \cdot x}
 $$
 
+<figure><img src=".gitbook/assets/9.2-two-vectors-and-angle-between-them.png" alt=""><figcaption><p>9.2 Two vectors and the angle between them</p></figcaption></figure>
+
 The dot product becomes larger when two conditions are met at the same time:
 
 1. The vectors point in nearly the same direction\
