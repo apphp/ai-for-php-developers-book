@@ -12,6 +12,7 @@ Added:
 Changes:
 
 * added illustrations in chapter "Vectors, dimensions, and feature spaces"
+* added illustrations in chapter "Distances and similarity"
 
 #### _April 2026_
 

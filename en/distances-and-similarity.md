@@ -117,6 +117,8 @@ So it is not a "pure" similarity measure. Two vectors may point in exactly the s
 
 In machine learning, this behavior is used intentionally. In linear models, a large dot product means strong activation. In neural networks and [attention mechanisms](getting-started/glossary.md#attention-mechanism), it is interpreted as a measure of importance or relevance.
 
+<figure><img src=".gitbook/assets/9.3-dot-product-as-proection-one-vertor-into-another.png" alt=""><figcaption><p>9.3 Dot product as a projection of one vector onto another</p></figcaption></figure>
+
 Geometrically, $$x \cdot y$$ can be interpreted as the length of the projection of one vector onto the direction of the other, multiplied by the length of the second vector.
 
 **PHP example**
@@ -159,7 +161,7 @@ As mentioned in the previous chapter, cosine similarity answers the question: ho
 It is defined as (you can see it follows directly from the dot product formula):
 
 $$
-\text{cosine_sim}(x, y) = \frac{x \cdot y}{|x| |y|}
+\text{cosine\_sim}(x, y) = \frac{x \cdot y}{|x| |y|}
 $$
 
 The result ranges from -1 to 1. While negative values are rare in practical NLP and embedding tasks, they are mathematically possible:
@@ -167,6 +169,8 @@ The result ranges from -1 to 1. While negative values are rare in practical NLP 
 * 1 – same direction
 * 0 – orthogonal vectors
 * -1 – opposite directions
+
+<figure><img src=".gitbook/assets/9.4-same-angle-different-vector-lengths.png" alt=""><figcaption><p>9.4 Same angle, different vector lengths</p></figcaption></figure>
 
 What matters in this illustration: the lengths differ, but the angle is the same – so the cosine similarity is the same.
 
