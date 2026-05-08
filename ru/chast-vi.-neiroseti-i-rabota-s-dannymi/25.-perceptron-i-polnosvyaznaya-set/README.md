@@ -256,17 +256,19 @@ class Perceptron
 Представим, что мы делаем два слоя:
 
 $$
-h = W_1 x + b_1 
-\\
-y = W_2 h + b_2
+\begin{aligned}
+h &= W_1 x + b_1 \\
+y &= W_2 h + b_2
+\end{aligned}
 $$
 
 Если нет активации, то:
 
 $$
-y = W_2 (W_1 x + b_1) + b_2
-\\
-y = (W_2 W_1)x + (W_2 b_1 + b_2)
+\begin{aligned}
+y &= W_2 (W_1 x + b_1) + b_2 \\
+y &= (W_2 W_1)x + (W_2 b_1 + b_2)
+\end{aligned}
 $$
 
 Это снова линейная модель.
