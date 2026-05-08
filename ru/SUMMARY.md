@@ -4,7 +4,7 @@
 
 * [Титульный лист](README.md)
 * [Оглавление](vvedenie/oglavlenie.md)
-* [1. Дисклеймер 11](vvedenie/1.-diskleimer-11.md)
+* [1. Дисклеймер](vvedenie/1.-diskleimer.md)
 * [2. Введение](vvedenie/2.-vvedenie/README.md)
   * [От понимания – к математике и реализации](vvedenie/2.-vvedenie/ot-ponimaniya-k-matematike-i-realizacii.md)
   * [Зачем PHP-разработчику AI](vvedenie/2.-vvedenie/zachem-php-razrabotchiku-ai.md)

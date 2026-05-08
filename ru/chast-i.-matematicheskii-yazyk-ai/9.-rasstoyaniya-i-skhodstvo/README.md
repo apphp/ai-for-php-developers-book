@@ -18,8 +18,10 @@ description: Евклидово расстояние, dot product, cosine simila
 Если у нас есть два вектора
 
 $$
-x = (x_1, x_2, \dots, x_n) \\ 
-y = (y_1, y_2, \dots, y_n)
+\begin{aligned}
+x &= (x_1, x_2, \dots, x_n) \\
+y &= (y_1, y_2, \dots, y_n)
+\end{aligned}
 $$
 
 то евклидово расстояние между ними определяется формулой:
