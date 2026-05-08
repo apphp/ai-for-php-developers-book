@@ -75,9 +75,11 @@ $$
 Если:
 
 $$
-L = L(a) \\
-a = f(z) \\
-z = wx
+\begin{aligned}
+L &= L(a) \\
+a &= f(z) \\
+z &= wx
+\end{aligned}
 $$
 
 То:
@@ -145,8 +147,10 @@ $$
 Для сигмоиды:
 
 $$
-a(1 - a) \\ 
-0.73 * 0.27 ≈ 0.197
+\begin{aligned}
+a(1 - a) \\
+0.73 \times 0.27 &\approx 0.197
+\end{aligned}
 $$
 
 #### 3. $$\frac{dz}{dw}$$
@@ -170,9 +174,11 @@ $$
 Пусть есть:
 
 $$
-x → h → y \\
-h = f(w_1 x) \\
-y = g(w_2 h)
+\begin{aligned}
+x &\to h \to y \\
+h &= f(w_1 x) \\
+y &= g(w_2 h)
+\end{aligned}
 $$
 
 Ошибка:

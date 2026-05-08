@@ -312,9 +312,10 @@ ReLU стал стандартом в глубоких сетях благода
 MLP (Multi-Layer Perceptron) – это несколько слоев перцептронов:
 
 $$
-h = \phi(W_1 x + b_1)
-\\
-y = \phi(W_2 h + b_2)
+\begin{aligned}
+h &= \phi(W_1 x + b_1) \\
+y &= \phi(W_2 h + b_2)
+\end{aligned}
 $$
 
 
