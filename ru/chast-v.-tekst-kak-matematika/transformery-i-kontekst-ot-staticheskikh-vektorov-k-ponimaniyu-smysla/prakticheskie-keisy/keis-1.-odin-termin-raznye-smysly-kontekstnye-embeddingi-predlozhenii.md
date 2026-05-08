@@ -75,8 +75,8 @@ function cosineSimilarity(array $a, array $b): float {
     return $dot / (sqrt($normA) * sqrt($normB));
 }
 
-echo cosineSimilarity($vectors[0], $vectors[1]) . PHP_EOL;
-echo cosineSimilarity($vectors[0], $vectors[2]) . PHP_EOL;
+echo cosineSimilarity($vectors[0], $vectors[1]);
+echo cosineSimilarity($vectors[0], $vectors[2]);
 
 ```
 
