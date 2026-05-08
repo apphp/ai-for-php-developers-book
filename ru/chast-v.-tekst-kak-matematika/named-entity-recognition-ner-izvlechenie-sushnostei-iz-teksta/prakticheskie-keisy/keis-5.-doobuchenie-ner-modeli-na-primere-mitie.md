@@ -112,11 +112,15 @@ LOCATION → Berlin
 
 Формально:
 
-h\_i = \text{features}(x\_i)<br>
+$$
+h_i = \text{features}(x_i)
+$$
 
-\text{score} = W h\_i + b
 
 
+$$
+\text{score} = W h_i + b
+$$
 
 Оптимизация – минимизация ошибки классификации.
 
