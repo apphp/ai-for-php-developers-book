@@ -47,7 +47,7 @@ $features = [0.12, 0.85, 0.33, 0.67, 0.91, 0.44, 0.58, 0.76, 0.29, 0.50];
 
 try {
     $result = predict($features);
-    echo "Model score: " . round($result, 3) . PHP_EOL;
+    echo "Model score: " . round($result, 3) . "\n";
     
     // Interpret the result
     if ($result > 0.7) {
@@ -150,7 +150,7 @@ $std  = 2.0;   // standard deviation
 
 $zScore = standardize($value, $mean, $std);
 
-echo "Z-score: " . round($zScore, 2) . PHP_EOL;
+echo "Z-score: " . round($zScore, 2) . "\n";
 
 // Interpretation
 if ($zScore > 2) {
@@ -186,8 +186,8 @@ function encodeColor(string $color): array {
     ];
 }
 
-echo 'Red: ' . encodeColor(color: 'red') . PHP_EOL;
-echo 'Green: ' . encodeColor(color: 'green') . PHP_EOL;
+echo 'Red: ' . encodeColor(color: 'red') . "\n";
+echo 'Green: ' . encodeColor(color: 'green') . "\n";
 echo 'Blue: ' . encodeColor(color: 'blue');
 
 // Red:   [1, 0, 0]
