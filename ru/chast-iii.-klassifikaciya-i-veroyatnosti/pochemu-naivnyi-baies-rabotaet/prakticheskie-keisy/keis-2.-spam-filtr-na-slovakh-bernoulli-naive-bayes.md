@@ -97,8 +97,8 @@ $vocabulary = array_keys($vocabulary);
 
 Например:
 
-* $$P("free" \mid spam)$$
-* $$P("meeting" \mid ham)$$
+* $$P(\text{free} \mid \text{spam})$$
+* $$P(\text{meeting} \mid \text{ham})$$
 
 Каждое слово рассматривается отдельно – это и есть предположение условной независимости.
 
