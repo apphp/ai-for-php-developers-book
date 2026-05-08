@@ -22,77 +22,77 @@
 
 ### Введение
 
-1.  [**Дисклеймер**](diskleimer.md)
+1.  [**Дисклеймер**](1.-diskleimer.md)
 
     _О границах книги, допущениях и ответственности._
-2. [**Введение**](vvedenie/)\
+2. [**Введение**](2.-vvedenie/)\
    &#xNAN;_&#x41C;отивация, реалии и цели книги._
-   1. [От понимания – к математике и реализации](vvedenie/ot-ponimaniya-k-matematike-i-realizacii.md)
-   2. [Зачем PHP-разработчику AI](vvedenie/zachem-php-razrabotchiku-ai.md)
-3. [**Экосистема ML в PHP**](ekosistema-ml-v-php/)\
+   1. [От понимания – к математике и реализации](2.-vvedenie/ot-ponimaniya-k-matematike-i-realizacii.md)
+   2. [Зачем PHP-разработчику AI](2.-vvedenie/zachem-php-razrabotchiku-ai.md)
+3. [**Экосистема ML в PHP**](3.-ekosistema-ml-v-php/)\
    &#xNAN;_&#x41E;бзор экосистемы PHP для машинного обучения и научных вычислений._
-   1. [Настройка среды для PHP](ekosistema-ml-v-php/nastroika-sredy-dlya-php/)
-4. [**О книге**](o-knige/)
-   1. [Лицензия и авторские права](o-knige/licenziya-i-avtorskie-prava.md)
-   2. [Как контрибьютить](o-knige/kak-kontribyutit.md)
-   3. [История изменений книги](o-knige/istoriya-izmenenii-knigi.md)
-   4. [Что дальше](o-knige/chto-dalshe.md)
-5. [**Глоссарий**](zaklyuchitelnye-materialy/glossarii.md)
-6. [**Ресурсы и литература**](resursy-i-literatura.md)
+   1. [Настройка среды для PHP](3.-ekosistema-ml-v-php/nastroika-sredy-dlya-php/)
+4. [**О книге**](4.-o-knige/)
+   1. [Лицензия и авторские права](4.-o-knige/licenziya-i-avtorskie-prava.md)
+   2. [Как контрибьютить](4.-o-knige/kak-kontribyutit.md)
+   3. [История изменений книги](4.-o-knige/istoriya-izmenenii-knigi.md)
+   4. [Что дальше](4.-o-knige/chto-dalshe.md)
+5. [**Глоссарий**](5.-glossarii.md)
+6. [**Ресурсы и литература**](6.-resursy-i-literatura.md)
 
 ### Часть I. Математический язык AI
 
-7. [**Что такое модель в математическом смысле**](../chast-i.-matematicheskii-yazyk-ai/chto-takoe-model-v-matematicheskom-smysle.md)\
+7. [**Что такое модель в математическом смысле**](../chast-i.-matematicheskii-yazyk-ai/7.-chto-takoe-model-v-matematicheskom-smysle.md)\
    &#xNAN;_&#x424;ункция, параметры, ошибка._
-8. [**Векторы, размерности и пространства признаков**](../chast-i.-matematicheskii-yazyk-ai/vektory-razmernosti-i-prostranstva-priznakov.md)\
+8. [**Векторы, размерности и пространства признаков**](../chast-i.-matematicheskii-yazyk-ai/8.-vektory-razmernosti-i-prostranstva-priznakov.md)\
    &#xNAN;_&#x41F;очему данные – это точки в пространстве._
-9. [**Расстояния и сходство**](../chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/)\
+9. [**Расстояния и сходство**](../chast-i.-matematicheskii-yazyk-ai/9.-rasstoyaniya-i-skhodstvo/)\
    &#xNAN;_&#x415;вклидово расстояние, dot product, cosine similarity._
-   1. [Практические кейсы](../chast-i.-matematicheskii-yazyk-ai/rasstoyaniya-i-skhodstvo/prakticheskie-keisy/)
+   1. [Практические кейсы](../chast-i.-matematicheskii-yazyk-ai/9.-rasstoyaniya-i-skhodstvo/prakticheskie-keisy/)
 
 ### Часть II. Обучение как оптимизация
 
-10. [**Ошибка, loss-функции и зачем они нужны**](../chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/)\
+10. [**Ошибка, loss-функции и зачем они нужны**](../chast-ii.-obuchenie-kak-optimizaciya/10.-oshibka-loss-funkcii-i-zachem-oni-nuzhny/)\
     &#xNAN;_&#x4D;SE, log loss – без формального ада._
-    1. [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/)
-11. [**Линейная регрессия как базовая модель**](../chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/)\
+    1. [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/10.-oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/)
+11. [**Линейная регрессия как базовая модель**](../chast-ii.-obuchenie-kak-optimizaciya/11.-lineinaya-regressiya-kak-bazovaya-model/)\
     &#xNAN;_&#x424;ормула, геометрический смысл, PHP-реализация._
-    1. [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/)
-12. [**Градиентный спуск на пальцах**](../chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/)\
+    1. [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/11.-lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/)
+12. [**Градиентный спуск на пальцах**](../chast-ii.-obuchenie-kak-optimizaciya/12.-gradientnyi-spusk-na-palcakh/)\
     &#xNAN;_&#x41F;очему производная – это направление движения._
-    1. [Эксперименты с градиентным спуском](../chast-ii.-obuchenie-kak-optimizaciya/gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/)
+    1. [Эксперименты с градиентным спуском](../chast-ii.-obuchenie-kak-optimizaciya/12.-gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/)
 
 ### Часть III. Классификация и вероятности
 
-13. [**Вероятность как степень уверенности**](../chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/)\
+13. [**Вероятность как степень уверенности**](../chast-iii.-klassifikaciya-i-veroyatnosti/13.-veroyatnost-kak-stepen-uverennosti/)\
     &#xNAN;_&#x427;астоты, апостериорные вероятности._
-    1. [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/)
-14. [**Логистическая регрессия**](../chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/)\
+    1. [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/13.-veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/)
+14. [**Логистическая регрессия**](../chast-iii.-klassifikaciya-i-veroyatnosti/14.-logisticheskaya-regressiya/)\
     &#xNAN;_&#x53;igmoid, decision boundary, кейс классификации._
-    1. [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/prakticheskie-keisy/)
-    2. [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist/)
-15. [**Почему наивный Байес работает**](../chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/)
+    1. [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/14.-logisticheskaya-regressiya/prakticheskie-keisy/)
+    2. [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/14.-logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+15. [**Почему наивный Байес работает**](../chast-iii.-klassifikaciya-i-veroyatnosti/15.-pochemu-naivnyi-baies-rabotaet/)
 
     _Условные вероятности и независимость._
 
-    1. [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/)
-    2. [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/pochemu-naivnyi-baies-rabotaet/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+    1. [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/15.-pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/)
+    2. [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/15.-pochemu-naivnyi-baies-rabotaet/skvoznoi-keis-raspoznavanie-cifr-mnist/)
 
 ### Часть IV. Близость и структура данных
 
-16. [**Алгоритм k-ближайших соседей и локальные решения**](../chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/)\
+16. [**Алгоритм k-ближайших соседей и локальные решения**](../chast-iv.-blizost-i-struktura-dannykh/16.-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/)\
     &#xNAN;_&#x413;еометрическая интуиция, метрики расстояний._
-    1. [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/)
-    2. [Сквозной кейс: распознавание цифр (MNIST)](../chast-iv.-blizost-i-struktura-dannykh/algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/)
-17. [**Decision Trees и разбиение пространства**](../chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/)
+    1. [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/16.-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/)
+    2. [Сквозной кейс: распознавание цифр (MNIST)](../chast-iv.-blizost-i-struktura-dannykh/16.-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+17. [**Decision Trees и разбиение пространства**](../chast-iv.-blizost-i-struktura-dannykh/17.-decision-trees-i-razbienie-prostranstva/)
 
     _Энтропия, information gain, объяснимость._
 
-    1. [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/decision-trees-i-razbienie-prostranstva/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+    1. [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/17.-decision-trees-i-razbienie-prostranstva/skvoznoi-keis-raspoznavanie-cifr-mnist/)
 
 ### Часть V. Текст как математика
 
-18. [**Почему слова превращаются в числа**](../chast-v.-tekst-kak-matematika/pochemu-slova-prevrashayutsya-v-chisla.md)\
+18. [**Почему слова превращаются в числа**](../chast-v.-tekst-kak-matematika/18.-pochemu-slova-prevrashayutsya-v-chisla.md)\
     &#xNAN;_&#x41F;ространство слов и признаки._
 19. 🟨 Bag of Words и TF–IDF
 
@@ -166,7 +166,7 @@
 
 ### Заключение
 
-37. [**Куда двигаться дальше**](../zaklyuchenie/kuda-dvigatsya-dalshe.md)\
+37. [**Куда двигаться дальше**](../zaklyuchenie/37.-kuda-dvigatsya-dalshe.md)\
     &#xNAN;_&#x427;то углублять: математику, системы или практику._
 
 
