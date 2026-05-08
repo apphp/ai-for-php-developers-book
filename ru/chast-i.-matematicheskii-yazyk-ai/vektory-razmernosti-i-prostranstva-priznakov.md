@@ -47,7 +47,7 @@ $features = [0.12, 0.85, 0.33, 0.67, 0.91, 0.44, 0.58, 0.76, 0.29, 0.50];
 
 try {
     $result = predict($features);
-    echo "Скор модели: " . round($result, 3) . PHP_EOL;
+    echo "Скор модели: " . round($result, 3) . "\n";
     
     // Интерпретация результата
     if ($result > 0.7) {
@@ -213,8 +213,8 @@ function encodeColor(string $color): array {
     ];
 }
 
-echo 'Red: ' . encodeColor(color: 'red') . PHP_EOL;
-echo 'Green: ' . encodeColor(color: 'green') . PHP_EOL;
+echo 'Red: ' . encodeColor(color: 'red') . "\n";
+echo 'Green: ' . encodeColor(color: 'green') . "\n";
 echo 'Blue: ' . encodeColor(color: 'blue');
 
 // Red:   [1, 0, 0]

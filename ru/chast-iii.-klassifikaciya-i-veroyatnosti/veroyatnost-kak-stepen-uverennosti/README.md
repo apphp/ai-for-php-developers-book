@@ -248,7 +248,7 @@ function softmax(array $scores): array {
 $probabilities = softmax($scores);
 
 foreach ($probabilities as $class => $probability) {
-    echo $class . ': ' . round($probability, 3) . PHP_EOL;
+    echo $class . ': ' . round($probability, 3) . "\n";
 }
 
 // Результат:

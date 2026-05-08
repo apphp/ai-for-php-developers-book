@@ -75,7 +75,7 @@ $probabilityOfApproval = $probas[0]['approve'] ?? null;
 echo  "\nВероятность одобрения (class=approve): ";
 print_r($probabilityOfApproval);
 
-echo PHP_EOL;
+echo "\n";
 
 $threshold = 0.6;
 $approved = $probabilityOfApproval !== null && $probabilityOfApproval >= $threshold;

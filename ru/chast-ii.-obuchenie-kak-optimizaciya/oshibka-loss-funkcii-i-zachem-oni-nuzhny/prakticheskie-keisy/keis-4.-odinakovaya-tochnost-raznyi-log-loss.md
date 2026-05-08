@@ -67,8 +67,8 @@ function logLoss(array $y, array $p, float $eps = 1e-15): float {
     return -$loss / $n;
 }
 
-echo "Log loss A: " . logLoss($y, $modelA) . PHP_EOL;
-echo "Log loss B: " . logLoss($y, $modelB) . PHP_EOL;
+echo "Log loss A: " . logLoss($y, $modelA) . "\n";
+echo "Log loss B: " . logLoss($y, $modelB) . "\n";
 ```
 
 Результат будет примерно таким:
