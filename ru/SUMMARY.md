@@ -20,6 +20,7 @@
   * [Что дальше](vvedenie/4.-o-knige/chto-dalshe.md)
 * [5. Глоссарий](vvedenie/5.-glossarii.md)
 * [6. Ресурсы и литература](vvedenie/6.-resursy-i-literatura.md)
+* [6. dddddddddd](vvedenie/6.-dddddddddd.md)
 
 ## Часть I. Математический язык AI
 
