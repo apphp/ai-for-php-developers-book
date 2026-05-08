@@ -169,7 +169,7 @@ for ($epoch = 0; $epoch < $epochs; $epoch++) {
 $newUser = [5.0, 7.0, 120.0];
 $probability = sigmoid(dot($weights, $newUser) + $bias);
 
-echo "Вероятность ухода: " . round($probability, 3) . PHP_EOL;
+echo "Вероятность ухода: " . round($probability, 3) . "\n";
 ```
 
 </details>
@@ -205,7 +205,7 @@ $probabilities = $classifier->proba($dataset);
 $probaRow = $probabilities[0];
 $churnProbability = $probaRow['churn'];
 
-echo 'Вероятность ухода: ' . number_format($churnProbability, 3) . PHP_EOL;
+echo 'Вероятность ухода: ' . number_format($churnProbability, 3) . "\n";
 
 // Результат
 // on 0 до 1, например 0.136 (может сильно колебаться, так как мало данных для обучения)
