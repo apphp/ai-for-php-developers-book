@@ -86,13 +86,13 @@ Cosine Similarity
 
 ```php
 $documents = [
-    1 => 'как сбросить пароль пользователя',
-    2 => 'ошибка подключения к базе данных',
-    3 => 'настройка smtp для отправки почты',
-    4 => 'восстановление доступа к аккаунту',
+    1 => 'Как сбросить пароль пользователя',
+    2 => 'Ошибка подключения к базе данных',
+    3 => 'Настройка SMTP для отправки почты',
+    4 => 'Восстановление доступа к аккаунту',
 ];
 
-$query = 'восстановить пароль';
+$query = 'не могу восстановить пароль'; 
 ```
 
 **Шаг 2. Токенизация**
@@ -116,6 +116,8 @@ $queryTokens = tokenize($query);
 
 **Шаг 3. TF (Term Frequency)**
 
+При помощи этой функции мы рассчитаем нормализованную частоту встречаемости термина в одном документе.
+
 ```php
 function termFrequency(array $tokens): array {
     $tf = [];
@@ -135,7 +137,7 @@ function termFrequency(array $tokens): array {
 
 **Шаг 4. IDF (Inverse Document Frequency)**
 
-Теперь считаем, насколько слово редкое во всём корпусе.
+Теперь считаем, насколько слово редкое во всём корпусе. Вычисляем обратную частоту встречаемости документа по всем документам.
 
 ```php
 function inverseDocumentFrequency(array $documents): array {
@@ -160,6 +162,8 @@ function inverseDocumentFrequency(array $documents): array {
 
 **Шаг 5. TF–IDF вектор**
 
+Создаём TF-IDF вектор для одного документа/запроса.
+
 ```php
 function tfidf(array $tf, array $idf): array {
     $vector = [];
@@ -178,7 +182,6 @@ function tfidf(array $tf, array $idf): array {
 $idf = inverseDocumentFrequency($tokenizedDocs);
 
 $documentVectors = [];
-
 foreach ($tokenizedDocs as $id => $tokens) {
     $tf = termFrequency($tokens);
     $documentVectors[$id] = tfidf($tf, $idf);
@@ -277,12 +280,157 @@ print_r($results);
 
 ```
 Array (
-    [1] => 0.41
-    [4] => 0.38
+    [1] => 0.5
     [2] => 0
     [3] => 0
+    [4] => 0
 )
 ```
+
+<details>
+
+<summary>Кейс 1. Полный пример кода на чистом PHP</summary>
+
+```php
+// Исходные документы для поиска сходства.
+$documents = [
+    1 => 'Как сбросить пароль пользователя',
+    2 => 'Ошибка подключения к базе данных',
+    3 => 'Настройка SMTP для отправки почты',
+    4 => 'Восстановление доступа к аккаунту',
+];
+
+// Converts text to lowercase and splits by spaces.
+function tokenize(string $text): array {
+    $text = mb_strtolower($text);
+
+    return explode(' ', $text);
+}
+
+// Вычисляет нормализованную частоту встречаемости терминов в одном документе.
+function termFrequency(array $tokens): array {
+    $tf = [];
+    $count = count($tokens);
+
+    foreach ($tokens as $token) {
+        $tf[$token] = ($tf[$token] ?? 0) + 1;
+    }
+
+    foreach ($tf as $word => $value) {
+        $tf[$word] = $value / $count;
+    }
+
+    return $tf;
+}
+
+// Вычисляет обратную частоту встречаемости документа по всем документам.
+function inverseDocumentFrequency(array $documents): array {
+    $df = [];
+    $N = count($documents);
+
+    foreach ($documents as $doc) {
+        foreach (array_unique($doc) as $word) {
+            $df[$word] = ($df[$word] ?? 0) + 1;
+        }
+    }
+
+    $idf = [];
+
+    foreach ($df as $word => $freq) {
+        $idf[$word] = log($N / $freq);
+    }
+
+    return $idf;
+}
+
+// Создает TF-IDF вектор для одного документа/запроса.
+function tfidf(array $tf, array $idf): array {
+    $vector = [];
+
+    foreach ($tf as $word => $value) {
+        $vector[$word] = $value * ($idf[$word] ?? 0);
+    }
+
+    return $vector;
+}
+
+// Измеряет сходство между двумя разреженными векторами.
+function cosineSimilarity(array $a, array $b): float {
+    $dot = 0;
+    $normA = 0;
+    $normB = 0;
+
+    $words = array_unique(array_merge(
+        array_keys($a),
+        array_keys($b)
+    ));
+
+    foreach ($words as $word) {
+        $va = $a[$word] ?? 0;
+        $vb = $b[$word] ?? 0;
+
+        $dot += $va * $vb;
+
+        $normA += $va * $va;
+        $normB += $vb * $vb;
+    }
+
+    if ($normA == 0 || $normB == 0) {
+        return 0;
+    }
+
+    return $dot / (sqrt($normA) * sqrt($normB));
+}
+
+// Предварительно вычислить токенизированные документы, 
+// IDF-коды и векторы TF-IDF для документов.
+$tokenizedDocs = array_map('tokenize', $documents);
+$idf = inverseDocumentFrequency($tokenizedDocs);
+
+$documentVectors = [];
+foreach ($tokenizedDocs as $id => $tokens) {
+    $tf = termFrequency($tokens);
+    $documentVectors[$id] = tfidf($tf, $idf);
+}
+
+$query = 'не могу восстановить пароль';
+
+$queryTokens = tokenize($query);
+$queryTf = termFrequency($queryTokens);
+$queryVector = tfidf($queryTf, $idf);
+
+$results = [];
+
+foreach ($documentVectors as $id => $vector) {
+    $results[$id] = cosineSimilarity(
+        $queryVector,
+        $vector
+    );
+}
+
+arsort($results);
+
+echo 'Results:' . "\n";
+foreach ($results as $id => $score) {
+    echo 'Document ' . $id . ': ' . round($score, 2) . ' (' . $documents[$id] . ')' . "\n";
+}
+echo "\n" . "\n";
+
+
+echo 'Document vectors:' . "\n";
+foreach ($documentVectors as $id => $vector) {
+    echo 'Document ' . $id . ': ' . "\n";
+    print_r($vector);
+    echo "\n";
+}
+echo "\n";
+
+echo 'IDF:' . "\n";
+print_r($idf);
+
+```
+
+</details>
 
 #### Интерпретация результата
 
@@ -390,45 +538,4 @@ TF–IDF не "понимает" текст. Он делает другое:
 * векторы
 * немного линейной алгебры
 
-Именно с таких систем исторически начинался поиск по тексту – и именно они до сих пор лежат внутри многих production-систем как быстрый и надёжный baseline.\
-\
-\
-\
-\
-Сценарий.
-
-Есть набор текстов (статьи, заметки, тикеты). Пользователь вводит запрос, нужно найти самый похожий текст.
-
-Почему BoW / TF–IDF.
-
-Это классическая задача информационного поиска, исторически именно для неё TF–IDF и придумали.
-
-Что делаем.
-
-– строим TF–IDF для всех документов
-
-– строим TF–IDF для запроса
-
-– считаем cosine similarity
-
-– сортируем по убыванию
-
-Практическая польза.
-
-– поиск по базе знаний
-
-– поиск по логам
-
-– FAQ без LLM
-
-Технически.
-
-– TF–IDF: чистый PHP (из примера главы)
-
-– cosine similarity: одна функция
-
-– никаких библиотек
-
-Ключевой вывод.
-
-Даже без нейросетей можно делать осмысленный поиск.
+Именно с таких систем исторически начинался поиск по тексту – и именно они до сих пор лежат внутри многих production-систем как быстрый и надёжный baseline.
