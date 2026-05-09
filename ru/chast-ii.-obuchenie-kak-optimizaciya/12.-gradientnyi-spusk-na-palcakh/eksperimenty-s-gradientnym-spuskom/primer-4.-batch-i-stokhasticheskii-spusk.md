@@ -10,8 +10,8 @@ description: >-
 
 Понять разницу между двумя подходами к обучению:
 
-* [batch gradient descent](../../../vvedenie/5.-glossarii.md#batch-gradient-descent) (BGD) – обновление по всему датасету
-* [stochastic gradient descent](../../../vvedenie/5.-glossarii.md#stochastic-gradient-descent-sgd) (SGD) – обновление по одному объекту
+* [batch gradient descent](../../../vvedenie/glossarii.md#batch-gradient-descent) (BGD) – обновление по всему датасету
+* [stochastic gradient descent](../../../vvedenie/glossarii.md#stochastic-gradient-descent-sgd) (SGD) – обновление по одному объекту
 
 Этот разбор показывает важную идею: обучение может быть гладким и стабильным, а может быть шумным и дерганым, и это не ошибка, а осознанный выбор алгоритма.
 

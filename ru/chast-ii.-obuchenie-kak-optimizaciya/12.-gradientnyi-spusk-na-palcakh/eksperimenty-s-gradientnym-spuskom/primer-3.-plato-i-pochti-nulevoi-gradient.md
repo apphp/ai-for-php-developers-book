@@ -129,8 +129,8 @@ $$
 
 Чтобы эффективно проходить плато, используются более продвинутые методы:
 
-* [momentum](../../../vvedenie/5.-glossarii.md#momentum-i-adaptivnye-algoritmy)
-* адаптивные алгоритмы (например, [Adam](../../../vvedenie/5.-glossarii.md#momentum-i-adaptivnye-algoritmy))
+* [momentum](../../../vvedenie/glossarii.md#momentum-i-adaptivnye-algoritmy)
+* адаптивные алгоритмы (например, [Adam](../../../vvedenie/glossarii.md#momentum-i-adaptivnye-algoritmy))
 
 Они помогают ускорять движение параметров на плоских участках и частично компенсировать эффект малого градиента.
 

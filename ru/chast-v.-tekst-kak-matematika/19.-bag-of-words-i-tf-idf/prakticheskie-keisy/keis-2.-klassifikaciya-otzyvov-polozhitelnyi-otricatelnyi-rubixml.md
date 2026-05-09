@@ -88,7 +88,7 @@ positive / negative
 
 #### Почему здесь уже нужен ML
 
-В предыдущем кейсе мы сравнивали документы напрямую через [cosine similarity](../../../vvedenie/5.-glossarii.md#cosine-similarity-kosinusnoe-skhodstvo).
+В предыдущем кейсе мы сравнивали документы напрямую через [cosine similarity](../../../vvedenie/glossarii.md#cosine-similarity-kosinusnoe-skhodstvo).
 
 Но теперь задача другая.
 

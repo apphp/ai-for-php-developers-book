@@ -402,7 +402,7 @@ class SimpleMLP
 
 ### Связь с логистической регрессией
 
-Логистическая регрессия – это перцептрон с sigmoid и обучением по [log loss](../../vvedenie/5.-glossarii.md#log-loss-logarifmicheskaya-funkciya-poter).
+Логистическая регрессия – это перцептрон с sigmoid и обучением по [log loss](../../vvedenie/glossarii.md#log-loss-logarifmicheskaya-funkciya-poter).
 
 То есть:
 

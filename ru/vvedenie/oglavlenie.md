@@ -22,31 +22,39 @@
 
 ### Введение
 
-1.  [**Дисклеймер**](1.-diskleimer.md)
+[**Дисклеймер**](diskleimer.md)\
+&#xNAN;_&#x41E; границах книги, допущениях и ответственности._
 
-    _О границах книги, допущениях и ответственности._
-2. [**Введение**](2.-vvedenie/)\
-   &#xNAN;_&#x41C;отивация, реалии и цели книги._
-   1. [От понимания – к математике и реализации](2.-vvedenie/ot-ponimaniya-k-matematike-i-realizacii.md)
-   2. [Зачем PHP-разработчику AI](2.-vvedenie/zachem-php-razrabotchiku-ai.md)
-3. [**Экосистема ML в PHP**](3.-ekosistema-ml-v-php/)\
-   &#xNAN;_&#x41E;бзор экосистемы PHP для машинного обучения и научных вычислений._
-   1. [Настройка среды для PHP](3.-ekosistema-ml-v-php/nastroika-sredy-dlya-php/)
-4. [**О книге**](4.-o-knige/)
-   1. [Лицензия и авторские права](4.-o-knige/licenziya-i-avtorskie-prava.md)
-   2. [Как контрибьютить](4.-o-knige/kak-kontribyutit.md)
-   3. [История изменений книги](4.-o-knige/istoriya-izmenenii-knigi.md)
-   4. [Что дальше](4.-o-knige/chto-dalshe.md)
-5. [**Глоссарий**](5.-glossarii.md)
-6. [**Ресурсы и литература**](6.-resursy-i-literatura.md)
+[**Введение**](vvedenie/)\
+&#xNAN;_&#x41C;отивация, реалии и цели книги._
+
+* [От понимания – к математике и реализации](vvedenie/ot-ponimaniya-k-matematike-i-realizacii.md)
+* [Зачем PHP-разработчику AI](vvedenie/zachem-php-razrabotchiku-ai.md)
+
+[**Экосистема ML в PHP**](ekosistema-ml-v-php/)\
+&#xNAN;_&#x41E;бзор экосистемы PHP для машинного обучения и научных вычислений._
+
+* [Настройка среды для PHP](ekosistema-ml-v-php/nastroika-sredy-dlya-php/)
+
+[**О книге**](o-knige/)
+
+* [Лицензия и авторские права](o-knige/licenziya-i-avtorskie-prava.md)
+* [Как контрибьютить](o-knige/kak-kontribyutit.md)
+* [История изменений книги](o-knige/istoriya-izmenenii-knigi.md)
+* [Что дальше](o-knige/chto-dalshe.md)
+
+[**Глоссарий**](glossarii.md)
+
+[**Ресурсы и литература**](resursy-i-literatura.md)
 
 ### Часть I. Математический язык AI
 
-7. [**Что такое модель в математическом смысле**](../chast-i.-matematicheskii-yazyk-ai/7.-chto-takoe-model-v-matematicheskom-smysle.md)\
-   &#xNAN;_&#x424;ункция, параметры, ошибка._
-8. [**Векторы, размерности и пространства признаков**](../chast-i.-matematicheskii-yazyk-ai/8.-vektory-razmernosti-i-prostranstva-priznakov.md)\
+1.1 [**Что такое модель в математическом смысле**](../chast-i.-matematicheskii-yazyk-ai/7.-chto-takoe-model-v-matematicheskom-smysle.md)\
+&#xNAN;_&#x424;ункция, параметры, ошибка._
+
+7. [**Векторы, размерности и пространства признаков**](../chast-i.-matematicheskii-yazyk-ai/8.-vektory-razmernosti-i-prostranstva-priznakov.md)\
    &#xNAN;_&#x41F;очему данные – это точки в пространстве._
-9. [**Расстояния и сходство**](../chast-i.-matematicheskii-yazyk-ai/9.-rasstoyaniya-i-skhodstvo/)\
+8. [**Расстояния и сходство**](../chast-i.-matematicheskii-yazyk-ai/9.-rasstoyaniya-i-skhodstvo/)\
    &#xNAN;_&#x415;вклидово расстояние, dot product, cosine similarity._
    1. [Практические кейсы](../chast-i.-matematicheskii-yazyk-ai/9.-rasstoyaniya-i-skhodstvo/prakticheskie-keisy/)
 

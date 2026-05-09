@@ -366,9 +366,9 @@ TF–IDF не "понимает" текст. Он делает другое:
 
 Чтобы решить это, обычно добавляют:
 
-* [stemming](../../../vvedenie/5.-glossarii.md#stemming)
-* [lemmatization](../../../vvedenie/5.-glossarii.md#lemmatizaciya)
-* [word embeddings](../../../vvedenie/5.-glossarii.md#embeddings-embeddingi)
+* [stemming](../../../vvedenie/glossarii.md#stemming)
+* [lemmatization](../../../vvedenie/glossarii.md#lemmatizaciya)
+* [word embeddings](../../../vvedenie/glossarii.md#embeddings-embeddingi)
 * transformer-модели
 
 Но фундамент остаётся тем же: текст всё равно превращается в вектор.

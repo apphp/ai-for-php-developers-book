@@ -33,7 +33,7 @@ $$
 
 Функция ошибки – среднеквадратичная (MSE).
 
-Как и в предыдущем примере, метод оптимизации – [batch gradient descent](../../../vvedenie/5.-glossarii.md#batch-gradient-descent). Единственное отличие – мы будем запускать обучение с разными значениями learning rate.
+Как и в предыдущем примере, метод оптимизации – [batch gradient descent](../../../vvedenie/glossarii.md#batch-gradient-descent). Единственное отличие – мы будем запускать обучение с разными значениями learning rate.
 
 Мы проверим три сценария:
 

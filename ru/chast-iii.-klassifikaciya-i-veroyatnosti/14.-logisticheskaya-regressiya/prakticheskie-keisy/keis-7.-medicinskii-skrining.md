@@ -132,7 +132,7 @@ $$
 
 #### Decision boundary
 
-В данном в примере пространстве признаков [decision boundary](../../../vvedenie/5.-glossarii.md#decision-boundary-granica-prinyatiya-resheniya) задается как:
+В данном в примере пространстве признаков [decision boundary](../../../vvedenie/glossarii.md#decision-boundary-granica-prinyatiya-resheniya) задается как:
 
 $$
 w_1 x_1 + w_2 x_2 + w_3 x_3 + w_4 x_4 + b = 0

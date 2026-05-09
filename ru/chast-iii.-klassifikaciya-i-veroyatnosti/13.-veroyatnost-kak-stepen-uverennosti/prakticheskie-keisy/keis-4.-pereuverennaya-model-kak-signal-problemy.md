@@ -88,7 +88,7 @@ foreach ($probabilities as $class => $p) {
 
 #### Расширенная проверка
 
-(проверка на уровне [батча](../../../vvedenie/5.-glossarii.md#batch-batch))
+(проверка на уровне [батча](../../../vvedenie/glossarii.md#batch-batch))
 
 В реальной системе лучше проверять не один пример, а поток предсказаний:
 

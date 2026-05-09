@@ -4,7 +4,7 @@ description: Использование косинусного сходства.
 
 # Кейс 3: Сравнение текстов
 
-Предположим, мы представили тексты в виде векторов – через [bag-of-words](../../../vvedenie/5.-glossarii.md#bag-of-words-meshok-slov), [TF-IDF](../../../vvedenie/5.-glossarii.md#tf-idf) или [эмбеддинги](../../../vvedenie/5.-glossarii.md#embeddings-embeddingi) языковой модели. Каждый текст теперь – точка в пространстве.
+Предположим, мы представили тексты в виде векторов – через [bag-of-words](../../../vvedenie/glossarii.md#bag-of-words-meshok-slov), [TF-IDF](../../../vvedenie/glossarii.md#tf-idf) или [эмбеддинги](../../../vvedenie/glossarii.md#embeddings-embeddingi) языковой модели. Каждый текст теперь – точка в пространстве.
 
 <div align="left"><figure><img src="../../../.gitbook/assets/9.6-texts-as-points-in-vector-space.png" alt=""><figcaption><p>9.6 Тексты как точки в векторном пространстве</p></figcaption></figure></div>
 
