@@ -131,49 +131,58 @@ _Motivation, realities and goals of the book._
 
 #### Part VI. Attention and Neural Networks
 
-25. ⬜ Perceptron and fully connected network\
-    &#xNAN;_&#x4C;inear combinations and nonlinearities._
-26. ⬜ Backpropagation — why it works\
-    &#xNAN;_&#x54;he chain rule without academic horror._
-27. ⬜ Convolutional neural networks (CNN)\
-    &#xNAN;_&#x46;ilters, local features, and why images are "understood" as matrices._
-28. ⬜ Autoencoders\
-    &#xNAN;_&#x44;ata compression, latent space and login recovery._
-29. Recurrent neural networks (RNN)\
-    &#xNAN;_&#x4D;odels that take into account the context over time._
-30. ⬜ Attention as weighted summation
+6.1 ⬜ Perceptron and fully connected network\
+&#xNAN;_&#x4C;inear combinations and nonlinearities._
 
-    _Q/K/V formulas + simplified implementation._
+6.2 ⬜ Backpropagation — why it works\
+&#xNAN;_&#x54;he chain rule without academic horror._
+
+6.3 ⬜ Convolutional neural networks (CNN)\
+&#xNAN;_&#x46;ilters, local features, and why images are "understood" as matrices._
+
+6.4 ⬜ Autoencoders\
+&#xNAN;_&#x44;ata compression, latent space and login recovery._
+
+6.5 Recurrent neural networks (RNN)\
+&#xNAN;_&#x4D;odels that take into account the context over time._
+
+6.6 ⬜ Attention as weighted summation\
+&#xNAN;_&#x51;/K/V formulas + simplified implementation._
 
 #### Part VII. LLMs and Modern AI
 
-31. ⬜ Why LLMs are next-token prediction models\
-    &#xNAN;_&#x50;robabilities, softmax, context._
-    1. Hands-on: Building a Next-Token Model in PHP
-    2. Practical use cases
-32. ⬜ Why LLMs Behave "Intelligently": RLHF and Behavioral Learning\
-    &#xNAN;_&#x46;rom Token Prediction to Useful Responses_
-    1. Understanding RLHF in Practice
-33. ⬜ Where LLMs fail mathematically
+7.1 ⬜ Why LLMs are next-token prediction models\
+&#xNAN;_&#x50;robabilities, softmax, context._
 
-    _Hallucinations, distributions, bias._
+&#x20;  7.1.1. Hands-on: Building a Next-Token Model in PHP
+
+&#x20;  7.1.2 Practical use cases
+
+7.2 ⬜ Why LLMs Behave "Intelligently": RLHF and Behavioral Learning\
+&#xNAN;_&#x46;rom Token Prediction to Useful Responses_
+
+&#x20;  7.2.1 Understanding RLHF in Practice
+
+7.3 ⬜ Where LLMs fail mathematically\
+&#xNAN;_&#x48;allucinations, distributions, bias._
 
 #### Part VIII. Agent Systems and Orchestration
 
-34. ⬜ Agent Systems and Multi-Step Reasoning in PHP\
-    &#xNAN;_&#x4C;LM as a managed system: planning, tools and control._
+8.1 ⬜ Agent Systems and Multi-Step Reasoning in PHP\
+&#xNAN;_&#x4C;LM as a managed system: planning, tools and control._
 
 #### Part IX. Production and Common Sense
 
-35. ⬜ How to use AI in PHP projects\
-    &#xNAN;_&#x41;rchitectures, integrations, orchestration._
-36. ⬜ When AI is not needed and why it matters\
-    &#xNAN;_&#x43;lear engineering boundaries._
+9.1 ⬜ How to use AI in PHP projects\
+&#xNAN;_&#x41;rchitectures, integrations, orchestration._
+
+9.2 ⬜ When AI is not needed and why it matters\
+&#xNAN;_&#x43;lear engineering boundaries._
 
 #### Conclusion
 
-37. ⬜ Where to go next\
-    &#xNAN;_&#x57;hat to deepen: mathematics, systems, or practice._
+⬜ Where to go next\
+&#xNAN;_&#x57;hat to deepen: mathematics, systems, or practice._
 
 
 
