@@ -79,31 +79,38 @@
 
 ### Часть III. Классификация и вероятности
 
-13. [**Вероятность как степень уверенности**](../chast-iii.-klassifikaciya-i-veroyatnosti/13.-veroyatnost-kak-stepen-uverennosti/)\
-    &#xNAN;_&#x427;астоты, апостериорные вероятности._
-    1. [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/13.-veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/)
-14. [**Логистическая регрессия**](../chast-iii.-klassifikaciya-i-veroyatnosti/14.-logisticheskaya-regressiya/)\
-    &#xNAN;_&#x53;igmoid, decision boundary, кейс классификации._
-    1. [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/14.-logisticheskaya-regressiya/prakticheskie-keisy/)
-    2. [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/14.-logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist/)
-15. [**Почему наивный Байес работает**](../chast-iii.-klassifikaciya-i-veroyatnosti/15.-pochemu-naivnyi-baies-rabotaet/)
+3.1 [**Вероятность как степень уверенности**](../chast-iii.-klassifikaciya-i-veroyatnosti/3.1-veroyatnost-kak-stepen-uverennosti/)\
+&#xNAN;_&#x427;астоты, апостериорные вероятности._
 
-    _Условные вероятности и независимость._
+&#x20;  3.1.1 [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/3.1-veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/)
 
-    1. [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/15.-pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/)
-    2. [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/15.-pochemu-naivnyi-baies-rabotaet/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+3.2 [**Логистическая регрессия**](../chast-iii.-klassifikaciya-i-veroyatnosti/3.2-logisticheskaya-regressiya/)\
+&#xNAN;_&#x53;igmoid, decision boundary, кейс классификации._
+
+&#x20;  3.2.1 [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/3.2-logisticheskaya-regressiya/prakticheskie-keisy/)
+
+&#x20;  3.2.2 [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/3.2-logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+
+3.3 [**Почему наивный Байес работает**](../chast-iii.-klassifikaciya-i-veroyatnosti/3.3-pochemu-naivnyi-baies-rabotaet/)\
+&#xNAN;_&#x423;словные вероятности и независимость._
+
+&#x20;  3.3.1 [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/3.3-pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/)
+
+&#x20;  3.3.2 [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/3.3-pochemu-naivnyi-baies-rabotaet/skvoznoi-keis-raspoznavanie-cifr-mnist/)
 
 ### Часть IV. Близость и структура данных
 
-16. [**Алгоритм k-ближайших соседей и локальные решения**](../chast-iv.-blizost-i-struktura-dannykh/16.-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/)\
-    &#xNAN;_&#x413;еометрическая интуиция, метрики расстояний._
-    1. [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/16.-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/)
-    2. [Сквозной кейс: распознавание цифр (MNIST)](../chast-iv.-blizost-i-struktura-dannykh/16.-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/)
-17. [**Decision Trees и разбиение пространства**](../chast-iv.-blizost-i-struktura-dannykh/17.-decision-trees-i-razbienie-prostranstva/)
+4.1 [**Алгоритм k-ближайших соседей и локальные решения**](../chast-iv.-blizost-i-struktura-dannykh/4.1-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/)\
+&#xNAN;_&#x413;еометрическая интуиция, метрики расстояний._
 
-    _Энтропия, information gain, объяснимость._
+&#x20;  4.1.1 [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/4.1-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/)
 
-    1. [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/17.-decision-trees-i-razbienie-prostranstva/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+&#x20;  4.1.1 [Сквозной кейс: распознавание цифр (MNIST)](../chast-iv.-blizost-i-struktura-dannykh/4.1-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+
+4.2 [**Decision Trees и разбиение пространства**](../chast-iv.-blizost-i-struktura-dannykh/4.2-decision-trees-i-razbienie-prostranstva/)\
+&#xNAN;_&#x42D;нтропия, information gain, объяснимость._
+
+&#x20;  4.2.1 [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/4.2-decision-trees-i-razbienie-prostranstva/skvoznoi-keis-raspoznavanie-cifr-mnist/)
 
 ### Часть V. Текст как математика
 
