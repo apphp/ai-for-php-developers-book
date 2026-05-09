@@ -20,30 +20,30 @@ Section statuses
 
 ### Getting Started
 
-**Disclaimer**\
+[**Disclaimer**](disclaimer.md)\
 &#xNAN;_&#x41;bout the book's boundaries, assumptions and responsibilities._
 
-**Introduction**\
+[**Introduction**](introduction/)\
 _Motivation, realities and goals of the book._
 
 * From understanding to mathematics and implementation
 * Why a PHP developer needs AI
 
-**The ML ecosystem in PHP**\
+[**The ML ecosystem in PHP**](the-ml-ecosystem-in-php/)\
 &#xNAN;_&#x41;n overview of the PHP ecosystem for machine learning and scientific computing._
 
 * Environment setup for PHP
 
-**About the book**
+[**About the book**](about-the-book/)
 
 * License and copyright
 * How to contribute
 * Book change history
 * What's next?
 
-🟨 Glossary
+🟨 [Glossary](glossary.md)
 
-**Resources and Literature**
+[**Resources and Literature**](resources-and-literature.md)
 
 #### Part I. The Mathematical Language of AI
 
