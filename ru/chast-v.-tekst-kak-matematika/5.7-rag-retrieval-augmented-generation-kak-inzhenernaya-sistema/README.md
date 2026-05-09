@@ -2,7 +2,7 @@
 description: Поиск → контекст → генерация. Как LLM отвечает на основе документов
 ---
 
-# 24. RAG: Retrieval-Augmented Generation как инженерная система
+# 5.7 RAG: Retrieval-Augmented Generation как инженерная система
 
 Когда говорят, что LLM "знает всё", это удобная, но опасная метафора. На самом деле модель ничего не знает в момент ответа – она лишь продолжает последовательность токенов, опираясь на статистические зависимости, выученные при обучении. Именно поэтому в реальных продуктах почти всегда возникает вопрос: _как заставить модель отвечать на основе конкретных, актуальных, контролируемых данных?_
 
@@ -42,11 +42,7 @@ RAG решает это, разделяя ответственность:
 
 В самом общем виде RAG выглядит так:
 
-\[IMAGE: DIAGRAM\_RAG\_PIPELINE]
-
-Промпт для картинки:
-
-“Clean technical diagram of Retrieval-Augmented Generation pipeline: User Query → Embedding → Vector Search → Top-K Documents → Context Assembly → LLM Generation → Final Answer. Minimalistic style, white background, thin arrows, readable labels.”
+<figure><img src="../../.gitbook/assets/5.7-1_diagram-rag-pipeline.png" alt=""><figcaption><p>Рис 5.7-1. Диаграмма RAG пайплайна</p></figcaption></figure>
 
 Формально это можно записать так:
 
@@ -130,6 +126,8 @@ $$
 $$
 
 Значение в диапазоне \[-1, 1], но на практике – от 0 до 1.
+
+<figure><img src="../../.gitbook/assets/5.7-2_2D-vector-space-visualization.png" alt=""><figcaption><p>Рис 5.7-2. Двумерная визуализация векторного пространства с кластеризованными текстовыми векторами.</p></figcaption></figure>
 
 \[IMAGE: VECTOR\_SPACE]
 

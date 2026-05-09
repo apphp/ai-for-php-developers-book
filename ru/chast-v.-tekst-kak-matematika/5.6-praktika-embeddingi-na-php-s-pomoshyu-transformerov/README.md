@@ -2,7 +2,7 @@
 description: Inference вместо обучения. TransformersPHP как инженерный инструмент.
 ---
 
-# 23. Практика: эмбеддинги на PHP с помощью трансформеров
+# 5.6 Практика: эмбеддинги на PHP с помощью трансформеров
 
 В этой главе мы аккуратно приземлим теорию эмбеддингов на инженерную практику. Без обучения моделей, без GPU-кластеров и без магии. Только inference, готовые трансформеры и PHP как рабочий инструмент.
 
@@ -60,7 +60,7 @@ $$
 
 Она отвечает на вопрос: "насколько одинаково направлены два вектора". Для эмбеддингов это обычно важнее, чем их длина. Подробно мы разбирали эту тему в главе "[Расстояния и сходство](../../chast-i.-matematicheskii-yazyk-ai/1.3-rasstoyaniya-i-skhodstvo/)".
 
-<div align="left"><figure><img src="../../.gitbook/assets/22.1-cosine-similarity-vectors.png" alt=""><figcaption><p>23.1 Векторы косинусного сходства</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.6-1_cosine-similarity-vectors.png" alt=""><figcaption><p>Рис 5.6-1.Векторы косинусного сходства</p></figcaption></figure></div>
 
 ### Трансформер как чёрный ящик
 
@@ -74,7 +74,7 @@ text → tokens → embeddings → pooling → vector
 
 Тем не менее полезно иметь интуицию.
 
-<div align="left"><figure><img src="../../.gitbook/assets/23.2-transformer-overview.png" alt=""><figcaption><p>23.2 Обзор трансформера</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.6-2_transformer-overview.png" alt=""><figcaption><p>Рис 5.6-2. Обзор трансформера</p></figcaption></figure></div>
 
 ### Рассмотрим TransformersPHP как инженерный инструмент
 
@@ -112,7 +112,7 @@ Embedding (vector)
 Vector DB / поиск / логика
 ```
 
-<div align="left"><figure><img src="../../.gitbook/assets/23.3-embedding-pipeline.png" alt=""><figcaption><p>23.3 Конвейер встраивания (embedding pipeline) </p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.6-3_embedding-pipeline.png" alt=""><figcaption><p>Рис 5.6-3. Конвейер встраивания (embedding pipeline) </p></figcaption></figure></div>
 
 ### Первый пример: получение эмбеддинга текста
 
@@ -172,7 +172,7 @@ print_r($embedding);
 
 На практике mean pooling чаще всего даёт стабильные результаты.
 
-<div align="left"><figure><img src="../../.gitbook/assets/22.4-pooling-explanation.png" alt="" width="563"><figcaption><p>23.4 Объяснение объединения (pooling_explanation)</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.6-4_pooling-explanation.png" alt=""><figcaption><p>Рис 5.6-4. Объяснение объединения (pooling explanation)</p></figcaption></figure></div>
 
 ### Пример: косинусное сходство на PHP
 
@@ -217,7 +217,7 @@ if ($sim > 0.8) {
 
 С точки зрения PHP это выглядит как обычная бизнес-логика, а не ML-экзотика.
 
-<div align="left"><figure><img src="../../.gitbook/assets/22.5-semantic-search.png" alt="" width="563"><figcaption><p>23.5 Семантический поиск</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.6-5_semantic-search.png" alt=""><figcaption><p>Рис 5.6-5. Семантический поиск</p></figcaption></figure></div>
 
 ### Инженерные замечания
 
