@@ -49,26 +49,33 @@
 
 ### Часть I. Математический язык AI
 
-1.1 [**Что такое модель в математическом смысле**](../chast-i.-matematicheskii-yazyk-ai/7.-chto-takoe-model-v-matematicheskom-smysle.md)\
+1.1 [**Что такое модель в математическом смысле**](../chast-i.-matematicheskii-yazyk-ai/1.1-chto-takoe-model-v-matematicheskom-smysle.md)\
 &#xNAN;_&#x424;ункция, параметры, ошибка._
 
-7. [**Векторы, размерности и пространства признаков**](../chast-i.-matematicheskii-yazyk-ai/8.-vektory-razmernosti-i-prostranstva-priznakov.md)\
-   &#xNAN;_&#x41F;очему данные – это точки в пространстве._
-8. [**Расстояния и сходство**](../chast-i.-matematicheskii-yazyk-ai/9.-rasstoyaniya-i-skhodstvo/)\
-   &#xNAN;_&#x415;вклидово расстояние, dot product, cosine similarity._
-   1. [Практические кейсы](../chast-i.-matematicheskii-yazyk-ai/9.-rasstoyaniya-i-skhodstvo/prakticheskie-keisy/)
+1.2 [**Векторы, размерности и пространства признаков**](../chast-i.-matematicheskii-yazyk-ai/1.2-vektory-razmernosti-i-prostranstva-priznakov.md)\
+&#xNAN;_&#x41F;очему данные – это точки в пространстве._
+
+1.3 [**Расстояния и сходство**](../chast-i.-matematicheskii-yazyk-ai/1.3-rasstoyaniya-i-skhodstvo/)\
+&#xNAN;_&#x415;вклидово расстояние, dot product, cosine similarity._
+
+&#x20;  _1.3.1_ [Практические кейсы](../chast-i.-matematicheskii-yazyk-ai/1.3-rasstoyaniya-i-skhodstvo/prakticheskie-keisy/)
 
 ### Часть II. Обучение как оптимизация
 
-10. [**Ошибка, loss-функции и зачем они нужны**](../chast-ii.-obuchenie-kak-optimizaciya/10.-oshibka-loss-funkcii-i-zachem-oni-nuzhny/)\
-    &#xNAN;_&#x4D;SE, log loss – без формального ада._
-    1. [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/10.-oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/)
-11. [**Линейная регрессия как базовая модель**](../chast-ii.-obuchenie-kak-optimizaciya/11.-lineinaya-regressiya-kak-bazovaya-model/)\
-    &#xNAN;_&#x424;ормула, геометрический смысл, PHP-реализация._
-    1. [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/11.-lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/)
-12. [**Градиентный спуск на пальцах**](../chast-ii.-obuchenie-kak-optimizaciya/12.-gradientnyi-spusk-na-palcakh/)\
-    &#xNAN;_&#x41F;очему производная – это направление движения._
-    1. [Эксперименты с градиентным спуском](../chast-ii.-obuchenie-kak-optimizaciya/12.-gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/)
+2.1 [**Ошибка, loss-функции и зачем они нужны**](../chast-ii.-obuchenie-kak-optimizaciya/2.1-oshibka-loss-funkcii-i-zachem-oni-nuzhny/)\
+&#xNAN;_&#x4D;SE, log loss – без формального ада._
+
+&#x20;  2.1.1 [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/2.1-oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/)
+
+2.2 [**Линейная регрессия как базовая модель**](../chast-ii.-obuchenie-kak-optimizaciya/2.2-lineinaya-regressiya-kak-bazovaya-model/)\
+&#xNAN;_&#x424;ормула, геометрический смысл, PHP-реализация._
+
+&#x20;  2.2.1 [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/2.2-lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/)
+
+2.3 [**Градиентный спуск на пальцах**](../chast-ii.-obuchenie-kak-optimizaciya/2.3-gradientnyi-spusk-na-palcakh/)\
+&#xNAN;_&#x41F;очему производная – это направление движения._
+
+&#x20;  2.3.1 [Эксперименты с градиентным спуском](../chast-ii.-obuchenie-kak-optimizaciya/2.3-gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/)
 
 ### Часть III. Классификация и вероятности
 

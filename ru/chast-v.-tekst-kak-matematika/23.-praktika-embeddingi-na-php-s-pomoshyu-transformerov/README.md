@@ -58,7 +58,7 @@ $$
 \cos(a, b) = \frac{a \cdot b}{\lVert a \rVert \, \lVert b \rVert}
 $$
 
-Она отвечает на вопрос: "насколько одинаково направлены два вектора". Для эмбеддингов это обычно важнее, чем их длина. Подробно мы разбирали эту тему в главе "[Расстояния и сходство](../../chast-i.-matematicheskii-yazyk-ai/9.-rasstoyaniya-i-skhodstvo/)".
+Она отвечает на вопрос: "насколько одинаково направлены два вектора". Для эмбеддингов это обычно важнее, чем их длина. Подробно мы разбирали эту тему в главе "[Расстояния и сходство](../../chast-i.-matematicheskii-yazyk-ai/1.3-rasstoyaniya-i-skhodstvo/)".
 
 <div align="left"><figure><img src="../../.gitbook/assets/22.1-cosine-similarity-vectors.png" alt=""><figcaption><p>23.1 Векторы косинусного сходства</p></figcaption></figure></div>
 
