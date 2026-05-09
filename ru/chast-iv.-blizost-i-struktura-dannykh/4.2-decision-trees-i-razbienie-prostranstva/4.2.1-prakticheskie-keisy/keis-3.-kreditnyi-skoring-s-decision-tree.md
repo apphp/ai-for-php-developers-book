@@ -299,7 +299,7 @@ echo print_r($result, 1);
 
 #### Сравнение с логистической регрессией
 
-Ту же задачу можно решить с помощью логистической регрессии (что мы и делали в кейсе "[Одобрение кредита](../../../chast-iii.-klassifikaciya-i-veroyatnosti/3.2-logisticheskaya-regressiya/prakticheskie-keisy/keis-5.-odobrenie-kredita.md)" из главы о логистической регрессии):
+Ту же задачу можно решить с помощью логистической регрессии (что мы и делали в кейсе "[Одобрение кредита](../../../chast-iii.-klassifikaciya-i-veroyatnosti/3.2-logisticheskaya-regressiya/3.2.1-prakticheskie-keisy/keis-5.-odobrenie-kredita.md)" из главы о логистической регрессии):
 
 ```php
 use Rubix\ML\Classifiers\LogisticRegression;

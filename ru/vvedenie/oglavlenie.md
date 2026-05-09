@@ -58,59 +58,61 @@
 1.3 [**Расстояния и сходство**](../chast-i.-matematicheskii-yazyk-ai/1.3-rasstoyaniya-i-skhodstvo/)\
 &#xNAN;_&#x415;вклидово расстояние, dot product, cosine similarity._
 
-&#x20;  _1.3.1_ [Практические кейсы](../chast-i.-matematicheskii-yazyk-ai/1.3-rasstoyaniya-i-skhodstvo/prakticheskie-keisy/)
+&#x20;  _1.3.1_ [Практические кейсы](../chast-i.-matematicheskii-yazyk-ai/1.3-rasstoyaniya-i-skhodstvo/1.3.1-prakticheskie-keisy/)
 
 ### Часть II. Обучение как оптимизация
 
 2.1 [**Ошибка, loss-функции и зачем они нужны**](../chast-ii.-obuchenie-kak-optimizaciya/2.1-oshibka-loss-funkcii-i-zachem-oni-nuzhny/)\
 &#xNAN;_&#x4D;SE, log loss – без формального ада._
 
-&#x20;  2.1.1 [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/2.1-oshibka-loss-funkcii-i-zachem-oni-nuzhny/prakticheskie-keisy/)
+&#x20;  2.1.1 [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/2.1-oshibka-loss-funkcii-i-zachem-oni-nuzhny/2.1.1-prakticheskie-keisy/)
 
 2.2 [**Линейная регрессия как базовая модель**](../chast-ii.-obuchenie-kak-optimizaciya/2.2-lineinaya-regressiya-kak-bazovaya-model/)\
 &#xNAN;_&#x424;ормула, геометрический смысл, PHP-реализация._
 
-&#x20;  2.2.1 [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/2.2-lineinaya-regressiya-kak-bazovaya-model/prakticheskie-keisy/)
+&#x20;  2.2.1 [Практические кейсы](../chast-ii.-obuchenie-kak-optimizaciya/2.2-lineinaya-regressiya-kak-bazovaya-model/2.2.1-prakticheskie-keisy/)
 
 2.3 [**Градиентный спуск на пальцах**](../chast-ii.-obuchenie-kak-optimizaciya/2.3-gradientnyi-spusk-na-palcakh/)\
 &#xNAN;_&#x41F;очему производная – это направление движения._
 
-&#x20;  2.3.1 [Эксперименты с градиентным спуском](../chast-ii.-obuchenie-kak-optimizaciya/2.3-gradientnyi-spusk-na-palcakh/eksperimenty-s-gradientnym-spuskom/)
+&#x20;  2.3.1 [Эксперименты с градиентным спуском](../chast-ii.-obuchenie-kak-optimizaciya/2.3-gradientnyi-spusk-na-palcakh/2.3.1-eksperimenty-s-gradientnym-spuskom/)
 
 ### Часть III. Классификация и вероятности
 
 3.1 [**Вероятность как степень уверенности**](../chast-iii.-klassifikaciya-i-veroyatnosti/3.1-veroyatnost-kak-stepen-uverennosti/)\
 &#xNAN;_&#x427;астоты, апостериорные вероятности._
 
-&#x20;  3.1.1 [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/3.1-veroyatnost-kak-stepen-uverennosti/prakticheskie-keisy/)
+&#x20;  3.1.1 [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/3.1-veroyatnost-kak-stepen-uverennosti/3.1.1-prakticheskie-keisy/)
 
 3.2 [**Логистическая регрессия**](../chast-iii.-klassifikaciya-i-veroyatnosti/3.2-logisticheskaya-regressiya/)\
 &#xNAN;_&#x53;igmoid, decision boundary, кейс классификации._
 
-&#x20;  3.2.1 [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/3.2-logisticheskaya-regressiya/prakticheskie-keisy/)
+&#x20;  3.2.1 [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/3.2-logisticheskaya-regressiya/3.2.1-prakticheskie-keisy/)
 
-&#x20;  3.2.2 [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/3.2-logisticheskaya-regressiya/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+&#x20;  3.2.2 [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/3.2-logisticheskaya-regressiya/3.2.2-skvoznoi-keis-raspoznavanie-cifr-mnist/)
 
 3.3 [**Почему наивный Байес работает**](../chast-iii.-klassifikaciya-i-veroyatnosti/3.3-pochemu-naivnyi-baies-rabotaet/)\
 &#xNAN;_&#x423;словные вероятности и независимость._
 
-&#x20;  3.3.1 [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/3.3-pochemu-naivnyi-baies-rabotaet/prakticheskie-keisy/)
+&#x20;  3.3.1 [Практические кейсы](../chast-iii.-klassifikaciya-i-veroyatnosti/3.3-pochemu-naivnyi-baies-rabotaet/3.3.1-prakticheskie-keisy/)
 
-&#x20;  3.3.2 [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/3.3-pochemu-naivnyi-baies-rabotaet/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+&#x20;  3.3.2 [Сквозной кейс: распознавание цифр (MNIST)](../chast-iii.-klassifikaciya-i-veroyatnosti/3.3-pochemu-naivnyi-baies-rabotaet/3.3.2-skvoznoi-keis-raspoznavanie-cifr-mnist/)
 
 ### Часть IV. Близость и структура данных
 
 4.1 [**Алгоритм k-ближайших соседей и локальные решения**](../chast-iv.-blizost-i-struktura-dannykh/4.1-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/)\
 &#xNAN;_&#x413;еометрическая интуиция, метрики расстояний._
 
-&#x20;  4.1.1 [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/4.1-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/prakticheskie-keisy/)
+&#x20;  4.1.1 [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/4.1-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/4.1.1-prakticheskie-keisy/)
 
-&#x20;  4.1.1 [Сквозной кейс: распознавание цифр (MNIST)](../chast-iv.-blizost-i-struktura-dannykh/4.1-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+&#x20;  4.1.2 [Сквозной кейс: распознавание цифр (MNIST)](../chast-iv.-blizost-i-struktura-dannykh/4.1-algoritm-k-blizhaishikh-sosedei-i-lokalnye-resheniya/4.1.2-skvoznoi-keis-raspoznavanie-cifr-mnist/)
 
 4.2 [**Decision Trees и разбиение пространства**](../chast-iv.-blizost-i-struktura-dannykh/4.2-decision-trees-i-razbienie-prostranstva/)\
 &#xNAN;_&#x42D;нтропия, information gain, объяснимость._
 
-&#x20;  4.2.1 [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/4.2-decision-trees-i-razbienie-prostranstva/skvoznoi-keis-raspoznavanie-cifr-mnist/)
+&#x20;  4.2.1 [Практические кейсы](../chast-iv.-blizost-i-struktura-dannykh/4.2-decision-trees-i-razbienie-prostranstva/4.2.2-skvoznoi-keis-raspoznavanie-cifr-mnist/)
+
+&#x20;  4.2.2 [Сквозной кейс: распознавание цифр (MNIST)](../chast-iv.-blizost-i-struktura-dannykh/4.2-decision-trees-i-razbienie-prostranstva/4.2.2-skvoznoi-keis-raspoznavanie-cifr-mnist/)
 
 ### Часть V. Текст как математика
 
