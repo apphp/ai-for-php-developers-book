@@ -20,31 +20,39 @@ Section statuses
 
 #### Getting Started
 
-1.  🟩 **Disclaimer**
+🟩 **Disclaimer**\
+&#xNAN;_&#x41;bout the book's boundaries, assumptions and responsibilities._
 
-    _About the book's boundaries, assumptions and responsibilities._
-2. 🟩 **Introduction**\
-   _Motivation, realities and goals of the book._
-   1. From understanding to mathematics and implementation
-   2. Why a PHP developer needs AI
-3. 🟩 **The ML ecosystem in PHP**\
-   &#xNAN;_&#x41;n overview of the PHP ecosystem for machine learning and scientific computing._
-   1. Environment setup for PHP
-4. 🟩 About the book
-   1. License and copyright
-   2. How to contribute
-   3. Book change history
-   4. What's next?
-5. 🟨 Glossary
-6. 🟩 Resources and Literature
+🟩 **Introduction**\
+_Motivation, realities and goals of the book._
+
+* From understanding to mathematics and implementation
+* Why a PHP developer needs AI
+
+🟩 **The ML ecosystem in PHP**\
+&#xNAN;_&#x41;n overview of the PHP ecosystem for machine learning and scientific computing._
+
+* Environment setup for PHP
+
+🟩 About the book
+
+* License and copyright
+* How to contribute
+* Book change history
+* What's next?
+
+🟨 Glossary
+
+🟩 Resources and Literature
 
 #### Part I. The Mathematical Language of AI
 
-7. 🟩 What a model is in the mathematical sense\
-   &#xNAN;_&#x46;unction, parameters, error._
-8. 🟨 Vectors, dimensions, and feature spaces\
+1.1 🟩 What a model is in the mathematical sense\
+&#xNAN;_&#x46;unction, parameters, error._
+
+7. 🟨 Vectors, dimensions, and feature spaces\
    &#xNAN;_&#x57;hy data are points in space._
-9. 🟨 Distances and similarity\
+8. 🟨 Distances and similarity\
    &#xNAN;_&#x45;uclidean distance, dot product, cosine similarity._
    1. Practical use cases
 

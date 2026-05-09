@@ -1,3 +1,8 @@
+---
+coverY: 0
+coverHeight: 10
+---
+
 # About the book
 
 In this book, I deliberately use professional jargon and terms from the fields of machine learning and software development. This is done for precision of wording and to align with established practice: many concepts do not have clear or concise equivalents in other languages. When key terms are first introduced, they are accompanied by brief explanations.
