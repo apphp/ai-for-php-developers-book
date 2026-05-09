@@ -18,23 +18,23 @@ Section statuses
 ⬜ - not started
 {% endhint %}
 
-#### Getting Started
+### Getting Started
 
-🟩 **Disclaimer**\
+**Disclaimer**\
 &#xNAN;_&#x41;bout the book's boundaries, assumptions and responsibilities._
 
-🟩 **Introduction**\
+**Introduction**\
 _Motivation, realities and goals of the book._
 
 * From understanding to mathematics and implementation
 * Why a PHP developer needs AI
 
-🟩 **The ML ecosystem in PHP**\
+**The ML ecosystem in PHP**\
 &#xNAN;_&#x41;n overview of the PHP ecosystem for machine learning and scientific computing._
 
 * Environment setup for PHP
 
-🟩 About the book
+**About the book**
 
 * License and copyright
 * How to contribute
@@ -43,76 +43,91 @@ _Motivation, realities and goals of the book._
 
 🟨 Glossary
 
-🟩 Resources and Literature
+**Resources and Literature**
 
 #### Part I. The Mathematical Language of AI
 
-1.1 🟩 What a model is in the mathematical sense\
+**1.1 What a model is in the mathematical sense**\
 &#xNAN;_&#x46;unction, parameters, error._
 
-7. 🟨 Vectors, dimensions, and feature spaces\
-   &#xNAN;_&#x57;hy data are points in space._
-8. 🟨 Distances and similarity\
-   &#xNAN;_&#x45;uclidean distance, dot product, cosine similarity._
-   1. Practical use cases
+1.2 🟨 Vectors, dimensions, and feature spaces\
+&#xNAN;_&#x57;hy data are points in space._
+
+1.3 🟨 Distances and similarity\
+&#xNAN;_&#x45;uclidean distance, dot product, cosine similarity._
+
+&#x20;   1.3.1 Practical use cases
 
 #### Part II. Learning as Optimization
 
-10. 🟨 Error, loss functions, and why they are needed\
-    &#xNAN;_&#x4D;SE, log loss – without formal hell._
-    1. Practical use cases
-11. 🟨 Linear regression as a base model\
-    &#xNAN;_&#x46;ormula, geometric meaning, PHP implementation._
-    1. Practical use cases
-12. ⬜ Gradient descent explained on fingers\
-    &#xNAN;_&#x57;hy the derivative is the direction of movement._
-    1. Experiments with gradient descent
+2.1 🟨 Error, loss functions, and why they are needed\
+&#xNAN;_&#x4D;SE, log loss – without formal hell._
+
+&#x20;  2.1.1 Practical use cases
+
+2.2 🟨 Linear regression as a base model\
+&#xNAN;_&#x46;ormula, geometric meaning, PHP implementation._
+
+&#x20;  2.2.1 Practical use cases
+
+2.3 🟨 Gradient descent explained on fingers\
+&#xNAN;_&#x57;hy the derivative is the direction of movement._
+
+&#x20;  2.3.1 Experiments with gradient descent
 
 #### Part III. Classification and Probabilities
 
-13. ⬜ Probability as a degree of confidence\
-    &#xNAN;_&#x46;requencies, posterior probabilities._
-    1. Practical use cases
-14. ⬜ Logistic regression\
-    &#xNAN;_&#x53;igmoid, decision boundary, classification case._
-    1. Practical use cases
-15. ⬜ Why Naive Bayes works
+3.1 ⬜ Probability as a degree of confidence\
+&#xNAN;_&#x46;requencies, posterior probabilities._
 
-    _Conditional probabilities and independence._
+&#x20;  3.1.1 Practical use cases
 
-    1. Practical use cases
+3.2 ⬜ Logistic regression\
+&#xNAN;_&#x53;igmoid, decision boundary, classification case._
+
+&#x20;  3.2.1 Practical use cases
+
+3.3 ⬜ Why Naive Bayes works\
+&#xNAN;_&#x43;onditional probabilities and independence._
+
+&#x20;  3.3.1 Practical use cases
 
 #### Part IV. Proximity and Data Structure
 
-16. ⬜ The k-nearest neighbors algorithm and local decisions\
-    &#xNAN;_&#x47;eometric intuition, distance metrics._
-    1. Practical use cases
-17. ⬜ Decision Trees and space partitioning
+4.1 ⬜ The k-nearest neighbors algorithm and local decisions\
+&#xNAN;_&#x47;eometric intuition, distance metrics._
 
-    _Entropy, information gain, explainability._
+&#x20;  4.1.1 Practical use cases
 
-    1. Practical use cases
+2.2 ⬜ Decision Trees and space partitioning\
+&#xNAN;_&#x45;ntropy, information gain, explainability._
+
+&#x20;  4.2.1 Practical use cases
 
 #### Part V. Text as Mathematics
 
-18. ⬜ Why words turn into numbers\
-    &#xNAN;_&#x57;ord spaces and features._
-19. ⬜ Bag of Words and TF–IDF
+5.1 ⬜ Why words turn into numbers \
+&#xNAN;_&#x57;ord spaces and features._
 
-    _Formulas, weight interpretation._
+5.2 ⬜ Bag of Words and TF–IDF\
+&#xNAN;_&#x46;ormulas, weight interpretation._
 
-    1. Practical use cases
-20. ⬜ Embeddings as continuous spaces of meaning
+&#x20;  5.2.1 Practical use cases
 
-    _Geometry of meaning and semantic search._
-21. ⬜ Transformers and context: from static vectors to understanding meaning\
-    &#xNAN;_&#x57;hy the word "key" has different vectors. Self-attention without formulas._
-22. ⬜ Named Entity Recognition (NER) – extracting entities from text\
-    &#xNAN;_&#x53;equence labeling, BIO markup, practical case study in PHP._
-23. ⬜ Practice: embeddings in PHP using transformers\
-    Inference instead of training. transformers-php as an engineering tool.
-24. ⬜ RAG: Retrieval-Augmented Generation as an engineering system\
-    &#xNAN;_&#x53;earch → context → generation. Why an LLM "remembers" documents._
+5.3 ⬜ Embeddings as continuous spaces of meaning\
+&#xNAN;_&#x47;eometry of meaning and semantic search._
+
+5.4 ⬜ Transformers and context: from static vectors to understanding meaning \
+&#xNAN;_&#x57;hy the word "key" has different vectors. Self-attention without formulas._
+
+5.5 ⬜ Named Entity Recognition (NER) – extracting entities from text \
+&#xNAN;_&#x53;equence labeling, BIO markup, practical case study in PHP._
+
+5.6 ⬜ Practice: embeddings in PHP using transformers \
+&#xNAN;_&#x49;nference instead of training. transformers-php as an engineering tool._
+
+5.7 ⬜ RAG: Retrieval-Augmented Generation as an engineering system \
+&#xNAN;_&#x53;earch → context → generation. Why an LLM "remembers" documents._
 
 #### Part VI. Attention and Neural Networks
 
