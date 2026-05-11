@@ -104,7 +104,7 @@ $$
 
 В режиме обучения этот эффект проявляется ещё сильнее.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/10.1-distance-between-y-and-y1-on-axis (1).png" alt=""><figcaption><p>10.1 MSE и цена большого промаха</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/2.1-6_mse_and_cost_of_big_miss.png" alt=""><figcaption><p>Рис. 2.1-6. MSE и цена большого промаха</p></figcaption></figure></div>
 
 #### **Почему это не баг**
 

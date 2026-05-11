@@ -2,7 +2,7 @@
 description: MSE, log loss – без формального ада.
 ---
 
-# 10. Ошибка, loss-функции и зачем они нужны
+# 2.1 Ошибка, loss-функции и зачем они нужны
 
 Любая модель машинного обучения сводится к простой идее: она пытается описать реальность с помощью некой функции. Это значит, что между тем, что есть на самом деле и тем, что говорит модель - всегда будет расхождение. Это расхождение мы и называем ошибкой.
 
@@ -42,7 +42,7 @@ $$
 
 Геометрически это выглядит так: мы смотрим, насколько далеко предсказание отстоит от реального значения на числовой прямой.
 
-<div align="left"><figure><img src="../../.gitbook/assets/10.1-distance-between-y-and-y1-on-axis.png" alt=""><figcaption><p>10.1 Расстояние между y и ŷ на числовой оси</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/2.1-1_distance-between-y-and-y1-on-axis.png" alt=""><figcaption><p>Рис. 2.1-1. Расстояние между y и ŷ на числовой оси</p></figcaption></figure></div>
 
 По сути, мы хотим превратить отклонение в число, которое ведёт себя как расстояние. Давайте поясним почему. В задачах регрессии ошибку удобно интерпретировать как расстояние между реальным значением и предсказанием, то есть всегда неотрицательное число, которое увеличивается при росте ошибки.
 
@@ -106,7 +106,7 @@ $$
 
 Если представить данные как точки на плоскости, а модель как линию или поверхность, MSE измеряет, насколько далеко точки находятся от этой поверхности.
 
-<div align="left"><figure><img src="../../.gitbook/assets/10.2-data-points-and-regression-line.png" alt=""><figcaption><p>10.2 Точки данных и линия регрессии, вертикальные отрезки – ошибки</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/2.1-2_data-points-and-regression-line.png" alt=""><figcaption><p>Рис. 2.1-2. Точки данных и линия регрессии, вертикальные отрезки – ошибки</p></figcaption></figure></div>
 
 #### Немного полезной математики
 
@@ -126,7 +126,7 @@ $$
 * антиградиент (обратное направление градиента) указывает путь к уменьшению функции ошибки
 * обучение стабильно
 
-<div align="left"><figure><img src="../../.gitbook/assets/10.3-graph-of-convex-loss-function-with-single-minimum.png" alt=""><figcaption><p>10.3 График выпуклой функции потерь с единственным минимумом</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/2.1-3_graph-of-convex-loss-function-with-single-minimum.png" alt=""><figcaption><p>Рис. 2.1-3. График выпуклой функции потерь с единственным минимумом</p></figcaption></figure></div>
 
 Это одна из причин, почему линейная регрессия – базовый и надёжный инструмент.
 
@@ -234,7 +234,7 @@ $$
 
 А теперь давайте обратим внимание на график этой функции - он очень показателен.
 
-<div align="left"><figure><img src="../../.gitbook/assets/10.4-plot-of-function-log.png" alt=""><figcaption><p>10.4 График -log(p) при p → 0 и p → 1</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/1.3-4_same-angle-different-vector-lengths (1).png" alt=""><figcaption><p>Рис. 2.1-4. График -log(p) при p → 0 и p → 1</p></figcaption></figure></div>
 
 * при $$\hat{p} \to 1$$ ошибка стремится к нулю
 * при $$\hat{p} \to 0$$ ошибка стремится к бесконечности
@@ -258,7 +258,7 @@ $$
 * $$p$$ – истинное распределение
 * $$q$$ – распределение модели
 
-<div align="left"><figure><img src="../../.gitbook/assets/10.5-two-probability-distributions-and-distance-between-them.png" alt=""><figcaption><p>10.5: Два распределения вероятностей и расстояние между ними</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/2.1-5_two-probability-distributions-and-distance-between-them.png" alt=""><figcaption><p>Рис. 2.1-5. Два распределения вероятностей и расстояние между ними</p></figcaption></figure></div>
 
 Это делает log loss естественным выбором для вероятностных моделей.
 
