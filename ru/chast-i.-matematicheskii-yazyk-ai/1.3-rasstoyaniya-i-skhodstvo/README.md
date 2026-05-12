@@ -212,3 +212,7 @@ echo $similarity;
 ```
 
 В данном случае результат 0.8 означает, что векторы довольно похожи по направлению, но не совпадают полностью.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/distances-and-similarity) для его запуска.
+{% endhint %}
