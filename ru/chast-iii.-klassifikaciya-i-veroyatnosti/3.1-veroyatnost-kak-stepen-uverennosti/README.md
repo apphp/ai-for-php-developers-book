@@ -2,7 +2,7 @@
 description: Частоты, апостериорные вероятности.
 ---
 
-# 13. Вероятность как степень уверенности
+# 3.1 Вероятность как степень уверенности
 
 Когда разработчики слышат слово "вероятность", в голове часто всплывают игральные кости, подбрасывание монетки и школьная формула "благоприятные исходы делить на все возможные". Это полезная, но очень узкая картинка. В машинном обучении и в прикладной аналитике вероятность чаще всего интерпретируется как степень нашей уверенности в утверждении, основанная на имеющихся данных.
 
@@ -180,7 +180,7 @@ $$99 / 5 094 \approx 1.94\%$$
 
 Это не просто два числа. Это распределение нашей уверенности между гипотезами.
 
-<div align="left"><figure><img src="../../.gitbook/assets/13.1-probability-distribution-between-two-classes.png" alt=""><figcaption><p>13.1 Распределение вероятности между двумя классами</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/3.1-1_probability-distribution-between-two-classes.png" alt=""><figcaption><p>Рис. 3.1-1. Распределение вероятности между двумя классами</p></figcaption></figure></div>
 
 #### Вероятность и softmax
 
@@ -265,7 +265,7 @@ foreach ($probabilities as $class => $probability) {
 
 Важное замечание: `softmax` не делает модель умнее. Он лишь переводит ее внутренние оценки в форму, удобную для интерпретации и принятия решений. Модель по-прежнему сомневается и распределяет уверенность между альтернативами, а не выдает жесткий ответ "да" или "нет".
 
-<div align="left"><figure><img src="../../.gitbook/assets/13.2-сonverting-logits-to-probabilities-via-softmax.png" alt=""><figcaption><p>13.2 softmax превращает logits в вероятности</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/3.1-2_сonverting-logits-to-probabilities-via-softmax.png" alt=""><figcaption><p>Рис. 3.1-2. Как softmax превращает logits в вероятности</p></figcaption></figure></div>
 
 ### Почему вероятность почти никогда не бывает 0 или 1
 
@@ -279,7 +279,7 @@ foreach ($probabilities as $class => $probability) {
 
 Здоровая модель почти всегда оставляет место сомнению.
 
-<div align="left"><figure><img src="../../.gitbook/assets/13.3-confidence-scale-from-0-to-1.png" alt=""><figcaption><p>13.3 Шкала уверенности от 0 до 1</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/3.1-3_confidence-scale-from-0-to-1.png" alt=""><figcaption><p>Рис. 3.1-3. Шкала уверенности от 0 до 1</p></figcaption></figure></div>
 
 ### Вероятность и решения
 
