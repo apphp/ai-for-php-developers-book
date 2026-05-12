@@ -172,7 +172,7 @@ $$
 w_1 x_1 + w_2 x_2 + b = 0
 $$
 
-<div align="left"><figure><img src="../../.gitbook/assets/25.2-decision-boundary.png" alt="" width="563"><figcaption><p>25.2 Граница принятия решений</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.1-2_decision-boundary.png" alt=""><figcaption><p>Рис. 6.1-2. Граница принятия решений</p></figcaption></figure></div>
 
 Линейная комбинация – это та же идея, что и в линейной регрессии и логистической регрессии. Разница начинается дальше.
 
@@ -197,7 +197,7 @@ $$
 
 Например, XOR (как было упомянуть выше) он решить не может.
 
-<div align="left"><figure><img src="../../.gitbook/assets/25.3-xor-problem.png" alt="" width="563"><figcaption><p>25.3 Проблема XOR</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.1-3_-xor-problem.png" alt=""><figcaption><p>Рис. 6.1-3. Проблема XOR</p></figcaption></figure></div>
 
 XOR требует нелинейности. И здесь начинается история многослойных сетей.
 
@@ -303,7 +303,7 @@ $$
 \tanh(x)={\frac {e^{x}-e^{-x}}{e^{x}+e^{-x}}}
 $$
 
-<div align="left"><figure><img src="../../.gitbook/assets/25.4-activation-functions.png" alt="" width="563"><figcaption><p>25.4 Функции активации</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.1-4_activation-functions.png" alt=""><figcaption><p>Рис. 6.1-4. Функции активации</p></figcaption></figure></div>
 
 ReLU стал стандартом в глубоких сетях благодаря простоте и отсутствию насыщения на положительной части.
 
@@ -322,7 +322,7 @@ $$
 
 Каждый нейрон связан со всеми нейронами предыдущего слоя – отсюда "полносвязная".
 
-<div align="left"><figure><img src="../../.gitbook/assets/25.5-mlp-diagram.png" alt="" width="563"><figcaption><p>25.5 Диаграмма MLP</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.1-5_mlp-diagram.png" alt=""><figcaption><p>Рис. 6.1-5. Диаграмма MLP</p></figcaption></figure></div>
 
 #### Один скрытый слой может всё
 
