@@ -159,6 +159,9 @@ function inverseDocumentFrequency(array $documents): array {
 
     foreach ($df as $word => $freq) {
         $idf[$word] = log($N / $freq);
+        // Такой вариант формулы использует smoothing и помогает избежать ситуаций, 
+        // когда очень частые слова получают вес ровно 0
+        // $idf[$word] = log(($N + 1) / ($freq + 1)) + 1;
     }
 
     return $idf;
@@ -307,6 +310,9 @@ function inverseDocumentFrequency(array $documents): array {
 
     foreach ($df as $word => $freq) {
         $idf[$word] = log($N / $freq);
+        // Такой вариант формулы использует smoothing и помогает избежать ситуаций, 
+        // когда очень частые слова получают вес ровно 0
+        // $idf[$word] = log(($N + 1) / ($freq + 1)) + 1;
     }
 
     return $idf;
