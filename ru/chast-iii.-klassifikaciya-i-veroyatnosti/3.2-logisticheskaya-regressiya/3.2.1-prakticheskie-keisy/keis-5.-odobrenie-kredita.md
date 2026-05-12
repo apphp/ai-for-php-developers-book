@@ -149,7 +149,7 @@ $$
 
 Если признаков больше – это гиперплоскость, которую невозможно визуализировать напрямую, но логика остается той же.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/14.10-credit-decision-boundary.png" alt=""><figcaption><p>14.8 Граница принятия кредитного решения</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/3.2-8_credit-decision-boundary.png" alt=""><figcaption><p>Рис. 3.2-8. Граница принятия кредитного решения</p></figcaption></figure></div>
 
 #### Интерпретация
 

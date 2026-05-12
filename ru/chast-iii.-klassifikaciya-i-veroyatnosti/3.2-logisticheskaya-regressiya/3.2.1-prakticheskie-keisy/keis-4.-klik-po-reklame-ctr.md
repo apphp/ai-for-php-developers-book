@@ -144,7 +144,7 @@ $$
 
 И модель учится сдвигать вероятность между ними.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/14.7-ctr-decision-boundary.png" alt=""><figcaption><p>14.7 Граница принятия решения для CTR</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/3.2-7_ctr-decision-boundary.png" alt=""><figcaption><p>Рис. 3.2-7. Граница принятия решения для CTR</p></figcaption></figure></div>
 
 #### Интерпретация
 

@@ -2,7 +2,7 @@
 description: Линейные комбинации и нелинейности.
 ---
 
-# 25. Перцептрон и полносвязная сеть
+# 6.1 Перцептрон и полносвязная сеть
 
 ### Что такое перцептрон
 
@@ -88,7 +88,7 @@ $$
 
 И если данные можно разделить одной плоской границей – перцептрон способен это сделать.
 
-<div align="left"><figure><img src="../../.gitbook/assets/25.1-hyperplane-separation.png" alt="" width="563"><figcaption><p>25.1 Разделение гиперплоскостей</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.1-1_hyperplane-separation.png" alt=""><figcaption><p>Рис. 6.1-1. Разделение гиперплоскостей</p></figcaption></figure></div>
 
 #### Почему это линейный классификатор
 

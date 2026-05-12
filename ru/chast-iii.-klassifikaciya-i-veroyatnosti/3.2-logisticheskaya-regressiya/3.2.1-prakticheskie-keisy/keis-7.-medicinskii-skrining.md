@@ -149,7 +149,7 @@ $$
 
 Тем не менее, можно использовать простой приём, позволяющий частично отразить влияние четвёртого признака. Для этого его удобно закодировать через размер точек на графике – так мы сможем наглядно увидеть, как он соотносится с остальными признаками.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/14.12-medical-decision-boundary.png" alt=""><figcaption><p>14.10 Граница медицинского решения</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/3.2-10_medical-decision-boundary.png" alt=""><figcaption><p>Рис. 3.2-10. Граница медицинского решения</p></figcaption></figure></div>
 
 #### Ключевая мысль
 

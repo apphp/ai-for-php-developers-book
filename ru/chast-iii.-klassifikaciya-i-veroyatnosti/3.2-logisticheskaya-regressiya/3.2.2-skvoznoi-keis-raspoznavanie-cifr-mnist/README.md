@@ -1,4 +1,4 @@
-# Сквозной кейс: распознавание цифр (MNIST)
+# 3.2.2 Сквозной кейс: распознавание цифр (MNIST)
 
 {% hint style="info" %}
 **Сквозной практический кейс**
@@ -161,7 +161,7 @@ class MnistLoader {
 
 #### **Визуализация**
 
-<div align="left"><figure><img src="../../../.gitbook/assets/14.4-mnist-samples-0-1.png" alt=""><figcaption><p>14.11 MNIST примеры цифр 0 и 1</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/3.2-11_mnist-samples-0-1.png" alt=""><figcaption><p>Рис. 3.2-11. MNIST примеры цифр 0 и 1</p></figcaption></figure></div>
 
 #### **Как мы будем с этим работать**
 
