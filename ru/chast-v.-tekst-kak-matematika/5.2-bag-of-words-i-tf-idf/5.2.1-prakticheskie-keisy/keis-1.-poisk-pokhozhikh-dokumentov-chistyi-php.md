@@ -80,7 +80,7 @@ Cosine Similarity
 Сортировка результатов
 ```
 
-<figure><img src="../../../.gitbook/assets/19.4-search-pipeline.png" alt=""><figcaption><p>19.4 Конвейер поиска</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/19.4-search-pipeline.png" alt=""><figcaption><p>19.4 Конвейер поиска (pipeline) документов</p></figcaption></figure>
 
 **Шаг 1. Подготавливаем документы**
 
