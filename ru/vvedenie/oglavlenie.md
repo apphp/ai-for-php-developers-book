@@ -119,7 +119,7 @@
 5.1 [**Почему слова превращаются в числа**](../chast-v.-tekst-kak-matematika/5.1-pochemu-slova-prevrashayutsya-v-chisla.md)\
 &#xNAN;_&#x41F;ространство слов и признаки._
 
-5.2 🟨 Bag of Words и TF–IDF\
+5.2 [**Bag of Words и TF–IDF**](../chast-v.-tekst-kak-matematika/5.2-bag-of-words-i-tf-idf/)\
 &#xNAN;_&#x424;ормулы, интерпретация весов._
 
 &#x20;  5.2.1 🟨 Практические кейсы
