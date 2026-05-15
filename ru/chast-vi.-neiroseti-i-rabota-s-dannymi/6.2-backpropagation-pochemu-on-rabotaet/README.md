@@ -2,7 +2,7 @@
 description: Цепное правило без академического ужаса.
 ---
 
-# 26. Backpropagation – почему он работает
+# 6.2 Backpropagation – почему он работает
 
 Если вы дошли до этой главы, значит уже понимаете две ключевые идеи: перцептрон считает линейную комбинацию признаков, а нейросеть – это композиция таких комбинаций плюс нелинейности.
 
@@ -113,7 +113,7 @@ $$
 
 Это просто распространение влияния назад.
 
-<div align="left"><figure><img src="../../.gitbook/assets/26.1-computational-graph.png" alt="" width="563"><figcaption><p>26.1 Вычислительный граф</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.2-1_computational-graph.png" alt=""><figcaption><p>Рис. 6.2-1. Вычислительный граф</p></figcaption></figure></div>
 
 ### Числовой пример
 
@@ -197,7 +197,7 @@ $$
 
 Backpropagation – это автоматическое применение цепного правила ко всей сети.
 
-<div align="left"><figure><img src="../../.gitbook/assets/26.2-two-layer-network.png" alt="" width="563"><figcaption><p>26.2 Сеть из двух слоёв</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.2-2_two-layer-network.png" alt=""><figcaption><p>Рис. 6.2-2. Сеть из двух слоёв</p></figcaption></figure></div>
 
 ### Почему это не магия
 
@@ -282,7 +282,7 @@ echo "New weight: " . $w;
 
 Если представить поверхность ошибки:
 
-<div align="left"><figure><img src="../../.gitbook/assets/26.3-error-function-surface.png" alt="" width="563"><figcaption><p>26.3 Поверхность функции ошибки</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.2-3_error-function-surface.png" alt=""><figcaption><p>Рис. 6.2-3. Поверхность функции ошибки</p></figcaption></figure></div>
 
 Backpropagation просто говорит: вот вектор вниз.
 
