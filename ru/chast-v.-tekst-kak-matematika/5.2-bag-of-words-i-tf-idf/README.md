@@ -120,7 +120,7 @@ $documents = [
 ];
 ```
 
-**Шаг 1. Токенизация**
+#### **Шаг 1. Токенизация**
 
 ```php
 function tokenize(string $text): array {
@@ -130,7 +130,7 @@ function tokenize(string $text): array {
 $tokenized = array_map('tokenize', $documents);
 ```
 
-**Шаг 2. Построение словаря**
+#### **Шаг 2. Построение словаря**
 
 ```php
 $vocab = [];
@@ -150,7 +150,7 @@ $vocab = array_keys($vocab);
 ['кот', 'ест', 'рыбу', 'любит', 'собака', 'мясо']
 ```
 
-**Шаг 3. Bag of Words-вектор**
+#### **Шаг 3. Bag of Words-вектор**
 
 ```php
 function bagOfWords(array $doc, array $vocab): array {
@@ -232,7 +232,7 @@ foreach ($bowVectors as $i => $vector) {
 
 </details>
 
-**Пример вывода**
+#### **Пример вывода**
 
 ```php
 foreach ($bowVectors as $i => $vector) {
@@ -278,7 +278,7 @@ foreach ($bowVectors as $i => $vector) {
 Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-5/bag-of-words-and-tf-idf) для его запуска.
 {% endhint %}
 
-**Как это интерпретировать**
+#### **Как это интерпретировать**
 
 Каждый документ превращается в вектор фиксированной длины — по одному числу на каждое слово из словаря.
 
