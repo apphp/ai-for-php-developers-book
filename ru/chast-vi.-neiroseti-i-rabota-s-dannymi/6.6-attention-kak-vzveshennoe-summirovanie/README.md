@@ -2,7 +2,7 @@
 description: Формулы Q/K/V + упрощённая реализация.
 ---
 
-# 30. Attention как взвешенное суммирование
+# 6.6 Attention как взвешенное суммирование
 
 Если убрать весь маркетинг вокруг LLM и трансформеров, attention – это очень простая идея: каждый элемент последовательности смотрит на другие элементы и берёт их в разной степени важности.
 
@@ -102,7 +102,7 @@ $$
 
 Это ключевая формула трансформера.
 
-<div align="left"><figure><img src="../../.gitbook/assets/27.1-scaled-dot-product-attention.png" alt="" width="563"><figcaption><p>27.1 Scaled dot product attention</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/27.1-scaled-dot-product-attention.png" alt=""><figcaption><p>27.1 Scaled dot product attention</p></figcaption></figure></div>
 
 ### Мини-пример с числами
 
@@ -234,7 +234,7 @@ Attention – это:
 
 Чем меньше угол – тем больше вклад.
 
-<div align="left"><figure><img src="../../.gitbook/assets/27.2-query-k-vectors.png" alt="" width="563"><figcaption><p>27.2 Вклад угла между векторами на скалярное произведение</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/27.2-query-k-vectors.png" alt=""><figcaption><p>27.2 Вклад угла между векторами на скалярное произведение</p></figcaption></figure></div>
 
 ### Почему это революция?
 
