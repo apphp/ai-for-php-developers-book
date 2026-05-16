@@ -119,10 +119,16 @@
 5.1 [**Почему слова превращаются в числа**](../chast-v.-tekst-kak-matematika/5.1-pochemu-slova-prevrashayutsya-v-chisla.md)\
 &#xNAN;_&#x41F;ространство слов и признаки._
 
-5.2 [**Bag of Words и TF–IDF**](../chast-v.-tekst-kak-matematika/5.2-bag-of-words-i-tf-idf/)\
+5.2 [**Представление текста: Bag of Words и TF–IDF**](../chast-v.-tekst-kak-matematika/5.2-predstavlenie-teksta-bag-of-words-i-tf-idf/)\
 &#xNAN;_&#x424;ормулы, интерпретация весов._
 
-&#x20;  5.2.1 🟨 Практические кейсы
+&#x20;  5.2.1 [**Bag of Words** ](../chast-v.-tekst-kak-matematika/5.2-predstavlenie-teksta-bag-of-words-i-tf-idf/5.2.1-bag-of-words.md)\
+&#x20;  _Как базовое векторное представление текста._
+
+&#x20;  5.2.2 [**TF–IDF**](../chast-v.-tekst-kak-matematika/5.2-predstavlenie-teksta-bag-of-words-i-tf-idf/5.2.2-tf-idf.md)\
+&#x20;  _Как улучшение BOW через взвешивание признаков._
+
+&#x20;  5.2.3 🟨 Практические кейсы
 
 5.3 🟨 Embeddings как непрерывные пространства смысла\
 &#xNAN;_&#x413;еометрия смысла и semantic search._
