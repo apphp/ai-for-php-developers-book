@@ -60,7 +60,7 @@
 
 * модель проверяет, закрашена ли конкретная точка изображения
 
-<figure><img src="../../../.gitbook/assets/17.4-mnist_pixel_split.png" alt=""><figcaption><p>17.4 Разбиение в дереве решений по интенсивности пикселя (MNIST)</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/4.2-4_mnist_pixel_split.png" alt=""><figcaption><p>Рис. 4.2-4. Разбиение в дереве решений по интенсивности пикселя (MNIST)</p></figcaption></figure>
 
 #### Что в итоге строит дерево
 
