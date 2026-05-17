@@ -2,7 +2,7 @@
 description: Почему слово "ключ" имеет разные векторы. Self-attention без формул.
 ---
 
-# Трансформеры и контекст: от статических векторов к пониманию смысла
+# 5.4 Трансформеры и контекст: от статических векторов к пониманию смысла
 
 ### От статических слов к контексту
 
@@ -44,7 +44,7 @@ description: Почему слово "ключ" имеет разные вект
 
 Важно, что контекст – это не только ближайшие слова. Self-attention позволяет слову учитывать информацию из любой части предложения, даже если между ними десятки токенов. Именно это принципиально отличает трансформеры от более ранних подходов, где влияние далёких слов быстро затухает.
 
-<div align="left"><figure><img src="../../.gitbook/assets/21.1-contextual-vectors-of-word-key.png" alt=""><figcaption><p>21.1 Контекстные векторы слова "ключ"</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.4-1_contextual-vectors-of-word-key.png" alt=""><figcaption><p>Рис. 5.4-1. Контекстные векторы слова "ключ"</p></figcaption></figure></div>
 
 ### Self-attention: идея без формул
 
@@ -96,7 +96,7 @@ $$
 
 Эта формула важна не как формула, а как идея: смысл слова – это агрегированный контекст.
 
-<div align="left"><figure><img src="../../.gitbook/assets/21.2-self-attention-scheme.png" alt=""><figcaption><p>21.2 Схема self-attention</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.4-2_self-attention-scheme.png" alt=""><figcaption><p>Рис. 5.4-2. Схема self-attention</p></figcaption></figure></div>
 
 ### Почему трансформер понимает порядок слов
 
@@ -118,7 +118,7 @@ $$
 
 В итоге итоговый вектор слова – это объединение нескольких разных взглядов на контекст.
 
-<div align="left"><figure><img src="../../.gitbook/assets/21.3-multi-head.attention.png" alt=""><figcaption><p>21.3 Многоголовочное (multi-head) внимание</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.4-3_multi-head.attention.png" alt=""><figcaption><p>Рис. 5.4-3. Многоголовочное (multi-head) внимание</p></figcaption></figure></div>
 
 ### Мини-пример на PHP: внимание как веса
 
