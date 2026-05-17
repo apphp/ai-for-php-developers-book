@@ -84,7 +84,7 @@ TF–IDF Vectorizer
 positive / negative
 ```
 
-<figure><img src="../../../.gitbook/assets/19.5-sentiment-pipeline.png" alt=""><figcaption><p>19.5 Конвейер анализа настроений</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/5.2-5_sentiment-pipeline.png" alt=""><figcaption><p>Рис. 5.2-5. Конвейер анализа настроений</p></figcaption></figure>
 
 #### Почему здесь уже нужен ML
 

@@ -2,7 +2,7 @@
 description: Геометрия смысла и semantic search.
 ---
 
-# 20. Embeddings как непрерывные пространства смысла
+# 5.3 Embeddings как непрерывные пространства смысла
 
 ### От слов и признаков – к пространству смысла
 
@@ -20,7 +20,7 @@ $$
 
 Где $$d$$ – размерность пространства, а каждая координата не имеет отдельного человеческого смысла. Важно не значение координат, а геометрические отношения между векторами.
 
-<div align="left"><figure><img src="../../.gitbook/assets/20.1-embedding-space-overview.png" alt=""><figcaption><p>20.1 Обзор embedding-пространства</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.3-1_embedding-space-overview.png" alt=""><figcaption><p>Рис. 5.3-1. Обзор embedding-пространства</p></figcaption></figure></div>
 
 ### Геометрия вместо логики
 
@@ -42,7 +42,7 @@ $$
 
 Важно заметить: нас интересует угол между векторами, а не их длина. Длина вектора часто нормализуется и перестает нести смысловую нагрузку.
 
-<div align="left"><figure><img src="../../.gitbook/assets/20.2-cosine-similarity.png" alt=""><figcaption><p>20.2 Косинусное сходство</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.3-2_cosine-similarity.png" alt=""><figcaption><p>Рис. 5.3-2. Косинусное сходство</p></figcaption></figure></div>
 
 ### Почему embeddings работают
 
@@ -94,7 +94,7 @@ $$
 
 Это не трюк и не заранее запрограммированное правило. Модель просто выучила, что определенные направления в пространстве соответствуют устойчивым семантическим сдвигам: пол, время, степень, роль.
 
-<div align="left"><figure><img src="../../.gitbook/assets/20.3-semantic-analogy.png" alt=""><figcaption><p>20.3 Семантическая Аналогия</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.3-3_semantic-analogy.png" alt=""><figcaption><p>Рис. 5.3-3. Семантическая Аналогия</p></figcaption></figure></div>
 
 Важно понимать: embeddings не хранят знания в виде фактов. Они хранят геометрию отношений.
 
@@ -116,7 +116,7 @@ $$
 
 Где $$\vec{q}$$  – embedding запроса, а $$\vec{d}$$  – embedding документа.
 
-<div align="left"><figure><img src="../../.gitbook/assets/20.4-semantic-search-pipeline.png" alt=""><figcaption><p>20.4 Семантический конвейер поиска</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.3-4_semantic-search-pipeline.png" alt=""><figcaption><p>Рис. 5.3-4. Семантический конвейер поиска</p></figcaption></figure></div>
 
 ### Почему semantic search лучше keyword search
 
