@@ -1,4 +1,4 @@
-# 6. Ресурсы и литература
+# Ресурсы и литература
 
 В этом разделе перечислены полезные инструменты, библиотеки и ссылки для дальнейшего изучения тем, рассматриваемых в этой книге.
 
@@ -10,7 +10,7 @@
 
 * Javatpoint – бесплатные онлайн-уроки\
   [https://www.javatpoint.com](https://www.javatpoint.com/)
-* GeeksforGeeks – портал по информатике для гиков.\
+* GeeksforGeeks – портал по информатике для гиков\
   [https://www.geeksforgeeks.org](https://www.geeksforgeeks.org/)
 * W3Schools – онлайн-уроки по веб-разработке\
   [https://www.w3schools.com](https://www.w3schools.com/)
