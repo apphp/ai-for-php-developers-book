@@ -2,7 +2,7 @@
 description: 'LLM как управляемая система: планирование, инструменты и контроль.'
 ---
 
-# Агентные системы и multi-step reasoning в PHP
+# 8.1 Агентные системы и multi-step reasoning в PHP
 
 Когда разработчики впервые сталкиваются с LLM, они обычно воспринимают модель как "умный автокомплит". Мы задаём вопрос – модель генерирует ответ. Однако такой способ использования раскрывает лишь небольшую часть потенциала современных моделей.
 
@@ -125,7 +125,7 @@ while (!$goalReached) {
 }
 ```
 
-<div align="left"><figure><img src="../../.gitbook/assets/31.1-ai-agent-loop.png" alt="" width="563"><figcaption><p>31.1 Цикл работы ИИ агента</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/31.1-ai-agent-loop.png" alt=""><figcaption><p>31.1 Цикл работы ИИ агента</p></figcaption></figure></div>
 
 ### Архитектура агентной системы
 
@@ -258,7 +258,7 @@ for ($i = 0; $i < 5; $i++) {
 }
 ```
 
-<div align="left"><figure><img src="../../.gitbook/assets/31.2-multi-step-reasoning.png" alt="" width="563"><figcaption><p>31.2 Многошаговое рассуждение</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/31.2-multi-step-reasoning.png" alt=""><figcaption><p>31.2 Многошаговое рассуждение</p></figcaption></figure></div>
 
 ### Контроль и безопасность
 

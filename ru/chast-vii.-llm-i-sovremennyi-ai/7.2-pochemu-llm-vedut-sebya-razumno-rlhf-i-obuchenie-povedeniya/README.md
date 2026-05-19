@@ -59,7 +59,7 @@ $$
 
 Можно представить себе цикл:
 
-<div align="left"><figure><img src="../../.gitbook/assets/29.1-rl-loop.png" alt=""><figcaption><p>29.1 Цикл обучения с подкреплением</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/7.2-1_rl-loop.png" alt=""><figcaption><p>Рис. 7.2-1. Цикл обучения с подкреплением</p></figcaption></figure></div>
 
 Модель отвечает → человек (или система) оценивает → модель корректирует параметры.
 
@@ -83,7 +83,7 @@ $$
 
 Важно понимать: RLHF – это не одна техника, а целый pipeline.
 
-<div align="left"><figure><img src="../../.gitbook/assets/29.2-rlhf-pipeline.png" alt=""><figcaption><p>29.2 Пайплайн - обучение с подкреплением на основе обратной связи от человека</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/7.2-2_rlhf-pipeline.png" alt=""><figcaption><p>Рис. 7.2-2. Пайплайн - обучение с подкреплением на основе обратной связи от человека</p></figcaption></figure></div>
 
 Этот pipeline состоит из трёх ключевых этапов.
 
