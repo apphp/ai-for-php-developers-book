@@ -2,7 +2,7 @@
 description: Понятные инженерные границы.
 ---
 
-# Когда AI не нужен и почему это важно
+# 9.2 Когда AI не нужен и почему это важно
 
 В эпоху повсеместного увлечения LLM, эмбеддингами и RAG-инфраструктурами легко попасть в когнитивную ловушку: если задача связана с текстом, значит нужен AI. Если есть данные – значит нужна модель. Если можно применить нейросеть – значит это "современно".
 
@@ -210,7 +210,7 @@ LLM – нет.
 
 Если поиск по базе плохой – сначала нужно исправить схему БД, а не добавлять эмбеддинги.
 
-<div align="left"><figure><img src="../../.gitbook/assets/33.1-scope-of-ai-applicability.png" alt="" width="563"><figcaption><p>33.1 Область применимости AI</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/33.1-scope-of-ai-applicability.png" alt=""><figcaption><p>33.1 Область применимости AI</p></figcaption></figure></div>
 
 Интерпретация:
 
@@ -221,7 +221,7 @@ LLM – нет.
 
 AI оправдан только в правом нижнем углу. Это упрощённая эвристика, но она хорошо отражает практику инженерных решений.
 
-<div align="left"><figure><img src="../../.gitbook/assets/33.2-growth-of-system-complexity.png" alt="" width="563"><figcaption><p>33.2 Рост сложности системы</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/33.2-growth-of-system-complexity.png" alt=""><figcaption><p>33.2 Рост сложности системы</p></figcaption></figure></div>
 
 ### Финансовая функция сложности
 
