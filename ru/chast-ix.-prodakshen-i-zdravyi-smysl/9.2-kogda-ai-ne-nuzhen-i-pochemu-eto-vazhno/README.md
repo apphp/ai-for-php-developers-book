@@ -210,7 +210,7 @@ LLM – нет.
 
 Если поиск по базе плохой – сначала нужно исправить схему БД, а не добавлять эмбеддинги.
 
-<div align="left"><figure><img src="../../.gitbook/assets/33.1-scope-of-ai-applicability.png" alt=""><figcaption><p>33.1 Область применимости AI</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/9.2-1-scope-of-ai-applicability.png" alt=""><figcaption><p>Рис. 9.2-1. Область применимости AI</p></figcaption></figure></div>
 
 Интерпретация:
 
@@ -221,7 +221,7 @@ LLM – нет.
 
 AI оправдан только в правом нижнем углу. Это упрощённая эвристика, но она хорошо отражает практику инженерных решений.
 
-<div align="left"><figure><img src="../../.gitbook/assets/33.2-growth-of-system-complexity.png" alt=""><figcaption><p>33.2 Рост сложности системы</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/9.2-2_growth-of-system-complexity.png" alt=""><figcaption><p>Рис. 9.2-2. Рост сложности системы</p></figcaption></figure></div>
 
 ### Финансовая функция сложности
 

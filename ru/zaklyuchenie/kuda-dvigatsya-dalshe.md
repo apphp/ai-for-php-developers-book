@@ -203,7 +203,7 @@ MLOps:
 
 Цель: бизнес-результат
 
-<div align="left"><figure><img src="../.gitbook/assets/34.1-map-of-development-directions.png" alt=""><figcaption><p>34.1 Карта направлений развития</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/map-of-development-directions.png" alt=""><figcaption><p>Карта направлений развития</p></figcaption></figure></div>
 
 Ни одна из этих ролей не лучше другой. Они просто разные. Но в реальной индустрии эти роли редко существуют изолированно. Обычно они соединяются в одной архитектуре ML-систем.
 
