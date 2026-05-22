@@ -204,3 +204,7 @@ Dot product отвечает на другой вопрос: "Насколько
 {% endhint %}
 
 Именно такая комбинация лежит в основе большинства production-рекомендательных систем – от простых e-commerce решений до сложных ML-пайплайнов.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/distances-and-similarity/case-1/comparison-of-objects-and-users) для его запуска.
+{% endhint %}
