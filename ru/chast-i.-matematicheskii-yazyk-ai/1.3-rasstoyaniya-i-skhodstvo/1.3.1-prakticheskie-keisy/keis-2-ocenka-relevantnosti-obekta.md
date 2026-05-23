@@ -112,7 +112,7 @@ $labels = [8, 2, 15];
 
 $dataset = new Labeled($samples, $labels);
 
-new Ridge(alpha: 1.0);
+$model = new Ridge(1.0);
 $model->train($dataset);
 
 // Новый объект
@@ -121,9 +121,9 @@ $newSample = [[9, 6, 4]];
 $prediction = $model->predict(new Unlabeled($newSample));
 print_r($prediction);
 
-// Результат: Array
-// (
-//     [0] => 8.3
+// Результат: 
+// Array (
+//     [0] => 8.175
 // )
 ```
 
@@ -159,3 +159,7 @@ $$
 {% endhint %}
 
 Эта идея станет ключевой при переходе к обучаемым моделям, где веса вектора ($$\mathbf{w}$$) подбираются автоматически на данных.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/distances-and-similarity/case-1/comparison-of-objects-and-users) для его запуска.
+{% endhint %}
