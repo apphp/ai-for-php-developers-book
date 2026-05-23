@@ -102,7 +102,7 @@ positive / negative
 * какие слова характерны для positive
 * какие для negative
 
-И здесь появляется обучение с учителем (supervised learning).
+И здесь появляется обучение с учителем ([supervised learning](../../../vvedenie/glossarii.md#supervised-learning-obuchenie-s-uchitelem)).
 
 #### Подготовка данных
 
