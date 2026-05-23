@@ -161,5 +161,5 @@ $$
 Эта идея станет ключевой при переходе к обучаемым моделям, где веса вектора ($$\mathbf{w}$$) подбираются автоматически на данных.
 
 {% hint style="info" %}
-Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/distances-and-similarity/case-1/comparison-of-objects-and-users) для его запуска.
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/distances-and-similarity) для его запуска.
 {% endhint %}
