@@ -6,3 +6,7 @@
 
 Фокус\
 – embeddings как универсальный переводчик
+
+
+
+TIP: используй [https://github.com/CodeWithKyrian/tokenizers-php](https://github.com/CodeWithKyrian/tokenizers-php)

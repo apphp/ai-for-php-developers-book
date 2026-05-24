@@ -15,3 +15,7 @@
 
 Сильный эффект\
 Читатель вдруг понимает, что embeddings – это универсальный слой для EventumX-подобных систем.
+
+
+
+TIP: используй [https://github.com/CodeWithKyrian/tokenizers-php](https://github.com/CodeWithKyrian/tokenizers-php)

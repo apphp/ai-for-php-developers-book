@@ -13,4 +13,6 @@
 – выполняем semantic search
 
 Важно\
-Фокус не на API, а на том, что код вокруг не меняется, даже если модель другая.
+Фокус не на API, а на том, что код вокруг не меняется, даже если модель другая.\
+\
+TIP: используй [https://github.com/CodeWithKyrian/tokenizers-php](https://github.com/CodeWithKyrian/tokenizers-php)
