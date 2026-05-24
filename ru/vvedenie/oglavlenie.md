@@ -128,7 +128,7 @@
 &#x20;  5.2.2 [**TF–IDF**](../chast-v.-tekst-kak-matematika/5.2-predstavlenie-teksta-bag-of-words-i-tf-idf/5.2.2-tf-idf.md)\
 &#x20;  TF–IDF как _улучшение BOW через взвешивание признаков._
 
-&#x20;  5.2.3 🟨 Практические кейсы
+&#x20;  5.2.3 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.2-predstavlenie-teksta-bag-of-words-i-tf-idf/5.2.3-prakticheskie-keisy/)
 
 5.3 🟨 Embeddings как непрерывные пространства смысла\
 &#xNAN;_&#x413;еометрия смысла и semantic search._
