@@ -131,7 +131,7 @@
 &#x20;  5.2.3 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.2-predstavlenie-teksta-bag-of-words-i-tf-idf/5.2.3-prakticheskie-keisy/)
 
 5.3 🟨 Embeddings как непрерывные пространства смысла\
-&#xNAN;_&#x413;еометрия смысла и semantic search._
+&#xNAN;_&#x413;еометрия смысла и_ семантический поис&#x43A;_._
 
 &#x20;  5.3.1 🟨 Практические кейсы
 
