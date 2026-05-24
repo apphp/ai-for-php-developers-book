@@ -546,7 +546,7 @@ TF–IDF усиливает такие слова, а Naive Bayes использ
 
 может быть ошибочно определено как positive из-за слова "великолепно".
 
-Это одна из причин, почему позже появились embeddings и transformer-модели.
+Это одна из причин, почему позже появились [embeddings](../../../vvedenie/glossarii.md#embeddings-modeli) и [transformer-модели](../../../vvedenie/glossarii.md#transformer-modeli).
 
 #### Что здесь важно понять концептуально
 
