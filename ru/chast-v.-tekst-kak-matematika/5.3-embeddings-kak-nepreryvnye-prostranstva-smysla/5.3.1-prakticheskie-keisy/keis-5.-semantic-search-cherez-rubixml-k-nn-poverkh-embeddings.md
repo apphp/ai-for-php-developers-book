@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Кейс 5. Semantic search через RubixML (k-NN поверх embeddings)
 
 Идея\

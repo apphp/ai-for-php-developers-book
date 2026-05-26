@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Кейс 4. Получение embeddings и semantic search (PHP + внешний embedding)
 
 Идея\
