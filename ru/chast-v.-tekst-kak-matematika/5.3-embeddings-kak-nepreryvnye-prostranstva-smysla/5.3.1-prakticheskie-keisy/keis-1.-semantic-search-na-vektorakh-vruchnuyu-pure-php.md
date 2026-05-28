@@ -142,6 +142,96 @@ foreach (array_slice($documents, 0, $topN) as $document) {
 }
 ```
 
+<details>
+
+<summary>Кейс 1. Полный пример кода на чистом PHP</summary>
+
+```php
+$documents = [
+    [
+        'title' => 'Оптимизация массовой email-рассылки',
+        'embedding' => [0.12, 0.88, 0.33, 0.55, 0.71],
+    ],
+    [
+        'title' => 'Настройка очередей в Laravel',
+        'embedding' => [0.18, 0.79, 0.41, 0.60, 0.66],
+    ],
+    [
+        'title' => 'RabbitMQ и фоновые задачи',
+        'embedding' => [0.14, 0.81, 0.39, 0.58, 0.69],
+    ],
+    [
+        'title' => 'Scaling PHP workers',
+        'embedding' => [0.11, 0.81, 0.36, 0.63, 0.72],
+    ],
+    [
+        'title' => 'Redis queues в production',
+        'embedding' => [0.15, 0.18, 0.31, 0.52, 0.62],
+    ],
+    [
+        'title' => 'Мониторинг email delivery',
+        'embedding' => [0.09, 0.91, 0.28, 0.57, 0.74],
+    ],
+    [
+        'title' => 'Kubernetes autoscaling',
+        'embedding' => [0.32, 0.61, 0.70, 0.40, 0.51],
+    ],
+    [
+        'title' => 'Как приготовить кофе дома',
+        'embedding' => [0.91, 0.04, 0.15, 0.08, 0.02],
+    ],
+    [
+        'title' => 'История Древнего Рима',
+        'embedding' => [0.84, 0.12, 0.10, 0.21, 0.07],
+    ],
+    [
+        'title' => 'Путешествие по Исландии',
+        'embedding' => [0.73, 0.18, 0.22, 0.19, 0.11],
+    ],
+];
+
+function cosineSimilarity(array $a, array $b): float {
+    $dotProduct = 0.0;
+    $normA = 0.0;
+    $normB = 0.0;
+
+    foreach ($a as $i => $value) {
+        $dotProduct += $value * $b[$i];
+
+        $normA += $value ** 2;
+        $normB += $b[$i] ** 2;
+    }
+
+    if ($normA == 0.0 || $normB == 0.0) {
+        return 0.0;
+    }
+
+    return $dotProduct / (sqrt($normA) * sqrt($normB));
+}
+
+$query = [
+    'text' => 'ускорить отправку email',
+    'embedding' => [0.10, 0.84, 0.29, 0.58, 0.69],
+];
+
+foreach ($documents as &$document) {
+    $document['score'] = cosineSimilarity($query['embedding'], $document['embedding']);
+}
+unset($document);
+
+usort($documents, function ($a, $b) {
+    return $b['score'] <=> $a['score'];
+});
+
+$topN = 5;
+
+foreach (array_slice($documents, 0, $topN) as $document) {
+    echo $document['title'] . ' => ' . round($document['score'], 3) . PHP_EOL;
+}
+```
+
+</details>
+
 **Результат**
 
 Примерный вывод:
@@ -197,7 +287,7 @@ RabbitMQ и фоновые задачи => 0.996
 текст → embedding → similarity → nearest neighbors
 ```
 
-В production вместо полного перебора обычно используются ANN-индексы (HNSW, IVF, PQ и др.), но сама идея поиска ближайших соседей остаётся неизменной.
+В production вместо полного перебора обычно используются [ANN-индексы](../../../vvedenie/glossarii.md#ann-indeksy-approximate-nearest-neighbor) (HNSW, IVF, PQ и др.), но сама идея поиска ближайших соседей остаётся неизменной.
 
 #### Где такой подход используется
 
@@ -235,7 +325,7 @@ RabbitMQ и фоновые задачи => 0.996
 
 Главная идея embeddings заключается не в сложных нейросетях, а в представлении объектов как точек непрерывного пространства.
 
-После этого поиск превращается в геометрическую задачу: найти ближайшие точки по выбранной метрике сходства. Именно поэтому embeddings стали фундаментом современных AI-систем, семантического поиска и retrieval-архитектур.
+После этого поиск превращается в геометрическую задачу: найти ближайшие точки по выбранной метрике сходства. Именно поэтому embeddings стали фундаментом современных AI-систем, семантического поиска и [retrieval-архитектур](../../../vvedenie/glossarii.md#retrieval-arkhitektury).
 
 {% hint style="info" %}
 Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-5/embeddings-as-continuous-spaces-of-meaning) для его запуска.
