@@ -115,7 +115,7 @@
     * [Кейс 6. Сравнение: Bag of Words vs TF–IDF на одном примере](chast-v.-tekst-kak-matematika/5.2-predstavlenie-teksta-bag-of-words-i-tf-idf/5.2.3-prakticheskie-keisy/keis-6.-sravnenie-bag-of-words-vs-tf-idf-na-odnom-primere.md)
 * [5.3 Эмбеддинги как непрерывные пространства смысла](chast-v.-tekst-kak-matematika/5.3-embeddingi-kak-nepreryvnye-prostranstva-smysla/README.md)
   * [5.3.1 Практические кейсы](chast-v.-tekst-kak-matematika/5.3-embeddingi-kak-nepreryvnye-prostranstva-smysla/5.3.1-prakticheskie-keisy/README.md)
-    * [Кейс 1. Semantic search на векторах вручную (pure PHP)](chast-v.-tekst-kak-matematika/5.3-embeddingi-kak-nepreryvnye-prostranstva-smysla/5.3.1-prakticheskie-keisy/keis-1.-semantic-search-na-vektorakh-vruchnuyu-pure-php.md)
+    * [Кейс 1. Семантический поиск по векторам вручную (pure PHP)](chast-v.-tekst-kak-matematika/5.3-embeddingi-kak-nepreryvnye-prostranstva-smysla/5.3.1-prakticheskie-keisy/keis-1.-semanticheskii-poisk-po-vektoram-vruchnuyu-pure-php.md)
     * [Кейс 2. Почему евклидово расстояние хуже косинусного](chast-v.-tekst-kak-matematika/5.3-embeddingi-kak-nepreryvnye-prostranstva-smysla/5.3.1-prakticheskie-keisy/keis-2.-pochemu-evklidovo-rasstoyanie-khuzhe-kosinusnogo.md)
     * [Кейс 3. Кластеризация смыслов без ML-библиотек](chast-v.-tekst-kak-matematika/5.3-embeddingi-kak-nepreryvnye-prostranstva-smysla/5.3.1-prakticheskie-keisy/keis-3.-klasterizaciya-smyslov-bez-ml-bibliotek.md)
     * [Кейс 4. Получение эмбеддингов и semantic search (PHP + внешний эмбеддинг)](chast-v.-tekst-kak-matematika/5.3-embeddingi-kak-nepreryvnye-prostranstva-smysla/5.3.1-prakticheskie-keisy/keis-4.-poluchenie-embeddingov-i-semantic-search-php-+-vneshnii-embedding.md)
