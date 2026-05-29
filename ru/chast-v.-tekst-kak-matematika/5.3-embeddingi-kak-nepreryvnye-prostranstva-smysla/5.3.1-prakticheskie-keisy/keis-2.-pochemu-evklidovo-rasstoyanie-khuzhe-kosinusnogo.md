@@ -140,11 +140,11 @@ usort($documents, function ($a, $b) {
 Примерный вывод:
 
 ```
-Оптимизация email-рассылки => 0.03
-Scaling PHP workers => 0.08
-Мониторинг email delivery => 0.10
-Как приготовить кофе => 1.40
-Масштабированный email embedding => 11.9
+Оптимизация email-рассылки => 0.0361
+Scaling PHP workers => 0.0632
+Мониторинг email delivery => 0.1077
+Как приготовить кофе => 1.4223
+Масштабированный email embedding => 11.4217
 ```
 
 #### Что пошло не так
@@ -214,16 +214,118 @@ usort($documents, function ($a, $b) {
 });
 ```
 
+<details>
+
+<summary>Кейс 2. Полный пример кода на чистом PHP</summary>
+
+```php
+$documents = [
+    [
+        'title' => 'Email campaign optimization',
+        'embedding' => [0.10, 0.84, 0.29, 0.58, 0.69],
+    ],
+    [
+        'title' => 'Scaling PHP workers',
+        'embedding' => [0.11, 0.81, 0.36, 0.63, 0.72],
+    ],
+    [
+        'title' => 'Monitoring email delivery',
+        'embedding' => [0.09, 0.91, 0.28, 0.57, 0.74],
+    ],
+    [
+        'title' => 'Scaled email embedding',
+        'embedding' => [1.0, 8.4, 2.9, 5.8, 6.9],
+    ],
+    [
+        'title' => 'How to make coffee',
+        'embedding' => [0.91, 0.04, 0.15, 0.08, 0.02],
+    ],
+];
+
+function euclideanDistance(array $a, array $b): float {
+    $sum = 0.0;
+
+    foreach ($a as $i => $value) {
+        $sum += ($value - $b[$i]) ** 2;
+    }
+
+    return sqrt($sum);
+}
+
+function cosineSimilarity(array $a, array $b): float {
+    $dotProduct = 0.0;
+    $normA = 0.0;
+    $normB = 0.0;
+
+    foreach ($a as $i => $value) {
+        $dotProduct += $value * $b[$i];
+        $normA += $value ** 2;
+        $normB += $b[$i] ** 2;
+    }
+
+    if ($normA == 0.0 || $normB == 0.0) {
+        return 0.0;
+    }
+
+    return $dotProduct / (sqrt($normA) * sqrt($normB));
+}
+
+// Query: We want to find documents about speeding up email sending
+$query = [
+    'text' => 'speed up email sending',
+    'embedding' => [0.10, 0.82, 0.31, 0.60, 0.70],
+];
+
+// Part 1. Calculating the Euclidean distance (smaller = better)
+$euclideanDocuments = $documents;
+
+foreach ($euclideanDocuments as &$document) {
+    $document['euclidean'] = euclideanDistance($query['embedding'], $document['embedding']);
+}
+unset($document);
+
+usort($euclideanDocuments, function ($a, $b) {
+    return $a['euclidean'] <=> $b['euclidean'];
+});
+
+echo "Part 1. Euclidean distance" . PHP_EOL;
+foreach ($euclideanDocuments as $document) {
+    echo $document['title'] . ' => ' . round($document['euclidean'], 3) . PHP_EOL;
+}
+
+echo PHP_EOL;
+
+// Part 2. Calculating cosine similarity (bigger = better)
+$cosineDocuments = $documents;
+
+foreach ($cosineDocuments as &$document) {
+    $document['cosine'] = cosineSimilarity($query['embedding'], $document['embedding']);
+}
+unset($document);
+
+usort($cosineDocuments, function ($a, $b) {
+    return $b['cosine'] <=> $a['cosine'];
+});
+
+echo "Part 2. Cosine similarity" . PHP_EOL;
+foreach ($cosineDocuments as $document) {
+    echo $document['title'] . ' => ' . round($document['cosine'], 3) . PHP_EOL;
+}
+
+```
+
+</details>
+
 **Результат**
 
 После расчета получим примерно такую картину:
 
 ```
-Масштабированный email embedding => 0.999
-Оптимизация email-рассылки => 0.999
-Мониторинг email delivery => 0.998
-Scaling PHP workers => 0.996
-Как приготовить кофе => 0.218
+Оптимизация email-рассылки => 0.9996
+Масштабированный email embedding => 0.9996
+Scaling PHP workers => 0.9991
+Мониторинг email delivery => 0.9977
+Как приготовить кофе => 0.1964
 ```
 
 #### Почему косинусное сходство работает лучше
