@@ -131,7 +131,7 @@
 5.3 [**Эмбеддинги как непрерывные пространства смысла**](../chast-v.-tekst-kak-matematika/5.3-embeddingi-kak-nepreryvnye-prostranstva-smysla/)\
 &#xNAN;_&#x413;еометрия смысла и_ семантический поис&#x43A;_._
 
-&#x20;  5.3.1 🟨 Практические кейсы
+&#x20;  5.3.1 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.3-embeddingi-kak-nepreryvnye-prostranstva-smysla/5.3.1-prakticheskie-keisy/)
 
 5.4 🟨 Трансформеры и контекст: от статических векторов к пониманию смысла\
 &#xNAN;_&#x41F;очему слово "ключ" имеет разные векторы. Self-attention без формул._
