@@ -75,7 +75,7 @@ Transformer
 Ответ
 ```
 
-<figure><img src="../.gitbook/assets/5.5-1_path-of-text-within-llm.png" alt=""><figcaption><p>Рис. 5.5-1. Путь текста внутри LLM</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5.5-1_path-of-text-within-llm.png" alt=""><figcaption><p>Рис. 5.5-1. Путь текста внутри LLM</p></figcaption></figure>
 
 ### Что такое токен
 
@@ -238,7 +238,7 @@ $$
 
 ### Почему контекстное окно ограничено
 
-Главная причина связана с механизмом самовнимания ([self-attention](../vvedenie/glossarii.md#self-attention)).
+Главная причина связана с механизмом самовнимания ([self-attention](../../vvedenie/glossarii.md#self-attention)).
 
 Каждый токен должен взаимодействовать со всеми остальными токенами.
 
@@ -280,7 +280,7 @@ $$
 
 Кроме того, большая часть документа обычно не относится к текущему вопросу.
 
-Поэтому появился подход Retrieval-Augmented Generation ([RAG](../vvedenie/glossarii.md#retrieval-arkhitektury)).
+Поэтому появился подход Retrieval-Augmented Generation ([RAG](../../vvedenie/glossarii.md#retrieval-arkhitektury)).
 
 ### Откуда появляется чанкинг
 
@@ -306,7 +306,7 @@ Chunk
 
 Система ищет не весь документ, а только наиболее релевантные чанки.
 
-<figure><img src="../.gitbook/assets/5.5-2_splitt-document-into-chunks.png" alt=""><figcaption><p>Рис. 5.5-2. Разбиение документа на чанки</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5.5-2_splitt-document-into-chunks.png" alt=""><figcaption><p>Рис. 5.5-2. Разбиение документа на чанки</p></figcaption></figure>
 
 ### Размер чанка
 
@@ -386,7 +386,7 @@ Overlap – это повторение части предыдущего чан
 
 дублируются.
 
-<figure><img src="../.gitbook/assets/5.5-3_chunk_overlap.png" alt=""><figcaption><p>Рис. 5.5-3. Перекрытие фрагментов (сhunk overlap)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5.5-3_chunk_overlap.png" alt=""><figcaption><p>Рис. 5.5-3. Перекрытие фрагментов (сhunk overlap)</p></figcaption></figure>
 
 ### Как выбрать overlap
 
