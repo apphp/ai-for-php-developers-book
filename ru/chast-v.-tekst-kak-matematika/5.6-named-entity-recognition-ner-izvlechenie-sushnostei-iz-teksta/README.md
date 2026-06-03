@@ -108,7 +108,7 @@ NER же – это задача, где порядок критичен.
 
 Это уже не просто классификация. Это sequence labeling.
 
-<div align="left"><figure><img src="../../.gitbook/assets/5.5-1_bio-tags.png" alt=""><figcaption><p>Рис. 5.5-1. BIO тэги</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.6-1_bio-tags.png" alt=""><figcaption><p>Рис. 5.6-1. BIO тэги</p></figcaption></figure></div>
 
 ### Sequence labeling как вероятностная задача
 
@@ -159,7 +159,7 @@ $$
 
 Где $$h_i$$ – контекстный вектор токена.
 
-<div align="left"><figure><img src="../../.gitbook/assets/5.5-2_ner-architecture.png" alt=""><figcaption><p>Рис. 5.5-2. Архитектура NER</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/5.6-2_ner-architecture.png" alt=""><figcaption><p>Рис. 5.6-2. Архитектура NER</p></figcaption></figure></div>
 
 ### Практический кейс – NER на PHP
 
