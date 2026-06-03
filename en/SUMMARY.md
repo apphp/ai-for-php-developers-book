@@ -27,7 +27,9 @@
 
 * [1.1 What a model is in the mathematical sense](1.1-what-a-model-is-in-the-mathematical-sense.md)
 * [1.2 Vectors, dimensions, and feature spaces](1.2-vectors-dimensions-and-feature-spaces.md)
-* [1.3 Distances and similarity](1.3-distances-and-similarity.md)
+* [1.3 Distances and similarity](1.3-distances-and-similarity/README.md)
+  * [1.3.1 Практические кейсы](1.3-distances-and-similarity/1.3.1-prakticheskie-keisy/README.md)
+    * [Case 1: Comparing Objects and Users](1.3-distances-and-similarity/1.3.1-prakticheskie-keisy/case-1-comparing-objects-and-users.md)
 
 ## Part II. Learning as Optimization
 

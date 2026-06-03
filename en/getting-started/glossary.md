@@ -154,6 +154,113 @@ Instead of using the entire dataset at once or updating parameters after each in
 
 Intuitively, a batch is a "small portion of data for one training step".
 
+#### Batch Gradient Descent (BGD)
+
+Batch gradient descent is the classic version of gradient descent in which the gradient of the loss function is calculated using the entire training dataset before each model parameter update.
+
+At each step, the algorithm uses all available data, so the gradient direction is exact for the current model. This makes the training trajectory smooth and stable.
+
+Key characteristics of batch gradient descent:
+
+* stable and predictable updates
+* no gradient noise
+* high computational cost on large datasets
+
+Because it requires processing the entire dataset at every step, batch gradient descent scales poorly and is rarely used in its pure form for large-scale problems.
+
+From a practical standpoint, batch gradient descent is well suited for:
+
+* small datasets
+* educational and analytical examples
+* situations where reproducibility and update precision are important
+
+In real-world systems, it is often replaced by mini-batch or stochastic gradient descent, which provide a better balance between training speed and stability.
+
+#### Bayes' Formula
+
+Bayes' formula allows us to update the probability of a hypothesis when new evidence becomes available:
+
+$$
+P(A\mid B)=\frac{P(B\mid A)\cdot P(A)}{P(B)}
+$$
+
+where:
+
+* $$P(A)$$ – the prior probability
+* $$P(B|A)$$ – the likelihood
+* $$P(A|B)$$ – the posterior probability
+
+Intuitively, Bayes' formula means: "update your initial belief based on new observations."<br>
+
+#### Bayesian Updating
+
+Bayesian updating is the process of recalculating the probability of a hypothesis when new data becomes available.
+
+The idea is simple: we start with a prior probability – our initial assumption – then receive observations and update our confidence, producing a posterior probability.
+
+Schematically:
+
+new probability = old probability × effect of the data
+
+Formally, this is expressed through Bayes' formula, but conceptually it comes down to gradually refining knowledge as more information accumulates.
+
+Bayesian updating is used:
+
+* in Naive Bayes
+* in Bayesian models
+* in risk assessment
+* in online learning
+* in systems that work with streaming data
+
+Unlike the classical approach, where parameters are simply fitted, the Bayesian approach treats parameters as random variables and updates their probability distribution.
+
+Intuitively, Bayesian updating follows this rule: "Do not start from scratch – adjust your confidence step by step."
+
+In practical ML, this matters when data arrives gradually, the distribution changes, or the model needs to account for uncertainty explicitly.
+
+#### Bernoulli Naive Bayes
+
+Bernoulli Naive Bayes is a variant of the Naive Bayes algorithm designed for binary features.
+
+In this model, each feature can take only two values: present/absent, 1/0, or true/false.
+
+Bernoulli Naive Bayes is most commonly used for text classification tasks, where a feature indicates whether a word appears in a document rather than how many times it appears.
+
+The core idea is:
+
+* the model estimates the probability of a feature being present for each class
+* features are assumed to be independent
+* the final class probability is computed as the product of individual probabilities
+
+Bernoulli Naive Bayes works well when:
+
+* the presence of a word is more important than its frequency
+* the data is sparse
+* a binary representation is used (bag-of-words without term frequencies)
+
+The key difference from Multinomial Naive Bayes is:
+
+* Bernoulli considers only whether a feature is present
+* Multinomial takes feature frequency into account
+
+Intuitively, Bernoulli Naive Bayes answers the question: "Which features are present, and how does their presence relate to a particular class?"
+
+This model is simple, fast, and often serves as a strong baseline for text classification tasks.
+
+#### Bias
+
+Bias is a model parameter that allows the output to be shifted independently of the input features. In linear regression, the bias corresponds to the term **b** in the formula:
+
+$$
+y=wx+b
+$$
+
+Intuitively, the bias represents the model's "baseline" prediction.
+
+Without a bias term, the model would be forced to pass through the origin, which often makes it less flexible and reduces prediction accuracy.
+
+In machine learning, the bias parameter is learned together with the model weights and helps the model better fit the data.<br>
+
 
 
 \>>>>>>>>>
