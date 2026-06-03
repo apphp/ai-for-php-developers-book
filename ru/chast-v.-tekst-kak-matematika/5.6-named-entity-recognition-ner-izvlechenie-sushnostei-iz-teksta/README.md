@@ -1,8 +1,8 @@
 ---
-description: Sequence labeling, BIO-разметка, практический кейс на PHP.
+description: Sequence labeling, BIO-разметка.
 ---
 
-# 5.5 Named Entity Recognition (NER) – извлечение сущностей из текста
+# 5.6 Named Entity Recognition (NER) – извлечение сущностей из текста
 
 До этого момента мы научились превращать слова в числа, числа – в векторы, а векторы – в осмысленные пространства. Теперь сделаем следующий шаг.
 
