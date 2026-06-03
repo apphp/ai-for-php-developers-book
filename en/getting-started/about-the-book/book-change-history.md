@@ -6,6 +6,16 @@ This book evolves gradually. New chapters are added, existing ones are revised a
 
 Added:
 
+* New chapter "Case 1: Comparing Objects and Users" in 1.3 Distances and similarity
+
+Changes:
+
+*
+
+#### _May 2026_
+
+Added:
+
 * New chapter "Error, loss functions, and why they are needed" in Part II. Learning as Optimization
 * New chapter "Linear regression as a base model" in Part II. Learning as Optimization&#x20;
 

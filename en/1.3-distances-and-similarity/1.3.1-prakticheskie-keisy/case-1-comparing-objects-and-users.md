@@ -8,6 +8,8 @@ When comparing numerical objects, Euclidean distance is often the most natural c
 
 The dot product, on the other hand, is more commonly used in recommendation systems. It helps estimate how well a user and an item "fit" each other: the larger the value, the stronger the match. Importantly, it takes into account not only the direction of preferences but also their strength.
 
+<figure><img src="../../.gitbook/assets/1.3-5_users-and-products-in-one-space.png" alt=""><figcaption><p>Figure 1.3-5. Users and products in one space</p></figcaption></figure>
+
 **Problem Statement**
 
 Let's consider a typical machine learning and recommendation-system task. We have users and items (products, services, subscriptions), each described by a set of numerical features. Our goal is to determine which users are similar to each other and which items are most suitable for them.
@@ -206,5 +208,5 @@ Important: In real systems, these two approaches are almost always used together
 This combination is the foundation of most production recommendation systems – from simple e-commerce solutions to complex ML pipelines.
 
 {% hint style="info" %}
-To try this code yourself, use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/what-is-a-model) to run it.
+To try this code yourself, use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/distances-and-similarity) to run it.
 {% endhint %}
