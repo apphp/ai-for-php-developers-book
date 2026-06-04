@@ -6,7 +6,8 @@ This book evolves gradually. New chapters are added, existing ones are revised a
 
 Added:
 
-* New chapter "Case 1: Comparing Objects and Users" in 1.3 Distances and similarity
+* New practical case "Case 1: Comparing Objects and Users" in 1.3 Distances and similarity
+* New chapter 2.3 Gradient descent on fingers
 
 Changes:
 
