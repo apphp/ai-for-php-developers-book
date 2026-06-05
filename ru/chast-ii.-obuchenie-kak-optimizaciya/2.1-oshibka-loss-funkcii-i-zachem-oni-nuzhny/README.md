@@ -234,7 +234,7 @@ $$
 
 А теперь давайте обратим внимание на график этой функции - он очень показателен.
 
-<div align="left"><figure><img src="../../.gitbook/assets/1.3-4_same-angle-different-vector-lengths (1).png" alt=""><figcaption><p>Рис. 2.1-4. График -log(p) при p → 0 и p → 1</p></figcaption></figure></div>
+<figure><img src="../../.gitbook/assets/2.1-4_plot-of-function-minus-log.png" alt=""><figcaption><p>Рис. 2.1-4. График -log(p) при p → 0 и p → 1</p></figcaption></figure>
 
 * при $$\hat{p} \to 1$$ ошибка стремится к нулю
 * при $$\hat{p} \to 0$$ ошибка стремится к бесконечности
