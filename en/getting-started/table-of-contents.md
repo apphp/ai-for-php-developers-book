@@ -9,7 +9,7 @@ The book is being written publicly and is in active development.
 
 Readines&#x73;**:** 16% (31%)
 
-🟩🟩🟩🟩🟨🟩🟩🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟨🟩🟩🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -120,13 +120,16 @@ _Motivation, realities and goals of the book._
 5.4 ⬜ Transformers and context: from static vectors to understanding meaning \
 &#xNAN;_&#x57;hy the word "key" has different vectors. Self-attention without formulas._
 
-5.5 ⬜ Named Entity Recognition (NER) – extracting entities from text \
+5.5 ⬜ Tokens, context window, and chunking - how LLM sees text\
+&#xNAN;_&#x43;ontext constraints, token counting, document splitting and overlap._
+
+5.6 ⬜ Named Entity Recognition (NER) – extracting entities from text \
 &#xNAN;_&#x53;equence labeling, BIO markup, practical case study in PHP._
 
-5.6 ⬜ Practice: embeddings in PHP using transformers \
+5.7 ⬜ Practice: embeddings in PHP using transformers \
 &#xNAN;_&#x49;nference instead of training. transformers-php as an engineering tool._
 
-5.7 ⬜ RAG: Retrieval-Augmented Generation as an engineering system \
+5.8 ⬜ RAG: Retrieval-Augmented Generation as an engineering system \
 &#xNAN;_&#x53;earch → context → generation. Why an LLM "remembers" documents._
 
 #### Part VI. Attention and Neural Networks
