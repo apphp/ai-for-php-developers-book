@@ -67,21 +67,6 @@ $embedder = pipeline(
 // получаем эмбеддинги
 $embeddings = $embedder($sentences);
 
-// mean pooling
-function meanPooling(array $tokenEmbeddings): array {
-    $sum = array_fill(0, count($tokenEmbeddings[0]), 0.0);
-
-    foreach ($tokenEmbeddings as $token) {
-        foreach ($token as $i => $value) {
-            $sum[$i] += $value;
-        }
-    }
-
-    return array_map(fn ($v) => $v / count($tokenEmbeddings), $sum);
-}
-
-$vectors = array_map('meanPooling', $embeddings);
-
 // cosine similarity
 function cosineSimilarity(array $a, array $b): float {
     $dot = 0.0;
@@ -97,12 +82,12 @@ function cosineSimilarity(array $a, array $b): float {
     return $dot / (sqrt($normA) * sqrt($normB));
 }
 
-echo cosineSimilarity($vectors[0], $vectors[0]) . "\n";
-echo cosineSimilarity($vectors[0], $vectors[1]) . "\n";
-echo cosineSimilarity($vectors[0], $vectors[2]) . "\n";
-echo cosineSimilarity($vectors[0], $vectors[3]) . "\n";
-echo cosineSimilarity($vectors[0], $vectors[4]) . "\n";
-echo cosineSimilarity($vectors[0], $vectors[5]) . "\n";
+echo cosineSimilarity($embeddings[0], $embeddings[0]) . "\n";
+echo cosineSimilarity($embeddings[0], $embeddings[1]) . "\n";
+echo cosineSimilarity($embeddings[0], $embeddings[2]) . "\n";
+echo cosineSimilarity($embeddings[0], $embeddings[3]) . "\n";
+echo cosineSimilarity($embeddings[0], $embeddings[4]) . "\n";
+echo cosineSimilarity($embeddings[0], $embeddings[5]) . "\n";
 
 // Результат: для "ключ от квартиры"
 // 0 ↔ 0 = 1.0000	↔ "ключ от квартиры"	  » полностью идентичные фразы
