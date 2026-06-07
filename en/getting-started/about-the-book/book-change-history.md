@@ -6,12 +6,12 @@ This book evolves gradually. New chapters are added, existing ones are revised a
 
 Added:
 
-* New practical case "Case 1: Comparing Objects and Users" in 1.3 Distances and similarity
-* New chapter 2.3 Gradient descent on fingers
+* New practical case "Case 1: Comparing Objects and Users" in chapter "Distances and similarity"
+* New chapter "Gradient descent on fingers" in Part II. Learning as Optimization&#x20;
 
 Changes:
 
-*
+* added illustrations in chapter "2.2 Linear regression as a base model"
 
 #### _May 2026_
 
