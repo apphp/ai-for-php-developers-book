@@ -36,3 +36,9 @@
 * [2.1 Error, loss functions, and why they are needed](part-ii.-learning-as-optimization/2.1-error-loss-functions-and-why-they-are-needed.md)
 * [2.2 Linear regression as a base model](part-ii.-learning-as-optimization/2.2-linear-regression-as-a-base-model.md)
 * [2.3 Gradient descent on fingers](part-ii.-learning-as-optimization/2.3-gradient-descent-on-fingers.md)
+
+## Part III. Classification and Probabilities
+
+***
+
+* [3.1 Probability as a degree of confidence](3.1-probability-as-a-degree-of-confidence.md)

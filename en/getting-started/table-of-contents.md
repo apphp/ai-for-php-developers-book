@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 16% (31%)
+Readines&#x73;**:** 16% (32%)
 
-🟩🟩🟩🟩🟨🟩🟩🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟩🟨🟩🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -77,7 +77,7 @@ _Motivation, realities and goals of the book._
 
 #### Part III. Classification and Probabilities
 
-3.1 ⬜ Probability as a degree of confidence\
+3.1 🟨 Probability as a degree of confidence\
 &#xNAN;_&#x46;requencies, posterior probabilities._
 
 &#x20;  3.1.1 Practical use cases
