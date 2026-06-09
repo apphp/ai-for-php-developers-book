@@ -133,10 +133,10 @@
 
 &#x20;  5.3.1 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.3-embeddingi-kak-nepreryvnye-prostranstva-smysla/5.3.1-prakticheskie-keisy/)
 
-5.4 🟨 Трансформеры и контекст: от статических векторов к пониманию смысла\
+5.4 [**Трансформеры и контекст: от статических векторов к пониманию смысла**](../chast-v.-tekst-kak-matematika/5.4-transformery-i-kontekst-ot-staticheskikh-vektorov-k-ponimaniyu-smysla/)\
 &#xNAN;_&#x41F;очему слово "ключ" имеет разные векторы. Self-attention без формул._
 
-&#x20;  5.4.1 🟨 Практические кейсы
+&#x20;  5.4.1 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.4-transformery-i-kontekst-ot-staticheskikh-vektorov-k-ponimaniyu-smysla/5.4.1-prakticheskie-keisy/)
 
 5.5 ⬜ Токены, контекстное окно и чанкинг - как LLM видит текст\
 &#xNAN;_&#x41E;граничения контекста, подсчет токенов, разбиение документов и overlap._
