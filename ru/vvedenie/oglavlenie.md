@@ -138,10 +138,10 @@
 
 &#x20;  5.4.1 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.4-transformery-i-kontekst-ot-staticheskikh-vektorov-k-ponimaniyu-smysla/5.4.1-prakticheskie-keisy/)
 
-5.5 🟨 Токены, контекстное окно и чанкинг - как LLM видит текст\
+5.5 [**Токены, контекстное окно и чанкинг - как LLM видит текст**](../chast-v.-tekst-kak-matematika/5.5-tokeny-kontekstnoe-okno-i-chanking-kak-llm-vidit-tekst/)\
 &#xNAN;_&#x41E;граничения контекста, подсчет токенов, разбиение документов и overlap._
 
-&#x20;  5.5.1 🟨 Практические кейсы
+&#x20;  5.5.1 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.5-tokeny-kontekstnoe-okno-i-chanking-kak-llm-vidit-tekst/5.5.1-prakticheskie-keisy/)
 
 5.6 🟨 Named Entity Recognition (NER) – извлечение сущностей из текста\
 &#xNAN;_&#x53;equence labeling, BIO-разметка._
