@@ -460,10 +460,14 @@ Chunk
 $text = file_get_contents('document.txt');
 
 $chars = mb_strlen($text);
-
 $estimatedTokens = (int) ($chars / 3);
 
+echo "Символов в document.txt: {$chars}\n";
 echo "Примерно токенов: {$estimatedTokens}";
+
+// Результат:
+// Символов в document.txt: 936
+// Примерно токенов: 312
 ```
 
 Для русского языка такая оценка часто оказывается достаточно близкой.
@@ -475,11 +479,20 @@ function chunkText(string $text, int $chunkSize = 1000): array {
     return mb_str_split($text, $chunkSize);
 }
 
-$text = file_get_contents('manual.txt');
-
+$text = file_get_contents('document.txt');
 $chunks = chunkText($text);
 
-print_r($chunks);
+echo "Пример чанков без overlap:\n";
+foreach ($chunks as $index => $chunk) {
+    echo ($index + 1) . '. ' . trim($chunk) . "\n";
+}
+
+// Результат:
+// Пример чанков без overlap:
+// 1. Большие языковые модели обрабатывают вход как токены, а не как символы
+// 2. .Перед отправкой длинного документа полезно заранее оценить,поместится
+// 3. ли он в контекстное окно модели и нужно ли делить текст на чанки.Когд
+// ...
 ```
 
 Для простоты пример разбивает текст по символам. В реальных RAG-системах чанкинг обычно выполняется по токенам или по смысловым границам документа.
@@ -498,6 +511,21 @@ function chunkWithOverlap(string $text, int $size = 1000, int $overlap = 200): a
 
     return $chunks;
 }
+
+$text = file_get_contents('document.txt');
+$overlapChunks = chunkWithOverlap($text, 70, 20);
+
+echo "Пример чанков с overlap:\n";
+foreach ($overlapChunks as $index => $chunk) {
+    echo ($index + 1) . '. ' . trim($chunk) . PHP_EOL;
+}
+
+// Результат:
+// echo "Пример чанков с overlap:";
+// 1. Большие языковые модели обрабатывают вход как токены, а не как символы
+// 2. ны, а не как символы.Перед отправкой длинного документа полезно заране
+// 3. мента полезно заранее оценить,поместится ли он в контекстное окно моде
+// ...
 ```
 
 Получаем последовательность перекрывающихся фрагментов.
