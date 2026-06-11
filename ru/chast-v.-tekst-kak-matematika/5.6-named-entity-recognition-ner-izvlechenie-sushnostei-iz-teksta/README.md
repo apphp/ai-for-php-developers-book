@@ -188,9 +188,7 @@ $$
 
 #### Пример PHP-кода (через HTTP API)
 
-```
-<?php
-
+```php
 $text = "Apple signed a contract with John Smith in London for $3 million.";
 
 $payload = [
@@ -217,7 +215,7 @@ foreach ($data as $entity) {
 
 Пример ответа API:
 
-```
+```php
 [
   {"word": "Apple", "entity_group": "ORG"},
   {"word": "John Smith", "entity_group": "PER"},
@@ -230,7 +228,7 @@ foreach ($data as $entity) {
 
 Если API возвращает токен-level BIO, нужно собрать сущности:
 
-```
+```php
 function extractEntities(array $tokens) {
     $entities = [];
     $current = null;
