@@ -7,7 +7,8 @@ This book evolves gradually. New chapters are added, existing ones are revised a
 Added:
 
 * New practical case "Case 1: Comparing Objects and Users" in chapter "Distances and similarity"
-* New chapter "Gradient descent on fingers" in Part II. Learning as Optimization&#x20;
+* New chapter "2.3 Gradient descent on fingers" in "Part II. Learning as Optimization"
+* New chapter "3.1 Probability as a degree of confidence"
 
 Changes:
 
@@ -17,8 +18,8 @@ Changes:
 
 Added:
 
-* New chapter "Error, loss functions, and why they are needed" in Part II. Learning as Optimization
-* New chapter "Linear regression as a base model" in Part II. Learning as Optimization&#x20;
+* New chapter "Error, loss functions, and why they are needed" in "Part II. Learning as Optimization"
+* New chapter "Linear regression as a base model" in "Part II. Learning as Optimization "
 
 Changes:
 
@@ -29,7 +30,7 @@ Changes:
 
 Added:
 
-* New chapter "Vectors, dimensions, and feature spaces" in Part I. The Mathematical Language of AI
+* New chapter "Vectors, dimensions, and feature spaces" in "Part I. The Mathematical Language of AI"
 
 Changes:
 
@@ -39,7 +40,7 @@ Changes:
 
 Added:
 
-* New chapter "What a model is in the mathematical sense" in Part I. The Mathematical Language of AI
+* New chapter "What a model is in the mathematical sense" in "Part I. The Mathematical Language of AI"
 
 Changes:
 
