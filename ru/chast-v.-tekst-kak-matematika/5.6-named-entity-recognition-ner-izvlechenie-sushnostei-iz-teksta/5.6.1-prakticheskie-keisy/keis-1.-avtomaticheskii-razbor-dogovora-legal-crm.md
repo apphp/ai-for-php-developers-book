@@ -19,6 +19,33 @@ This Agreement is made on March 12, 2025 between Apple Inc. and John Smith in Lo
 
 ***
 
+
+
+#### **USE**
+
+use transformers-php<br>
+
+[https://transformers.codewithkyrian.com/token-classification](https://transformers.codewithkyrian.com/token-classification)
+
+```
+require 'vendor/autoload.php';
+
+use Codewithkyrian\Transformers\Transformers;
+
+$pipeline = Transformers::pipeline('token-classification', 'Xenova/bert-base-NER');
+
+// Perform NER on a sentence
+$result = $pipeline->run("Apple opened a new office in N-sk.");
+
+print_r($result);
+```
+
+<br>
+
+
+
+###
+
 ### через MITIE (локально)
 
 Устанавливаем:

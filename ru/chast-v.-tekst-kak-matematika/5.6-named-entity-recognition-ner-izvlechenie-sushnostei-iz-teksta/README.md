@@ -182,85 +182,133 @@ $$
 
 Мы не обучаем модель.
 
-Мы делаем inference через готовую модель.
+Мы делаем inference через готовую модель – применяем уже обученную NER-модель к новому тексту. Само обучение и дообучение модели – отдельный этап, который обычно выполняется заранее.
 
-Допустим, используем REST API модели NER.
+#### Пример PHP-кода (через MITIE)
 
-#### Пример PHP-кода (через HTTP API)
+Сначала устанавливаем библиотеку:
+
+```bash
+composer require ankane/mitie-php
+```
+
+MITIE использует заранее обученную NER-модель. Для примера будем использовать любою модель, которая вам больше подходит.&#x20;
+
+Например официальную [MITIE модель](https://github.com/mit-nlp/MITIE/releases/download/v0.4/MITIE-models-v0.2.tar.bz2) (\~436Mb).
+
+После скачивания и распаковки модели у нас есть файл, например:
+
+```
+ner_model.dat
+```
+
+Теперь выполняем извлечение сущностей:
 
 ```php
+use Mitie\Ner;
+
 $text = "Apple signed a contract with John Smith in London for $3 million.";
 
-$payload = [
-    "inputs" => $text
-];
+$ner = new Ner(__DIR__ . "/models/ner_model.dat");
 
-$ch = curl_init("https://api.example.com/ner");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-    "Content-Type: application/json",
-    "Authorization: Bearer YOUR_API_KEY"
-]);
+$entities = $ner->extractEntities($text);
 
-$response = curl_exec($ch);
-curl_close($ch);
-
-$data = json_decode($response, true);
-
-foreach ($data as $entity) {
-    echo $entity['word'] . " → " . $entity['entity_group'] . "\n";
+foreach ($entities as $entity) {
+    echo $entity->getValue() . " → " . $entity->getTag() . "\n";
 }
 ```
 
-Пример ответа API:
+Пример вывода:
+
+```
+Apple → ORGANIZATION
+John Smith → PERSON
+London → LOCATION
+$3 million → MONEY
+```
+
+#### **Что происходит внутри**
+
+Метод:
+
+```php
+$ner->extractEntities($text);
+```
+
+получает обычную строку:
+
+```
+Apple signed a contract with John Smith in London for $3 million.
+```
+
+и превращает её в последовательность сущностей:
 
 ```php
 [
-  {"word": "Apple", "entity_group": "ORG"},
-  {"word": "John Smith", "entity_group": "PER"},
-  {"word": "London", "entity_group": "LOC"},
-  {"word": "$3 million", "entity_group": "MONEY"}
+    [
+        "value" => "Apple",
+        "tag" => "ORGANIZATION"
+    ],
+    [
+        "value" => "John Smith",
+        "tag" => "PERSON"
+    ],
+    [
+        "value" => "London",
+        "tag" => "LOCATION"
+    ],
+    [
+        "value" => "$3 million",
+        "tag" => "MONEY"
+    ]
 ]
 ```
 
-#### Постобработка BIO-тегов
+#### **Сохранение результата в структуру приложения**
 
-Если API возвращает токен-level BIO, нужно собрать сущности:
+Например, для CRM:
 
 ```php
-function extractEntities(array $tokens) {
-    $entities = [];
-    $current = null;
+$document = [
+    "text" => $text,
+    "entities" => []
+];
 
-    foreach ($tokens as $token) {
-        if (str_starts_with($token['entity'], 'B-')) {
-            if ($current !== null) {
-                $entities[] = $current;
-            }
-            $current = [
-                'type' => substr($token['entity'], 2),
-                'text' => $token['word']
-            ];
-        } elseif (str_starts_with($token['entity'], 'I-') && $current !== null) {
-            $current['text'] .= ' ' . $token['word'];
-        } else {
-            if ($current !== null) {
-                $entities[] = $current;
-                $current = null;
-            }
-        }
-    }
-
-    if ($current !== null) {
-        $entities[] = $current;
-    }
-
-    return $entities;
+foreach ($entities as $entity) {
+    $document["entities"][] = [
+        "type" => $entity->getTag(),
+        "value" => $entity->getValue()
+    ];
 }
+
+print_r($document);
 ```
 
-Это превращает sequence labeling в структурированные данные.
+Результат:
+
+```php
+Array (
+    [text] => Apple signed a contract with John Smith in London for $3 million.
+    [entities] => Array (
+            [0] => Array (
+                    [type] => ORGANIZATION
+                    [value] => Apple
+                )
+            [1] => Array (
+                    [type] => PERSON
+                    [value] => John Smith
+                )
+            [2] => Array (
+                    [type] => LOCATION
+                    [value] => London
+                )
+            [3] => Array (
+                    [type] => MONEY
+                    [value] => $3 million
+                )
+        )
+)
+```
 
 #### Почему трансформеры дали скачок качества
 

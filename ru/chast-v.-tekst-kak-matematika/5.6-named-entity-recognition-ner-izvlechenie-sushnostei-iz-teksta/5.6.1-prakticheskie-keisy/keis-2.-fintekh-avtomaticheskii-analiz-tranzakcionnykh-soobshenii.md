@@ -17,6 +17,24 @@ Transfer of $8500 was sent to Michael Brown in New York on January 5.
 
 ### Чистый PHP + REST API
 
+Установим Spacy локально !!!!!
+
+#### 2. spaCy via PHP Wrapper
+
+The most common approach is to run **spaCy** (Python) and call it from PHP.
+
+Example options:
+
+* REST API around spaCy
+* Symfony Process component
+* Dockerized NLP service
+
+```
+$response = file_get_contents(    
+'http://localhost:8000/ner?text=' . urlencode($text));
+$entities = json_decode($response, true);
+```
+
 ```
 function analyzeTransaction(string $text): array
 {
