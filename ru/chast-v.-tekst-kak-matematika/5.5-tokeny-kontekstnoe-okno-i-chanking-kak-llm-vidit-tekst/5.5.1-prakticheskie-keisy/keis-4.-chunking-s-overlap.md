@@ -1,5 +1,6 @@
 ---
 description: Как сохраняется контекст между соседними чанками.
+hidden: true
 ---
 
 # Кейс 4. Chunking с overlap
