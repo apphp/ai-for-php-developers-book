@@ -99,7 +99,6 @@ $tokens = $encoder->encode($text);
 
 ```php
 $count = count($tokens);
-
 echo "Токенов: {$count}";
 ```
 
@@ -204,7 +203,6 @@ TiktokenPHP позволяет получить не только количес
 
 ```php
 $tokens = $encoder->encode('Система аутентификации пользователя');
-
 print_r($tokens);
 ```
 
@@ -228,7 +226,6 @@ Array (
 
 ```php
 $decoded = $encoder->decode($tokens);
-
 echo $decoded;
 ```
 
