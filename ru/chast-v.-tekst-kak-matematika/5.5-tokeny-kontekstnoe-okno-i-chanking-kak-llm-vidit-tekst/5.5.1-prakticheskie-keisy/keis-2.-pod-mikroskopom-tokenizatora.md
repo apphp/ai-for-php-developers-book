@@ -67,23 +67,12 @@ composer require yethee/tiktoken
 
 После установки подключаем автозагрузчик Composer.
 
-
-
-\>>>>>>>>>>
-
-***
-
-## Подключение токенизатора
+#### Подключение токенизатора
 
 Создаём экземпляр энкодера.
 
 ```php
-<?php
-
-require 'vendor/autoload.php';
-
 use Yethee\Tiktoken\EncoderProvider;
-
 
 $provider = new EncoderProvider();
 
@@ -92,16 +81,12 @@ $encoder = $provider->getForModel('gpt-4o');
 
 Теперь `$encoder` знает правила токенизации выбранной модели.
 
-***
-
-## Подсчёт токенов документа
+#### Подсчёт токенов документа
 
 Читаем файл:
 
 ```php
-$text = file_get_contents(
-    'customer-manual.txt'
-);
+$text = file_get_contents('customer-manual.txt');
 ```
 
 Получаем токены:
@@ -115,61 +100,41 @@ $tokens = $encoder->encode($text);
 ```php
 $count = count($tokens);
 
-
 echo "Токенов: {$count}";
 ```
 
 Теперь мы получили реальный размер текста с точки зрения модели.
 
-***
+<details>
 
-## Полный пример
+<summary>Кейс 2. Полный пример кода на чистом PHP</summary>
 
 ```php
-<?php
-
-require 'vendor/autoload.php';
-
 use Yethee\Tiktoken\EncoderProvider;
-
 
 $provider = new EncoderProvider();
 
-$encoder = $provider
-    ->getForModel('gpt-4o');
+$encoder = $provider->getForModel('gpt-4o');
 
-
-$text = file_get_contents(
-    'customer-manual.txt'
-);
-
+$text = file_get_contents('customer-manual.txt');
 
 $tokens = $encoder->encode($text);
 
-
 echo "Символов: ";
-
-echo mb_strlen($text);
-
-echo PHP_EOL;
-
+echo mb_strlen($text) . "\n";
 
 echo "Токенов: ";
-
-echo count($tokens);
-
-echo PHP_EOL;
+echo count($tokens) . "\n";
 ```
 
-***
+</details>
 
-## Сравниваем символы и токены
+#### Сравниваем символы и токены
 
 Допустим, получили результат:
 
 ```
 Символов: 15000
-
 Токенов: 5723
 ```
 
@@ -187,23 +152,19 @@ echo PHP_EOL;
 
 И действительно, для русского текста это значение близко.
 
-Но важно понимать:
+Но важно понимать: токены не равны символам.
 
-токены не равны символам.
-
-***
-
-## Почему количество токенов отличается
+#### Почему количество токенов отличается
 
 Рассмотрим два текста:
 
-### Вариант 1
+**Вариант 1**
 
 ```
 User authentication system
 ```
 
-### Вариант 2
+**Вариант 2**
 
 ```
 Система аутентификации пользователя
@@ -237,17 +198,12 @@ system
 
 может превратиться в большее количество частей.
 
-***
-
-## Посмотрим сами токены
+#### Посмотрим сами токены
 
 TiktokenPHP позволяет получить не только количество, но и сами токены.
 
 ```php
-$tokens = $encoder->encode(
-    "Система аутентификации пользователя"
-);
-
+$tokens = $encoder->encode('Система аутентификации пользователя');
 
 print_r($tokens);
 ```
@@ -255,8 +211,7 @@ print_r($tokens);
 Результат будет примерно таким:
 
 ```
-Array
-(
+Array (
     [0] => 12345
     [1] => 67891
     [2] => 45211
@@ -267,17 +222,12 @@ Array
 
 Модель работает именно с ними, а не с исходным текстом.
 
-***
-
-## Обратное преобразование
+#### Обратное преобразование
 
 Можно восстановить текст из токенов:
 
 ```php
-$decoded = $encoder->decode(
-    $tokens
-);
-
+$decoded = $encoder->decode($tokens);
 
 echo $decoded;
 ```
@@ -292,27 +242,17 @@ echo $decoded;
 
 ```
 Текст
-
-↓
-
+   ↓
 Encode
-
-↓
-
+   ↓
 Token IDs
-
-↓
-
+   ↓
 Decode
-
-↓
-
+   ↓
 Текст
 ```
 
-***
-
-## Практическая проверка контекста
+#### Практическая проверка контекста
 
 Теперь добавим ограничение.
 
@@ -325,71 +265,34 @@ $contextLimit = 128000;
 Проверяем:
 
 ```php
-if (
-    count($tokens) > $contextLimit
-) {
-
-    echo "Документ слишком большой";
-
+if (count($tokens) > $contextLimit) {
+    echo 'Документ слишком большой';
 } else {
-
-    echo "Документ помещается";
-
+    echo 'Документ помещается';
 }
 ```
 
 Теперь перед отправкой запроса приложение может автоматически принимать решение.
 
-***
-
-## Использование в AI-пайплайне
+#### Использование в AI-пайплайне
 
 В реальном приложении логика будет выглядеть так:
 
 ```
 Документ
-
-↓
-
+   ↓
 TiktokenPHP
-
-↓
-
+   ↓
 Подсчёт токенов
-
-↓
-
-Проверка размера
-
-↓
-
-Маленький документ
-        ↓
-       LLM
-
-
-Большой документ
-        ↓
-     Chunking
-        ↓
-    Embeddings
-        ↓
-       RAG
+   |
+   ↓              ┌ → Маленький документ → LLM
+Проверка размера  |
+                  └ → Большой документ → Chunking → Embeddings → RAG
 ```
 
-***
+<figure><img src="../../../.gitbook/assets/5.5-5_tokenizer-operation.png" alt=""><figcaption><p>Рис. 5.5-5. Работа токенизатора</p></figcaption></figure>
 
-## Визуализация
-
-\[Иллюстрация 5.5.5 – Работа токенизатора]
-
-Промпт:
-
-Educational diagram showing tokenizer inside an AI system. A text document enters a tokenizer, gets split into small tokens, converted into token IDs, and sent to a language model. Show difference between characters and tokens. Modern clean vector infographic, white background, technical style.
-
-***
-
-## Выводы
+#### Выводы
 
 В этом кейсе мы заменили приблизительную оценку размера текста на настоящий подсчёт токенов.
 
