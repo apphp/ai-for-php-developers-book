@@ -35,13 +35,14 @@ $$
 y = (y_1, y_2, ..., y_n)
 $$
 
-Каждый $$y_i$$ – класс токена:
+Каждый $$y_i$$ – класс токена, например:
 
 * PERSON
 * ORG
 * LOC
 * MONEY
 * O (не сущность)
+* и т.д.
 
 Модель оценивает:
 
@@ -86,13 +87,17 @@ NER же – это задача, где порядок критичен.
 
 ### BIO-разметка
 
-Чтобы модель понимала границы сущностей, используется схема BIO:
+Чтобы модель понимала границы сущностей, используется схема BIO (это по сути стандарт, хотя и не все модели её поддерживают):
 
 * B-XXX (Beginning) – начало сущности
 * I-XXX (Inside) – продолжение
 * O (Outside) – вне сущности
 
-Пример:
+Допустим, у нас есть текст:&#x20;
+
+> "Apple bought a startup in London for $3 million from John Smith"
+
+BIO разметка по нему покажет следующий результат:
 
 | Токен   | Метка   |
 | ------- | ------- |
@@ -105,6 +110,9 @@ NER же – это задача, где порядок критичен.
 | for     | O       |
 | $3      | B-MONEY |
 | million | I-MONEY |
+| from    | O       |
+| John    | B-PER   |
+| Smith   | I-PER   |
 
 Это уже не просто классификация. Это sequence labeling.
 
@@ -208,13 +216,12 @@ ner_model.dat
 use Mitie\Ner;
 
 $text = "Apple signed a contract with John Smith in London for $3 million.";
-
 $ner = new Ner(__DIR__ . "/models/ner_model.dat");
 
 $entities = $ner->extractEntities($text);
 
 foreach ($entities as $entity) {
-    echo $entity->getValue() . " → " . $entity->getTag() . "\n";
+    echo ($entity['text'] ?? '') . " → " . ($entity['tag'] ?? '') . "\n";
 }
 ```
 
@@ -224,7 +231,6 @@ foreach ($entities as $entity) {
 Apple → ORGANIZATION
 John Smith → PERSON
 London → LOCATION
-$3 million → MONEY
 ```
 
 #### **Что происходит внутри**
@@ -257,10 +263,6 @@ Apple signed a contract with John Smith in London for $3 million.
         "value" => "London",
         "tag" => "LOCATION"
     ],
-    [
-        "value" => "$3 million",
-        "tag" => "MONEY"
-    ]
 ]
 ```
 
@@ -276,8 +278,8 @@ $document = [
 
 foreach ($entities as $entity) {
     $document["entities"][] = [
-        "type" => $entity->getTag(),
-        "value" => $entity->getValue()
+        "type" => $entity['tag'],
+        "value" => $entity['text']
     ];
 }
 
@@ -290,24 +292,46 @@ print_r($document);
 Array (
     [text] => Apple signed a contract with John Smith in London for $3 million.
     [entities] => Array (
-            [0] => Array (
-                    [type] => ORGANIZATION
-                    [value] => Apple
-                )
-            [1] => Array (
-                    [type] => PERSON
-                    [value] => John Smith
-                )
-            [2] => Array (
-                    [type] => LOCATION
-                    [value] => London
-                )
-            [3] => Array (
-                    [type] => MONEY
-                    [value] => $3 million
-                )
-        )
+        [0] => Array (
+                [type] => ORGANIZATION
+                [value] => Apple
+            )
+        [1] => Array (
+                [type] => PERSON
+                [value] => John Smith
+            )
+        [2] => Array (
+                [type] => LOCATION
+                [value] => London
+            )
+    )
 )
+```
+
+#### Пример PHP-кода (через TransformersPHP)
+
+Выполняем извлечение сущностей, используя модель `Xenova/bert-base-NER`:
+
+```php
+use Codewithkyrian\Transformers\Transformers;
+use function Codewithkyrian\Transformers\Pipelines\pipeline;
+
+$text = "Microsoft signed a contract with John Smith in London for $3 million.";
+$pipeline = pipeline(task: 'token-classification', modelName: 'Xenova/bert-base-NER');
+$entities = $pipeline($text);
+
+foreach ($entities as $entity) {
+    echo ($entity['word'] ?? '') . " → " . ($entity['entity'] ?? '') . "\n";
+}
+```
+
+Пример вывода:
+
+```
+Microsoft → B-ORG
+John → B-PER
+Smith → I-PER
+London → LOCATION
 ```
 
 #### Почему трансформеры дали скачок качества

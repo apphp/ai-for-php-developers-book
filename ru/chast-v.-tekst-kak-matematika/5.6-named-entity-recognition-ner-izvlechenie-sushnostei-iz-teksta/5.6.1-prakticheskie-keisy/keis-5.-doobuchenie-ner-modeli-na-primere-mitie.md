@@ -14,6 +14,8 @@
 * INVOICE\_NUMBER
 * PRODUCT\_CODE
 * CRYPTO\_WALLET
+* MONEY
+* DATE
 
 Если ваш бизнес-домен специфичен – модель нужно дообучить.
 
