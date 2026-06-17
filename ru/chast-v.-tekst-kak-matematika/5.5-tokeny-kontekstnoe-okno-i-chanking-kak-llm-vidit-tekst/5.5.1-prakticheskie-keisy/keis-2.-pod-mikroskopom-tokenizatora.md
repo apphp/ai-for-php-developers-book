@@ -75,7 +75,6 @@ composer require yethee/tiktoken
 use Yethee\Tiktoken\EncoderProvider;
 
 $provider = new EncoderProvider();
-
 $encoder = $provider->getForModel('gpt-4o');
 ```
 
@@ -112,16 +111,14 @@ echo "Токенов: {$count}";
 use Yethee\Tiktoken\EncoderProvider;
 
 $provider = new EncoderProvider();
-
 $encoder = $provider->getForModel('gpt-4o');
-
 $text = file_get_contents('customer-manual.txt');
 
 $tokens = $encoder->encode($text);
 
+echo "Считаем реальные токены:\n";
 echo "Символов: ";
 echo mb_strlen($text) . "\n";
-
 echo "Токенов: ";
 echo count($tokens) . "\n";
 ```
@@ -133,20 +130,21 @@ echo count($tokens) . "\n";
 Допустим, получили результат:
 
 ```
-Символов: 15000
-Токенов: 5723
+Считаем реальные токены:
+Символов: 847
+Токенов: 216
 ```
 
 На первый взгляд кажется:
 
 ```
-15000 символов
+847 символов
 ```
 
 должны превратиться примерно в:
 
 ```
-5000 токенов
+216 токенов
 ```
 
 Для данного текста это соотношение выглядит реалистично. Однако оно не является универсальным: для других языков, программного кода, таблиц, JSON и HTML количество токенов может отличаться значительно.&#x20;
@@ -208,9 +206,13 @@ print_r($tokens);
 
 ```
 Array (
-    [0] => 12345
-    [1] => 67891
-    [2] => 45211
+    [0] => 3043
+    [1] => 144225
+    [2] => 960
+    [3] => 3574
+    [4] => 43706
+    [5] => 119310
+    [6] => 106778
 )
 ```
 
