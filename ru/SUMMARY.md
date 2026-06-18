@@ -13,6 +13,7 @@
     * [Установка напрямую](vvedenie/ekosistema-ml-v-php/nastroika-sredy-dlya-php/ustanovka-napryamuyu.md)
     * [Установка с Docker](vvedenie/ekosistema-ml-v-php/nastroika-sredy-dlya-php/ustanovka-s-docker.md)
     * [Примечания](vvedenie/ekosistema-ml-v-php/nastroika-sredy-dlya-php/primechaniya.md)
+  * [Установка и настройка Transformer в PHP](vvedenie/ekosistema-ml-v-php/ustanovka-i-nastroika-transformer-v-php.md)
 * [О книге](vvedenie/o-knige/README.md)
   * [Лицензия и авторские права](vvedenie/o-knige/licenziya-i-avtorskie-prava.md)
   * [Как контрибьютить](vvedenie/o-knige/kak-kontribyutit.md)
