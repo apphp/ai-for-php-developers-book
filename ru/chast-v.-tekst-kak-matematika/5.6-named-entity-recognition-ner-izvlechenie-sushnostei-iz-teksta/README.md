@@ -391,3 +391,7 @@ NER – это первый момент в книге, где мы видим:
 С инженерной точки зрения: мы превращаем строку в данные.
 
 И именно в этом – огромная ценность для PHP-разработчика.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-5/named-entity-recognition-ner-extracting-entities-from-text) для его запуска.
+{% endhint %}
