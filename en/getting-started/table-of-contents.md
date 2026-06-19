@@ -26,20 +26,21 @@ Section statuses
 [**Introduction**](introduction/)\
 _Motivation, realities and goals of the book._
 
-* From understanding to mathematics and implementation
-* Why a PHP developer needs AI
+* [From understanding to mathematics and implementation](introduction/from-understanding-to-mathematics-and-implementation.md)
+* [Why a PHP developer needs AI](introduction/why-a-php-developer-needs-ai.md)
 
 [**The ML ecosystem in PHP**](the-ml-ecosystem-in-php/)\
 &#xNAN;_&#x41;n overview of the PHP ecosystem for machine learning and scientific computing._
 
-* Environment setup for PHP
+* [Environment setup for PHP](the-ml-ecosystem-in-php/environment-setup-for-php/)
+* [Installing and Configuring Transformer in PHP](the-ml-ecosystem-in-php/installing-and-configuring-transformer-in-php.md)
 
 [**About the book**](about-the-book/)
 
-* License and copyright
-* How to contribute
-* Book change history
-* What's next?
+* [License and copyright](about-the-book/license-and-copyright.md)
+* [How to contribute](about-the-book/how-to-contribute.md)
+* [Book change history](about-the-book/book-change-history.md)
+* [What's next?](about-the-book/whats-next.md)
 
 🟨 [Glossary](glossary.md)
 
