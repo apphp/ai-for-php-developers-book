@@ -13,6 +13,7 @@
     * [Direct installation](getting-started/the-ml-ecosystem-in-php/environment-setup-for-php/direct-installation.md)
     * [Installation with Docker](getting-started/the-ml-ecosystem-in-php/environment-setup-for-php/installation-with-docker.md)
     * [Notes](getting-started/the-ml-ecosystem-in-php/environment-setup-for-php/notes.md)
+  * [Installing and Configuring Transformer in PHP](getting-started/the-ml-ecosystem-in-php/installing-and-configuring-transformer-in-php.md)
 * [About the book](getting-started/about-the-book/README.md)
   * [License and Copyright](getting-started/about-the-book/license-and-copyright.md)
   * [How to contribute](getting-started/about-the-book/how-to-contribute.md)

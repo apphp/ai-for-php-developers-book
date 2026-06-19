@@ -9,6 +9,7 @@ Added:
 * New practical case "Case 1: Comparing Objects and Users" in chapter "Distances and similarity"
 * New chapter "2.3 Gradient descent on fingers" in "Part II. Learning as Optimization"
 * New chapter "3.1 Probability as a degree of confidence"
+* Subchapter "Installing and Configuring Transformer in PHP" in the chapter "ML Ecosystem in PHP"
 
 Changes:
 
