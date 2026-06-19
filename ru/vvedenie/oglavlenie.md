@@ -34,6 +34,7 @@
 &#xNAN;_&#x41E;бзор экосистемы PHP для машинного обучения и научных вычислений._
 
 * [Настройка среды для PHP](ekosistema-ml-v-php/nastroika-sredy-dlya-php/)
+* [Установка и настройка Transformer в PHP](ekosistema-ml-v-php/ustanovka-i-nastroika-transformer-v-php.md)
 
 [**О книге**](o-knige/)
 
@@ -147,7 +148,9 @@
 5.6 🟨 Named Entity Recognition (NER) – извлечение сущностей из текста\
 &#xNAN;_&#x53;equence labeling, BIO-разметка._
 
-&#x20;  5.6.1 🟨 Практические кейсы
+&#x20;  5.6.1 🟨 Различные способы добавить NER в PHP
+
+&#x20;  5.6.2 🟨 Практические кейсы
 
 5.7 🟨 Практика: эмбеддинги на PHP с помощью трансформеров\
 &#xNAN;_&#x49;nference вместо обучения._ TransformersPHP _как инженерный инструмент._
