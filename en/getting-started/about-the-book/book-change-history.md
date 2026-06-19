@@ -13,6 +13,7 @@ Added:
 Changes:
 
 * added illustrations in chapter "2.2 Linear regression as a base model"
+* Improved and modified chapter "ML Ecosystem in PHP"
 
 #### _May 2026_
 

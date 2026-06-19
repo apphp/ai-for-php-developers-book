@@ -174,6 +174,51 @@ Nevertheless, they are important for understanding that ideas of scientific comp
 
 Modern machine learning rarely consists of just an "algorithm". There is always infrastructure around it: tokenization, data preparation, streaming processing.
 
+#### MITIE PHP
+
+Repository: [https://github.com/ankane/mitie-php](https://github.com/ankane/mitie-php)
+
+**Status:** <mark style="color:green;">**limited maintenance**</mark>
+
+MITIE PHP is a PHP wrapper around the MITIE (MIT Information Extraction) library, designed to solve traditional Natural Language Processing (NLP) tasks.
+
+Unlike modern transformer-based models, MITIE belongs to the generation of statistical NLP systems that emerged before the BERT and GPT revolution. Despite the age of the approach, the library can still be useful in projects where local data processing, minimal resource requirements, and the absence of external dependencies are important.
+
+MITIE supports tasks such as:
+
+* Named Entity Recognition (NER)
+* Extraction of person names, organizations, and geographic locations
+* Text classification
+* Analysis of short documents
+
+All computations are performed locally, without relying on external APIs or cloud services.
+
+A simple example of entity extraction:
+
+```php
+use Mitie\NER;
+
+$modelPath = 'ner_model.dat';
+$text = 'Barack Obama visited Microsoft headquarters in Seattle.';
+
+$ner = new NER($modelPath);
+$entities = $ner->entities($text);
+
+print_r($entities);
+```
+
+The output will contain the detected entities along with their corresponding types:
+
+```
+PERSON: Barack Obama
+ORGANIZATION: Microsoft
+LOCATION: Seattle
+```
+
+From an architectural perspective, MITIE occupies a middle ground between traditional machine learning and modern NLP systems. It does not use transformers, embeddings, or attention mechanisms, and therefore generally falls behind contemporary models in language understanding capabilities. In return, it offers significantly faster execution and substantially lower memory and computational requirements.
+
+Today, MITIE is rarely considered a foundation for new NLP projects. Nevertheless, the library remains an interesting example of local NLP inference and demonstrates how entity extraction and text classification tasks were addressed before the advent of modern transformer-based architectures.
+
 #### **Tiktoken PHP**
 
 Repository: [https://github.com/yethee/tiktoken-php](https://github.com/yethee/tiktoken-php)
@@ -270,9 +315,17 @@ In real ML systems, this layer often turns out to be the most complex. Data must
 
 Flow PHP bridges the gap between "the data is somewhere" and "the model is already working".
 
-### Integration with External ML Services
+### Frameworks for AI applications
 
-In practice, in most production scenarios, using ML in PHP means not training models, but performing inference via APIs.
+As AI systems continue to evolve, it has become increasingly clear that interacting with a model is only a small part of the overall architecture.
+
+In real-world applications, it is not enough to simply send a prompt to a model and receive a response. Developers must also manage context, memory, documents, external tools, vector databases, and business workflows.
+
+AI frameworks emerged specifically to address these challenges.
+
+While machine learning libraries operate at the algorithmic level and infrastructure solutions focus on model execution, AI frameworks sit one layer higher, enabling developers to build complete AI-powered systems.
+
+Within the PHP ecosystem, the most prominent representatives of this category are **LLPhant** and **Neuron AI**.
 
 #### **LLPhant**
 
@@ -437,6 +490,10 @@ This approach is especially useful in cases where a single model call is not eno
 * building AI assistants
 
 If LLPhant is responsible for the infrastructure around LLMs, then Neuron AI is responsible for the logic and orchestration of the process.
+
+### Integration with External ML Services
+
+In practice, in most production scenarios, using ML in PHP means not training models, but performing inference via APIs.
 
 #### **OpenAI, Anthropic, Gemini, and other LLMs**
 
