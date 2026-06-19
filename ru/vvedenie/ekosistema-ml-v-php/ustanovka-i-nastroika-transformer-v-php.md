@@ -10,10 +10,10 @@ TransformersPHP — это библиотека, которая позволяе
 
 Минимальные требования:
 
-* PHP 8.1 или выше;
-* Composer;
-* включенный FFI;
-* доступ к ONNX Runtime.
+* PHP 8.1 или выше
+* Composer
+* включенный FFI
+* доступ к ONNX Runtime
 
 В этой главе рассмотрим два варианта установки:
 
@@ -140,9 +140,7 @@ php index.php
 ```
 TransformersPHP
    |
-   |
 Hugging Face
-   |
    |
 Локальный кеш
 ```
@@ -164,17 +162,15 @@ Docker позволяет использовать одинаковое окру
 
 Архитектура выглядит следующим образом:
 
-<pre><code>PHP Application
-<strong>    |
-</strong>    |
-TransformersPHP
+```
+PHP Application
     |
+TransformersPHP
     |
 ONNX Runtime
     |
-    |
 ML Models
-</code></pre>
+```
 
 Все компоненты работают внутри одного контейнера.
 
@@ -288,7 +284,7 @@ services:
       - .:/app
 ```
 
-### Установка библиотеки внутри контейнера
+#### Установка библиотеки внутри контейнера
 
 Собираем образ:
 
