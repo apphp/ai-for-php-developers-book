@@ -112,45 +112,39 @@ Vector DB / поиск / логика
 
 <div align="left"><figure><img src="../../.gitbook/assets/5.7-3_embedding-pipeline.png" alt=""><figcaption><p>Рис 5.7-3. Конвейер встраивания (embedding pipeline) </p></figcaption></figure></div>
 
-### Первый пример: получение эмбеддинга текста
+### Пример: получение эмбеддинга текста
 
 Начнём с минимального примера. Предположим, у нас уже есть ONNX-модель для эмбеддингов, например из семейства sentence-transformers.
 
 Ниже приведён упрощённый пример, иллюстрирующий общую идею получения эмбеддинга. Конкретный API может отличаться в зависимости от версии библиотеки и используемой модели.
 
 ```php
-use Codewithkyrian\Transformers\PreTrainedTokenizers\AutoTokenizer;
-use Codewithkyrian\Transformers\Models\Auto\AutoModel;
-
-$tokenizer = AutoTokenizer::fromPretrained('sentence-transformers/all-MiniLM-L6-v2');
-$model = AutoModel::fromPretrained('sentence-transformers/all-MiniLM-L6-v2');
+use function Codewithkyrian\Transformers\Pipelines\pipeline;
 
 $text = 'PHP – это не только веб, но и инженерный инструмент.';
 
-$inputs = $tokenizer->encode($text);
-$output = $model->forward($inputs);
-
-// Упрощённый пример mean pooling по представлениям токенов
-$embedding = array_map(
-    fn($i) => array_sum(array_column($output, $i)) / count($output),
-    array_keys($output[0])
+$embedder = pipeline(
+    task: 'embeddings', 
+    modelName: 'Xenova/paraphrase-multilingual-MiniLM-L12-v2'
 );
+$result = $embedder($text, normalize: true, pooling: 'mean');
+$embedding = array_map(static fn ($v): float => (float) $v, $result[0]);
 
 print_r($embedding);
 
 // Результат:
 // Array (
-//    [0] => -0.021347
-//    [1] =>  0.084912
-//    [2] => -0.317654
-//    [3] =>  0.112903
-//    [4] =>  0.045221
-//    ...
-//    [379] => -0.098234
-//    [380] =>  0.204551
-//    [381] => -0.011223
-//    [382] =>  0.067891
-//    [383] =>  0.154332
+//   [0] => -0.285867
+//   [1] => -0.532032
+//   [2] => -0.117540
+//   [3] => -0.080704
+//   [4] => 0.094416
+//   ...
+//   [379] => 0.383363
+//   [380] => -0.123445
+//   [381] => 0.072758
+//   [382] => 0.514027
+//   [383] => -0.349335
 // )
 ```
 
@@ -176,7 +170,7 @@ print_r($embedding);
 
 <div align="left"><figure><img src="../../.gitbook/assets/5.7-4_pooling-explanation.png" alt=""><figcaption><p>Рис 5.7-4. Объяснение объединения (pooling explanation)</p></figcaption></figure></div>
 
-### Пример: косинусное сходство на PHP
+### Сравнение: косинусное сходство на PHP
 
 Теперь, когда у нас есть векторы, мы можем их сравнивать.
 
