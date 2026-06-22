@@ -91,7 +91,7 @@ $$
 
 Но вместе "Bank of America" образует единую сущность типа ORG (организация).
 
-Поэтому NER требует создания моделей, которые учитывают контекст и взаимосвязи между токенами: RNN, LSTM, а также современные [Transformer-модели](../../vvedenie/glossarii.md#transformer-modeli).
+Поэтому NER требует создания моделей, которые учитывают контекст и взаимосвязи между токенами: [RNN](../../vvedenie/glossarii.md#rnn-recurrent-neural-network-rekurrentnaya-neironnaya-set), LSTM, а также современные [Transformer-модели](../../vvedenie/glossarii.md#transformer-modeli).
 
 ### BIO-разметка
 
