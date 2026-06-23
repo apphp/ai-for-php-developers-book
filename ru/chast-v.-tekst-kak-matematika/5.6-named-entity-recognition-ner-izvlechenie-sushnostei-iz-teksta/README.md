@@ -91,7 +91,7 @@ $$
 
 Но вместе "Bank of America" образует единую сущность типа ORG (организация).
 
-Поэтому NER требует создания моделей, которые учитывают контекст и взаимосвязи между токенами: [RNN](../../vvedenie/glossarii.md#rnn-recurrent-neural-network-rekurrentnaya-neironnaya-set), LSTM, а также современные [Transformer-модели](../../vvedenie/glossarii.md#transformer-modeli).
+Поэтому NER требует создания моделей, которые учитывают контекст и взаимосвязи между токенами: [RNN](../../vvedenie/glossarii.md#rnn-recurrent-neural-network-rekurrentnaya-neironnaya-set), [LSTM](../../vvedenie/glossarii.md#lstm-long-short-term-memory), а также современные [Transformer-модели](../../vvedenie/glossarii.md#transformer-modeli).
 
 ### BIO-разметка
 
@@ -147,7 +147,7 @@ $$
 * I-ORG без B-ORG
 * I-MONEY после O
 
-Поэтому продвинутые модели (например, CRF) моделируют согласованность всей последовательности меток и могут учитывать зависимости между соседними тегами.
+Поэтому продвинутые модели (например, [CRF](../../vvedenie/glossarii.md#crf-sloi-conditional-random-field-uslovnoe-sluchainoe-pole)) моделируют согласованность всей последовательности меток и могут учитывать зависимости между соседними тегами.
 
 Упрощённо это можно представить как зависимость:
 

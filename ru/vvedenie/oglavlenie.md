@@ -7,9 +7,9 @@
 
 **Общий прогресс**
 
-Готовност&#x44C;**:** 50% | 60% | 100%
+Готовност&#x44C;**:** 50% | 63% | 100%
 
-🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟧🟧🟧🟧🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟩
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟧🟧🟧🟧🟧🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟩
 
 **Статусы разделов**
 
@@ -145,12 +145,12 @@
 
 &#x20;  5.5.1 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.5-tokeny-kontekstnoe-okno-i-chanking-kak-llm-vidit-tekst/5.5.1-prakticheskie-keisy/)
 
-5.6 🟨 Named Entity Recognition (NER) – извлечение сущностей из текста\
+5.6 [**Named Entity Recognition (NER) – извлечение сущностей из текста**](../chast-v.-tekst-kak-matematika/5.6-named-entity-recognition-ner-izvlechenie-sushnostei-iz-teksta/)\
 &#xNAN;_&#x53;equence labeling, BIO-разметка._
 
-&#x20;  5.6.1 🟨 Различные способы добавить NER в PHP
+&#x20;  5.6.1 [Различные способы добавить NER в PHP](../chast-v.-tekst-kak-matematika/5.6-named-entity-recognition-ner-izvlechenie-sushnostei-iz-teksta/5.6.1-razlichnye-sposoby-dobavit-ner-v-php.md)
 
-&#x20;  5.6.2 🟨 Практические кейсы
+&#x20;  5.6.2 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.6-named-entity-recognition-ner-izvlechenie-sushnostei-iz-teksta/5.6.2-prakticheskie-keisy/)
 
 5.7 🟨 Практика: эмбеддинги на PHP с помощью трансформеров\
 &#xNAN;_&#x49;nference вместо обучения._ TransformersPHP _как инженерный инструмент._
