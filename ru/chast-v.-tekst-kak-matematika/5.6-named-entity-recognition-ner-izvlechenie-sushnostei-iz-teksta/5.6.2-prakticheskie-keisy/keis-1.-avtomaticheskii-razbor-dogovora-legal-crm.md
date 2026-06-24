@@ -6,11 +6,11 @@
 
 Представим систему, в которую пользователи загружают договоры. Обычно после загрузки документа сотруднику необходимо вручную найти:
 
-* кто является сторонами договора;
-* дату подписания;
-* сумму сделки;
-* связанные организации;
-* места и юрисдикции.
+* кто является сторонами договора
+* дату подписания
+* сумму сделки
+* связанные организации
+* места и юрисдикции
 
 Для небольшого количества документов это возможно делать вручную. Но когда в системе находятся тысячи договоров, такой подход становится дорогим и медленным.
 
@@ -91,8 +91,8 @@ CRM interface
 
 В этом примере покажем два варианта:
 
-1. TransformersPHP – работа с моделью Transformer.
-2. MITIE – локальная NER-модель через PHP.
+1. TransformersPHP – работа с моделью Transformer
+2. MITIE – локальная NER-модель через PHP
 
 #### Вариант 1. NER через TransformersPHP
 
@@ -105,15 +105,12 @@ composer require codewithkyrian/transformers
 Подключаем:
 
 ```php
-<?php
-
-require 'vendor/autoload.php';
-
 use Codewithkyrian\Transformers\Transformers;
+use function Codewithkyrian\Transformers\Pipelines\pipeline;
 
-$pipeline = Transformers::pipeline(
-    'token-classification',
-    'Xenova/bert-base-NER'
+$pipeline = pipeline(
+    task: 'token-classification', 
+    modelName: 'Xenova/bert-base-NER'
 );
 ```
 
@@ -128,11 +125,9 @@ The agreement concerns software development services.
 The total contract value is $3,000,000.
 
 The services will be provided in London, United Kingdom.
-The contract becomes effective on March 12, 2025.
-";
+The contract becomes effective on March 12, 2025.";
 
-
-$result = $pipeline->run($text);
+$entities = $pipeline($text);
 
 print_r($result);
 ```
@@ -198,12 +193,9 @@ models/ner_model.dat
 Теперь выполняем извлечение сущностей:
 
 ```php
-require 'vendor/autoload.php';
+use Mitie\NER;
 
-$ner = new \Mitie\Ner(
-    __DIR__ . "/models/ner_model.dat"
-);
-
+$ner = new NER(__DIR__ . "/models/ner_model.dat");
 
 $text = "
 This Agreement is made on March 12, 2025 between 
@@ -220,19 +212,12 @@ The contract duration starts on March 12, 2025
 and expires on March 12, 2027.
 
 The agreement was approved by Michael Brown,
-Legal Director of Apple Inc.
-";
+Legal Director of Apple Inc.";
 
-
-$entities = $ner->extractEntities($text);
-
+$entities = $ner->entities($text);
 
 foreach ($entities as $entity) {
-
-    echo $entity->getTag()
-        . " → "
-        . $entity->getValue()
-        . PHP_EOL;
+    echo $entity['tag'] . " → " . $entity['text'] . "\n";
 }
 ```
 
@@ -285,7 +270,6 @@ $stmt = $pdo->prepare("
 
 
 foreach ($entities as $entity) {
-
     $stmt->execute([
         1001,
         $entity->getTag(),
@@ -402,9 +386,9 @@ Apple Inc. signed contract with John Smith...
 
 В этом кейсе мы увидели:
 
-* NER может быть встроен непосредственно в PHP-приложение;
-* модели не заменяют бизнес-логику, а подготавливают данные для неё;
-* извлечение сущностей – это мост между текстом и структурированными системами;
-* один и тот же подход применяется не только к договорам, но и к email, тикетам поддержки, документам и базам знаний.
+* NER может быть встроен непосредственно в PHP-приложение
+* модели не заменяют бизнес-логику, а подготавливают данные для неё
+* извлечение сущностей – это мост между текстом и структурированными системами
+* один и тот же подход применяется не только к договорам, но и к email, тикетам поддержки, документам и базам знаний
 
 NER превращает неструктурированный текст в объект, с которым привычный PHP-код уже умеет работать.
