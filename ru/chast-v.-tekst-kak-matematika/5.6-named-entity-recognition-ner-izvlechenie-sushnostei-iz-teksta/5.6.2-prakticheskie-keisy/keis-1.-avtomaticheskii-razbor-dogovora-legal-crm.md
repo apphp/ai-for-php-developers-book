@@ -96,11 +96,7 @@ CRM interface
 
 #### Вариант 1. NER через TransformersPHP
 
-Устанавливаем библиотеку:
-
-```bash
-composer require codewithkyrian/transformers
-```
+Устанавливаем библиотеку TransformersPHP (инструкции [здесь](../../../vvedenie/ekosistema-ml-v-php/ustanovka-i-nastroika-transformer-v-php.md)).
 
 Подключаем:
 
@@ -118,48 +114,41 @@ $pipeline = pipeline(
 
 ```php
 $text = "
-This Agreement is made on March 12, 2025 between 
-Apple Inc. and John Smith.
+This Agreement is made on March 12, 2025 between Apple Inc. and John Smith.
+Apple Inc. agrees to provide software development services to the client.
+The total amount of the agreement is $3,000,000.
+The services will be delivered in London, United Kingdom.
+The contract duration starts on March 12, 2025 and expires on March 12, 2027.
 
-The agreement concerns software development services.
-The total contract value is $3,000,000.
-
-The services will be provided in London, United Kingdom.
-The contract becomes effective on March 12, 2025.";
+The agreement was approved by Michael Brown,
+Legal Director of Apple Inc.";
 
 $entities = $pipeline($text);
 
-print_r($result);
+foreach ($entities as $entity) {
+    echo ($entity['word'] ?? '') . ' -> ' . ($entity['entity'] ?? '') . PHP_EOL;
+}
 ```
 
-Пример результата:
+Результат работы скрипта:
 
-```php
-[
-    [
-        "word" => "Apple",
-        "entity" => "B-ORG"
-    ],
-    [
-        "word" => "Inc.",
-        "entity" => "I-ORG"
-    ],
-    [
-        "word" => "John",
-        "entity" => "B-PER"
-    ],
-    [
-        "word" => "Smith",
-        "entity" => "I-PER"
-    ],
-    [
-        "word" => "London",
-        "entity" => "B-LOC"
-    ]
-]
+```
+Apple   -> B-ORG
+Inc     -> I-ORG
+John    -> B-PER
+Smith   -> I-PER
+Apple   -> B-ORG
+Inc     -> I-ORG
+London  -> B-LOC
+United  -> B-LOC
+Kingdom -> I-LOC
+Michael -> B-PER
+Brown   -> I-PER
+Apple   -> B-ORG
+Inc     -> I-ORG
 ```
 
-Здесь модель возвращает не готовые сущности, а токены с BIO-разметкой.
+Как видно, здесь модель возвращает не готовые сущности, а токены с BIO-разметкой.
 
 Например:
 
@@ -187,7 +176,7 @@ composer require ankane/mitie-php
 После установки у нас есть модель:
 
 ```
-models/ner_model.dat
+models/.mitie/ner_model.dat
 ```
 
 Теперь выполняем извлечение сущностей:
@@ -195,21 +184,14 @@ models/ner_model.dat
 ```php
 use Mitie\NER;
 
-$ner = new NER(__DIR__ . "/models/ner_model.dat");
+$ner = new NER(__DIR__ . "/models/.mitie/ner_model.dat");
 
 $text = "
-This Agreement is made on March 12, 2025 between 
-Apple Inc. and John Smith.
-
-Apple Inc. agrees to provide software development 
-services to the client.
-
+This Agreement is made on March 12, 2025 between Apple Inc. and John Smith.
+Apple Inc. agrees to provide software development services to the client.
 The total amount of the agreement is $3,000,000.
-
 The services will be delivered in London, United Kingdom.
-
-The contract duration starts on March 12, 2025 
-and expires on March 12, 2027.
+The contract duration starts on March 12, 2025 and expires on March 12, 2027.
 
 The agreement was approved by Michael Brown,
 Legal Director of Apple Inc.";
@@ -217,7 +199,7 @@ Legal Director of Apple Inc.";
 $entities = $ner->entities($text);
 
 foreach ($entities as $entity) {
-    echo $entity['tag'] . " → " . $entity['text'] . "\n";
+    echo ($entity['tag'] ?? '') . ' -> ' . ($entity['text'] ?? '') . PHP_EOL;
 }
 ```
 
@@ -226,23 +208,20 @@ foreach ($entities as $entity) {
 Пример вывода:
 
 ```
-ORGANIZATION → Apple Inc.
-PERSON → John Smith
-LOCATION → London
-MONEY → $3,000,000
-DATE → March 12, 2025
-DATE → March 12, 2027
-PERSON → Michael Brown
-ORGANIZATION → Apple Inc.
+ORGANIZATION -> Apple Inc
+PERSON       -> John Smith
+ORGANIZATION -> Apple Inc
+LOCATION     -> London
+LOCATION     -> United Kingdom
+PERSON       -> Michael Brown
+ORGANIZATION -> Apple Inc
 ```
 
 Набор типов сущностей зависит от используемой модели MITIE. Некоторые модели извлекают только PERSON, ORGANIZATION и LOCATION, поэтому MONEY и DATE могут отсутствовать без дополнительного обучения модели.
 
 #### Сохранение результата в CRM
 
-Теперь сущности можно сохранить в базу.
-
-Например:
+Например, предположим, что наша модель успешно определила все необходимые сущности, такие как: PERSON, ORGANIZATION, LOCATION, MONEY и DATE и теперь эти сущности можно сохранить в базу данных.
 
 Таблица:
 
@@ -272,8 +251,8 @@ $stmt = $pdo->prepare("
 foreach ($entities as $entity) {
     $stmt->execute([
         1001,
-        $entity->getTag(),
-        $entity->getValue()
+        ($entity['tag'] ?? ''),
+        ($entity['text'] ?? '')
     ]);
 }
 ```
