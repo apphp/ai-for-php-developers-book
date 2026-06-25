@@ -231,7 +231,7 @@ print_r($embedding);
 
 Это и есть цифровое представление смысла текста.
 
-#### Индексация документов
+**Индексация документов**
 
 Проходим по файлам:
 
@@ -259,7 +259,7 @@ foreach ($files as $file) {
 file_put_contents('embeddings.json', json_encode($documents));
 ```
 
-#### Поиск
+**Поиск**
 
 Получаем запрос:
 
@@ -276,7 +276,7 @@ $queryEmbedding = $result[0];
 
 Теперь сравниваем с документами.
 
-#### Cosine similarity
+**Cosine similarity**
 
 Для нормализованных векторов скалярное произведение эквивалентно cosine similarity, поэтому отдельно вычислять длину векторов уже не требуется.
 
@@ -288,7 +288,7 @@ function cosineSimilarity(array $a, array $b): float {
 }
 ```
 
-#### Результат
+**Результат**
 
 Запрос:
 
