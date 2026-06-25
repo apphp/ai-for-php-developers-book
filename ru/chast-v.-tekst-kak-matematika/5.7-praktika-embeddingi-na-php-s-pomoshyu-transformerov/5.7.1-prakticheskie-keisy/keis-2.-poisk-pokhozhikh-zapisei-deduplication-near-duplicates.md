@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Кейс 2. Поиск похожих записей (deduplication / near-duplicates)
 
 Сценарий
