@@ -371,3 +371,7 @@ Apple Inc. signed contract with John Smith...
 * один и тот же подход применяется не только к договорам, но и к email, тикетам поддержки, документам и базам знаний
 
 NER превращает неструктурированный текст в объект, с которым привычный PHP-код уже умеет работать.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-5/named-entity-recognition-ner-extracting-entities-from-text) для его запуска.
+{% endhint %}
