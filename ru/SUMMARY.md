@@ -101,7 +101,7 @@
   * [4.2.2 Сквозной кейс: распознавание цифр (MNIST)](chast-iv.-blizost-i-struktura-dannykh/4.2-decision-trees-i-razbienie-prostranstva/4.2.2-skvoznoi-keis-raspoznavanie-cifr-mnist/README.md)
     * [MNIST: дерево решений – как модель "смотрит" на пиксели](chast-iv.-blizost-i-struktura-dannykh/4.2-decision-trees-i-razbienie-prostranstva/4.2.2-skvoznoi-keis-raspoznavanie-cifr-mnist/mnist-derevo-reshenii-kak-model-smotrit-na-pikseli.md)
 
-## ЧАСТЬ V. ТЕКСТ КАК МАТЕМАТИКА
+## Часть V. Текст как математика
 
 * [5.1 Почему слова превращаются в числа](chast-v.-tekst-kak-matematika/5.1-pochemu-slova-prevrashayutsya-v-chisla.md)
 * [5.2 Представление текста: Bag of Words и TF–IDF](chast-v.-tekst-kak-matematika/5.2-predstavlenie-teksta-bag-of-words-i-tf-idf/README.md)
