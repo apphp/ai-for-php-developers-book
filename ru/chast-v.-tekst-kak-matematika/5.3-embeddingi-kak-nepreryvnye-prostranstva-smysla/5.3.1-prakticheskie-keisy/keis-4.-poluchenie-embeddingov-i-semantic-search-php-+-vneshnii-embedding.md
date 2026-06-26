@@ -1,8 +1,9 @@
 ---
+description: Использование внешних эмбеддинг-моделей для semantic search.
 hidden: true
 ---
 
-# Кейс 4. Получение embeddings и semantic search (PHP + внешний embedding)
+# Кейс 4. Получение эмбеддингов и semantic search (PHP + внешний эмбеддинг)
 
 Идея\
 Показать полный pipeline, но без перегруза.

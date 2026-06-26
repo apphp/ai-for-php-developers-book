@@ -1,4 +1,5 @@
 ---
+description: Semantic search по системным событиям и operational-данным.
 hidden: true
 ---
 

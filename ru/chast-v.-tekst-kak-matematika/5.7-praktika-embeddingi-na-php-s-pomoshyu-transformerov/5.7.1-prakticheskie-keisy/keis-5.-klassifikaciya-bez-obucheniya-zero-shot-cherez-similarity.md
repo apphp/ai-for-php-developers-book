@@ -1,4 +1,7 @@
 ---
+description: >-
+  Zero-shot подход через similarity: определяем категории без переобучения
+  модели.
 hidden: true
 ---
 

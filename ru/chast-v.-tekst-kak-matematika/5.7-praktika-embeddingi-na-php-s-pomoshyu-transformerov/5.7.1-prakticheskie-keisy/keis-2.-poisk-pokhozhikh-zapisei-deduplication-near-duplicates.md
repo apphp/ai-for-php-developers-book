@@ -1,4 +1,7 @@
 ---
+description: >-
+  Deduplication и near-duplicates: как находить одинаковый смысл в разных
+  формулировках.
 hidden: true
 ---
 

@@ -1,8 +1,9 @@
 ---
+description: Поиск похожих объектов через k-nearest neighbors.
 hidden: true
 ---
 
-# Кейс 5. Semantic search через RubixML (k-NN поверх embeddings)
+# Кейс 5. Semantic search через RubixML (k-NN поверх эмбеддингов)
 
 Идея\
 Показать, что классические ML-алгоритмы отлично работают поверх embeddings.
