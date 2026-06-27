@@ -7,9 +7,9 @@
 
 **Общий прогресс**
 
-Готовност&#x44C;**:** 50% | 63% | 100%
+Готовност&#x44C;**:** 50% | 66% | 100%
 
-🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟧🟧🟧🟧🟧🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟩
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟧🟧🟧🟧🟧🟧🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟩
 
 **Статусы разделов**
 
@@ -152,10 +152,10 @@
 
 &#x20;  5.6.2 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.6-named-entity-recognition-ner-izvlechenie-sushnostei-iz-teksta/5.6.2-prakticheskie-keisy/)
 
-5.7 🟨 Практика: эмбеддинги на PHP с помощью трансформеров\
+5.7 [**Практика: эмбеддинги на PHP с помощью трансформеров**](../chast-v.-tekst-kak-matematika/5.7-praktika-embeddingi-na-php-s-pomoshyu-transformerov/)\
 &#xNAN;_&#x49;nference вместо обучения._ TransformersPHP _как инженерный инструмент._
 
-&#x20;  5.7.1 🟨 Практические кейсы
+&#x20;  5.7.1 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.7-praktika-embeddingi-na-php-s-pomoshyu-transformerov/5.7.1-prakticheskie-keisy/)
 
 5.8 🟨 RAG: Retrieval-Augmented Generation как инженерная система \
 &#xNAN;_&#x41F;оиск → контекст → генерация. Как LLM отвечает на основе документов._
