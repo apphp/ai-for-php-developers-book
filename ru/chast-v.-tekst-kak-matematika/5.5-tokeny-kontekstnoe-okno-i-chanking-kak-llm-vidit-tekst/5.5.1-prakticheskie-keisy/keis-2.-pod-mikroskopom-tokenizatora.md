@@ -105,7 +105,7 @@ echo "Токенов: {$count}";
 
 <details>
 
-<summary>Кейс 2. Полный пример кода на чистом PHP</summary>
+<summary><strong>Кейс 2. Полный пример кода на чистом PHP</strong></summary>
 
 ```php
 use Yethee\Tiktoken\EncoderProvider;

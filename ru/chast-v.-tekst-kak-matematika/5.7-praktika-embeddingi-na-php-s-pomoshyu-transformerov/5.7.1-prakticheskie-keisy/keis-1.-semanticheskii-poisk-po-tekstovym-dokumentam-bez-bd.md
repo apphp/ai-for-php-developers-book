@@ -174,7 +174,7 @@ document C → 0.32
 Нам не нужны:
 
 * базы данных
-* vector store
+* векторное хранилище
 * сложная инфраструктура
 * обучение моделей
 
@@ -282,15 +282,118 @@ $queryEmbedding = $result[0];
 
 **Cosine similarity**
 
-Для нормализованных векторов скалярное произведение эквивалентно cosine similarity, поэтому отдельно вычислять длину векторов уже не требуется.
-
 ```php
 function cosineSimilarity(array $a, array $b): float {
-    return array_sum(
-        array_map(fn($x, $y) => $x * $y, $a, $b)
-    );
+    $dot = 0.0;
+    $normA = 0.0;
+    $normB = 0.0;
+
+    $n = min(count($a), count($b));
+    for ($i = 0; $i < $n; $i++) {
+        $x = (float) $a[$i];
+        $y = (float) $b[$i];
+        $dot += $x * $y;
+        $normA += $x * $x;
+        $normB += $y * $y;
+    }
+
+    if ($normA <= 0.0 || $normB <= 0.0) {
+        return 0.0;
+    }
+
+    return $dot / (sqrt($normA) * sqrt($normB));
 }
 ```
+
+<details>
+
+<summary><strong>Кейс 1. Полный пример кода (без БД)</strong></summary>
+
+```php
+use function Codewithkyrian\Transformers\Pipelines\pipeline;
+
+$embedder = pipeline(
+    task: 'embeddings',
+    modelName: 'Xenova/paraphrase-multilingual-MiniLM-L12-v2'
+);
+
+$files = glob(__DIR__ . '/documents/*');
+$documents = [];
+
+foreach ($files as $file) {
+    $documentText = file_get_contents($file);
+
+    if ($documentText === false) {
+        continue;
+    }
+
+    $result = $embedder($documentText, normalize: true, pooling: 'mean');
+    $documentEmbedding = array_map(static fn ($v): float => (float) $v, $result[0]);
+
+    $documents[] = [
+        'id' => basename($file),
+        'text' => trim($documentText),
+        'embedding' => $documentEmbedding,
+    ];
+}
+
+file_put_contents(__DIR__ . '/embeddings.json', json_encode($documents, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+
+function cosineSimilarity(array $a, array $b): float
+{
+    $dot = 0.0;
+    $normA = 0.0;
+    $normB = 0.0;
+
+    $n = min(count($a), count($b));
+    for ($i = 0; $i < $n; $i++) {
+        $x = (float) $a[$i];
+        $y = (float) $b[$i];
+        $dot += $x * $y;
+        $normA += $x * $x;
+        $normB += $y * $y;
+    }
+
+    if ($normA <= 0.0 || $normB <= 0.0) {
+        return 0.0;
+    }
+
+    return $dot / (sqrt($normA) * sqrt($normB));
+}
+
+$query = 'Как добавить искусственный интеллект в PHP приложение?';
+$result = $embedder($query, normalize: true, pooling: 'mean');
+$queryEmbedding = array_map(static fn ($v): float => (float) $v, $result[0]);
+
+$scored = [];
+
+foreach ($documents as $document) {
+    $scored[] = [
+        'score' => cosineSimilarity($queryEmbedding, $document['embedding']),
+        'document' => $document,
+    ];
+}
+
+usort($scored, static fn (array $a, array $b): int => $b['score'] <=> $a['score']);
+$topResults = array_slice($scored, 0, 3);
+
+echo 'Запрос: ' . $query . PHP_EOL . PHP_EOL;
+
+if (count($topResults) === 0) {
+    echo 'Ничего не найдено.' . PHP_EOL;
+    return;
+}
+
+foreach ($topResults as $row) {
+    $score = number_format((float) $row['score'], 2, '.', '');
+    $document = $row['document'];
+
+    echo '[' . $score . '] ' . $document['id'] . PHP_EOL;
+    echo (string) $document['text'] . PHP_EOL . PHP_EOL;
+}
+```
+
+</details>
 
 **Результат**
 
@@ -303,16 +406,17 @@ function cosineSimilarity(array $a, array $b): float {
 Например, система может вернуть:
 
 ```
-0.84 php-ai.md
+[0.71] php-ai.md
 PHP постепенно становится частью AI-инфраструктуры.
 Разработчики используют PHP для создания приложений
 с языковыми моделями и интеллектуальными функциями.
 
-0.62 transformers.md
-Трансформеры позволяют создавать модели,
-которые понимают контекст текста.
+[0.44] machine-learning.txt
+Машинное обучение помогает строить модели,
+которые находят закономерности в данных
+и улучшают качество поиска и рекомендаций.
 
-0.38 laravel.md
+[0.30] laravel.md
 Laravel используется для создания
 современных веб-приложений.
 ```
@@ -381,3 +485,7 @@ Laravel используется для создания
 > эмбеддинги позволяют добавить в PHP-приложение новый тип поиска – не по словам, а по смыслу.
 
 Именно этот фундамент дальше используется в более сложных системах: RAG, AI-ассистентах, рекомендательных механизмах и агентных архитектурах.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-5/hands-on-embedding-in-php-with-transformers) для его запуска.
+{% endhint %}
