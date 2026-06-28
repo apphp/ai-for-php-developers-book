@@ -23,6 +23,8 @@ description: Линейные комбинации и нелинейности.
 
 Перцептрон делает очень похожую операцию, только в математической форме.
 
+<figure><img src="../../.gitbook/assets/6.1-1_perceptron_flowchart_diagram.png" alt=""><figcaption><p>Рис. 6.1-1. Схема одного перцептрона</p></figcaption></figure>
+
 #### Исторический контекст
 
 Перцептрон был предложен [Фрэнком Розенблаттом](https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B7%D0%B5%D0%BD%D0%B1%D0%BB%D0%B0%D1%82%D1%82,_%D0%A4%D1%80%D1%8D%D0%BD%D0%BA). Это была одна из первых моделей, вдохновленных нейронами мозга.
@@ -94,7 +96,7 @@ $$
 
 Более того, [теорема сходимости перцептрона](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D1%81%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8_%D0%BF%D0%B5%D1%80%D1%86%D0%B5%D0%BF%D1%82%D1%80%D0%BE%D0%BD%D0%B0) утверждает, что если данные линейно разделимы, алгоритм обучения гарантированно найдет такую разделяющую гиперплоскость за конечное число шагов.
 
-<div align="left"><figure><img src="../../.gitbook/assets/6.1-1_hyperplane-separation.png" alt=""><figcaption><p>Рис. 6.1-1. Разделение гиперплоскостей</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.1-2_hyperplane-separation.png" alt=""><figcaption><p>Рис. 6.1-2. Разделение гиперплоскостей</p></figcaption></figure></div>
 
 #### Почему это линейный классификатор
 
@@ -184,7 +186,7 @@ $$
 w_1 x_1 + w_2 x_2 + b = 0
 $$
 
-<div align="left"><figure><img src="../../.gitbook/assets/6.1-2_decision-boundary.png.png" alt=""><figcaption><p>Рис. 6.1-2. Граница принятия решений</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.1-3_decision-boundary.png" alt=""><figcaption><p>Рис. 6.1-3. Граница принятия решений</p></figcaption></figure></div>
 
 Линейная комбинация – это та же идея, что и в линейной регрессии и логистической регрессии. Разница начинается дальше.
 
@@ -209,7 +211,7 @@ $$
 
 Например, XOR (как было упомянуто выше) он решить не может.
 
-<div align="left"><figure><img src="../../.gitbook/assets/6.1-3_-xor-problem.png" alt=""><figcaption><p>Рис. 6.1-3. Проблема XOR</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.1-4_-xor-problem.png" alt=""><figcaption><p>Рис. 6.1-4. Проблема XOR</p></figcaption></figure></div>
 
 XOR невозможно разделить одной гиперплоскостью, поэтому для его решения необходима нелинейность. И именно отсюда началась история многослойных сетей.
 
@@ -315,7 +317,7 @@ $$
 \tanh(x)={\frac {e^{x}-e^{-x}}{e^{x}+e^{-x}}}
 $$
 
-<div align="left"><figure><img src="../../.gitbook/assets/6.1-4_activation-functions.png" alt=""><figcaption><p>Рис. 6.1-4. Функции активации</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.1-5_activation-functions.png" alt=""><figcaption><p>Рис. 6.1-5. Функции активации</p></figcaption></figure></div>
 
 ReLU стал стандартом в глубоких сетях благодаря простоте вычислений и отсутствию насыщения на положительной части.
 
@@ -334,7 +336,7 @@ $$
 
 Каждый нейрон связан со всеми нейронами предыдущего слоя – отсюда "полносвязная".
 
-<div align="left"><figure><img src="../../.gitbook/assets/6.1-5_mlp-diagram.png" alt=""><figcaption><p>Рис. 6.1-5. Диаграмма MLP</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/6.1-6_mlp-diagram.png" alt=""><figcaption><p>Рис. 6.1-6. Диаграмма MLP</p></figcaption></figure></div>
 
 #### Теоретически одного скрытого слоя достаточно
 
