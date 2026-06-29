@@ -7,9 +7,9 @@
 
 **Общий прогресс**
 
-Готовност&#x44C;**:** 50% | 66% | 100%
+Готовност&#x44C;**:** 50% | 68% | 100%
 
-🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟧🟧🟧🟧🟧🟧🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟩
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟧🟧🟧🟧🟧🟧🟧🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟩
 
 **Статусы разделов**
 
@@ -157,10 +157,10 @@
 
 &#x20;  5.7.1 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.7-praktika-embeddingi-na-php-s-pomoshyu-transformerov/5.7.1-prakticheskie-keisy/)
 
-5.8 🟨 RAG: Retrieval-Augmented Generation как инженерная система \
+5.8 [**RAG: Retrieval-Augmented Generation как инженерная система** ](../chast-v.-tekst-kak-matematika/5.8-rag-retrieval-augmented-generation-kak-inzhenernaya-sistema/)\
 &#xNAN;_&#x41F;оиск → контекст → генерация. Как LLM отвечает на основе документов._
 
-&#x20;  5.8.1 🟨 Практические кейсы
+&#x20;  5.8.1 🟨 [Практические кейсы](../chast-v.-tekst-kak-matematika/5.8-rag-retrieval-augmented-generation-kak-inzhenernaya-sistema/5.8.1-prakticheskie-keisy/)
 
 ### Часть VI. Нейросети и работа с данными
 
