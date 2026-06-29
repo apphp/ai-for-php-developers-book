@@ -120,11 +120,11 @@ $$
 
 Поэтому перцептрон может решить:
 
-* AND
-* OR
+* [AND](https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D1%8A%D1%8E%D0%BD%D0%BA%D1%86%D0%B8%D1%8F) (конъюнкция)
+* [OR](https://ru.wikipedia.org/wiki/%D0%94%D0%B8%D0%B7%D1%8A%D1%8E%D0%BD%D0%BA%D1%86%D0%B8%D1%8F) (дизъюнкция)
 * простую линейную классификацию
 
-Но не может решить XOR.
+Но не может решить [XOR](https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BA%D0%BB%D1%8E%D1%87%D0%B0%D1%8E%D1%89%D0%B5%D0%B5_%C2%AB%D0%B8%D0%BB%D0%B8%C2%BB) (исключающее "или").
 
 #### Перцептрон как алгоритм обучения
 
