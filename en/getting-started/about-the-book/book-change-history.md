@@ -6,14 +6,24 @@ This book evolves gradually. New chapters are added, existing ones are revised a
 
 Added:
 
-* New practical case "Case 1: Comparing Objects and Users" in chapter "Distances and similarity"
+* New practical case "Case 2: Estimating object relevance" in chapter "1.3 Distances and similarity"
+
+Changes:
+
+*
+
+#### _June 2026_
+
+Added:
+
+* New practical case "Case 1: Comparing Objects and Users" in chapter "1.3 Distances and similarity"
 * New chapter "2.3 Gradient descent on fingers" in "Part II. Learning as Optimization"
 * New chapter "3.1 Probability as a degree of confidence"
 * Subchapter "Installing and Configuring Transformer in PHP" in the chapter "ML Ecosystem in PHP"
 
 Changes:
 
-* added illustrations in chapter "2.2 Linear regression as a base model"
+* Added illustrations in chapter "2.2 Linear regression as a base model"
 * Improved and modified chapter "ML Ecosystem in PHP"
 
 #### _May 2026_
@@ -25,8 +35,8 @@ Added:
 
 Changes:
 
-* added illustrations in chapter "Vectors, dimensions, and feature spaces"
-* added illustrations in chapter "Distances and similarity"
+* Added illustrations in chapter "1.2 Vectors, dimensions, and feature spaces"
+* Added illustrations in chapter "1.3 Distances and similarity"
 
 #### _April 2026_
 

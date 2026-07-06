@@ -28,9 +28,9 @@ $$
 
 The dot product computes the weighted sum of the features:
 
-\$$\
-\mathbf{x} \cdot \mathbf{w} = \sum\_i x\_i w\_i\
-\$$
+$$
+\mathbf{x} \cdot \mathbf{w} = \sum_i x_i w_i
+$$
 
 In this scenario:
 
@@ -40,7 +40,7 @@ In this scenario:
 
 This is why neither Euclidean distance nor cosine similarity is appropriate here.
 
-**Option 1. Pure PHP Implementation**
+#### **Option 1. Pure PHP Implementation**
 
 **Dot product**
 
@@ -86,7 +86,7 @@ The higher the value, the higher the object's relevance score.
 
 The result is easy to interpret and explain, which is especially valuable in real-world applications.
 
-**Option 2. Implementation Using Rubix ML**
+#### **Option 2. Implementation Using Rubix ML**
 
 In Rubix ML, the dot product is used internally by linear models. Let's look at an example using linear regression with weights learned from a small training dataset.
 
@@ -125,19 +125,19 @@ print_r($prediction);
 
 **What happens internally**
 
-Ridge is a linear regression model with [L2 regularization](https://chatgpt.com/ai-for-php-developers/introduction/glossary.md#l2-regularization) (that is, Ridge = Linear Regression + L2):
+Ridge is a linear regression model with L2 regularization (that is, Ridge = Linear Regression + L2):
 
-\$$\
-\hat y = w\_1 x\_1+w\_2 x\_2+w\_3 x\_3 + b\
-\$$
+$$
+\hat y = w_1 x_1+w_2 x_2+w_3 x_3 + b
+$$
 
 where the weights are obtained by solving:
 
-\$$\
-\mathbf{w} = \left( \mathbf{X}^\top \mathbf{X} + \alpha \mathbf{I} \right)^{-1} \mathbf{X}^\top \mathbf{y}\
-\$$
+$$
+\mathbf{w} = \left( \mathbf{X}^\top \mathbf{X} + \alpha \mathbf{I} \right)^{-1} \mathbf{X}^\top \mathbf{y}
+$$
 
-**Relationship to Linear Models**
+#### **Relationship to Linear Models**
 
 The dot product is the core operation behind linear models:
 
@@ -150,12 +150,12 @@ In fact, every neuron computes the dot product of its inputs and weights.
 
 **Summary**
 
-\{% hint style="warning" %\}\
-Important: The dot product is used whenever the contribution of each feature to the final result matters. It provides a direct way to model feature influence and forms the foundation of linear models and scoring systems.\
-\{% endhint %\}
+{% hint style="warning" %}
+Important: The dot product is used whenever the contribution of each feature to the final result matters. It provides a direct way to model feature influence and forms the foundation of linear models and scoring systems.
+{% endhint %}
 
-This idea becomes even more important when we move on to trainable models, where the weights (\$$\mathbf{w}\$$) are learned automatically from data.
+This idea becomes even more important when we move on to trainable models, where the weights ($$\mathbf{w}$$) are learned automatically from data.
 
-\{% hint style="info" %\}\
-To experiment with this code yourself, use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/distances-and-similarity).\
-\{% endhint %\}
+{% hint style="info" %}
+To try this code yourself, use the [online demo](https://aiwithphp.org/books/ai-for-php-developers/examples/part-1/distances-and-similarity) to run it.
+{% endhint %}

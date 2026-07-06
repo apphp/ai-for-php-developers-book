@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 16% (32%)
+Readines&#x73;**:** 21% (37%)
 
-🟩🟩🟩🟩🟩🟨🟩🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟨🟩🟩🟩🟩🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -48,16 +48,16 @@ _Motivation, realities and goals of the book._
 
 #### Part I. The Mathematical Language of AI
 
-**1.1 What a model is in the mathematical sense**\
+1.1 [**What a model is in the mathematical sense**](../1.1-what-a-model-is-in-the-mathematical-sense.md)\
 &#xNAN;_&#x46;unction, parameters, error._
 
-1.2 🟨 Vectors, dimensions, and feature spaces\
+1.2 [**Vectors, dimensions, and feature spaces**](../1.2-vectors-dimensions-and-feature-spaces.md)\
 &#xNAN;_&#x57;hy data are points in space._
 
-1.3 🟨 Distances and similarity\
+1.3 [**Distances and similarity**](../1.3-distances-and-similarity/)\
 &#xNAN;_&#x45;uclidean distance, dot product, cosine similarity._
 
-&#x20;   1.3.1 Practical use cases
+&#x20;   1.3.1 🟨 Practical use cases
 
 #### Part II. Learning as Optimization
 
