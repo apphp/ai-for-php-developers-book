@@ -2,7 +2,7 @@
 
 This chapter is a reference point. You can return to it whenever a term appears in code, a formula, or an algorithm description and you want to quickly refresh its meaning without diving into theory.
 
-#### Accuracy (classification accuracy)
+### Accuracy (classification accuracy)
 
 Accuracy is the fraction of correct predictions made by a model out of the total number of predictions. In simple terms, it answers the question: "In how many cases did the model guess correctly?"
 
@@ -24,13 +24,13 @@ That is why accuracy is often used:
 
 The intuitive meaning of accuracy is: "The percentage of cases where the model did not make a mistake." In machine learning, it is important to remember that high accuracy does not always mean a good model.
 
-#### Algorithm
+### Algorithm
 
 An algorithm is a finite sequence of steps that transforms input data into a result. In machine learning, an algorithm usually defines how we adjust the model parameters – for example, gradient descent, stochastic gradient descent, or k-nearest neighbors.
 
 It is important to distinguish between a model and an algorithm: a model is the form of the relationship, while an algorithm is the method used to train or apply it.
 
-#### **Affine Transformation**
+### Affine Transformation
 
 An affine transformation is a transformation of the form:
 
@@ -52,7 +52,24 @@ In practice, almost any model first applies an affine transformation to the inpu
 
 Intuitively, an affine transformation determines how a model reweights input features and shifts the result into the appropriate region of the feature space.
 
-#### **Attention Mechanism**
+### ANN Indexes (Approximate Nearest Neighbor)
+
+ANN indexes are data structures designed for fast nearest-neighbor search in high-dimensional vector spaces.
+
+Unlike exact search, ANN uses approximate algorithms to dramatically speed up retrieval while sacrificing only a small amount of accuracy.
+
+They are widely used in:
+
+* semantic search
+* RAG (Retrieval-Augmented Generation) systems
+* recommendation engines
+* vector databases
+
+Popular ANN algorithms include HNSW, IVF, and PQ.
+
+Intuitively: "Find almost the nearest neighbors—but much faster."
+
+### Attention Mechanism
 
 The attention mechanism is a way for a model to selectively "focus" on different parts of the input data depending on the task context.
 
@@ -60,9 +77,9 @@ The core idea of attention is that not all elements of the input are equally imp
 
 In mathematical form, attention is built around dot products. For each element, three vectors are computed:
 
-* **Query (Q)** – what we are currently looking for
-* **Key (K)** – what each element represents
-* **Value (V)** – what information it carries
+* Query (Q) – what we are currently looking for
+* Key (K) – what each element represents
+* Value (V) – what information it carries
 
 The importance score is typically computed as the dot product $$Q ⋅ K$$, followed by normalization (most commonly softmax). The final result is a weighted sum of the vectors $$V$$.
 
@@ -70,7 +87,7 @@ Attention mechanisms are at the core of transformers and modern language models.
 
 Intuitively, attention can be seen as a dynamic focusing mechanism: the model continuously decides which parts of the input are important at each step. From a practical perspective, attention is a generalization of vector similarity, scaled up to the level of entire models.
 
-#### Autoencoders
+### Autoencoders
 
 Autoencoders are neural network models that learn to compress data into a compact representation (code) and then reconstruct it.
 
@@ -81,7 +98,7 @@ They consist of two parts:
 
 They are used for dimensionality reduction, noise removal, and embedding training.
 
-#### **Auto-scaling**
+### Auto-scaling
 
 Auto-scaling is a mechanism for automatically adjusting a system’s computational resources based on workload.
 
@@ -95,7 +112,7 @@ When the number of requests increases, the system automatically adds computation
 
 From a practical perspective, auto-scaling is not about the model itself, but about its lifecycle within a real system: even a good model becomes useless if it cannot handle the load.
 
-#### **Backpropagation (error backpropagation)**
+### Backpropagation (error backpropagation)
 
 Backpropagation, or backprop, is an algorithm for computing the gradients of a loss function with respect to the parameters of a neural network by sequentially applying the chain rule from the model’s output back to its inputs.
 
@@ -109,7 +126,7 @@ In practical terms, backprop makes it possible to train deep, multi-layer models
 
 Intuitively, backprop can be seen as a step-by-step analysis of the error: the model identifies which layer and which weights are responsible for an incorrect prediction and adjusts them accordingly.
 
-#### **Bag-of-Words (BoW)**
+### Bag-of-Words (BoW)
 
 Bag-of-Words (BoW) is a method for representing text as a numerical vector. Each element of the vector corresponds to a word in a vocabulary, and its value indicates how many times that word appears in the text.
 
@@ -117,13 +134,13 @@ In this representation, word order is completely ignored. For example, the phras
 
 BoW is simple, fast, and well-suited for initial experiments, but it does a poor job of capturing meaning and context.
 
-#### **Base Rate Neglect**
+### Base Rate Neglect
 
 Base rate neglect is a cognitive bias in which the prior probability of an event (the base rate) is ignored, and attention is focused only on new evidence or observed features.
 
 In simpler terms, it is a situation where a person or a model fails to take into account how rare an event actually is.
 
-**Example:**&#x20;
+Example:&#x20;
 
 If a disease occurs in 1% of the population and a test has 95% accuracy, many people overestimate the probability of having the disease after a positive result. In practice, without considering the base rate, the true probability can be significantly lower than expected.
 
@@ -146,7 +163,7 @@ Intuitively, base rate neglect is the error of thinking:
 
 In practical applications, ignoring base rates can lead to overestimating risks, making incorrect decisions, and misinterpreting model results.
 
-#### Batch
+### Batch
 
 A batch is a group of samples that a model processes in a single training step.
 
@@ -154,7 +171,7 @@ Instead of using the entire dataset at once or updating parameters after each in
 
 Intuitively, a batch is a "small portion of data for one training step".
 
-#### Batch Gradient Descent (BGD)
+### Batch Gradient Descent (BGD)
 
 Batch gradient descent is the classic version of gradient descent in which the gradient of the loss function is calculated using the entire training dataset before each model parameter update.
 
@@ -176,7 +193,7 @@ From a practical standpoint, batch gradient descent is well suited for:
 
 In real-world systems, it is often replaced by mini-batch or stochastic gradient descent, which provide a better balance between training speed and stability.
 
-#### Bayes' Formula
+### Bayes' Formula
 
 Bayes' formula allows us to update the probability of a hypothesis when new evidence becomes available:
 
@@ -192,7 +209,7 @@ where:
 
 Intuitively, Bayes' formula means: "update your initial belief based on new observations."<br>
 
-#### Bayesian Updating
+### Bayesian Updating
 
 Bayesian updating is the process of recalculating the probability of a hypothesis when new data becomes available.
 
@@ -218,7 +235,7 @@ Intuitively, Bayesian updating follows this rule: "Do not start from scratch –
 
 In practical ML, this matters when data arrives gradually, the distribution changes, or the model needs to account for uncertainty explicitly.
 
-#### Bernoulli Naive Bayes
+### Bernoulli Naive Bayes
 
 Bernoulli Naive Bayes is a variant of the Naive Bayes algorithm designed for binary features.
 
@@ -247,9 +264,9 @@ Intuitively, Bernoulli Naive Bayes answers the question: "Which features are pre
 
 This model is simple, fast, and often serves as a strong baseline for text classification tasks.
 
-#### Bias
+### Bias
 
-Bias is a model parameter that allows the output to be shifted independently of the input features. In linear regression, the bias corresponds to the term **b** in the formula:
+Bias is a model parameter that allows the output to be shifted independently of the input features. In linear regression, the bias corresponds to the term b in the formula:
 
 $$
 y=wx+b
@@ -259,13 +276,127 @@ Intuitively, the bias represents the model's "baseline" prediction.
 
 Without a bias term, the model would be forced to pass through the origin, which often makes it less flexible and reduces prediction accuracy.
 
-In machine learning, the bias parameter is learned together with the model weights and helps the model better fit the data.<br>
+In machine learning, the bias parameter is learned together with the model weights and helps the model better fit the data.
+
+### Bias–Variance Tradeoff
+
+The bias–variance tradeoff is a fundamental concept in machine learning that describes the balance between a model's simplicity and its ability to generalize to unseen data.
+
+Bias is the error introduced by overly simplistic assumptions made by a model.
+
+A model with high bias:
+
+* is too simple
+* fails to fit the training data well
+* leads to underfitting
+
+Variance measures how sensitive a model is to the specific training dataset.
+
+A model with high variance:
+
+* is too complex
+* memorizes the training data
+* generalizes poorly to new data
+* leads to overfitting
+
+The total prediction error of a model consists of:
+
+* bias
+* variance
+* irreducible noise in the data
+
+Increasing a model's complexity typically reduces bias but increases variance. Simplifying the model has the opposite effect.
+
+In machine learning, the bias–variance tradeoff is managed through:
+
+* model selection
+* regularization (L1, L2)
+* feature selection and the number of features
+* training dataset size
+* early stopping
+
+Intuitively, the bias–variance tradeoff is about finding the right balance between "too simplistic" and "too perfectly fitted to the training data."
+
+From a practical standpoint, understanding the bias–variance tradeoff is more important than knowing individual algorithms, because it explains why a model behaves the way it does.
+
+### BM25 (Best Matching 25)
+
+BM25 is a text retrieval algorithm that ranks documents by estimating how relevant they are to a search query based on keyword matches.
+
+It takes into account:
+
+* term frequency (TF) – how often a word appears in a document
+* inverse document frequency (IDF) – how rare the word is across the entire collection
+* document length
+
+Unlike simple keyword search, BM25 provides a more accurate estimate of how well a document matches a query.
+
+It is widely used in:
+
+* search engines
+* hybrid search
+* RAG (Retrieval-Augmented Generation) systems alongside vector search
+
+Intuitively: "How well does this document match the query based on the words it contains and their importance?"
+
+### CART (Classification and Regression Trees)
+
+CART is a decision tree algorithm used for both classification and regression tasks.
+
+It recursively splits the data based on feature values, selecting the splits that most effectively reduce impurity (such as Gini impurity for classification or mean squared error (MSE) for regression).
+
+Key characteristics:
+
+* uses binary splits (each node is divided into two branches)
+* supports both classification and regression
+* is easy to interpret and visualize
+
+Intuitively: "Ask a sequence of simple questions to progressively divide the data into more homogeneous groups."
+
+### Chunking
+
+Chunking is the process of splitting a large document into smaller pieces (chunks) that can be processed independently by a model.
+
+Chunking is used when a document is too large to fit within a model's context window or when more efficient document retrieval is required.
+
+It is commonly used in:
+
+* RAG (Retrieval-Augmented Generation) systems
+* semantic search
+* vector databases
+* processing long documents
+
+The quality of chunking has a direct impact on the quality of both document retrieval and the model's responses.
+
+Intuitively: "Break a large document into smaller, manageable pieces that are easier to search and process."
+
+### Cold Start&#x20;
+
+The cold start problem is a challenge in recommendation systems where the model lacks enough data to generate accurate recommendations.
+
+This most commonly occurs in two situations:
+
+* a new user, about whom nothing is known yet
+* a new item (such as a product, article, or video) with no interaction history
+
+The problem arises because traditional recommendation models rely on past behavior. When no historical data exists, the model has little or nothing to base its recommendations on.
+
+Common ways to mitigate the cold start problem include:
+
+* using content-based features (such as product descriptions, text, or categories)
+* asking users for their initial preferences
+* recommending popular or broadly appealing items
+* combining multiple approaches using hybrid recommendation models
+
+The cold start problem highlights an important principle: the quality of recommendations depends not only on the algorithm but also on the availability and structure of the data.
+
+Intuitively: "You can't recommend based on someone's tastes if you don't know what they like yet."
 
 
 
 \>>>>>>>>>
 
-#### **Feature Engineering**
+#### Feature Engineering
 
 Feature engineering is the process of transforming raw data into features that a model can effectively work with.
 
@@ -285,7 +416,7 @@ Intuitively, feature engineering is the process of translating reality into a la
 
 From a practical perspective, feature engineering is a key competency in applied machine learning, especially when working with limited data and classical algorithms.
 
-#### **Prior and Posterior Probability**
+#### Prior and Posterior Probability
 
 Prior probability is the probability of an event before taking new data into account.\
 Posterior probability is the probability after incorporating observations.
