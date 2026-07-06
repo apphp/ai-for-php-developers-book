@@ -30,7 +30,8 @@
 * [1.2 Vectors, dimensions, and feature spaces](1.2-vectors-dimensions-and-feature-spaces.md)
 * [1.3 Distances and similarity](1.3-distances-and-similarity/README.md)
   * [1.3.1 Practical use cases](1.3-distances-and-similarity/1.3.1-practical-use-cases/README.md)
-    * [Case 1: Comparing Objects and Users](1.3-distances-and-similarity/1.3.1-practical-use-cases/case-1-comparing-objects-and-users.md)
+    * [Case 1: Comparing objects and users](1.3-distances-and-similarity/1.3.1-practical-use-cases/case-1-comparing-objects-and-users.md)
+    * [Case 2: Estimating object relevance](1.3-distances-and-similarity/1.3.1-practical-use-cases/case-2-estimating-object-relevance.md)
 
 ## Part II. Learning as Optimization
 

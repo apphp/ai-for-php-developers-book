@@ -2,7 +2,7 @@
 description: Using Euclidean range.
 ---
 
-# Case 1: Comparing Objects and Users
+# Case 1: Comparing objects and users
 
 When comparing numerical objects, Euclidean distance is often the most natural choice. It works well when features have comparable meaning and are expressed on a similar scale. Under these conditions, the distance directly reflects how close the objects are to one another.
 
@@ -122,7 +122,7 @@ This is exactly the principle used by:
 
 * k-NN (k-Nearest Neighbors) for finding similar users
 * customer segmentation
-* cold-start recommendation systems
+* [cold-start](../../getting-started/glossary.md#cold-start) recommendation systems
 
 It is important to emphasize that Euclidean distance answers the question, "How similar are these profiles overall?" It does not answer, "How well would this user interact with a particular item?"
 
