@@ -396,7 +396,7 @@ Intuitively: "You can't recommend based on someone's tastes if you don't know wh
 
 \>>>>>>>>>
 
-#### Feature Engineering
+### Feature Engineering
 
 Feature engineering is the process of transforming raw data into features that a model can effectively work with.
 
@@ -416,7 +416,25 @@ Intuitively, feature engineering is the process of translating reality into a la
 
 From a practical perspective, feature engineering is a key competency in applied machine learning, especially when working with limited data and classical algorithms.
 
-#### Prior and Posterior Probability
+### One-hot encoding
+
+One-hot encoding is a method for converting categorical features into a numerical representation using binary vectors.
+
+Each category corresponds to a separate dimension of the vector. For a given object, exactly one dimension is set to 1, while all the others are set to 0.
+
+For example, the feature "color" with the values {red, green, blue} can be encoded as follows:
+
+* red → \[1, 0, 0]
+* green → \[0, 1, 0]
+* blue → \[0, 0, 1]
+
+One-hot encoding is widely used in linear models, logistic regression, and neural networks when the categories do not have a natural ordering.
+
+The main drawback of one-hot encoding is the increase in the dimensionality of the feature space when the number of categories is large. In text processing, Bag-of-Words and TF-IDF are essentially special cases of one-hot representations weighted by term frequency.
+
+In more advanced models and when dealing with a large number of categories, one-hot encoding is often replaced by embeddings, which provide a compact representation of categorical data while capturing latent relationships between categories.
+
+### Prior and Posterior Probability
 
 Prior probability is the probability of an event before taking new data into account.\
 Posterior probability is the probability after incorporating observations.
