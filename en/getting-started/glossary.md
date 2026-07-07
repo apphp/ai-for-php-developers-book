@@ -67,7 +67,7 @@ They are widely used in:
 
 Popular ANN algorithms include HNSW, IVF, and PQ.
 
-Intuitively: "Find almost the nearest neighbors—but much faster."
+Intuitively: "Find almost the nearest neighbors – but much faster."
 
 ### Attention Mechanism
 
@@ -392,7 +392,63 @@ The cold start problem highlights an important principle: the quality of recomme
 
 Intuitively: "You can't recommend based on someone's tastes if you don't know what they like yet."
 
+### Concept Drift
 
+Concept drift is a change in the statistical properties of data over time, where the relationship between the features and the target variable no longer remains the same.
+
+Put simply, the model continues to operate, but reality has changed.
+
+Examples of concept drift include:
+
+* changes in user behavior
+* seasonal effects
+* the emergence of new types of data
+* shifts in the market or external conditions
+
+Concept drift is not a model error – it is a natural property of dynamic, real-world systems. Common approaches to handling it include performance monitoring, model retraining, sliding data windows, and online learning.
+
+Intuitively, concept drift is the moment when the model has been left behind by reality.
+
+### Content Deduplication
+
+Content deduplication is the process of identifying and removing duplicate or highly similar content.
+
+In machine learning and NLP, it is used to:
+
+* clean training data
+* reduce dataset size
+* improve the quality of search and RAG systems
+
+Duplicate content can lead to:
+
+* model overfitting
+* repetitive search results
+* unnecessary storage and processing costs
+
+Common techniques for detecting duplicates include:
+
+* hashing
+* comparing embedding vectors
+* similarity metrics
+
+Intuitively, content deduplication means removing repetitions so the model can learn and work with cleaner data.
+
+### Context Window
+
+A context window is the maximum number of tokens a model can consider at once when processing a request.
+
+The context window includes:
+
+* system instructions
+* conversation history
+* the user's prompt
+* uploaded documents and any other relevant context
+
+If the total amount of data exceeds the size of the context window, some information must be removed, summarized, or split into smaller chunks.
+
+The size of the context window directly affects a model's ability to work with long documents and maintain coherent, long-running conversations.
+
+Intuitively, the context window is the amount of working memory available to the model at any given moment.
 
 \>>>>>>>>>
 
