@@ -158,7 +158,7 @@ echo $result;
 
 #### Cosine Similarity – comparing directions
 
-As mentioned in the previous chapter, cosine similarity answers the question: how much do two vectors point in the same direction, regardless of their length.
+As mentioned in the previous chapter, [cosine similarity](../getting-started/glossary.md#cosine-similarity) answers the question: how much do two vectors point in the same direction, regardless of their length.
 
 It is defined as (you can see it follows directly from the dot product formula):
 
