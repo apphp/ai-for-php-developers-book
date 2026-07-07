@@ -450,6 +450,88 @@ The size of the context window directly affects a model's ability to work with l
 
 Intuitively, the context window is the amount of working memory available to the model at any given moment.
 
+### Contextual Embeddings
+
+Contextual embeddings are vector representations of words or text that depend on the context in which they are used.
+
+Unlike traditional embeddings, where each word is assigned a single fixed vector, contextual embeddings can produce different representations for the same word depending on its meaning in the surrounding text.
+
+For example, the word "bank" has different embeddings in the following sentences:
+
+* "The bank approved the loan."
+* "They sat on the bank of the river."
+
+Contextual embeddings are widely used in:
+
+* transformer models
+* NLP tasks
+* semantic search
+* RAG systems
+
+Intuitively, the meaning of a word is determined not only by the word itself, but also by the context in which it appears.
+
+### Cosine Similarity
+
+**Cosine similarity** is a measure of similarity between two vectors based on the cosine of the angle between them:
+
+$$
+\cos(\theta)=\frac{\mathbf{A}\cdot\mathbf{B}}{|\mathbf{A}| |\mathbf{B}|}
+$$
+
+It measures how closely two vectors point in the same direction, regardless of their magnitude. This property makes it especially useful when working with text, embeddings, and TF-IDF vectors.
+
+Cosine similarity is often preferred over Euclidean distance for text-based applications because what matters is not the absolute magnitude of the vectors, but the direction they point in—that is, their semantic similarity.
+
+### CRF Layer (Conditional Random Field)
+
+A CRF layer (Conditional Random Field) is a model layer that captures dependencies between consecutive predictions in a sequence.
+
+Unlike standard classification, where each element is predicted independently, a CRF layer considers the entire sequence and learns which combinations of labels are most likely to occur together.
+
+CRF layers have been widely used in NLP tasks such as:
+
+* Named Entity Recognition (NER)
+* Part-of-Speech (POS) tagging
+* information extraction from text
+
+For example, a CRF layer can learn that after the label "B-PER" (Beginning of a Person entity), it is much more likely to see "I-PER" (Inside the same Person entity) than an unrelated label.
+
+Intuitively, a CRF layer allows the model to consider not only individual predictions, but also how those predictions fit together as a coherent sequence.
+
+### Cross-Entropy
+
+Cross-entropy is a loss function that measures the difference between the true probability distribution and the probability distribution predicted by a model.
+
+Put simply, it measures how far the model's predicted probabilities are from reality.
+
+If the model assigns a high probability to the correct class, the cross-entropy loss is low.
+
+If the model is confidently wrong, the loss increases dramatically.
+
+For this reason, cross-entropy penalizes confident mistakes much more heavily than uncertain ones.
+
+Cross-entropy is widely used in:
+
+* binary classification
+* multiclass classification
+* training neural networks
+* NLP models
+
+It is closely related to:
+
+* log loss
+* logistic regression
+* Maximum Likelihood Estimation (MLE)
+* information theory
+
+Intuitively, cross-entropy answers the question: "How closely does the model's predicted probability distribution match the true distribution?"
+
+In practical machine learning, minimizing cross-entropy means training a model that produces both accurate and well-calibrated class probabilities.
+
+
+
+
+
 \>>>>>>>>>
 
 ### Feature Engineering
