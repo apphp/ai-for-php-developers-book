@@ -528,9 +528,49 @@ Intuitively, cross-entropy answers the question: "How closely does the model's p
 
 In practical machine learning, minimizing cross-entropy means training a model that produces both accurate and well-calibrated class probabilities.
 
+### Decision Boundary
 
+A decision boundary is a boundary in the feature space that separates different classes.
 
+Simply put, it is a line (in 2D), a surface (in 3D), or a hyperplane (in higher-dimensional spaces) that divides the feature space so that objects on one side are assigned to one class, while objects on the other side are assigned to another.
 
+Different models produce different types of decision boundaries:
+
+* Linear regression and logistic regression → a linear decision boundary
+* k-NN → a complex, irregular ("jagged") boundary
+* Decision trees → a stepwise, axis-aligned boundary
+* Neural networks → can learn highly complex nonlinear boundaries
+
+The complexity of a decision boundary is directly related to the bias–variance tradeoff:
+
+* A boundary that is too simple → underfitting
+* A boundary that is too complex → overfitting
+
+Intuitively, a decision boundary answers the question: "Where is the line between the classes?"
+
+In machine learning, it is important to understand that training a model is, in essence, the process of finding an appropriate decision boundary in the feature space.
+
+### Dot Product
+
+The **dot product** is an operation on two vectors that produces a single number. In coordinate form, it is defined as the sum of the products of the corresponding components:
+
+$$
+\mathbf{A} \cdot \mathbf{B} = \sum_i A_i B_i
+$$
+
+Geometrically, the dot product can be expressed in terms of the vectors' magnitudes and the angle between them:
+
+$$
+\mathbf{A} \cdot \mathbf{B} = |\mathbf{A}| |\mathbf{B}| \cos(\theta)
+$$
+
+This formula directly leads to cosine similarity, which is simply the normalized dot product.
+
+In machine learning, the dot product appears everywhere. A linear model computes its prediction as the dot product of the feature vector and the weight vector, plus a bias term. Similarity search, embeddings, TF-IDF, and Bag-of-Words representations also rely heavily on dot products between vectors.
+
+Intuitively, the dot product answers the question: "How closely do two vectors point in the same direction?" If the result is large and positive, the vectors are similar; if it is close to zero, they are nearly unrelated; if it is negative, they point in opposite directions.
+
+From a practical perspective, the dot product is one of the fundamental operations underlying both classical and modern machine learning algorithms.
 
 \>>>>>>>>>
 
@@ -588,3 +628,10 @@ Intuitively, the prior is "what we believed beforehand", while the posterior is 
 Example:
 
 If we know that 1% of emails are spam (the prior probability), and an email contains typical spam indicators, then after taking those indicators into account, the probability that the email is spam increases - that is the posterior probability.
+
+### Vector
+
+A vector is an ordered collection of numbers that represents an object. In machine learning, almost everything is a vector: a piece of text, a user, an event, or an image.
+
+Working with vectors is one of the fundamental building blocks of machine learning.
+
