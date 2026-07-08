@@ -7,6 +7,8 @@ This book evolves gradually. New chapters are added, existing ones are revised a
 Added:
 
 * New practical case "Case 2: Estimating object relevance" in chapter "1.3 Distances and similarity"
+* New chapter "2.1.1 Practical use cases"
+* New chapter "2.2.1 Practical use cases"
 
 Changes:
 

@@ -35,8 +35,10 @@
 
 ## Part II. Learning as Optimization
 
-* [2.1 Error, loss functions, and why they are needed](part-ii.-learning-as-optimization/2.1-error-loss-functions-and-why-they-are-needed.md)
-* [2.2 Linear regression as a base model](part-ii.-learning-as-optimization/2.2-linear-regression-as-a-base-model.md)
+* [2.1 Error, loss functions, and why they are needed](part-ii.-learning-as-optimization/2.1-error-loss-functions-and-why-they-are-needed/README.md)
+  * [2.1.1 Practical use cases](part-ii.-learning-as-optimization/2.1-error-loss-functions-and-why-they-are-needed/2.1.1-practical-use-cases.md)
+* [2.2 Linear regression as a base model](part-ii.-learning-as-optimization/2.2-linear-regression-as-a-base-model/README.md)
+  * [2.2.1 Practical use cases](part-ii.-learning-as-optimization/2.2-linear-regression-as-a-base-model/2.2.1-practical-use-cases.md)
 * [2.3 Gradient descent on fingers](part-ii.-learning-as-optimization/2.3-gradient-descent-on-fingers.md)
 
 ## Part III. Classification and Probabilities

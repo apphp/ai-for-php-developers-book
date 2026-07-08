@@ -1,4 +1,4 @@
-# 1.3.1 Практические кейсы
+# 1.3.1 Practical use cases
 
 In many machine learning tasks, objects are represented as feature vectors. To compare these objects, we need to formally define what "similar" or "different" means. This is exactly the role played by a distance or similarity measure.
 
@@ -15,7 +15,7 @@ It is important to understand that a machine learning algorithm does not know wh
 On the following pages, we will look at real practical use cases where these distance measures are applied to solve specific tasks – with detailed explanations and PHP code examples:
 
 * **Case 1: Comparing objects and users**\
-  Using Euclidean distance.
+  &#xNAN;_&#x55;sing Euclidean range._
 * **Case 2: Estimating object relevance**\
   &#xNAN;_&#x55;sing the dot product._
 * **Case 3: Comparing texts**\

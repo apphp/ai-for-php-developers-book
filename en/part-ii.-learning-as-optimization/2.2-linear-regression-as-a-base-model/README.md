@@ -193,7 +193,7 @@ Geometry is the key to understanding linear regression.
 
 If we have one feature, the data are points on the plane $$(x, y)$$. The model is a line. Training linear regression means finding the line that passes "as close as possible" to these points. Closeness is measured by the sum of squared errors.
 
-<figure><img src="../.gitbook/assets/2.2-1_points-and-approximating-line.png" alt=""><figcaption><p>Figure 2.2-1. Data points and a fitting line that minimizes the sum of squares of vertical deviations</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.2-1_points-and-approximating-line.png" alt=""><figcaption><p>Figure 2.2-1. Data points and a fitting line that minimizes the sum of squares of vertical deviations</p></figcaption></figure>
 
 The vertical segments from the points to the line are the prediction errors.
 
@@ -207,7 +207,7 @@ The prediction $$\hat{y}$$ is the value of the linear function. Geometrically, i
 
 From this perspective, linear regression is the problem of finding the direction in feature space that best explains the data.
 
-<figure><img src="../.gitbook/assets/2.2-2_vectors-and-projection.png" alt=""><figcaption><p>Figure 2.2-2. Vectors x, w and projection onto the w direction</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.2-2_vectors-and-projection.png" alt=""><figcaption><p>Figure 2.2-2. Vectors x, w and projection onto the w direction</p></figcaption></figure>
 
 #### How the Weights Are Found
 
@@ -400,7 +400,7 @@ Where $$\eta$$ is the learning rate – the training step size.
 
 At each step, the parameters shift slightly in the direction that reduces the error.
 
-<figure><img src="../.gitbook/assets/2.2-3_error-surface-and-gradient-descent.png" alt=""><figcaption><p>Figure 2.2-3. Error surface and gradient descent steps</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.2-3_error-surface-and-gradient-descent.png" alt=""><figcaption><p>Figure 2.2-3. Error surface and gradient descent steps</p></figcaption></figure>
 
 #### Analytical Solution vs Gradient Descent
 

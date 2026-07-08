@@ -44,7 +44,7 @@ That is why we introduce a loss function – a function that transforms the erro
 
 Geometrically, it looks like this: we measure how far the prediction is from the real value on the number line.
 
-<figure><img src="../.gitbook/assets/2.1-1_distance-between-y-and-y1-on-axis.png" alt=""><figcaption><p>Figure 2.1-1. The distance between y and ŷ on the number line</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.1-1_distance-between-y-and-y1-on-axis.png" alt=""><figcaption><p>Figure 2.1-1. The distance between y and ŷ on the number line</p></figcaption></figure>
 
 Essentially, we want to convert the deviation into a number that behaves like a distance. Let us explain why. In regression tasks, it is convenient to interpret error as the distance between the real value and the prediction – that is, a number that is always non-negative and grows as the error increases.
 
@@ -108,7 +108,7 @@ From a geometric point of view, MSE is the average squared distance between real
 
 If we imagine the data as points on a plane and the model as a line or surface, MSE measures how far the points are from that surface.
 
-<figure><img src="../.gitbook/assets/2.1-2_data-points-and-regression-line.png" alt=""><figcaption><p>Figure 2.1-2. Data points and regression line, vertical bars are errors</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.1-2_data-points-and-regression-line.png" alt=""><figcaption><p>Figure 2.1-2. Data points and regression line, vertical bars are errors</p></figcaption></figure>
 
 **A Bit of Useful Math**
 
@@ -128,7 +128,7 @@ This means:
 * the anti-gradient (the direction opposite to the gradient) points toward reducing the error function
 * training is stable
 
-<figure><img src="../.gitbook/assets/2.1-3_graph-of-convex-loss-function-with-single-minimum.png" alt=""><figcaption><p>Figure 2.1-3. Graph of a convex loss function with a single minimum</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.1-3_graph-of-convex-loss-function-with-single-minimum.png" alt=""><figcaption><p>Figure 2.1-3. Graph of a convex loss function with a single minimum</p></figcaption></figure>
 
 This is one of the reasons why linear regression is such a fundamental and reliable tool.
 
@@ -236,7 +236,7 @@ This is the value the model tries to minimize during training.
 
 Now let us look at the graph of this function – it is very revealing.
 
-<figure><img src="../.gitbook/assets/2.1-4_plot-of-function-minus-log.png" alt=""><figcaption><p>Figure 2.1-4. Plot of -log(p) as p → 0 and p → 1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.1-4_plot-of-function-minus-log.png" alt=""><figcaption><p>Figure 2.1-4. Plot of -log(p) as p → 0 and p → 1</p></figcaption></figure>
 
 * when $$\hat{p} \to 1$$, the error approaches zero
 * when $$\hat{p} \to 0$$, the error approaches infinity
@@ -249,7 +249,7 @@ This is the mathematical expression of the idea:
 
 Log loss can be interpreted as a measure of divergence between the real distribution and the predicted probability distribution.
 
-Formally, it is a special case of [cross-entropy](../getting-started/glossary.md#cross-entropy):
+Formally, it is a special case of [cross-entropy](../../getting-started/glossary.md#cross-entropy):
 
 $$
 H(p, q) = - \sum p \log(q)
@@ -260,7 +260,7 @@ Where:
 * $$p$$ – the true distribution
 * $$q$$ – the model distribution
 
-<figure><img src="../.gitbook/assets/2.1-5_two-probability-distributions-and-distance-between-them.png" alt=""><figcaption><p>Figure 2.1-5. Two probability distributions and the distance between them</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.1-5_two-probability-distributions-and-distance-between-them.png" alt=""><figcaption><p>Figure 2.1-5. Two probability distributions and the distance between them</p></figcaption></figure>
 
 This makes log loss a natural choice for probabilistic models.
 
