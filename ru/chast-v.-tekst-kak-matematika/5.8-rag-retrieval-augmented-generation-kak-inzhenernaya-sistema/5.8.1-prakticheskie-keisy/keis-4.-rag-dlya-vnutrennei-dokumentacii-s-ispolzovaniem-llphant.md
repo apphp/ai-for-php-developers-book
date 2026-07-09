@@ -239,3 +239,7 @@ LLPhant не делает RAG за нас, он:
 
 * мы уже не пишем всё вручную
 * но ещё полностью контролируем архитектуру
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-5/retrieval-augmented-generation-as-engineering-system) для его запуска.
+{% endhint %}
