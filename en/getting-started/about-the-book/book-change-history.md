@@ -10,6 +10,7 @@ Added:
 * New chapter "2.1.1 Practical use cases"
 * New chapter "2.2.1 Practical use cases"
 * New chapter "2.3.1 Experiments with gradient descent"
+* New chapter "3.1.1 Practical use cases"
 
 Changes:
 

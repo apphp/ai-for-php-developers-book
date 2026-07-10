@@ -46,4 +46,5 @@
 
 ***
 
-* [3.1 Probability as a degree of confidence](3.1-probability-as-a-degree-of-confidence.md)
+* [3.1 Probability as a degree of confidence](3.1-probability-as-a-degree-of-confidence/README.md)
+  * [3.1.1 Practical use cases](3.1-probability-as-a-degree-of-confidence/3.1.1-practical-use-cases.md)
