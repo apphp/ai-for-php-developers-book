@@ -181,7 +181,7 @@ For example, a text classification model might output:
 
 These are not just two numbers. They represent how the model distributes its confidence across competing hypotheses.
 
-<figure><img src="../.gitbook/assets/3.1-1_probability-distribution-between-two-classes.png" alt=""><figcaption><p>Figure 3.1-1. Probability distribution between two classes</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3.1-1_probability-distribution-between-two-classes.png" alt=""><figcaption><p>Figure 3.1-1. Probability distribution between two classes</p></figcaption></figure>
 
 #### **Probability and Softmax**
 
@@ -266,7 +266,7 @@ Now we have a valid probability distribution:
 
 An important note: `softmax` does not make the model smarter. It simply converts the model's internal scores into a form that is easier to interpret and use for decision-making. The model is still uncertain and distributes confidence across alternatives rather than producing a hard "yes" or "no" answer.
 
-<figure><img src="../.gitbook/assets/3.1-2_сonverting-logits-to-probabilities-via-softmax.png" alt=""><figcaption><p>Figure 3.1-2. How softmax transforms logits into probabilities</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3.1-2_сonverting-logits-to-probabilities-via-softmax.png" alt=""><figcaption><p>Figure 3.1-2. How softmax transforms logits into probabilities</p></figcaption></figure>
 
 ### Why Probability Is Almost Never 0 or 1
 
@@ -280,7 +280,7 @@ If a model says it is "100% certain", that is usually a warning sign:
 
 A healthy model almost always leaves room for doubt.
 
-<figure><img src="../.gitbook/assets/3.1-3_confidence-scale-from-0-to-1.png" alt=""><figcaption><p>Figure 3.1-3. Confidence scale from 0 to 1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3.1-3_confidence-scale-from-0-to-1.png" alt=""><figcaption><p>Figure 3.1-3. Confidence scale from 0 to 1</p></figcaption></figure>
 
 ### Probability and Decisions
 

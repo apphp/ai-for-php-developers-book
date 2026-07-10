@@ -44,8 +44,7 @@
 
 ## Part III. Classification and Probabilities
 
-***
-
-* [3.1 Probability as a degree of confidence](3.1-probability-as-a-degree-of-confidence/README.md)
-  * [3.1.1 Practical use cases](3.1-probability-as-a-degree-of-confidence/3.1.1-practical-use-cases.md)
-* [3.2 Logistic Regression](3.2-logistic-regression.md)
+* [3.1 Probability as a degree of confidence](part-iii.-classification-and-probabilities/3.1-probability-as-a-degree-of-confidence/README.md)
+  * [3.1.1 Practical use cases](part-iii.-classification-and-probabilities/3.1-probability-as-a-degree-of-confidence/3.1.1-practical-use-cases.md)
+* [3.2 Logistic Regression](part-iii.-classification-and-probabilities/3.2-logistic-regression.md)
+* [3.3 Why Naive Bayes Works](part-iii.-classification-and-probabilities/3.3-why-naive-bayes-works.md)
