@@ -48,3 +48,4 @@
 
 * [3.1 Probability as a degree of confidence](3.1-probability-as-a-degree-of-confidence/README.md)
   * [3.1.1 Practical use cases](3.1-probability-as-a-degree-of-confidence/3.1.1-practical-use-cases.md)
+* [3.2 Logistic Regression](3.2-logistic-regression.md)

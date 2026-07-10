@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 21% (37%)
+Readines&#x73;**:** 21% (40%)
 
-🟩🟩🟩🟩🟨🟩🟩🟩🟩🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟨🟩🟩🟩🟩🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -83,7 +83,7 @@ _Motivation, realities and goals of the book._
 
 &#x20;  3.1.1 Practical use cases
 
-3.2 ⬜ Logistic regression\
+3.2 🟨 Logistic regression\
 &#xNAN;_&#x53;igmoid, decision boundary, classification case._
 
 &#x20;  3.2.1 Practical use cases
