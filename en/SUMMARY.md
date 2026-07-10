@@ -39,7 +39,8 @@
   * [2.1.1 Practical use cases](part-ii.-learning-as-optimization/2.1-error-loss-functions-and-why-they-are-needed/2.1.1-practical-use-cases.md)
 * [2.2 Linear regression as a base model](part-ii.-learning-as-optimization/2.2-linear-regression-as-a-base-model/README.md)
   * [2.2.1 Practical use cases](part-ii.-learning-as-optimization/2.2-linear-regression-as-a-base-model/2.2.1-practical-use-cases.md)
-* [2.3 Gradient descent on fingers](part-ii.-learning-as-optimization/2.3-gradient-descent-on-fingers.md)
+* [2.3 Gradient descent on fingers](part-ii.-learning-as-optimization/2.3-gradient-descent-on-fingers/README.md)
+  * [2.3.1 Experiments with gradient descent](part-ii.-learning-as-optimization/2.3-gradient-descent-on-fingers/2.3.1-experiments-with-gradient-descent.md)
 
 ## Part III. Classification and Probabilities
 

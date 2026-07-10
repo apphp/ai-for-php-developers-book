@@ -24,7 +24,7 @@ The parameter value $$w$$ represents your horizontal position. The error value $
 
 It is as if we are walking through mountainous terrain and trying to reach the lowest point – the minimum.
 
-<figure><img src="../.gitbook/assets/2.3-1_error-graph-like-a-hill.png" alt=""><figcaption><p>Figure 2.3-1. The error graph is like a hill</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.3-1_error-graph-like-a-hill.png" alt=""><figcaption><p>Figure 2.3-1. The error graph is like a hill</p></figcaption></figure>
 
 #### Why It Is Called "Descent"
 
@@ -52,7 +52,7 @@ But without the formal definition, it means the following:
 
 Geometrically, the derivative is the tangent of the angle formed by the tangent line to the graph.
 
-<figure><img src="../.gitbook/assets/2.3-2_tangent-to-graph.png" alt=""><figcaption><p>Figure 2.3-2. The graph of a function and the tangent line showing the slope</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.3-2_tangent-to-graph.png" alt=""><figcaption><p>Figure 2.3-2. The graph of a function and the tangent line showing the slope</p></figcaption></figure>
 
 #### Why the Derivative Gives the Direction of Motion
 
@@ -90,7 +90,7 @@ Intuition might suggest speeding things up by choosing a very large $$\eta$$. Bu
 
 If the step is too large, we stop descending and start jumping over the minimum. First we overshoot from the left, then from the right, then back again. The error no longer decreases – it oscillates.
 
-<figure><img src="../.gitbook/assets/2.3-3_chart-with-jumping-minimum.png" alt=""><figcaption><p>Figure 2.3-3. Chart with jumping minimum</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.3-3_chart-with-jumping-minimum.png" alt=""><figcaption><p>Figure 2.3-3. Chart with jumping minimum</p></figcaption></figure>
 
 On the other hand, if the step is too small, training becomes painfully slow. We are moving in the right direction, but so slowly that it seems as though the model is not learning at all.
 
@@ -228,7 +228,7 @@ This vector points in the direction of the _steepest increase_ of the loss funct
 
 Again, there is no magic here. We are simply walking downhill along the steepest slope.
 
-<figure><img src="../.gitbook/assets/2.3-4_error-surface-and-gradient-vector.png" alt=""><figcaption><p>Figure 2.3-4. 3D error surface and gradient vector</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2.3-4_error-surface-and-gradient-vector.png" alt=""><figcaption><p>Figure 2.3-4. 3D error surface and gradient vector</p></figcaption></figure>
 
 #### Why Derivatives Are Essential
 
@@ -464,7 +464,7 @@ Here, the bias is already included as an additional feature with a value of 1. T
 This is a standard ML trick because it:
 
 * works consistently across linear models, logistic regression, SVMs, and neural networks,
-* simplifies [backpropagation](../getting-started/glossary.md#backpropagation-error-backpropagation),
+* simplifies [backpropagation](../../getting-started/glossary.md#backpropagation-error-backpropagation),
 * allows everything to be stored in matrices,
 * eliminates conditional branches from code and formulas.
 
