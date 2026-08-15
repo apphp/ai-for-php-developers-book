@@ -228,6 +228,8 @@ $labels = [
 $dataset = new Labeled($samples, $labels);
 $dataset->apply(new ZScaleStandardizer());
 
+// Скрытые слои: 8 и 4 нейрона добавляют достаточно нелинейности 
+// для этого небольшого демонстрационного набора данных.
 $model = new MultilayerPerceptron([
     new Dense(8),
     new Dense(4),
