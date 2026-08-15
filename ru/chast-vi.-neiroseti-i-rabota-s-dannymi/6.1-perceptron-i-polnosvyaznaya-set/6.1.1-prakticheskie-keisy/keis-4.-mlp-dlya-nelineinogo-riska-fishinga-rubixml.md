@@ -105,8 +105,8 @@ use Rubix\ML\Transformers\ZScaleStandardizer;
 * `Labeled` – набор объектов с известными правильными ответами
 * `ZScaleStandardizer` – стандартизация числовых признаков
 * `MultilayerPerceptron` – многослойная нейронная сеть для классификации
-* `Dense` –&#x20;
-* `Activation` –
+* `Dense` – полносвязный слой, выполняющий линейное преобразование входов с обучаемыми весами и bias.
+* `Activation` – слой, применяющий функцию активации к результатам предыдущего слоя.
 
 #### Создаем dataset
 
@@ -168,7 +168,7 @@ $dataset->apply(new ZScaleStandardizer());
 нейронная сеть
 ```
 
-Это не делает модель "умнее", но делает обучение более удобным и устойчивым.
+Это не делает модель "умнее", но может сделать оптимизацию более стабильной и облегчить сходимость.
 
 #### Создаем нейронную сеть
 
@@ -206,6 +206,8 @@ Input
 Output
 ```
 
+В конфигурации мы задаём два скрытых слоя: первый содержит 8 нейронов, второй – 4. Выходной слой классификатора добавляется самим MultilayerPerceptron.
+
 Входной слой получает наши два признака:
 
 ```
@@ -221,6 +223,7 @@ Output
 
 ```php
 use Rubix\ML\Datasets\Labeled;
+use Rubix\ML\Datasets\Unlabeled;
 use Rubix\ML\Classifiers\MultilayerPerceptron;
 use Rubix\ML\NeuralNet\ActivationFunctions\ReLU;
 use Rubix\ML\NeuralNet\Layers\Activation;
@@ -242,7 +245,8 @@ $labels = [
 ];
 
 $dataset = new Labeled($samples, $labels);
-$dataset->apply(new ZScaleStandardizer());
+$standardizer = new ZScaleStandardizer();
+$dataset->apply($standardizer);
 
 // Скрытые слои: 8 и 4 нейрона добавляют достаточно нелинейности 
 // для этого небольшого демонстрационного набора данных.
@@ -327,7 +331,7 @@ $$
 нагрузка ────→ ┘
 ```
 
-> Каждый нейрон получает оба входных признака, но использует собственные веса для каждого из них. Поэтому разные нейроны могут по-разному реагировать на одни и те же признаки и выделять разные их комбинации.
+> Каждый нейрон первого скрытого слоя получает оба исходных признака. Нейроны следующего слоя получают выходы предыдущего слоя. Поэтому разные нейроны могут по-разному реагировать на одни и те же признаки и выделять разные их комбинации.
 
 Отсюда
 
@@ -568,7 +572,7 @@ $inputSample = [
     [8, 2],
     [5, 5],
 ];
-$predictDataset = new Unlabeled(inputSample);
+$predictDataset = new Unlabeled($inputSample);
 $predictDataset->apply($standardizer);
 $prediction = $model->predict($predictDataset);
 ```
