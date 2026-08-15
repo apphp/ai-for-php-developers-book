@@ -121,10 +121,10 @@ $dataset = new Labeled($samples, $labels);
 Например:
 
 ```
-[1,  1] → risk
-[1, 10] → safe
-[4,  6] → risk
-[6,  4] → safe
+[1,  6] → risk
+[5,  3] → safe
+[10, 1] → risk
+[3,  7] → safe
 ```
 
 #### Зачем нужна стандартизация?
@@ -156,10 +156,10 @@ $dataset->apply(new ZScaleStandardizer());
 ```
 исходные данные
        ↓
-    [1,  1]
-    [1, 10]
+    [1,  6]
+    [5,  3]
       ...
-    [6,  6]
+    [3,  7]
        ↓
 стандартизация
        ↓
@@ -228,7 +228,7 @@ use Rubix\ML\NeuralNet\Layers\Dense;
 use Rubix\ML\Transformers\ZScaleStandardizer;
 
 $samples = [
-    [1, 10],
+    [1, 6],
     [5, 3],
     [10, 1],
     [3, 7],
@@ -529,13 +529,17 @@ input → neuron → output
 мы получаем:
 
 ```
-input
+Input
   ↓
-8 нейронов
+Dense(8)
   ↓
-4 нейрона
+ReLU
   ↓
-output
+Dense(4)
+  ↓
+ReLU
+  ↓
+Output
 ```
 
 Поэтому MLP можно рассматривать как сеть из множества связанных нейронов, организованных в несколько слоев.
@@ -547,6 +551,8 @@ output
 Например:
 
 ```php
+use Rubix\ML\Datasets\Unlabeled;
+
 $inputSample = [4, 6];
 $predictDataset = new Unlabeled([$inputSample]);
 $predictDataset->apply($standardizer);
