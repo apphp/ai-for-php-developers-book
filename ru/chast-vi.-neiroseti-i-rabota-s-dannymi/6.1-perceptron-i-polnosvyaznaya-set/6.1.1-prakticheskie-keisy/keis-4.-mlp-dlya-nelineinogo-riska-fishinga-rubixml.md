@@ -207,7 +207,8 @@ Output
 
 ```php
 use Rubix\ML\Datasets\Labeled;
-use Rubix\ML\Classifiers\MLPClassifier;
+use Rubix\ML\Classifiers\MultilayerPerceptron;
+use Rubix\ML\NeuralNet\Layers\Dense;
 use Rubix\ML\Transformers\ZScaleStandardizer;
 
 $samples = [
@@ -227,18 +228,25 @@ $labels = [
 $dataset = new Labeled($samples, $labels);
 $dataset->apply(new ZScaleStandardizer());
 
-$model = new MLPClassifier([8, 4]);
+$model = new MultilayerPerceptron([
+    new Dense(8),
+    new Dense(4),
+]);
 $model->train($dataset);
 
-$prediction = $model->predict([[4, 6]]);
+$inputSample = [4, 6];
+$predictDataset = new Unlabeled([$inputSample]);
+$predictDataset->apply($standardizer);
+$prediction = $model->predict($predictDataset);
 
-echo $prediction[0];
+echo 'Прогноз риска фишинга:' . PHP_EOL;
+echo ($prediction[0] === 'risk' ? 'risk (высокий риск)' : 'safe (низкий риск)');
 ```
 
 Предположим, что модель классифицировала новый объект как:
 
 ```
-safe
+safe (низкий риск)
 ```
 
 То есть для сотрудника с характеристиками:
