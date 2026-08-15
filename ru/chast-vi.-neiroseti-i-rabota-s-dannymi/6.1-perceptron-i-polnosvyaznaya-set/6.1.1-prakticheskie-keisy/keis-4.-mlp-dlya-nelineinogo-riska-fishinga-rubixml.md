@@ -90,11 +90,13 @@ $labels = ['risk', 'risk', 'risk', 'risk', 'safe', 'safe', 'safe', 'safe'];
 
 Для реализации модели воспользуемся RubixML.
 
-Нам понадобятся:
+Нам понадобятся:use Rubix\ML\Datasets\Labeled;
 
-```php
-use Rubix\ML\Datasets\Labeled;
-use Rubix\ML\Classifiers\MLPClassifier;
+```
+use Rubix\ML\Classifiers\MultilayerPerceptron;
+use Rubix\ML\NeuralNet\ActivationFunctions\ReLU;
+use Rubix\ML\NeuralNet\Layers\Activation;
+use Rubix\ML\NeuralNet\Layers\Dense;
 use Rubix\ML\Transformers\ZScaleStandardizer;
 ```
 
@@ -102,7 +104,9 @@ use Rubix\ML\Transformers\ZScaleStandardizer;
 
 * `Labeled` – набор объектов с известными правильными ответами
 * `ZScaleStandardizer` – стандартизация числовых признаков
-* `MLPClassifier` – многослойная нейронная сеть для классификации
+* `MultilayerPerceptron` – многослойная нейронная сеть для классификации
+* `Dense` –&#x20;
+* `Activation` –
 
 #### Создаем dataset
 
@@ -171,13 +175,23 @@ $dataset->apply(new ZScaleStandardizer());
 Теперь создадим MLP:
 
 ```php
-$model = new MLPClassifier([8, 4]);
+$model = new MultilayerPerceptron([
+    new Dense(8),
+    new Activation(new ReLU()),
+    new Dense(4),
+    new Activation(new ReLU()),
+]);
 ```
 
 Запись:
 
 ```php
-[8, 4]
+[
+    new Dense(8),
+    new Activation(new ReLU()),
+    new Dense(4),
+    new Activation(new ReLU()),
+]
 ```
 
 означает, что мы задаем два скрытых слоя:
@@ -208,6 +222,8 @@ Output
 ```php
 use Rubix\ML\Datasets\Labeled;
 use Rubix\ML\Classifiers\MultilayerPerceptron;
+use Rubix\ML\NeuralNet\ActivationFunctions\ReLU;
+use Rubix\ML\NeuralNet\Layers\Activation;
 use Rubix\ML\NeuralNet\Layers\Dense;
 use Rubix\ML\Transformers\ZScaleStandardizer;
 
@@ -232,7 +248,9 @@ $dataset->apply(new ZScaleStandardizer());
 // для этого небольшого демонстрационного набора данных.
 $model = new MultilayerPerceptron([
     new Dense(8),
+    new Activation(new ReLU()),
     new Dense(4),
+    new Activation(new ReLU()),
 ]);
 $model->train($dataset);
 
@@ -269,7 +287,9 @@ safe (низкий риск)
 Когда мы передаем модели:
 
 ```php
-[4, 6]
+$predictDataset = new Unlabeled([[4, 6]]);
+$predictDataset->apply($standardizer);
+$prediction = $model->predict($predictDataset);
 ```
 
 эти значения становятся входами первого слоя.
@@ -527,20 +547,24 @@ output
 Например:
 
 ```php
-$prediction = $model->predict([
-    [4, 6],
-]);
+$inputSample = [4, 6];
+$predictDataset = new Unlabeled([$inputSample]);
+$predictDataset->apply($standardizer);
+$prediction = $model->predict($predictDataset);
 ```
 
 Или проверить несколько сотрудников одновременно:
 
 ```php
-$prediction = $model->predict([
+$inputSample = [
     [4, 6],
     [1, 9],
     [8, 2],
     [5, 5],
-]);
+];
+$predictDataset = new Unlabeled(inputSample);
+$predictDataset->apply($standardizer);
+$prediction = $model->predict($predictDataset);
 ```
 
 Модель вернет соответствующий класс для каждого объекта.
@@ -708,3 +732,7 @@ MLP может быть полезен там, где на результат о
 **forward pass → вычисление функции потерь → backpropagation → вычисление градиентов → обновление параметров оптимизатором.**
 
 Именно поэтому MLP – естественный следующий шаг после изучения простого перцептрона.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-6/perceptron-and-fully-connected-network) для его запуска.
+{% endhint %}
