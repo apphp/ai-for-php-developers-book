@@ -530,7 +530,7 @@ echo 'Выход: ' . number_format($output, 6, '.', '') . "\n";
 // Выход: 3.018517
 ```
 
-Это только forward-pass. Для обучения нужно использовать backpropagation – мы разберем его в следующей главе.
+Это только [forward-pass](../../vvedenie/glossarii.md#forward-pass-pryamoi-prokhod). Для обучения нужно использовать [backpropagation](../../vvedenie/glossarii.md#backpropagation-obratnoe-rasprostranenie-oshibki) – мы разберем его в следующей главе.
 
 #### Геометрическая интуиция MLP
 
