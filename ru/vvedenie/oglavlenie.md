@@ -169,7 +169,7 @@ _&#x41B;инейные комбинации и нелинейности._
 
 &#x20;  6.1.1 🟨 [Практические кейсы](../chast-vi.-neiroseti-i-rabota-s-dannymi/6.1-perceptron-i-polnosvyaznaya-set/6.1.1-prakticheskie-keisy/)
 
-6.2 🟨 Backpropagation – почему он работает\
+6.2 [**Backpropagation – почему он работает**](../chast-vi.-neiroseti-i-rabota-s-dannymi/6.2-backpropagation-pochemu-on-rabotaet/)\
 _&#x426;епное правило без академического ужаса._
 
 &#x20;  6.2.1 🟨 Практические кейсы
