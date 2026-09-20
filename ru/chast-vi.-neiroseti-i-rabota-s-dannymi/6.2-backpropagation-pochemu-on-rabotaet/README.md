@@ -359,6 +359,11 @@ $w = $w - $lr * $gradient;
 echo "Loss: " . $loss . "\n";
 echo "Gradient: " . $gradient . "\n";
 echo "New weight: " . $w;
+
+// Результат:
+// Loss: 0.072329488128513
+// Gradient: -0.21150837113707
+// New weight: 0.52115083711371
 ```
 
 Это и есть backpropagation – всего в чуть более десяти строках PHP.
