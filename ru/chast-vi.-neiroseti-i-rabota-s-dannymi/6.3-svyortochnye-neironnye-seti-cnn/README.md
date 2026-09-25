@@ -317,3 +317,7 @@ CNN ничего не "понимает" в человеческом смысл�
 Модель перестаёт зависеть от ручного feature engineering.
 
 В следующей главе мы сделаем шаг дальше и рассмотрим автокодировщики.
+
+{% hint style="info" %}
+Чтобы самостоятельно протестировать этот код, воспользуйтесь [онлайн-демонстрацией](https://aiwithphp.org/books/ai-for-php-developers/examples/part-6/convolutional-neural-networks) для его запуска.
+{% endhint %}
