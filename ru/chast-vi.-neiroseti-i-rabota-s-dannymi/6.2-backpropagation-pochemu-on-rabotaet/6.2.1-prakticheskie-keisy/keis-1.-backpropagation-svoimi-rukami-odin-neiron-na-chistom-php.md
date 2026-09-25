@@ -140,9 +140,11 @@ x = количество подозрительных факторов
 
 Математически нейрон сначала вычисляет:
 
-\=========
+$$
+z = wx+bz = wx + b
+$$
 
-z=wx+bz = wx + b
+
 
 где:
 
@@ -153,7 +155,11 @@ z=wx+bz = wx + b
 
 Затем применяется функция активации:
 
-a=sigmoid(z)a = sigmoid(z)
+$$
+a=sigmoid(z)
+$$
+
+
 
 На выходе получаем число от `0` до `1`.
 
@@ -167,9 +173,7 @@ a=sigmoid(z)a = sigmoid(z)
 
 Здесь `a` – prediction нейрона.
 
-***
-
-## Шаг 1. Создаем класс Neuron
+#### Шаг 1. Создаем класс Neuron
 
 Начнем с минимальной структуры:
 
@@ -190,26 +194,15 @@ class Neuron
 
 Теперь у нас есть объект, который представляет нейрон.
 
-Он хранит два параметра:
-
-```
-Neuron
-
-weight
-bias
-```
+Он хранит два параметра: `weight` and `bias`
 
 Это и есть параметры модели.
 
 Во время обучения они будут изменяться.
 
-Важно понимать разницу:
+Важно понимать разницу: модель хранит параметры, а обучение изменяет эти параметры.
 
-**модель** хранит параметры, а **обучение** изменяет эти параметры.
-
-***
-
-## Шаг 2. Forward pass
+#### Шаг 2. Forward pass
 
 Сначала научим нейрон делать prediction.
 
@@ -228,7 +221,6 @@ public function forward(float $input): float
 
 ```php
 $neuron = new Neuron();
-
 $result = $neuron->forward(2);
 
 echo $result;
@@ -238,21 +230,13 @@ echo $result;
 
 ```
 input = 2
-
     ↓
-
 2 × weight + bias
-
     ↓
-
     z
-
     ↓
-
  sigmoid
-
     ↓
-
 prediction
 ```
 
@@ -260,9 +244,7 @@ prediction
 
 Нейрон получает данные и вычисляет результат.
 
-***
-
-## Шаг 3. Функция активации
+#### Шаг 3. Функция активации
 
 Используем sigmoid:
 
@@ -279,9 +261,7 @@ Sigmoid превращает любое число в значение межд�
 
 ```
 sigmoid(-3) ≈ 0.05
-
 sigmoid(0)  = 0.50
-
 sigmoid(3)  ≈ 0.95
 ```
 
@@ -291,17 +271,13 @@ sigmoid(3)  ≈ 0.95
 
 ```
 0.05 → 5% phishing
-
 0.50 → 50% phishing
-
 0.95 → 95% phishing
 ```
 
 Это еще не означает, что значение действительно является статистически откалиброванной вероятностью. Для нашего учебного примера это удобная интерпретация выхода sigmoid.
 
-***
-
-## Шаг 4. Нейрон должен помнить forward pass
+#### Шаг 4. Нейрон должен помнить forward pass
 
 Теперь появляется важный момент.
 
@@ -316,7 +292,6 @@ sigmoid(3)  ≈ 0.95
 
 ```php
 private float $lastInput;
-
 private float $lastOutput;
 ```
 
@@ -326,9 +301,7 @@ private float $lastOutput;
 public function forward(float $input): float
 {
     $this->lastInput = $input;
-
     $z = $this->weight * $input + $this->bias;
-
     $this->lastOutput = $this->sigmoid($z);
 
     return $this->lastOutput;
@@ -339,7 +312,6 @@ public function forward(float $input): float
 
 ```
 forward()
-
 input
   ↓
 Neuron
@@ -347,44 +319,44 @@ Neuron
 output
 
 Neuron remembers:
-
 lastInput
 lastOutput
 ```
 
 Это понадобится на следующем этапе.
 
-***
+#### Шаг 5. Функция ошибки
 
-## Шаг 5. Функция ошибки
-
-Нейрон сделал prediction.
-
-Но как понять, хороший он или плохой?
+Нейрон сделал prediction. Но как понять, хороший он или плохой?
 
 Нужно сравнить prediction с правильным ответом.
 
 Используем простую квадратичную функцию ошибки:
 
-L=(a−y)2L = (a-y)^2
+$$
+L = (a-y)^2
+$$
+
+
 
 где:
 
-* `a` – prediction;
-* `y` – правильный ответ;
-* `L` – loss.
+* `a` – prediction
+* `y` – правильный ответ
+* `L` – loss
 
 Например:
 
 ```
 prediction = 0.6
-
 target = 1
 ```
 
 Тогда:
 
-L=(0.6−1)2=0.16L = (0.6-1)^2 = 0.16
+$$
+L = (0.6-1)^2 = 0.16
+$$
 
 Чем ближе prediction к target, тем меньше ошибка.
 
@@ -393,7 +365,6 @@ L=(0.6−1)2=0.16L = (0.6-1)^2 = 0.16
 ```
 prediction = 0.9
 target = 1
-
 loss = 0.01
 ```
 
@@ -402,15 +373,12 @@ loss = 0.01
 ```
 prediction = 0.2
 target = 1
-
 loss = 0.64
 ```
 
 Значит, второе предсказание значительно хуже.
 
-***
-
-## Шаг 6. Что должен сделать backpropagation?
+#### Шаг 6. Что должен сделать backpropagation?
 
 Теперь начинается самая важная часть кейса.
 
@@ -436,25 +404,26 @@ loss
 
 В нашем случае нам нужны:
 
-dLdw\frac{dL}{dw}
+$$
+\frac{dL}{dw}
+$$
 
 и
 
-dLdb\frac{dL}{db}
+$$
+\frac{dL}{db}
+$$
 
 То есть:
 
 ```
 как weight влияет на ошибку
-
 как bias влияет на ошибку
 ```
 
-***
+#### Шаг 7. Цепное правило
 
-## Шаг 7. Цепное правило
-
-Чтобы получить эти градиенты, используем **chain rule – цепное правило**.
+Чтобы получить эти градиенты, используем [chain rule](../../../vvedenie/glossarii.md#chain-rule-cepnoe-pravilo) – цепное правило.
 
 Наша модель состоит из нескольких последовательных операций:
 
@@ -470,13 +439,13 @@ L = (a - y)²
 
 Ошибка зависит от `a`.
 
-`a` зависит от `z`.
-
-`z` зависит от `w`.
+`a` зависит от `z` , а `z` зависит от `w`.
 
 Поэтому:
 
-dLdw=dLda⋅dadz⋅dzdw\frac{dL}{dw} = \frac{dL}{da} \cdot \frac{da}{dz} \cdot \frac{dz}{dw}
+$$
+\frac{dL}{dw} = \frac{dL}{da} \cdot \frac{da}{dz} \cdot \frac{dz}{dw}
+$$
 
 Это и есть идея backpropagation.
 
@@ -492,17 +461,19 @@ weighted sum
 weight
 ```
 
-***
-
-## Шаг 8. Первая часть градиента
+#### Шаг 8. Первая часть градиента
 
 Наша функция ошибки:
 
-L=(a−y)2L=(a-y)^2
+$$
+L=(a-y)^2
+$$
 
 Производная по `a`:
 
-dLda=2(a−y)\frac{dL}{da}=2(a-y)
+$$
+\frac{dL}{da}=2(a-y)
+$$
 
 В PHP:
 
@@ -514,17 +485,19 @@ $dL_da = 2 * ($this->lastOutput - $target);
 
 > Как изменение prediction влияет на ошибку?
 
-***
+#### Шаг 9. Производная sigmoid
 
-## Шаг 9. Производная sigmoid
+Следующая функция:&#x20;
 
-Следующая функция:
-
-a=sigmoid(z)a=sigmoid(z)
+$$
+a=sigmoid(z)
+$$
 
 Для sigmoid существует очень удобная производная:
 
-dadz=a(1−a)\frac{da}{dz}=a(1-a)
+$$
+\frac{da}{dz}=a(1-a)
+$$
 
 Поэтому:
 
@@ -547,17 +520,19 @@ $da_dz = $this->sigmoidDerivative(
 
 Отдельно пересчитывать `sigmoid(z)` не требуется.
 
-***
-
-## Шаг 10. Как вес влияет на z?
+#### Шаг 10. Как вес влияет на z?
 
 У нас:
 
-z=wx+bz=wx+b
+$$
+z=wx+b
+$$
 
 Производная по `w`:
 
-dzdw=x\frac{dz}{dw}=x
+$$
+\frac{dz}{dw}=x
+$$
 
 Это логично.
 
@@ -573,49 +548,50 @@ $dz_dw = $this->lastInput;
 
 ```
 dL/da
-
 da/dz
-
 dz/dw
 ```
 
 Перемножаем:
 
 ```php
-$this->weightGradient =
-    $dL_da *
-    $da_dz *
-    $dz_dw;
+$this->weightGradient = $dL_da * $da_dz * $dz_dw;
 ```
 
 Получаем:
 
-dLdw=dLda⋅dadz⋅dzdw\frac{dL}{dw} = \frac{dL}{da} \cdot \frac{da}{dz} \cdot \frac{dz}{dw}
+$$
+\frac{dL}{dw} = \frac{dL}{da} \cdot \frac{da}{dz} \cdot \frac{dz}{dw}
+$$
 
-***
-
-## Шаг 11. А что с bias?
+#### Шаг 11. А что с bias?
 
 Bias тоже является параметром модели.
 
 Мы имеем:
 
+$$
 z=wx+bz=wx+b
+$$
+
+
 
 Поэтому:
 
-dzdb=1\frac{dz}{db}=1
+$$
+\frac{dz}{db}=1
+$$
 
 Следовательно:
 
-dLdb=dLda⋅dadz\frac{dL}{db} = \frac{dL}{da} \cdot \frac{da}{dz}
+$$
+\frac{dL}{db} = \frac{dL}{da} \cdot \frac{da}{dz}
+$$
 
 В коде:
 
 ```php
-$this->biasGradient =
-    $dL_da *
-    $da_dz;
+$this->biasGradient = $dL_da * $da_dz;
 ```
 
 Теперь нейрон умеет вычислять градиент для обоих параметров:
@@ -625,34 +601,19 @@ weight → gradient
 bias   → gradient
 ```
 
-***
-
-## Шаг 12. Реализуем backward()
+#### Шаг 12. Реализуем backward()
 
 Теперь можем собрать все вместе:
 
 ```php
 public function backward(float $target): void
 {
-    $dL_da =
-        2 * ($this->lastOutput - $target);
+    $dL_da = 2 * ($this->lastOutput - $target);
+    $da_dz = $this->sigmoidDerivative($this->lastOutput);
+    $dz_dw = $this->lastInput;
 
-    $da_dz =
-        $this->sigmoidDerivative(
-            $this->lastOutput
-        );
-
-    $dz_dw =
-        $this->lastInput;
-
-    $this->weightGradient =
-        $dL_da *
-        $da_dz *
-        $dz_dw;
-
-    $this->biasGradient =
-        $dL_da *
-        $da_dz;
+    $this->weightGradient = $dL_da * $da_dz * $dz_dw;
+    $this->biasGradient = $dL_da * $da_dz;
 }
 ```
 
@@ -669,21 +630,21 @@ public function backward(float $target): void
 
 Изменение параметров произойдет на следующем шаге.
 
-***
+#### Шаг 13. Gradient descent
 
-## Шаг 13. Gradient descent
-
-Теперь нейрон знает градиенты.
-
-Осталось изменить параметры.
+Теперь нейрон знает градиенты. Осталось изменить параметры.
 
 Используем градиентный спуск:
 
-w=w−αdLdww=w-\alpha\frac{dL}{dw}
+$$
+w=w-\alpha\frac{dL}{dw}
+$$
 
 и:
 
-b=b−αdLdbb=b-\alpha\frac{dL}{db}
+$$
+b=b-\alpha\frac{dL}{db}
+$$
 
 где `α` – learning rate.
 
@@ -692,11 +653,8 @@ b=b−αdLdbb=b-\alpha\frac{dL}{db}
 ```php
 public function update(float $learningRate): void
 {
-    $this->weight -=
-        $learningRate * $this->weightGradient;
-
-    $this->bias -=
-        $learningRate * $this->biasGradient;
+    $this->weight -= $learningRate * $this->weightGradient;
+    $this->bias -= $learningRate * $this->biasGradient;
 }
 ```
 
@@ -714,9 +672,7 @@ $neuron->update(0.1);
 
 Слишком маленький – сделать обучение очень медленным.
 
-***
-
-## Полный класс Neuron
+#### Полный класс Neuron
 
 Теперь соберем все части вместе:
 
@@ -737,61 +693,33 @@ class Neuron
 
     public function __construct()
     {
-        $this->weight =
-            mt_rand(-100, 100) / 100;
-
+        $this->weight = mt_rand(-100, 100) / 100;
         $this->bias = 0.0;
     }
 
     public function forward(float $input): float
     {
         $this->lastInput = $input;
-
-        $z =
-            $this->weight * $input
-            + $this->bias;
-
-        $this->lastOutput =
-            $this->sigmoid($z);
+        $z = $this->weight * $input + $this->bias;
+        $this->lastOutput = $this->sigmoid($z);
 
         return $this->lastOutput;
     }
 
     public function backward(float $target): void
     {
-        $dL_da =
-            2 * (
-                $this->lastOutput
-                - $target
-            );
+        $dL_da = 2 * ($this->lastOutput - $target);
+        $da_dz = $this->sigmoidDerivative($this->lastOutput);
+        $dz_dw = $this->lastInput;
 
-        $da_dz =
-            $this->sigmoidDerivative(
-                $this->lastOutput
-            );
-
-        $dz_dw =
-            $this->lastInput;
-
-        $this->weightGradient =
-            $dL_da *
-            $da_dz *
-            $dz_dw;
-
-        $this->biasGradient =
-            $dL_da *
-            $da_dz;
+        $this->weightGradient = $dL_da * $da_dz * $dz_dw;
+        $this->biasGradient = $dL_da * $da_dz;
     }
 
     public function update(float $learningRate): void
     {
-        $this->weight -=
-            $learningRate *
-            $this->weightGradient;
-
-        $this->bias -=
-            $learningRate *
-            $this->biasGradient;
+        $this->weight -= $learningRate * $this->weightGradient;
+        $this->bias -= $learningRate * $this->biasGradient;
     }
 
     private function sigmoid(float $x): float
@@ -806,13 +734,9 @@ class Neuron
 }
 ```
 
-Получился очень маленький класс.
+Получился очень маленький класс. Но внутри него уже есть основные механизмы обучения нейронной сети.
 
-Но внутри него уже есть основные механизмы обучения нейронной сети.
-
-***
-
-## Шаг 14. Создаем обучающую выборку
+#### Шаг 14. Создаем обучающую выборку
 
 Теперь дадим нейрону несколько примеров:
 
@@ -824,17 +748,9 @@ $dataset = [
 ];
 ```
 
-Первое значение – вход:
+Первое значение – вход: `x`&#x20;
 
-```
-x
-```
-
-Второе – правильный ответ:
-
-```
-target
-```
+Второе – правильный ответ: `target`
 
 Получается:
 
@@ -846,15 +762,12 @@ x = 2 → 1
 
 Это уже немного больше похоже на задачу классификации.
 
-***
-
-## Шаг 15. Обучаем нейрон
+#### Шаг 15. Обучаем нейрон
 
 Создаем модель:
 
 ```php
 $neuron = new Neuron();
-
 $learningRate = 0.1;
 ```
 
@@ -866,28 +779,18 @@ for ($epoch = 1; $epoch <= 1000; $epoch++) {
     $loss = 0.0;
 
     foreach ($dataset as [$input, $target]) {
-
         // Forward pass
-        $prediction =
-            $neuron->forward($input);
-
+        $prediction = $neuron->forward($input);
         // Loss
-        $loss +=
-            ($prediction - $target) ** 2;
-
+        $loss += ($prediction - $target) ** 2;
         // Backpropagation
         $neuron->backward($target);
-
         // Gradient descent
         $neuron->update($learningRate);
     }
 
     if ($epoch % 100 === 0) {
-        echo sprintf(
-            "Epoch %d, loss: %.4f\n",
-            $epoch,
-            $loss
-        );
+        echo sprintf("Epoch %d, loss: %.4f\n", $epoch, $loss);
     }
 }
 ```
@@ -920,9 +823,7 @@ for ($epoch = 1; $epoch <= 1000; $epoch++) {
 
 И затем процесс повторяется.
 
-***
-
-## Что такое эпоха?
+### Что такое эпоха?
 
 В нашем примере одна эпоха означает, что нейрон прошел по всей обучающей выборке.
 
@@ -930,7 +831,6 @@ for ($epoch = 1; $epoch <= 1000; $epoch++) {
 
 ```
 Dataset:
-
 0 → 0
 1 → 1
 2 → 1
@@ -940,9 +840,7 @@ Dataset:
 
 ```
 0 → forward → backward → update
-
 1 → forward → backward → update
-
 2 → forward → backward → update
 ```
 
@@ -956,9 +854,7 @@ Epoch 3
 Epoch 1000
 ```
 
-***
-
-## Что происходит с моделью во время обучения?
+### Что происходит с моделью во время обучения?
 
 Представим, что в начале параметры случайные:
 
@@ -988,17 +884,11 @@ bias   = -0.4
 
 ```
 x = 0 → около 0.40
-
 x = 1 → около 0.60
-
 x = 2 → около 0.77
 ```
 
-После дальнейшего обучения параметры продолжают изменяться.
-
-Главная идея не в конкретных числах.
-
-Главное – направление:
+После дальнейшего обучения параметры продолжают изменяться. Главная идея не в конкретных числах. Главное – направление:
 
 ```
 bad prediction
@@ -1012,18 +902,16 @@ change parameters
 better prediction
 ```
 
-***
+### Почему это называется backpropagation?
 
-## Почему это называется backpropagation?
-
-Потому что информация об ошибке распространяется **назад** по вычислениям.
+Потому что информация об ошибке распространяется назад по вычислениям.
 
 Forward pass идет:
 
 ```
 input
   ↓
-z
+  z
   ↓
 activation
   ↓
@@ -1039,7 +927,7 @@ loss
   ↓
 activation
   ↓
-z
+  z
   ↓
 weight / bias
 ```
@@ -1060,9 +948,7 @@ Input
 
 Ошибка распространяется от выхода назад через сеть.
 
-***
-
-## Разберем один backward pass вручную
+### Разберем один backward pass вручную
 
 Полезно один раз пройти вычисления полностью.
 
@@ -1082,6 +968,8 @@ bias = 0
 ```
 
 Сначала forward:
+
+\==========
 
 z=wx+bz=wx+b
 
@@ -1615,4 +1503,3 @@ Backpropagation – это не отдельная магическая техн
 “Посмотри на свою ошибку, вычисли свой вклад в нее и немного измени свои параметры”.
 
 В следующем кейсе мы заменим один наш объект `Neuron` на настоящую многослойную сеть и посмотрим, как тот же механизм используется внутри RubixML.
-
