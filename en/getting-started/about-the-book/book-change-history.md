@@ -14,7 +14,7 @@ Added:
 
 Changes:
 
-*
+* Improved and modified chapter "1.2 Vectors, dimensions, and feature spaces"
 
 #### _June 2026_
 
