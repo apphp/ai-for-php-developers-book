@@ -626,7 +626,66 @@ The similarity between embeddings is typically measured using cosine similarity 
 
 Intuitively, an embedding model translates the meaning of objects into the geometry of a vector space.
 
-\>>>>>>>>>
+### Epoch
+
+An epoch is one complete pass of the training algorithm over the entire training dataset.
+
+With batch gradient descent, one epoch corresponds to one update of the model's parameters. With stochastic or mini-batch gradient descent, many updates are performed during one epoch – one for each data point or batch.
+
+The number of epochs determines how many times the model "sees" the entire training data. Too few epochs can lead to underfitting, while too many can lead to overfitting.
+
+In practice, the number of epochs is chosen based on:
+
+* the behavior of the loss function
+* performance on the validation set
+* the rate of convergence
+
+Intuitively, you can think of an epoch as one learning cycle during which the model goes through all the examples and gradually adjusts its parameters.
+
+### Euclidean distance
+
+Euclidean distance is the usual "ruler distance" between two points:
+
+$$
+d(A,B) = \sqrt{\sum_{i=1}^{n}(A_i-B_i)^2}
+$$
+
+It works well for numerical data, but often performs worse than cosine similarity for text and embeddings.
+
+### Fairness
+
+Fairness is the property of a model making decisions without systematically discriminating against certain groups.
+
+In machine learning, a model can have good overall accuracy while performing worse for certain categories of users. This can happen because of biased data, inappropriate features, or characteristics of the algorithm itself.
+
+Fairness problems can arise when a model:
+
+* makes more errors for one group
+* systematically underestimates or overestimates probabilities for certain categories
+* is trained on historical data that contains social biases
+
+In ML practice, fairness is evaluated using different criteria, for example:
+
+* equal accuracy across different groups
+* equal error rates
+* equal decision-making conditions
+
+It is usually impossible to satisfy all fairness criteria at the same time, so a balance must be found between fairness and other quality metrics.
+
+Intuitively, fairness answers the question: "Does the model make decisions that are systematically unfair to some users?"
+
+In modern ML systems, fairness is considered together with:
+
+* model interpretability
+* AI ethics
+* risk management
+* algorithmic auditing
+
+### Feature
+
+A feature is a measurable characteristic of an object. For an apartment, it could be its area; for a user, their age; for text, the frequency of a word or an embedding value.
+
+A model does not work with "real-world objects" directly. It works with their features.
 
 ### Feature Engineering
 
@@ -647,6 +706,136 @@ The quality of feature engineering often has a greater impact on performance tha
 Intuitively, feature engineering is the process of translating reality into a language that the model can understand.
 
 From a practical perspective, feature engineering is a key competency in applied machine learning, especially when working with limited data and classical algorithms.
+
+### Forward pass
+
+A forward pass is the stage of a neural network where the input data passes through all layers in sequence, and each neuron calculates its value based on the inputs, weights, and activation function. As a result, the network produces a final prediction.
+
+During the forward pass, the model's weights are not changed – the forward pass is used only to produce an output. During training, the error is calculated after the forward pass and then used by the [backpropagation](glossary.md#backpropagation-error-backpropagation) algorithm to adjust the weights.
+
+### Gaussian distribution
+
+The Gaussian distribution (normal distribution) is one of the most important probability distributions in statistics and machine learning.
+
+It is described by two parameters:
+
+* the mean `μ`
+* the variance `σ²`
+
+The probability density function is:
+
+$$
+p(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+$$
+
+Geometrically, the Gaussian distribution has a "bell" shape: values close to the mean occur more often, while the probability of large deviations decreases rapidly.
+
+In machine learning, the Gaussian distribution is often used as a model of noise in data. For example, in linear regression, we usually assume that the prediction error is normally distributed. This assumption leads to MSE as the optimal loss function under maximum likelihood estimation (MLE).
+
+The Gaussian distribution also forms the basis of:
+
+* probabilistic models
+* Bayesian methods
+* feature normalization
+* neural network weight initialization
+
+Intuitively, the Gaussian distribution is a mathematical way to say: "small errors are common, while large errors are rare."
+
+### Gaussian Naive Bayes
+
+Gaussian Naive Bayes is a variant of Naive Bayes designed for numerical features. It assumes that the features within each class follow a normal (Gaussian) distribution.
+
+For each class, the model estimates:
+
+* the mean value of each feature
+* the variance
+
+Based on these values, it calculates the probability that an object belongs to each class.
+
+Intuitively: "A feature value is more likely to belong to the class where it is closer to the mean, taking the spread of the data into account."
+
+### Gini impurity
+
+Gini impurity is a measure of the "impurity" of a dataset. It is used in decision trees to evaluate the quality of a split.
+
+It shows how likely a random classification error would be if the class of an object were chosen randomly according to the class distribution in the node. If all objects in a node belong to the same class, Gini impurity is zero – the node is "pure". If the classes are evenly distributed, the value is higher – the node is more "impure".
+
+In decision trees, Gini impurity is used to:
+
+* choose a feature for splitting
+* evaluate the quality of a split
+* build the tree structure
+
+Intuitively, Gini impurity answers the question: "How mixed are the classes in this group?"
+
+Gini impurity is similar to entropy, but:
+
+* it is simpler to calculate
+* it is faster to compute
+* it is commonly used in practical implementations, such as CART
+
+In the context of entropy, Gini impurity is an alternative way to measure uncertainty and the purity of a split.
+
+### Gradient
+
+A gradient is a vector of the partial derivatives of a function with respect to all its parameters. It points in the direction of the steepest increase of the function in multidimensional space.
+
+If a function depends on parameters `w1,w2,…,wn`, the gradient is written as:
+
+$$
+\nabla f = \left(\frac{\partial f}{\partial w_1},\frac{\partial f}{\partial w_2},\ldots,\frac{\partial f}{\partial w_n}\right)
+$$
+
+Geometrically, the gradient is perpendicular to the lines of equal function value and shows which direction is "up" on the error surface. Therefore, to minimize a function, such as a loss function, we move in the opposite direction – against the gradient.
+
+In machine learning, the gradient is used for:
+
+* updating model parameters
+* training linear models and neural networks
+* optimizing MSE, log loss, and other functions
+
+Intuitively, the gradient answers the question: "In which direction should we change the parameters for the error to increase the fastest?" Therefore, moving in the opposite direction reduces the error as quickly as possible.
+
+From a practical perspective, almost all model training comes down to calculating gradients and taking small steps through parameter space.
+
+### Gradient Boosting
+
+Gradient Boosting is an ensemble method in which models, usually decision trees, are trained sequentially, with each new model correcting the errors of the previous ones.
+
+Each new model focuses on the examples where the previous model made mistakes and reduces the loss function using gradient descent.
+
+The result is a strong model built from a sequence of weak models.
+
+Intuitively: "each next step corrects the mistakes of the previous one."
+
+
+
+\>>>>>>>>>>>>>
+
+
+
+#### Manhattan distance
+
+Manhattan distance (L1 distance) is a measure of the distance between two points. It is equal to the sum of the absolute differences between their coordinates:
+
+$$
+d(x,y) = \sum_{i=1}^{n} |x_i-y_i|
+$$
+
+The name comes from the analogy with moving through the streets of Manhattan, where you cannot move diagonally and have to follow the street grid.
+
+In machine learning, Manhattan distance is used:
+
+* in k-nearest neighbors (k-NN) algorithms
+* when working with sparse features
+* in clustering tasks
+* as an alternative to Euclidean distance
+
+Manhattan distance is less sensitive to a single large difference along one coordinate than Euclidean distance. This makes it useful when outliers are present or when working in high-dimensional spaces.
+
+Intuitively, Manhattan distance answers the question: "How far do you need to travel along the axes to get from one point to another?"
+
+From a practical perspective, L1 distance works well with L1 regularization and sparse vectors such as Bag-of-Words.
 
 ### One-hot encoding
 
