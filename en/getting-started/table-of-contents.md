@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 21% (40%)
+Readines&#x73;**:** 21% (45%)
 
-🟩🟩🟩🟩🟨🟩🟩🟩🟩🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟨🟩🟩🟩🟩🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -21,7 +21,7 @@ Section statuses
 ### Getting Started
 
 [**Disclaimer**](disclaimer.md)\
-&#xNAN;_&#x41;bout the book's boundaries, assumptions and responsibilities._
+_&#x41;bout the book's boundaries, assumptions and responsibilities._
 
 [**Introduction**](introduction/)\
 _Motivation, realities and goals of the book._
@@ -30,7 +30,7 @@ _Motivation, realities and goals of the book._
 * [Why a PHP developer needs AI](introduction/why-a-php-developer-needs-ai.md)
 
 [**The ML ecosystem in PHP**](the-ml-ecosystem-in-php/)\
-&#xNAN;_&#x41;n overview of the PHP ecosystem for machine learning and scientific computing._
+_&#x41;n overview of the PHP ecosystem for machine learning and scientific computing._
 
 * [Environment setup for PHP](the-ml-ecosystem-in-php/environment-setup-for-php/)
 * [Installing and Configuring Transformer in PHP](the-ml-ecosystem-in-php/installing-and-configuring-transformer-in-php.md)
@@ -49,144 +49,144 @@ _Motivation, realities and goals of the book._
 #### Part I. The Mathematical Language of AI
 
 1.1 [**What a model is in the mathematical sense**](../1.1-what-a-model-is-in-the-mathematical-sense.md)\
-&#xNAN;_&#x46;unction, parameters, error._
+_&#x46;unction, parameters, error._
 
 1.2 [**Vectors, dimensions, and feature spaces**](../1.2-vectors-dimensions-and-feature-spaces.md)\
-&#xNAN;_&#x57;hy data are points in space._
+_&#x57;hy data are points in space._
 
 1.3 [**Distances and similarity**](../1.3-distances-and-similarity/)\
-&#xNAN;_&#x45;uclidean distance, dot product, cosine similarity._
+_&#x45;uclidean distance, dot product, cosine similarity._
 
 &#x20;   1.3.1 🟨 Practical use cases
 
 #### Part II. Learning as Optimization
 
 2.1 🟨 Error, loss functions, and why they are needed\
-&#xNAN;_&#x4D;SE, log loss – without formal hell._
+_&#x4D;SE, log loss – without formal hell._
 
 &#x20;  2.1.1 Practical use cases
 
 2.2 🟨 Linear regression as a base model\
-&#xNAN;_&#x46;ormula, geometric meaning, PHP implementation._
+_&#x46;ormula, geometric meaning, PHP implementation._
 
 &#x20;  2.2.1 Practical use cases
 
 2.3 🟨 Gradient descent explained on fingers\
-&#xNAN;_&#x57;hy the derivative is the direction of movement._
+_&#x57;hy the derivative is the direction of movement._
 
 &#x20;  2.3.1 Experiments with gradient descent
 
 #### Part III. Classification and Probabilities
 
 3.1 🟨 Probability as a degree of confidence\
-&#xNAN;_&#x46;requencies, posterior probabilities._
+_&#x46;requencies, posterior probabilities._
 
 &#x20;  3.1.1 Practical use cases
 
 3.2 🟨 Logistic regression\
-&#xNAN;_&#x53;igmoid, decision boundary, classification case._
+_&#x53;igmoid, decision boundary, classification case._
 
 &#x20;  3.2.1 Practical use cases
 
-3.3 ⬜ Why Naive Bayes works\
-&#xNAN;_&#x43;onditional probabilities and independence._
+3.3 🟨 Why Naive Bayes works\
+_&#x43;onditional probabilities and independence._
 
 &#x20;  3.3.1 Practical use cases
 
 #### Part IV. Proximity and Data Structure
 
-4.1 ⬜ The k-nearest neighbors algorithm and local decisions\
-&#xNAN;_&#x47;eometric intuition, distance metrics._
+4.1 🟨 The k-nearest neighbors algorithm and local decisions\
+_&#x47;eometric intuition, distance metrics._
 
 &#x20;  4.1.1 Practical use cases
 
 2.2 ⬜ Decision Trees and space partitioning\
-&#xNAN;_&#x45;ntropy, information gain, explainability._
+_&#x45;ntropy, information gain, explainability._
 
 &#x20;  4.2.1 Practical use cases
 
 #### Part V. Text as Mathematics
 
 5.1 ⬜ Why words turn into numbers \
-&#xNAN;_&#x57;ord spaces and features._
+_&#x57;ord spaces and features._
 
 5.2 ⬜ Bag of Words and TF–IDF\
-&#xNAN;_&#x46;ormulas, weight interpretation._
+_&#x46;ormulas, weight interpretation._
 
 &#x20;  5.2.1 Practical use cases
 
 5.3 ⬜ Embeddings as continuous spaces of meaning\
-&#xNAN;_&#x47;eometry of meaning and semantic search._
+_&#x47;eometry of meaning and semantic search._
 
 5.4 ⬜ Transformers and context: from static vectors to understanding meaning \
-&#xNAN;_&#x57;hy the word "key" has different vectors. Self-attention without formulas._
+_&#x57;hy the word "key" has different vectors. Self-attention without formulas._
 
 5.5 ⬜ Tokens, context window, and chunking - how LLM sees text\
-&#xNAN;_&#x43;ontext constraints, token counting, document splitting and overlap._
+_&#x43;ontext constraints, token counting, document splitting and overlap._
 
 5.6 ⬜ Named Entity Recognition (NER) – extracting entities from text \
-&#xNAN;_&#x53;equence labeling, BIO markup, practical case study in PHP._
+_&#x53;equence labeling, BIO markup, practical case study in PHP._
 
 5.7 ⬜ Practice: embeddings in PHP using transformers \
-&#xNAN;_&#x49;nference instead of training. transformers-php as an engineering tool._
+_&#x49;nference instead of training. transformers-php as an engineering tool._
 
 5.8 ⬜ RAG: Retrieval-Augmented Generation as an engineering system \
-&#xNAN;_&#x53;earch → context → generation. Why an LLM "remembers" documents._
+_&#x53;earch → context → generation. Why an LLM "remembers" documents._
 
 #### Part VI. Attention and Neural Networks
 
 6.1 ⬜ Perceptron and fully connected network\
-&#xNAN;_&#x4C;inear combinations and nonlinearities._
+_&#x4C;inear combinations and nonlinearities._
 
 6.2 ⬜ Backpropagation — why it works\
-&#xNAN;_&#x54;he chain rule without academic horror._
+_&#x54;he chain rule without academic horror._
 
 6.3 ⬜ Convolutional neural networks (CNN)\
-&#xNAN;_&#x46;ilters, local features, and why images are "understood" as matrices._
+_&#x46;ilters, local features, and why images are "understood" as matrices._
 
 6.4 ⬜ Autoencoders\
-&#xNAN;_&#x44;ata compression, latent space and login recovery._
+_&#x44;ata compression, latent space and login recovery._
 
 6.5 Recurrent neural networks (RNN)\
-&#xNAN;_&#x4D;odels that take into account the context over time._
+_&#x4D;odels that take into account the context over time._
 
 6.6 ⬜ Attention as weighted summation\
-&#xNAN;_&#x51;/K/V formulas + simplified implementation._
+_&#x51;/K/V formulas + simplified implementation._
 
 #### Part VII. LLMs and Modern AI
 
 7.1 ⬜ Why LLMs are next-token prediction models\
-&#xNAN;_&#x50;robabilities, softmax, context._
+_&#x50;robabilities, softmax, context._
 
 &#x20;  7.1.1. Hands-on: Building a Next-Token Model in PHP
 
 &#x20;  7.1.2 Practical use cases
 
 7.2 ⬜ Why LLMs Behave "Intelligently": RLHF and Behavioral Learning\
-&#xNAN;_&#x46;rom Token Prediction to Useful Responses_
+_&#x46;rom Token Prediction to Useful Responses_
 
 &#x20;  7.2.1 Understanding RLHF in Practice
 
 7.3 ⬜ Where LLMs fail mathematically\
-&#xNAN;_&#x48;allucinations, distributions, bias._
+_&#x48;allucinations, distributions, bias._
 
 #### Part VIII. Agent Systems and Orchestration
 
 8.1 ⬜ Agent Systems and Multi-Step Reasoning in PHP\
-&#xNAN;_&#x4C;LM as a managed system: planning, tools and control._
+_&#x4C;LM as a managed system: planning, tools and control._
 
 #### Part IX. Production and Common Sense
 
 9.1 ⬜ How to use AI in PHP projects\
-&#xNAN;_&#x41;rchitectures, integrations, orchestration._
+_&#x41;rchitectures, integrations, orchestration._
 
 9.2 ⬜ When AI is not needed and why it matters\
-&#xNAN;_&#x43;lear engineering boundaries._
+_&#x43;lear engineering boundaries._
 
 #### Conclusion
 
 ⬜ Where to go next\
-&#xNAN;_&#x57;hat to deepen: mathematics, systems, or practice._
+_&#x57;hat to deepen: mathematics, systems, or practice._
 
 
 
