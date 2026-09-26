@@ -10,7 +10,7 @@ Once we represent data as numbers and vectors, a natural question arises: how do
 
 To formalize this, we need distance measures and similarity measures. In math and ML, these are not abstract ideas but concrete functions that take two vectors and return a number. The algorithm makes decisions based on that number.
 
-In this chapter, we will cover three key tools: Euclidean distance, dot product, and cosine similarity. These are fundamental to k-NN, linear models, recommender systems, text search, and embeddings.
+In this chapter, we will cover three key tools: [Euclidean distance](../getting-started/glossary.md#euclidean-distance), [dot product](../getting-started/glossary.md#dot-product), and [cosine similarity](../getting-started/glossary.md#cosine-similarity). These are fundamental to k-NN, linear models, recommender systems, text search, and [embeddings](../getting-started/glossary.md#embeddings).
 
 #### Euclidean Distance – "regular" geometry
 
