@@ -6,11 +6,22 @@ This book evolves gradually. New chapters are added, existing ones are revised a
 
 Added:
 
+*
+
+Changes:
+
+*
+
+#### _July-September 2026_
+
+Added:
+
 * New practical case "Case 2: Estimating object relevance" in chapter "1.3 Distances and similarity"
 * New chapter "2.1.1 Practical use cases"
 * New chapter "2.2.1 Practical use cases"
 * New chapter "2.3.1 Experiments with gradient descent"
 * New chapter "3.1.1 Practical use cases"
+* New chapter "4.1 k-Nearest Neighbors and Local Decisions"
 
 Changes:
 
