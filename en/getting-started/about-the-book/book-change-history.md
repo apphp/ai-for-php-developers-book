@@ -6,7 +6,7 @@ This book evolves gradually. New chapters are added, existing ones are revised a
 
 Added:
 
-*
+* New chapter "4.2 Decision Trees and space partitioning"
 
 Changes:
 

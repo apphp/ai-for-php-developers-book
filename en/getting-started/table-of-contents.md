@@ -7,9 +7,9 @@ The book is being written publicly and is in active development.
 
 **Overall progress**
 
-Readines&#x73;**:** 21% (45%)
+Readines&#x73;**:** 21% (47%)
 
-🟩🟩🟩🟩🟨🟩🟩🟩🟩🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+🟩🟩🟩🟩🟨🟩🟩🟩🟩🟨🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 Section statuses
 
@@ -100,7 +100,7 @@ _&#x47;eometric intuition, distance metrics._
 
 &#x20;  4.1.1 Practical use cases
 
-2.2 ⬜ Decision Trees and space partitioning\
+4.2 🟨 Decision Trees and space partitioning\
 _&#x45;ntropy, information gain, explainability._
 
 &#x20;  4.2.1 Practical use cases

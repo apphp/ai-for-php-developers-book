@@ -54,3 +54,4 @@
 ***
 
 * [4.1 k-Nearest Neighbors and Local Decisions](4.1-k-nearest-neighbors-and-local-decisions.md)
+* [4.2 Decision Trees and space partitioning](4.2-decision-trees-and-space-partitioning.md)
