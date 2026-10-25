@@ -40,25 +40,21 @@
 
 Все полученные числа образуют новую матрицу — карту признаков.
 
-![#000000 & #FFFFFF — The Neighbourhood | Last.fm](https://images.openai.com/static-rsc-4/eZShEQdvUZOLftisTnCDds13-z4Y1xM6FY95bXxciFwfantU2gjyklOVTo9nO6wsidoju7YosOHwuLkZz8L9pmgPuOM1dA_fKEYOVhbUV5VCc7N084-XSH3HNqlArZJVw_kvXz5M7KCtk0v7oVy3RvTUgBxfmxFv0AiyaJ9FXRo?purpose=inline)
-
 Исходное изображение
 
 Матрица яркости пикселей.
 
-![Convolutional Neural Networks. Part 1. | Cloud\_Player's Notes](https://images.openai.com/static-rsc-4/833cDFvLBjh0K-aF__RkpSQvFUugmeFsZPupqlvMrU2OdPsIjlqk9OjCj3LD0ufqt3zjR8dUOkPmn2q1FF4DBVuLLlIW7ccIxPu8U695W-2kuhzk1k6FQkUXwrNpOuGkru4ZuWCOR2YQF7H7yIbWlILzIy0migP3yCqxqc3ozis?purpose=inline)
-
 Фильтр
 
 Небольшая матрица весов, которая реагирует на изменение яркости.
-
-![sobel — SciPy v1.15.1 Manual](https://images.openai.com/static-rsc-4/YnFmg6fzhdryFJwkNHYRIUqhCDo-PPbMbdyHZ6bnf_HhKmMp2FdQHk7Ftdjtx62dHtj_MNANwa6bsUAusvzPOq4dzOueUxRyeEEuk6m2xf8bdCW3GmLg_K74mjU2IRSFm18OgQabSp8Che8MAIStOeAXqirueNmwFG9mX4Z27ug?purpose=inline)
 
 Карта признаков
 
 Результат применения фильтра к изображению.
 
 В этом кейсе мы не будем обучать нейронную сеть. Мы зададим фильтр вручную, чтобы сначала понять саму операцию. Позже станет понятно, как CNN обучается подбирать веса фильтров самостоятельно.
+
+<figure><img src="../../../.gitbook/assets/6.3-4_svertka_obshaya_skhema.png" alt=""><figcaption><p>Рисунок 1. Применение фильтра к изображению и получение карты признаков.</p></figcaption></figure>
 
 ### 3. Что такое свёртка
 
@@ -284,6 +280,10 @@ printMatrix($featureMap);
 Внешние циклы `for` определяют позицию фильтра. Переменная `$y` отвечает за строку, а `$x` — за столбец.
 
 На каждой позиции фильтр покрывает участок размером `3 × 3`.
+
+<figure><img src="../../../.gitbook/assets/6.3-5_svertka_peremeshchenie_filtra.png" alt=""><figcaption><p>Рисунок 2. Перемещение фильтра по изображению с шагом 1 и вычисление значений карты признаков.</p></figcaption></figure>
+
+
 
 3\. Перемножаем соответствующие элементы
 
