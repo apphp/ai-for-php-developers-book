@@ -239,11 +239,11 @@
   * [8.2.2 Создание MCP-сервера на PHP](chast-viii.-agentnye-sistemy-i-orkestraciya/8.2-sozdanie-mcp-servera-na-php/8.2.2-sozdanie-mcp-servera-na-php.md)
   * [8.2.3 Практические кейсы](chast-viii.-agentnye-sistemy-i-orkestraciya/8.2-sozdanie-mcp-servera-na-php/8.2.3-prakticheskie-keisy/README.md)
     * [Кейс 1. Предоставление доступа к инструментам разработки PHP-приложений через MC](chast-viii.-agentnye-sistemy-i-orkestraciya/8.2-sozdanie-mcp-servera-na-php/8.2.3-prakticheskie-keisy/keis-1.-predostavlenie-dostupa-k-instrumentam-razrabotki-php-prilozhenii-cherez-mc.md)
-* [8.3 Создание ИИ-агентов на PHP](chast-viii.-agentnye-sistemy-i-orkestraciya/8.3-sozdanie-ii-agentov-na-php/README.md)
-  * [8.3.1 От API больших языковых моделей (LLM) к ИИ-агентам](chast-viii.-agentnye-sistemy-i-orkestraciya/8.3-sozdanie-ii-agentov-na-php/8.3.1-ot-api-bolshikh-yazykovykh-modelei-llm-k-ii-agentam.md)
-  * [8.3.2 Вызов функций и интеграция инструментов MCP](chast-viii.-agentnye-sistemy-i-orkestraciya/8.3-sozdanie-ii-agentov-na-php/8.3.2-vyzov-funkcii-i-integraciya-instrumentov-mcp.md)
-  * [8.3.3. Практические кейсы](chast-viii.-agentnye-sistemy-i-orkestraciya/8.3-sozdanie-ii-agentov-na-php/8.3.3.-prakticheskie-keisy/README.md)
-    * [Кейс 1. Создание ИИ-агента на PHP](chast-viii.-agentnye-sistemy-i-orkestraciya/8.3-sozdanie-ii-agentov-na-php/8.3.3.-prakticheskie-keisy/keis-1.-sozdanie-ii-agenta-na-php.md)
+* [8.3 Создание AI-агентов на PHP](chast-viii.-agentnye-sistemy-i-orkestraciya/8.3-sozdanie-ai-agentov-na-php/README.md)
+  * [8.3.1 От API больших языковых моделей (LLM) к ИИ-агентам](chast-viii.-agentnye-sistemy-i-orkestraciya/8.3-sozdanie-ai-agentov-na-php/8.3.1-ot-api-bolshikh-yazykovykh-modelei-llm-k-ii-agentam.md)
+  * [8.3.2 Вызов функций и интеграция инструментов MCP](chast-viii.-agentnye-sistemy-i-orkestraciya/8.3-sozdanie-ai-agentov-na-php/8.3.2-vyzov-funkcii-i-integraciya-instrumentov-mcp.md)
+  * [8.3.3. Практические кейсы](chast-viii.-agentnye-sistemy-i-orkestraciya/8.3-sozdanie-ai-agentov-na-php/8.3.3.-prakticheskie-keisy/README.md)
+    * [Кейс 1. Создание ИИ-агента на PHP](chast-viii.-agentnye-sistemy-i-orkestraciya/8.3-sozdanie-ai-agentov-na-php/8.3.3.-prakticheskie-keisy/keis-1.-sozdanie-ii-agenta-na-php.md)
 
 ## Часть IX. Продакшен и здравый смысл
 
@@ -252,7 +252,7 @@
   * [9.2.1 Практические кейсы](chast-ix.-prodakshen-i-zdravyi-smysl/9.2-kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/9.2.1-prakticheskie-keisy/README.md)
     * [Кейс 1 – Замена LLM на детерминированный код](chast-ix.-prodakshen-i-zdravyi-smysl/9.2-kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/9.2.1-prakticheskie-keisy/keis-1-zamena-llm-na-determinirovannyi-kod.md)
     * [Кейс 2 – Когда AI действительно оправдан](chast-ix.-prodakshen-i-zdravyi-smysl/9.2-kogda-ai-ne-nuzhen-i-pochemu-eto-vazhno/9.2.1-prakticheskie-keisy/keis-2-kogda-ai-deistvitelno-opravdan.md)
-* [9.3 Особенности внедрения ИИ-приложений в промышленную эксплуатацию](chast-ix.-prodakshen-i-zdravyi-smysl/9.3-osobennosti-vnedreniya-ii-prilozhenii-v-promyshlennuyu-ekspluataciyu.md)
+* [9.3 Особенности внедрения AI-приложений в промышленную эксплуатацию](chast-ix.-prodakshen-i-zdravyi-smysl/9.3-osobennosti-vnedreniya-ai-prilozhenii-v-promyshlennuyu-ekspluataciyu.md)
 
 ## Заключение
 
