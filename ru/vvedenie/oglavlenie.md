@@ -181,7 +181,7 @@ _&#x426;епное правило без академического ужаса
 6.3 🟨 [**Свёрточные нейронные сети (CNN)**](../chast-vi.-neiroseti-i-rabota-s-dannymi/6.3-svyortochnye-neironnye-seti-cnn/)\
 _&#x424;ильтры, локальные признаки и почему картинки “понимаются” как матрицы._
 
-&#x20; 6.3.1 🟨 [Практические кейсы](../chast-vi.-neiroseti-i-rabota-s-dannymi/6.3-svyortochnye-neironnye-seti-cnn/prakticheskie-keisy/)
+&#x20; 6.3.1 🟨 [Практические кейсы](../chast-vi.-neiroseti-i-rabota-s-dannymi/6.3-svyortochnye-neironnye-seti-cnn/6.3.1-prakticheskie-keisy/)
 
 6.4 🟨 Автокодировщики\
 _&#x421;жатие данных, латентное пространство и восстановление входа._
